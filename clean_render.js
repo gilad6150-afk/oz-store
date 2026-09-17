@@ -1955,3 +1955,96 @@ function setupExitIntent() {
         }
     });
 }
+
+// AUTOMATIC SHABBAT OBSERVANCE & ACCESS BLOCKING SYSTEM
+function checkShabbatMode() {
+    const hash = (window.location.hash || '').toLowerCase();
+    const search = (window.location.search || '').toLowerCase();
+
+    // Admin/Owner override check
+    if (hash === '#admin' || hash === '#crm' || hash === '#noshabbat') {
+        const overlay = document.getElementById('shabbat-overlay');
+        if (overlay) {
+            overlay.remove();
+            document.body.style.overflow = '';
+        }
+        return;
+    }
+
+    const forceTest = hash === '#shabbat' || search.includes('shabbat=true');
+
+    let now = new Date();
+    try {
+        const israelStr = now.toLocaleString("en-US", { timeZone: "Asia/Jerusalem" });
+        now = new Date(israelStr);
+    } catch(e){}
+
+    const day = now.getDay(); // 0 = Sun, 5 = Fri, 6 = Sat
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const timeNum = hours + (minutes / 60);
+
+    // Shabbat mode starts Friday 16:00 (4 PM) until Saturday 20:30 (8:30 PM)
+    const isFridayShabbat = (day === 5 && timeNum >= 16.0);
+    const isSaturdayShabbat = (day === 6 && timeNum <= 20.5);
+
+    const isShabbatNow = forceTest || isFridayShabbat || isSaturdayShabbat;
+
+    if (isShabbatNow) {
+        showShabbatOverlay();
+    }
+}
+
+function showShabbatOverlay() {
+    if (document.getElementById('shabbat-overlay')) return;
+
+    const overlay = document.createElement('div');
+    overlay.id = 'shabbat-overlay';
+    overlay.className = 'fixed inset-0 z-[999999] bg-gradient-to-br from-[#12072B] via-[#1E1B4B] to-[#0A0318] text-white flex flex-col items-center justify-center p-4 sm:p-6 text-center dir-rtl select-none';
+    
+    overlay.innerHTML = `
+        <div class="max-w-xl w-full bg-white/10 backdrop-blur-2xl p-6 sm:p-10 rounded-3xl border border-amber-400/40 shadow-2xl space-y-6 animate-fade-in relative overflow-hidden">
+            <!-- Decorative Glow -->
+            <div class="absolute -top-12 -right-12 w-40 h-40 bg-amber-400/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-12 -left-12 w-40 h-40 bg-purple-600/30 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Candle Icon -->
+            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-gradient-to-br from-amber-300 via-amber-400 to-amber-500 text-slate-950 flex items-center justify-center mx-auto text-4xl sm:text-5xl shadow-2xl border-2 border-amber-200 animate-pulse">
+                🕯️🕯️
+            </div>
+            
+            <div class="space-y-3">
+                <span class="inline-flex items-center gap-1.5 px-4 py-1.5 bg-amber-400/20 border border-amber-400/40 text-amber-300 font-black text-xs rounded-full shadow-inner">
+                    ✨ אתר שומר שבת כהלכה
+                </span>
+                <h1 class="text-3xl sm:text-4xl font-black text-amber-300 tracking-tight">שבת שלום ומבורך!</h1>
+                <p class="text-sm sm:text-base text-slate-100 font-bold leading-relaxed pt-1">
+                    החנות המקוונת של מכון עוז סגורה כעת לרגל קדושת השבת.
+                </p>
+            </div>
+
+            <div class="p-4 bg-purple-950/80 border border-purple-800/70 rounded-2xl text-xs sm:text-sm text-slate-200 leading-relaxed font-medium space-y-2">
+                <p>אנו מבקשים מכל גולשינו היקרים נהגו בכבוד ונא לא לבצע הזמנות או לגלוש באתר עד צאת השבת.</p>
+                <div class="pt-2 border-t border-purple-800/60 font-black text-amber-300">
+                    נשמח לשרתכם שוב מכל הלב עם צאת השבת! 🛍️✨
+                </div>
+            </div>
+
+            <div class="text-xs text-purple-200 font-bold bg-white/5 py-2.5 px-4 rounded-xl border border-white/10 flex items-center justify-center gap-2 flex-wrap">
+                <span>📍 ראש העין, שלום מנצורה 48</span>
+                <span>•</span>
+                <span>📞 052-686-7192</span>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(overlay);
+    document.body.style.overflow = 'hidden';
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', checkShabbatMode);
+} else {
+    checkShabbatMode();
+}
+window.addEventListener('hashchange', checkShabbatMode);
