@@ -864,3 +864,43 @@ window.saveInvoice4USettingsFromUI = function() {
     Invoice4UService.saveConfig({ apiToken, clientId, companyId, sandboxMode });
     alert('✅ הגדרות Invoice4U נשמרו בהצלחה במערכת!');
 };
+
+// ==========================================
+// SECRET STORE OWNER ACCESS LISTENERS (100% Invisible to Public Visitors)
+// ==========================================
+(function initSecretAdminTriggers() {
+    function checkSecretHash() {
+        if (window.location.hash === '#admin' || window.location.hash === '#crm') {
+            if (typeof window.openCRMModal === 'function') {
+                window.openCRMModal();
+            }
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        window.addEventListener('DOMContentLoaded', checkSecretHash);
+    } else {
+        checkSecretHash();
+    }
+    window.addEventListener('hashchange', checkSecretHash);
+
+    // Keyboard shortcut: Ctrl + Shift + C
+    window.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && e.shiftKey && (e.key === 'C' || e.key === 'c' || e.keyCode === 67)) {
+            e.preventDefault();
+            if (typeof window.openCRMModal === 'function') {
+                window.openCRMModal();
+            }
+        }
+    });
+
+    // Secret Double-Click on Footer
+    document.addEventListener('dblclick', function(e) {
+        if (e.target && (e.target.closest('footer') || e.target.closest('#footer') || (e.target.innerText && e.target.innerText.includes('מכון עוז')))) {
+            if (typeof window.openCRMModal === 'function') {
+                window.openCRMModal();
+            }
+        }
+    });
+})();
+
