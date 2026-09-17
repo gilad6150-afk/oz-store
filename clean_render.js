@@ -791,6 +791,7 @@ function closeProductPage() {
 function generateProductPageHTML(p) {
     const isFav = state.wishlist.includes(Number(p.id));
     const related = products.filter(x => String(x.id) !== String(p.id) && (x.category === p.category || x.category_name === p.category_name)).slice(0, 3);
+    const isStam = isStamProduct(p);
 
     return `
         <div class="space-y-6 text-right dir-rtl pb-8 max-w-5xl mx-auto">
@@ -813,7 +814,7 @@ function generateProductPageHTML(p) {
                 <div class="flex flex-col gap-3">
                     <div class="h-72 sm:h-96 rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shadow-inner relative group">
                         <img id="pdp-main-img" src="${p.images && p.images.length ? p.images[0] : p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                        <span class="absolute top-3 right-3 bg-oz-primary text-white font-black text-[11px] py-1 px-3 rounded-full shadow-md">100% כשר מוסמך ✨</span>
+                        ${isStam ? '<span class="absolute top-3 right-3 bg-oz-primary text-white font-black text-[11px] py-1 px-3 rounded-full shadow-md">100% כשר מוסמך ✨</span>' : '<span class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-sm text-white font-black text-[11px] py-1 px-3 rounded-full shadow-md">100% איכות ואחריות ✨</span>'}
                         ${!p.inStock ? '<span class="absolute top-3 left-3 bg-red-600 text-white font-black text-[11px] py-1 px-3 rounded-full shadow-md">אזל מהמלאי</span>' : ''}
                     </div>
 
@@ -850,7 +851,7 @@ function generateProductPageHTML(p) {
                         <div class="grid grid-cols-2 gap-2 text-[11px] font-extrabold text-slate-700">
                             <div class="flex items-center gap-1.5">
                                 <span class="text-emerald-600 font-bold">✓</span>
-                                <span>הגהת מחשב וגברא מוסמכת</span>
+                                <span>${isStam ? 'הגהת מחשב וגברא מוסמכת' : '100% איכות וגימור יוקרתי'}</span>
                             </div>
                             <div class="flex items-center gap-1.5">
                                 <span class="text-emerald-600 font-bold">✓</span>
@@ -934,8 +935,8 @@ function generateProductPageHTML(p) {
                             <span class="font-black text-oz-primary">${p.category_name || 'תשמישי קדושה'}</span>
                         </div>
                         <div class="p-3 bg-slate-50/40 rounded-xl border border-slate-200/80 flex items-center justify-between col-span-1 sm:col-span-2">
-                            <span class="font-bold text-slate-500">רמת כשרות ובדיקה:</span>
-                            <span class="font-black text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded border border-emerald-200">100% כשרות • הגהת מחשב וגברא ✨</span>
+                            <span class="font-bold text-slate-500">${isStam ? 'רמת כשרות ובדיקה:' : 'תקן איכות ובקרה:'}</span>
+                            <span class="font-black text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded border border-emerald-200">${isStam ? '100% כשרות • הגהת מחשב וגברא ✨' : '100% איכות • אחריות בית מכון עוז ✨'}</span>
                         </div>
                         <div class="p-3 bg-slate-50/40 rounded-xl border border-slate-200/80 flex items-center justify-between col-span-1 sm:col-span-2">
                             <span class="font-bold text-slate-500">אחריות יצרן:</span>
@@ -1009,11 +1010,17 @@ function generateProductPageHTML(p) {
                 <div id="pdp-tab-warranty" class="pdp-tab-pane hidden space-y-3 text-xs">
                     <div class="p-4 bg-slate-50/60 rounded-2xl border border-slate-200/80 space-y-2 text-slate-700 font-medium leading-relaxed">
                         <div class="font-black text-sm text-oz-primary flex items-center gap-1.5">
-                            <span>🛡️ אחריות כשרות ואיכות מקיפה</span>
+                            <span>🛡️ אחריות ואיכות מקיפה</span>
                         </div>
-                        <p>כל תשמישי הקדושה (תפילין, מזוזות, ספרי תורה) נכתבים ונבדקים על ידי סופרי סת"ם מורשים ובעלי תעודת הסמכה בתוקף.</p>
-                        <p class="text-emerald-700 font-bold">✓ 100% בדיקת מחשב סורק אופטי למניעת דיבוק אותיות</p>
-                        <p class="text-emerald-700 font-bold">✓ הגהת גברא קפדנית ע"י מגיה מוסמך</p>
+                        ${isStam ? `
+                            <p>כל תשמישי הקדושה והסת"ם (תפילין, מזוזות, ספרי תורה) נכתבים ונבדקים על ידי סופרי סת"ם מורשים ובעלי תעודת הסמכה בתוקף.</p>
+                            <p class="text-emerald-700 font-bold">✓ 100% בדיקת מחשב סורק אופטי למניעת דיבוק אותיות</p>
+                            <p class="text-emerald-700 font-bold">✓ הגהת גברא קפדנית ע"י מגיה מוסמך</p>
+                        ` : `
+                            <p>מוצרי החנות מיוצרים ונבחרים בקפידה יתרה תוך שמירה על רמת גימור גבוהה, איכות חומרים משובחת ועמידות לאורך זמן.</p>
+                            <p class="text-emerald-700 font-bold">✓ 100% בקרת איכות וגימור יוקרתי</p>
+                            <p class="text-emerald-700 font-bold">✓ אחריות מלאה מבית מכון עוז</p>
+                        `}
                         <p class="text-slate-500 text-[11px] pt-1">כל הקניות באתר מוגנות באחריות מלאה ובאפשרות החלפה/החזרה ע"פ חוק להגנת הצרכן.</p>
                     </div>
                 </div>
