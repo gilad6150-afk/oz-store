@@ -1420,6 +1420,54 @@ function redeemPoints() {
     alert('🎉 ברכות! מימשת 150 נקודות VIP OZ לקבלת 10% הנחה בלעדית בקופה (חיסכון משמעותי של עד ₪150!). הקופון OZ-VIP-10% הוחל אוטומטית בקופה.');
 }
 
+window.saveUserProfile = function(e) {
+    if (e) e.preventDefault();
+
+    const name = (document.getElementById('profile-name')?.value || '').trim();
+    const phone = (document.getElementById('profile-phone')?.value || '').trim();
+    const email = (document.getElementById('profile-email')?.value || '').trim();
+    const city = (document.getElementById('profile-city')?.value || '').trim();
+    const street = (document.getElementById('profile-street')?.value || '').trim();
+    const apartment = (document.getElementById('profile-apartment')?.value || '').trim();
+    const rite = (document.getElementById('profile-rite')?.value || '').trim();
+
+    if (!name || !phone) {
+        alert('⚠️ אנא מלא שם מלא ומספר טלפון תקין');
+        return false;
+    }
+
+    state.user = state.user || {};
+    state.user.name = name;
+    state.user.phone = phone;
+    state.user.email = email;
+    state.user.city = city;
+    state.user.street = street;
+    state.user.apartment = apartment;
+    state.user.rite = rite;
+
+    try {
+        localStorage.setItem('oz_user', JSON.stringify(state.user));
+    } catch(err) {
+        console.error('Failed saving oz_user to localStorage', err);
+    }
+
+    if (typeof updateUserLabel === 'function') updateUserLabel();
+
+    if (typeof showToast === 'function') {
+        showToast('🎉 פרטי החשבון עודכנו בהצלחה!');
+    } else {
+        alert('🎉 פרטי החשבון עודכנו בהצלחה!');
+    }
+
+    const accountPage = document.getElementById('account-page-container');
+    if (accountPage) {
+        accountPage.innerHTML = renderAccountPageHTML();
+        switchAccountTab('edit-profile');
+    }
+
+    return false;
+};
+
 function renderAccountPageHTML() {
     const user = state.user || { name: 'ישראל מירושלים', phone: '052-686-7192' };
     const wishlistCount = state.wishlist ? state.wishlist.length : 0;
@@ -1464,9 +1512,13 @@ function renderAccountPageHTML() {
                                 <span class="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 text-slate-950 font-black text-[10px] py-1 px-3 rounded-full shadow-md flex items-center gap-1">
                                     <span>🌟</span> חבר מועדון VIP OZ
                                 </span>
+                                <button onclick="switchAccountTab('edit-profile')" class="py-1 px-3 bg-amber-400/20 hover:bg-amber-400/30 text-amber-300 font-bold text-xs rounded-xl border border-amber-400/40 transition-all flex items-center gap-1 cursor-pointer">
+                                    <span>✏️</span> ערוך פרטים
+                                </button>
                             </div>
-                            <p class="text-xs text-purple-200 font-medium flex items-center gap-2">
+                            <p class="text-xs text-purple-200 font-medium flex items-center gap-2 flex-wrap">
                                 <span>📱 ${user.phone || '052-686-7192'}</span>
+                                ${user.email ? `<span class="text-purple-400">•</span><span>✉️ ${user.email}</span>` : ''}
                                 <span class="text-purple-400">•</span>
                                 <span class="text-amber-300 font-bold">דרגת VIP: Platinum Gold</span>
                             </p>
@@ -1493,7 +1545,7 @@ function renderAccountPageHTML() {
                 </div>
 
                 <!-- Quick Stat Badges Strip -->
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 pt-5 border-t border-white/10 relative z-10 text-xs">
+                <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 mt-6 pt-5 border-t border-white/10 relative z-10 text-xs">
                     <div onclick="switchAccountTab('wishlist')" class="bg-white/5 hover:bg-white/10 border border-white/10 p-2.5 rounded-xl cursor-pointer transition-all flex items-center justify-between">
                         <div class="flex items-center gap-2">
                             <span class="text-base">❤️</span>
@@ -1525,6 +1577,14 @@ function renderAccountPageHTML() {
                         </div>
                         <span class="font-black bg-amber-400 text-slate-950 text-[10px] py-0.5 px-2 rounded-full">10% OFF</span>
                     </div>
+
+                    <div onclick="switchAccountTab('edit-profile')" class="bg-white/5 hover:bg-white/10 border border-white/10 p-2.5 rounded-xl cursor-pointer transition-all flex items-center justify-between col-span-2 sm:col-span-1">
+                        <div class="flex items-center gap-2">
+                            <span class="text-base">✏️</span>
+                            <span class="font-bold text-purple-100 text-[11px]">פרטי חשבון</span>
+                        </div>
+                        <span class="font-black bg-amber-400 text-slate-950 text-[10px] py-0.5 px-2 rounded-full">ערוך</span>
+                    </div>
                 </div>
             </div>
 
@@ -1543,6 +1603,9 @@ function renderAccountPageHTML() {
                     </button>
                     <button id="account-tab-btn-points" onclick="switchAccountTab('points', this)" class="account-tab-btn py-2.5 px-5 rounded-xl font-bold text-xs bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all flex items-center gap-1.5 shrink-0">
                         <span>🎁</span> מועדון VIP ונקודות
+                    </button>
+                    <button id="account-tab-btn-edit-profile" onclick="switchAccountTab('edit-profile', this)" class="account-tab-btn py-2.5 px-5 rounded-xl font-bold text-xs bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all flex items-center gap-1.5 shrink-0">
+                        <span>✏️</span> עריכת פרטי חשבון
                     </button>
                 </div>
 
@@ -1729,6 +1792,94 @@ function renderAccountPageHTML() {
                             <p class="text-slate-600 leading-relaxed font-medium">חברי VIP נהנים מ-50 נקודות מתנה ביום ההולדת, קופונים בלעדיים ומשלוחים מועדפים בחגים ואירועים.</p>
                         </div>
                     </div>
+                </div>
+
+                <!-- Tab 5: Edit Profile & Account Details -->
+                <div id="account-tab-edit-profile" class="account-tab-pane hidden space-y-6">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-3 flex-wrap gap-2">
+                        <div>
+                            <h3 class="font-black text-slate-900 text-base flex items-center gap-2">
+                                <span>✏️</span> עריכת פרטי החשבון והמשלוח שלך
+                            </h3>
+                            <p class="text-xs text-slate-500 mt-0.5">העדכן את הפרטים האישיים שלך למילוי אוטומטי מהיר בקופה ובקבצי ההזמנה</p>
+                        </div>
+                        <span class="text-xs font-black text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full flex items-center gap-1 shadow-sm">
+                            <span>🔒</span> שמור ומאובטח במכון עוז
+                        </span>
+                    </div>
+
+                    <form onsubmit="saveUserProfile(event)" class="space-y-5 bg-slate-50/70 p-5 sm:p-6 rounded-2xl border border-slate-200/80">
+                        <!-- Section 1: Basic Info -->
+                        <div>
+                            <h4 class="font-black text-xs text-oz-primary uppercase tracking-wider mb-3 flex items-center gap-1.5 border-b border-slate-200 pb-1.5">
+                                <span>👤</span> 1. פרטים אישיים ויצירת קשר
+                            </h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">שם מלא *</label>
+                                    <input type="text" id="profile-name" required value="${user.name || ''}" placeholder="לדוגמה: ישראל ישראלי" class="w-full p-3 bg-white border border-slate-300 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary focus:ring-2 focus:ring-purple-100 transition-all" />
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">מספר טלפון נייד *</label>
+                                    <input type="tel" id="profile-phone" required value="${user.phone || ''}" placeholder="052-686-7192" class="w-full p-3 bg-white border border-slate-300 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary focus:ring-2 focus:ring-purple-100 transition-all" />
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <label class="block text-xs font-bold text-slate-700 mb-1">כתובת דוא"ל (אימייל לקבלת חשבוניות)</label>
+                                <input type="email" id="profile-email" value="${user.email || ''}" placeholder="israel@gmail.com" class="w-full p-3 bg-white border border-slate-300 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary focus:ring-2 focus:ring-purple-100 transition-all" />
+                            </div>
+                        </div>
+
+                        <!-- Section 2: Address -->
+                        <div>
+                            <h4 class="font-black text-xs text-oz-primary uppercase tracking-wider mb-3 flex items-center gap-1.5 border-b border-slate-200 pb-1.5">
+                                <span>🏠</span> 2. כתובת למשלוח מהיר
+                            </h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">עיר / יישוב</label>
+                                    <input type="text" id="profile-city" value="${user.city || ''}" placeholder="ראש העין" class="w-full p-3 bg-white border border-slate-300 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary focus:ring-2 focus:ring-purple-100 transition-all" />
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">רחוב ומספר בית</label>
+                                    <input type="text" id="profile-street" value="${user.street || ''}" placeholder="שלום מנצורה 48" class="w-full p-3 bg-white border border-slate-300 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary focus:ring-2 focus:ring-purple-100 transition-all" />
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">דירה / כניסה / קומה</label>
+                                    <input type="text" id="profile-apartment" value="${user.apartment || ''}" placeholder="דירה 4, כניסה א'" class="w-full p-3 bg-white border border-slate-300 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary focus:ring-2 focus:ring-purple-100 transition-all" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 3: Preferences -->
+                        <div>
+                            <h4 class="font-black text-xs text-oz-primary uppercase tracking-wider mb-3 flex items-center gap-1.5 border-b border-slate-200 pb-1.5">
+                                <span>📜</span> 3. נוסח מועדף לתשמישי קדושה וסת"ם
+                            </h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">נוסח כתיבת תפילין ומזוזות מועדף</label>
+                                    <select id="profile-rite" class="w-full p-3 bg-white border border-slate-300 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary focus:ring-2 focus:ring-purple-100 transition-all cursor-pointer">
+                                        <option value="עדות המזרח" ${user.rite === 'עדות המזרח' ? 'selected' : ''}>עדות המזרח / ספרדי (מורשת מרן)</option>
+                                        <option value="אשכנז" ${user.rite === 'אשכנז' ? 'selected' : ''}>אשכנז (בית יוסף)</option>
+                                        <option value="חב''ד" ${user.rite === "חב''ד" ? 'selected' : ''}>אריז"ל / חב"ד (אדמוה"ז)</option>
+                                    </select>
+                                </div>
+                                <div class="bg-purple-50/70 p-3 rounded-xl border border-purple-100 text-xs text-slate-600 flex items-center gap-2">
+                                    <span>💡</span>
+                                    <span>בחירת הנוסח המועדף תבטיח שההזמנות העתידיות שלך יותאמו מראש למסורת והמנהג של ביתך.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <button type="submit" class="w-full sm:w-auto py-3.5 px-8 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 text-slate-950 font-black text-xs sm:text-sm rounded-xl shadow-lg hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer">
+                                <span>💾</span> שמור עדכון פרטי חשבון
+                            </button>
+                            <span class="text-[11px] text-slate-400 font-medium">✨ הפרטים יישמרו וימולאו אוטומטית בכל רכישה באתר</span>
+                        </div>
+                    </form>
                 </div>
             </div>
 

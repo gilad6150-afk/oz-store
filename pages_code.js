@@ -134,13 +134,13 @@
                             </div>
                             <div>
                                 <label class="block text-xs font-bold text-slate-600 mb-1">עיר / יישוב *</label>
-                                <input type="text" required placeholder="ראש העין" class="w-full p-3 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary" />
+                                <input type="text" id="checkout-city" required placeholder="ראש העין" class="w-full p-3 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary" value="${state.user ? (state.user.city || '') : ''}" />
                             </div>
                         </div>
 
                         <div>
                             <label class="block text-xs font-bold text-slate-600 mb-1">כתובת ומספר בית *</label>
-                            <input type="text" required placeholder="שלום מנצורה 48" class="w-full p-3 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary" />
+                            <input type="text" id="checkout-street" required placeholder="שלום מנצורה 48" class="w-full p-3 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary" value="${state.user ? (state.user.street || '') : ''}" />
                         </div>
 
                         <h4 class="font-black text-sm text-slate-800 border-b border-slate-100 pb-2 pt-2">2. בחר שיטת משלוח וזמן אספקה:</h4>
