@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://oz-judaica.co.il/sitemap.xml

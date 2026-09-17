@@ -1,0 +1,251 @@
+    <!-- DYNAMIC MAIN CONTENT CONTAINER -->
+    <main id="main-content" class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
+        <div id="shop" class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            
+            <!-- SIDEBAR FILTERS -->
+            <aside class="lg:col-span-1 space-y-6">
+                <div class="bg-white p-6 rounded-3xl border border-purple-100 oz-shadow text-right">
+                    <div class="flex items-center justify-between mb-6 pb-4 border-b border-purple-100">
+                        <h3 class="font-black text-lg text-slate-900 flex items-center gap-2">
+                            <span>סינון מוצרים</span>
+                        </h3>
+                        <button onclick="resetFilters()" class="text-xs font-bold text-oz-primary hover:underline">איפוס</button>
+                    </div>
+
+                    <!-- Category Filter Links -->
+                    <div class="mb-6">
+                        <h4 class="font-bold text-xs text-slate-500 uppercase tracking-wider mb-3">קטגוריות מוצרים</h4>
+                        <div class="space-y-1">
+                            <button onclick="filterCategory('all', this)" class="cat-btn w-full text-right py-2.5 px-3.5 rounded-xl font-bold text-xs bg-purple-50 text-oz-primary flex justify-between items-center transition-colors">
+                                <span>כל המוצרים בחנות</span>
+                                <svg class="w-3.5 h-3.5 stroke-current stroke-2 fill-none inline" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+                            </button>
+                            <button onclick="filterCategory('stam', this)" class="cat-btn w-full text-right py-2.5 px-3.5 rounded-xl font-medium text-xs text-slate-700 hover:bg-slate-50 flex justify-between items-center transition-colors">
+                                <span>תשמישי קדושה וסת"ם</span>
+                                <svg class="w-3.5 h-3.5 stroke-current stroke-2 fill-none inline" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+                            </button>
+                            <button onclick="filterCategory('tefillin-bags', this)" class="cat-btn w-full text-right py-2.5 px-3.5 rounded-xl font-medium text-xs text-slate-700 hover:bg-slate-50 flex justify-between items-center transition-colors">
+                                <span>תיקים לתפילין וטלית</span>
+                                <svg class="w-3.5 h-3.5 stroke-current stroke-2 fill-none inline" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+                            </button>
+                            <button onclick="filterCategory('wallets', this)" class="cat-btn w-full text-right py-2.5 px-3.5 rounded-xl font-medium text-xs text-slate-700 hover:bg-slate-50 flex justify-between items-center transition-colors">
+                                <span>ארנקים לגבר</span>
+                                <svg class="w-3.5 h-3.5 stroke-current stroke-2 fill-none inline" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+                            </button>
+                            <button onclick="filterCategory('tallitot-tzitzit', this)" class="cat-btn w-full text-right py-2.5 px-3.5 rounded-xl font-medium text-xs text-slate-700 hover:bg-slate-50 flex justify-between items-center transition-colors">
+                                <span>טליתות וציציות</span>
+                                <svg class="w-3.5 h-3.5 stroke-current stroke-2 fill-none inline" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+                            </button>
+                            <button onclick="filterCategory('mezuzot', this)" class="cat-btn w-full text-right py-2.5 px-3.5 rounded-xl font-medium text-xs text-slate-700 hover:bg-slate-50 flex justify-between items-center transition-colors">
+                                <span>מזוזות ובתי מזוזה</span>
+                                <svg class="w-3.5 h-3.5 stroke-current stroke-2 fill-none inline" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+                            </button>
+                            <button onclick="filterCategory('books', this)" class="cat-btn w-full text-right py-2.5 px-3.5 rounded-xl font-medium text-xs text-slate-700 hover:bg-slate-50 flex justify-between items-center transition-colors">
+                                <span>ספרי קודש וסידורים</span>
+                                <svg class="w-3.5 h-3.5 stroke-current stroke-2 fill-none inline" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+                            </button>
+                            <button onclick="filterCategory('gifts', this)" class="cat-btn w-full text-right py-2.5 px-3.5 rounded-xl font-medium text-xs text-slate-700 hover:bg-slate-50 flex justify-between items-center transition-colors">
+                                <span>מתנות ויודאיקה</span>
+                                <svg class="w-3.5 h-3.5 stroke-current stroke-2 fill-none inline" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+                            </button>
+
+                            <!-- Dedicated Wishlist / Liked Products Sidebar Button -->
+                            <button onclick="openAccountPageWithWishlist()" class="w-full text-right py-3 px-3.5 mt-2.5 rounded-2xl font-black text-xs bg-gradient-to-r from-red-500 via-rose-500 to-red-600 text-white flex justify-between items-center shadow-lg shadow-red-500/20 hover:from-red-600 hover:to-rose-700 transition-all active:scale-95 cursor-pointer" title="מוצרים שאהבתי - החשבון שלי">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-sm">❤️</span>
+                                    <span>מוצרים שאהבתי</span>
+                                    <span id="sidebar-wishlist-badge" class="bg-white text-red-600 text-[10px] font-black py-0.5 px-2 rounded-full hidden">0</span>
+                                </div>
+                                <svg class="w-4 h-4 stroke-current stroke-2 fill-none inline" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Price Filter Chips -->
+                    <div class="mb-6 pb-6 border-b border-slate-100">
+                        <h4 class="font-bold text-xs text-slate-500 uppercase tracking-wider mb-3">טווח מחירים</h4>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="filterPrice(0, 150, this)" class="price-chip text-xs font-bold py-2.5 px-3 rounded-xl bg-slate-50 border border-slate-200 transition-all text-slate-700">עד ₪150</button>
+                            <button onclick="filterPrice(150, 300, this)" class="price-chip text-xs font-bold py-2.5 px-3 rounded-xl bg-slate-50 border border-slate-200 transition-all text-slate-700">₪150 - ₪300</button>
+                            <button onclick="filterPrice(300, 600, this)" class="price-chip text-xs font-bold py-2.5 px-3 rounded-xl bg-slate-50 border border-slate-200 transition-all text-slate-700">₪300 - ₪600</button>
+                            <button onclick="filterPrice(600, 99999, this)" class="price-chip text-xs font-bold py-2.5 px-3 rounded-xl bg-slate-50 border border-slate-200 transition-all text-slate-700">₪600+</button>
+                        </div>
+                    </div>
+
+                    <!-- Availability Toggle -->
+                    <div>
+                        <label class="flex items-center justify-between cursor-pointer">
+                            <span class="text-xs font-bold text-slate-700">מוצרים במלאי בלבד</span>
+                            <input type="checkbox" onchange="toggleInStock(this)" class="w-4 h-4 text-oz-primary rounded border-slate-300 focus:ring-oz-primary" />
+                        </label>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- PRODUCT GRID & CATALOG (MOBILE 2-COLUMNS) -->
+            <section class="lg:col-span-3 space-y-6">
+                <div class="flex items-center justify-between bg-white p-4 px-6 rounded-2xl border border-purple-100 oz-shadow">
+                    <span id="product-count" class="text-xs font-extrabold text-slate-600">מציג מוצרים...</span>
+                    <div class="flex items-center gap-2 text-xs font-bold text-slate-500">
+                        <span>משלוח חינם מעל ₪399 🚚</span>
+                    </div>
+                </div>
+
+                <div id="products-grid" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
+                    <!-- Products Injected via JavaScript -->
+                </div>
+
+                <!-- RICH CATEGORY SEO ACCORDIONS SECTION -->
+                <div class="col-span-full mt-12 pt-8 border-t border-purple-100">
+                    <div class="text-right mb-6">
+                        <span class="text-xs font-black text-oz-primary uppercase tracking-widest bg-purple-50 py-1 px-3 rounded-full border border-purple-100">מדריכי איכות ומידע תורני</span>
+                        <h3 class="text-2xl font-black text-slate-900 mt-2">כל מה שחשוב לדעת על תשמישי הקדושה והיודאיקה במכון עוז</h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-right">
+                        <div class="bg-white p-6 rounded-3xl border border-purple-100 shadow-sm space-y-3">
+                            <h4 class="font-black text-base text-slate-800 flex items-center gap-2">
+                                <span>מכון עוז – תשמישי קדושה, תפילין מהודרות וציוד סופרים</span>
+                            </h4>
+                            <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                                מחפשים תפילין מהודרות לבר מצווה או לחתן? במכון עוז אנו מציעים תפילין בהגהת מחשב וגברא, מזוזות כשרות בהשגחה צמודה, וציוד היקפי לסופרי סת"ם...
+                            </p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-3xl border border-purple-100 shadow-sm space-y-3">
+                            <h4 class="font-black text-base text-slate-800 flex items-center gap-2">
+                                <span>ארנקים ותיקים לגבר – עור נאפה 100% פרימיום</span>
+                            </h4>
+                            <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                                קולקציית הארנקים והתיקים של מכון עוז מציעה ארנקי עור נאפה ענק, ארנקי מגנט דקים, ותיקי יוקרה לגבר באיכות ללא פשרות...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EXPANDABLE SEO BOX FOR HOME / SHOP -->
+                <div class="col-span-full mt-8">
+                    <div class="bg-gradient-to-br from-slate-900 via-purple-950 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-purple-800/40 dir-rtl text-right">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="w-10 h-10 rounded-2xl bg-amber-400/20 border border-amber-400/40 text-amber-400 flex items-center justify-center font-black text-xl shrink-0">📜</span>
+                            <div>
+                                <h3 class="font-black text-lg sm:text-xl text-amber-300">רקע ומידע נוסף | מכון עוז - תשמישי קדושה ויוקרה בראש העין</h3>
+                                <p class="text-xs text-slate-300">רחוב שלום מנצורה 48, ראש העין | טלפון להזמנות וייעוץ: 052-686-7192</p>
+                            </div>
+                        </div>
+
+                        <p class="text-xs sm:text-sm leading-relaxed text-slate-200">
+                            ברוכים הבאים ל<strong>מכון עוז</strong>, המרכז המוביל בישראל לתשמישי קדושה, תפילין מהודרות, מזוזות כשרות, ארנקי עור נאפה וציוד סת"ם מובחר. במכון עוז אנו משלבים מסורת כתיבה עתיקת יומין עם בדיקות טכנולוגיות מתקדמות (הגהת גברא כפולה לצד סורק ממוחשב אופטי) כדי להבטיח לכל לקוח מוצר כשר למהדרין ברמת הגימור הגבוהה ביותר.
+                        </p>
+
+                        <div id="seo-content-shop" class="hidden mt-4 pt-4 border-t border-purple-800/60 space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            <p>
+                                <strong>תפילין מהודרות לבר מצווה ולמבוגרים:</strong> אנו מתמחים בייצור ואספקת בתים ופרשיות לתפילין מבהמה גסה (עור עגל עבה ועמיד במיוחד לשמירה על ריבוע מדויק לכל החיים) בנוסח ספרדי, אשכנזי, חב"ד ותימני. כל סט תפילין מגיע עם תעודת אחריות, הגהת מחשב מאושרת, ונרתיק מגן מהודר.
+                            </p>
+                            <p>
+                                <strong>מזוזות כשרות ובתי מזוזה מעוצבים:</strong> בחנותנו תמצאו קלפי מזוזה כשרים שנכתבו ע"י סופרי סת"ם מוסמכים ויראי שמיים בגדלים 10, 12, ו-15 ס"מ. בנוסף, קולקציית בתי המזוזה שלנו כוללת עיצובי יוקרה מעץ זית ישראלי, יציקות אפוקסי מודרניות, ואלומיניום מוברש המתאימים לעיצוב פנים עכשווי.
+                            </p>
+                            <p>
+                                <strong>תיקים לתפילין וארנקים לגבר:</strong> במכון עוז הפרדנו באופן מקצועי בין תיקים לתפילין וטלית (תיקי קטיפה, דמוי עור יוקרתי, תיקי מזוודה קשיחים) לבין קולקציית ארנקי עור נאפה 100% פרימיום לגבר, הכוללת ארנקים דקים עם הגנת RFID, ארנקי מפתח, וארנקי כרטיסים אלגנטיים.
+                            </p>
+                            <p>
+                                <strong>משלוחים לכל הארץ ושירות פרונטלי:</strong> החנות הפיזית שלנו ממוקמת ברחוב שלום מנצורה 48, ראש העין. אנו מספקים משלוחים מהירים עד פתח הבית לכל חלקי הארץ, שירות בדיקת תפילין ומזוזות מוסמכת, ומענה טלפוני זמין במספר 052-686-7192.
+                            </p>
+                        </div>
+
+                        <div class="mt-4 pt-2 flex justify-center sm:justify-start">
+                            <button id="seo-btn-shop" onclick="toggleSeoExpand('shop')" class="py-2.5 px-6 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-950 font-black text-xs sm:text-sm rounded-xl shadow-lg transition-all transform hover:scale-105 active:scale-95 cursor-pointer">
+                                קרא עוד... ↓
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- DYNAMIC DEDICATED PRODUCT DETAIL PAGE CONTAINER -->
+        <div id="product-page-container" class="hidden min-h-[600px] w-full"></div>
+
+        <!-- DYNAMIC VIP MY ACCOUNT PAGE CONTAINER -->
+        <div id="account-page-container" class="hidden min-h-[600px] w-full"></div>
+    </main>
+
+    <!-- MAGAZINE & HALACHA SECTION -->
+    <section id="magazine" class="py-14 bg-purple-50/50 border-t border-b border-purple-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <!-- Halachic Mandatory Disclaimer Badge -->
+            <div class="inline-flex items-center gap-2 text-xs font-bold text-amber-800 bg-amber-100/90 py-1.5 px-4 rounded-full border border-amber-300 shadow-sm max-w-3xl">
+                <span>⚠️</span>
+                <span>לתשומת לב הקוראים: התוכן המובא במאמרים הינו לשם העשרה בלבד ואינו מהווה הלכה פסוקה או תחליף להתייעצות הלכתית אישית עם רב</span>
+            </div>
+
+            <!-- Title matching user image: מגזין והלכה 📖 -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-purple-200/60 pb-6">
+                <div class="text-right">
+                    <h3 class="text-3xl font-black text-slate-900 flex items-center gap-2">
+                        <span class="text-oz-primary">מגזין והלכה</span>
+                        <span class="text-2xl">📖</span>
+                    </h3>
+                    <p class="text-xs text-slate-500 font-medium mt-1">מדריכים הלכתיים, חידושי סת"ם והידור מצווה – מאמרים מקיפים</p>
+                </div>
+
+                <!-- Article Search Bar -->
+                <div class="relative w-full sm:w-80">
+                    <input type="text" id="article-search-input" oninput="searchArticles(this.value)" placeholder="חפש במאמרים ובמדריכים..." class="w-full py-2.5 pr-10 pl-4 rounded-2xl bg-white border border-purple-200 focus:outline-none focus:border-oz-primary text-xs font-bold shadow-sm" />
+                    <svg class="w-4 h-4 absolute right-3.5 top-3 text-slate-400 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
+                </div>
+            </div>
+
+            <!-- Category Pills Bar for Articles -->
+            <div class="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar pb-2 text-xs font-extrabold">
+                <button onclick="filterArticleCategory('all', this)" class="article-cat-btn py-2 px-4 rounded-xl bg-oz-primary text-white shadow-sm transition-all shrink-0">כל המאמרים</button>
+                <button onclick="filterArticleCategory('תפילין וסת\"ם', this)" class="article-cat-btn py-2 px-4 rounded-xl bg-white text-slate-700 border border-purple-200 hover:bg-purple-50 transition-all shrink-0">תפילין וסת"ם</button>
+                <button onclick="filterArticleCategory('מזוזות ובית', this)" class="article-cat-btn py-2 px-4 rounded-xl bg-white text-slate-700 border border-purple-200 hover:bg-purple-50 transition-all shrink-0">מזוזות ובית</button>
+                <button onclick="filterArticleCategory('טליתות וציציות', this)" class="article-cat-btn py-2 px-4 rounded-xl bg-white text-slate-700 border border-purple-200 hover:bg-purple-50 transition-all shrink-0">טליתות וציציות</button>
+                <button onclick="filterArticleCategory('ספרי תורה', this)" class="article-cat-btn py-2 px-4 rounded-xl bg-white text-slate-700 border border-purple-200 hover:bg-purple-50 transition-all shrink-0">ספרי תורה</button>
+                <button onclick="filterArticleCategory('יודאיקה ומתנות', this)" class="article-cat-btn py-2 px-4 rounded-xl bg-white text-slate-700 border border-purple-200 hover:bg-purple-50 transition-all shrink-0">יודאיקה ומתנות</button>
+                <button onclick="filterArticleCategory('בר מצווה ואירועים', this)" class="article-cat-btn py-2 px-4 rounded-xl bg-white text-slate-700 border border-purple-200 hover:bg-purple-50 transition-all shrink-0">בר מצווה</button>
+                <button onclick="filterArticleCategory('חגים ומועדים', this)" class="article-cat-btn py-2 px-4 rounded-xl bg-white text-slate-700 border border-purple-200 hover:bg-purple-50 transition-all shrink-0">חגים ומועדים</button>
+            </div>
+
+            <!-- Articles Grid -->
+            <div id="articles-container" class="grid grid-cols-1 md:grid-cols-3 gap-6 text-right pt-4">
+                <!-- Articles injected via JS -->
+            </div>
+
+            <!-- EXPANDABLE SEO BOX FOR MAGAZINE -->
+            <div class="mt-10 text-right">
+                <div class="bg-gradient-to-br from-slate-900 via-purple-950 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-purple-800/40 dir-rtl">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-10 h-10 rounded-2xl bg-amber-400/20 border border-amber-400/40 text-amber-400 flex items-center justify-center font-black text-xl shrink-0">📖</span>
+                        <div>
+                            <h3 class="font-black text-lg sm:text-xl text-amber-300">רקע ומידע הלכתי מורחב | ארכיון המאמרים של מכון עוז</h3>
+                            <p class="text-xs text-slate-300">מדריכי עומק הלכתיים ומאמרי איכות לקידום הידור מצווה</p>
+                        </div>
+                    </div>
+
+                    <p class="text-xs sm:text-sm leading-relaxed text-slate-200">
+                        מגזין ההלכה והסת"ם של מכון עוז מציע מאמרים מקיפים העוסקים בהלכות תפילין, קלפי מזוזה, הידור מצוות, בדיקת סת"ם, שמירה על מוצרי עור ותשמישי קדושה, והדרכות לנערי בר מצווה וחתנים.
+                    </p>
+
+                    <div id="seo-content-magazine" class="hidden mt-4 pt-4 border-t border-purple-800/60 space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        <p>
+                            <strong>תוכן הלכתי מוסמך ומעודכן:</strong> המאמרים נכתבו על סמך פוסקי ההלכה הראשונים והאחרונים (השולחן ערוך, משנה ברורה, ילקוט יוסף, חזון איש) כדי להעניק לקוראים ידע מעשי ומדויק בכל סוגיה.
+                        </p>
+                        <p>
+                            <strong>מילות מפתח וקישורים פנימיים:</strong> כל מאמר כולל קישורים ישירים למוצרי החנות הרלוונטיים (תפילין מבהמה גסה, מזוזות כשרות, טלית צמר טהור, תיקים לתפילין, ארנקי עור נאפה), ומאפשר מעבר מהיר לקריאה ורכישה מושכלת.
+                        </p>
+                        <p>
+                            <strong>ליצירת קשר ושאילת רב:</strong> מכון עוז, רחוב שלום מנצורה 48, ראש העין | טלפון: 052-686-7192.
+                        </p>
+                    </div>
+
+                    <div class="mt-4 pt-2 flex justify-center sm:justify-start">
+                        <button id="seo-btn-magazine" onclick="toggleSeoExpand('magazine')" class="py-2.5 px-6 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-950 font-black text-xs sm:text-sm rounded-xl shadow-lg transition-all transform hover:scale-105 active:scale-95 cursor-pointer">
+                            קרא עוד... ↓
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

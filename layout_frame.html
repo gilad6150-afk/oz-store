@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מכון עוז | תשמישי קדושה, תפילין מהודרות וארנקי יוקרה לגבר - חנות אונליין</title>
+    <!-- PERFORMANCE BOOST: DNS PREFETCH & PRECONNECT -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- TAILWIND CSS CDN & OZ THEME CONFIG -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'oz-primary': '#5A328E',
+                        'oz-hover': '#4A2878'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Rubik', sans-serif; direction: rtl; }
+        .glass-header { background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(12px); }
+        .oz-shadow { box-shadow: 0 12px 32px -6px rgba(90, 50, 142, 0.08); }
+        .gold-border { border-color: #D4AF37; }
+        .wishlist-btn.active svg { fill: #EF4444 !important; color: #EF4444 !important; }
+        .price-chip.active { background-color: #5A328E !important; color: #FFFFFF !important; border-color: #5A328E !important; }
+        @keyframes toastIn { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .animate-toast { animation: toastIn 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .mega-menu { opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.25s ease; }
+        .group\/menu:hover .mega-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        /* Hide scrollbars for smooth horizontal carousel */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen relative antialiased selection:bg-purple-200 selection:text-oz-primary">
+
+    /* TOP_BAR_PLACEHOLDER */
+
+    /* CLEAN_NAV_PLACEHOLDER */
+
+    /* ANIMATED_HERO_PLACEHOLDER */
+
+    /* SHOP_LAYOUT_PLACEHOLDER */
+
+    /* FOOTER_PLACEHOLDER */
+
+    <!-- SOCIAL PROOF PURCHASE TOAST -->
+    <div id="purchase-toast" class="fixed bottom-24 left-6 z-[99999] bg-white border border-purple-100 rounded-2xl p-4 shadow-2xl flex items-center gap-3 hidden animate-toast dir-rtl">
+        <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-lg shrink-0">🛒</div>
+        <div>
+            <div class="text-xs font-extrabold text-slate-800" id="toast-title">ישראל מירושלים</div>
+            <div class="text-[11px] text-oz-primary font-bold" id="toast-desc">רכש כעת: תפילין מהודרות ⚡</div>
+        </div>
+    </div>
+
+    /* FLOATING_CART_PLACEHOLDER */
+
+    /* MODALS_PLACEHOLDER */
+
+    <!-- INLINED PRODUCTS & ARTICLES DATABASE TO GUARANTEE 100% SELF-CONTAINED LOADING IN ARTIFACTS & IFRAMES -->
+    <script>
+        /* PRODUCTS_DATA_PLACEHOLDER */
+        /* ARTICLES_DATA_PLACEHOLDER */
+    </script>
+
+    <!-- MAIN APP JAVASCRIPT -->
+    <script>
+        const products = (typeof window.PRODUCTS_DATA !== 'undefined' && window.PRODUCTS_DATA.length > 0) ? window.PRODUCTS_DATA : ((typeof PRODUCTS_DATA !== 'undefined') ? PRODUCTS_DATA : ((typeof realProductsDB !== 'undefined') ? realProductsDB : []));
+        const articles = (typeof window.ARTICLES_DATA !== 'undefined' && window.ARTICLES_DATA.length > 0) ? window.ARTICLES_DATA : ((typeof ARTICLES_DATA !== 'undefined') ? ARTICLES_DATA : ((typeof articlesDB !== 'undefined') ? articlesDB : []));
+
+        let state = {
+            selectedCategory: 'all',
+            selectedPriceMin: 0,
+            selectedPriceMax: 99999,
+            inStockOnly: false,
+            cart: [],
+            wishlist: JSON.parse(localStorage.getItem('oz_wishlist') || '[]'),
+            user: JSON.parse(localStorage.getItem('oz_user') || 'null'),
+            exitIntentTriggered: false
+        };
+
+        /* PAGES_CODE_PLACEHOLDER */
+
+        /* CLEAN_RENDER_PLACEHOLDER */
+
+        function initApp() {
+            renderProducts();
+            renderArticles();
+            updateWishlistBadge();
+            updateUserLabel();
+            updateCartUI();
+            startAutoScrollCarousels();
+            startHeroSlider();
+            startSocialProofToasts();
+            setupExitIntent();
+        }
+
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            initApp();
+        } else {
+            document.addEventListener('DOMContentLoaded', initApp);
+        }
+    </script>
+</body>
+</html>

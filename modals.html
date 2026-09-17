@@ -1,0 +1,380 @@
+    <!-- FLOATING ACCESSIBILITY WIDGET & TOOLBAR -->
+    <div class="fixed bottom-6 right-6 z-[9999999]">
+        <button onclick="toggleAccessibilityMenu()" class="w-12 h-12 rounded-full bg-oz-primary hover:bg-oz-hover text-white flex items-center justify-center shadow-2xl border-2 border-white transition-all transform hover:scale-110 active:scale-95" title="תפריט נגישות" aria-label="תפריט נגישות">
+            <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/></svg>
+        </button>
+
+        <!-- Accessibility Dropdown Panel -->
+        <div id="accessibility-menu" class="hidden absolute bottom-16 right-0 w-80 bg-white rounded-3xl p-5 shadow-2xl border border-purple-100 text-right dir-rtl space-y-3 text-slate-800">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                <h4 class="font-black text-sm text-oz-primary flex items-center gap-1.5">
+                    <span>♿ תפריט נגישות ע"פ החוק</span>
+                </h4>
+                <button onclick="toggleAccessibilityMenu()" class="text-slate-400 hover:text-slate-600 font-bold text-lg">&times;</button>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2 text-xs font-bold">
+                <button onclick="changeFontSize(1)" class="p-2.5 bg-purple-50 hover:bg-purple-100 rounded-xl text-oz-primary border border-purple-100 transition-colors">א+ הגדלת גופן</button>
+                <button onclick="changeFontSize(-1)" class="p-2.5 bg-purple-50 hover:bg-purple-100 rounded-xl text-oz-primary border border-purple-100 transition-colors">א- הקטנת גופן</button>
+                <button onclick="toggleHighContrast()" class="p-2.5 bg-slate-900 text-amber-300 hover:bg-black rounded-xl border border-slate-700 transition-colors">ניגודיות גבוהה</button>
+                <button onclick="toggleHighlightLinks()" class="p-2.5 bg-purple-50 hover:bg-purple-100 rounded-xl text-oz-primary border border-purple-100 transition-colors">הדגשת קישורים</button>
+                <button onclick="toggleReadableFont()" class="p-2.5 bg-purple-50 hover:bg-purple-100 rounded-xl text-oz-primary border border-purple-100 transition-colors">גופן קריא</button>
+                <button onclick="resetAccessibility()" class="p-2.5 bg-slate-100 hover:bg-slate-200 rounded-xl text-slate-600 transition-colors">איפוס הגדרות</button>
+            </div>
+
+            <div class="pt-2 border-t border-slate-100 text-[11px] font-bold text-center">
+                <button onclick="toggleAccessibilityMenu(); toggleModal('accessibility-modal');" class="text-oz-primary hover:underline block w-full">קרא את הצהרת הנגישות המלאה 📜</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- LIVE SEARCH MODAL -->
+    <div id="search-modal" onclick="if(event.target===this) toggleModal('search-modal')" class="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[999999] hidden flex items-start justify-center p-4 pt-16 sm:pt-24 cursor-pointer">
+        <div class="bg-white w-full max-w-3xl rounded-3xl shadow-2xl overflow-hidden relative p-6 sm:p-8 text-right cursor-default max-h-[85vh] flex flex-col border border-purple-100 dir-rtl">
+            <button onclick="toggleModal('search-modal')" class="absolute top-4 left-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 font-bold text-xl flex items-center justify-center transition-colors z-30">&times;</button>
+            
+            <div class="flex items-center gap-3 text-oz-primary mb-4 border-b border-slate-100 pb-3">
+                <div class="w-10 h-10 rounded-2xl bg-purple-100 text-oz-primary flex items-center justify-center font-black text-xl shrink-0">🔍</div>
+                <div>
+                    <h3 class="text-xl font-black text-slate-900">חיפוש מוצרים בלייב</h3>
+                    <p class="text-xs text-slate-500">חפש תפילין, מזוזות, ארנקים, טליתות או כל מוצר בחנות</p>
+                </div>
+            </div>
+
+            <!-- Search Input Bar -->
+            <div class="relative mb-6">
+                <input type="text" id="search-input" oninput="handleSearch(this.value)" placeholder="הקלד שם מוצר, קטגוריה או מילת מפתח..." class="w-full p-4 pr-12 bg-purple-50/50 border-2 border-purple-200 rounded-2xl text-sm font-bold text-slate-800 outline-none focus:border-oz-primary focus:bg-white transition-all shadow-inner" />
+                <svg class="w-6 h-6 text-oz-primary absolute top-4 right-4 fill-none stroke-current stroke-2 pointer-events-none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
+            </div>
+
+            <!-- Results List Container -->
+            <div id="search-results" class="flex-grow overflow-y-auto space-y-3 pr-1">
+                <div class="text-center py-12 text-slate-400 font-bold text-xs">
+                    הקלד שם מוצר או קטגוריה בתיבת החיפוש...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCT DETAIL PAGE & QUICK VIEW MODAL -->
+    <div id="quick-view-modal" onclick="if(event.target===this) toggleModal('quick-view-modal')" class="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[999999] hidden flex items-center justify-center p-4 cursor-pointer">
+        <div class="bg-white w-full max-w-3xl rounded-3xl shadow-2xl overflow-hidden relative p-6 sm:p-8 text-right cursor-default max-h-[90vh] overflow-y-auto border border-purple-100 dir-rtl">
+            <button onclick="toggleModal('quick-view-modal')" class="absolute top-4 left-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 font-bold text-xl flex items-center justify-center transition-colors z-30" title="סגור וחזור">&times;</button>
+            <div id="quick-view-content">
+                <!-- Injected via JS dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- HIGH-UX CHECKOUT MODAL -->
+    <div id="checkout-modal" onclick="if(event.target===this) toggleModal('checkout-modal')" class="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[999999] hidden flex items-center justify-center p-4 cursor-pointer">
+        <div class="bg-white w-full max-w-4xl rounded-3xl shadow-2xl overflow-hidden relative p-6 max-h-[90vh] overflow-y-auto text-right cursor-default border border-purple-100">
+            <button onclick="toggleModal('checkout-modal')" class="absolute top-4 left-4 text-slate-400 hover:text-slate-600 font-bold text-2xl z-30">&times;</button>
+            <div id="checkout-modal-content">
+                <!-- Injected via JS dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- SHIPPING & RETURNS POLICY MODAL (חוק הגנת הצרכן) -->
+    <div id="shipping-returns-modal" onclick="if(event.target===this) toggleModal('shipping-returns-modal')" class="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[999999] hidden flex items-center justify-center p-4 cursor-pointer">
+        <div class="bg-white w-full max-w-3xl rounded-3xl shadow-2xl overflow-hidden relative p-6 sm:p-8 text-right cursor-default max-h-[90vh] overflow-y-auto border border-purple-100 dir-rtl">
+            <button onclick="toggleModal('shipping-returns-modal')" class="absolute top-4 left-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 font-bold text-xl flex items-center justify-center transition-colors z-30">&times;</button>
+            
+            <div class="flex items-center gap-3 text-oz-primary mb-6 border-b border-slate-100 pb-4">
+                <div class="w-12 h-12 rounded-2xl bg-purple-100 text-oz-primary flex items-center justify-center font-black text-2xl shrink-0 shadow-inner">🚚</div>
+                <div>
+                    <h3 class="text-2xl font-black text-slate-900">מדיניות משלוחים, אספקה והחזרת מוצרים</h3>
+                    <p class="text-xs text-oz-primary font-bold">מכון עוז – עמידה מלאה בחוק הגנת הצרכן, תשמ"א-1981</p>
+                </div>
+            </div>
+
+            <div class="space-y-5 text-xs text-slate-700 leading-relaxed font-medium">
+                <!-- Card 1: Delivery Options -->
+                <div class="p-5 bg-gradient-to-br from-purple-50 via-white to-purple-50/50 rounded-2xl border border-purple-100 shadow-sm space-y-3">
+                    <h4 class="font-extrabold text-sm text-oz-primary flex items-center gap-2">
+                        <span>📦</span> אפשרויות משלוח, עלויות וזמני אספקה
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                        <div class="p-3 bg-white rounded-xl border border-purple-100 space-y-1">
+                            <div class="font-black text-slate-900 flex items-center justify-between">
+                                <span class="flex items-center gap-1.5">🚀 משלוח מהיר</span>
+                                <span class="text-oz-primary font-black">₪70</span>
+                            </div>
+                            <p class="text-slate-500 font-medium">1-3 ימי עסקים בלבד עד פתח הבית בתיאום מראש</p>
+                        </div>
+
+                        <div class="p-3 bg-white rounded-xl border border-purple-100 space-y-1">
+                            <div class="font-black text-slate-900 flex items-center justify-between">
+                                <span class="flex items-center gap-1.5">🚚 משלוח רגיל</span>
+                                <span class="text-oz-primary font-black">₪35</span>
+                            </div>
+                            <p class="text-slate-500 font-medium">5-10 ימי עסקים לכל רחבי הארץ (חינם בקנייה מעל ₪399)</p>
+                        </div>
+
+                        <div class="p-3 bg-white rounded-xl border border-purple-100 space-y-1">
+                            <div class="font-black text-slate-900 flex items-center justify-between">
+                                <span class="flex items-center gap-1.5">📦 נקודת איסוף</span>
+                                <span class="text-oz-primary font-black">₪19</span>
+                            </div>
+                            <p class="text-slate-500 font-medium">איסוף מנקודת חלוקה/לוקר קרוב לביתך בכל הארץ</p>
+                        </div>
+
+                        <div class="p-3 bg-white rounded-xl border border-purple-100 space-y-1">
+                            <div class="font-black text-slate-900 flex items-center justify-between">
+                                <span class="flex items-center gap-1.5">🏪 איסוף עצמי</span>
+                                <span class="text-emerald-600 font-black">חינם (₪0)</span>
+                            </div>
+                            <p class="text-slate-500 font-medium">בתיאום מראש מחנות מכון עוז: <strong>שלום מנצורה 48, ראש העין</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Consumer Rights & Returns -->
+                <div class="p-5 bg-gradient-to-br from-emerald-50 via-white to-emerald-50/40 rounded-2xl border border-emerald-200 shadow-sm space-y-3">
+                    <h4 class="font-extrabold text-sm text-emerald-900 flex items-center gap-2">
+                        <span>🔄</span> ביטול עסקה והחזרת מוצרים (ע"פ חוק הגנת הצרכן)
+                    </h4>
+                    <p class="text-slate-700">אנו במכון עוז מחויבים לשביעות רצונך המלאה ולשמירה קפדנית על זכויות הצרכן בישראל:</p>
+                    <ul class="space-y-2 pr-2 text-slate-700">
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600 font-bold">•</span>
+                            <div><strong>תקופת ביטול:</strong> ניתן לבטל עסקה ולהחזיר מוצר תוך <strong>14 ימים</strong> מיום קבלת המוצר או מיום קבלת מסמך הגילוי (לפי המאוחר).</div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600 font-bold">•</span>
+                            <div><strong>אזרחים ותיקים, עולים חדשים ואנשים עם מוגבלות:</strong> זכאים לבטל עסקה תוך <strong>4 חודשים</strong> מיום קבלת המוצר כקבוע בסעיף 14ג1 לחוק.</div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600 font-bold">•</span>
+                            <div><strong>דמי ביטול כחוק:</strong> במקרה של ביטול שלא עקב פגם או אי-התאמה, ייגבו דמי ביטול בשיעור 5% ממחיר המוצר או 100 ₪ (הנמוך מביניהם).</div>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600 font-bold">•</span>
+                            <div><strong>תנאי ההחזרה:</strong> המוצר יוחזר כשהוא באריזתו המקורית, שלם, ללא פגם ושלא נעשה בו שימוש.</div>
+                        </li>
+                    </ul>
+
+                    <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-[11px] text-amber-900 font-bold">
+                        ⚠️ <strong>סייגים לזכות הביטול ע"פ סעיף 14ג(ד) לחוק:</strong> מוצרים שיוצרו/הותאמו במיוחד עבור הצרכן (כגון חריטת שמות ממוחשבת אישית, או כתיבת סת"ם מיוחדת לשמה שהוזמנה מראש) אינם ניתנים לביטול לאחר תחילת ביצוע העבודה.
+                    </div>
+                </div>
+
+                <!-- Card 3: Defective Items -->
+                <div class="p-4 bg-purple-50/60 rounded-2xl border border-purple-100 space-y-1.5">
+                    <h4 class="font-extrabold text-sm text-oz-primary flex items-center gap-1.5">
+                        <span>🛠️</span> מוצר פגום / אי התאמה להזמנה
+                    </h4>
+                    <p class="text-slate-700">במקרה שמתגלה פגם במוצר או אי התאמה, מכון עוז יחליף את המוצר ללא עלות נוספת או יזכה את הלקוח החזר כספי מלא (כולל דמי המשלוח) ע"פ בחירת הלקוח.</p>
+                </div>
+
+                <!-- Direct WhatsApp Support Button -->
+                <div class="pt-2 text-center">
+                    <a href="https://wa.me/972526867192?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%9D%D7%9B%D7%95%D7%9F%20%D7%A2%D7%95%D7%96%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%9C%D7%91%D7%A8%D7%A8%20%D7%92%D7%91%D7%99%20%D7%9E%D7%A9%D7%9C%D7%95%D7%97%20%D7%90%D7%95%20%D7%9F%D7%94%D7%97%D7%96%D7%A8%D7%90" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#25D366] hover:bg-emerald-600 text-white font-extrabold text-xs rounded-2xl shadow-lg transition-all transform hover:scale-105">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        <span>שירות לקוחות בוואטסאפ לבירורים מהירים</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TERMS & CONDITIONS MODAL (תקנון האתר ותנאי הזמנה) -->
+    <div id="terms-modal" onclick="if(event.target===this) toggleModal('terms-modal')" class="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[999999] hidden flex items-center justify-center p-4 cursor-pointer">
+        <div class="bg-white w-full max-w-3xl rounded-3xl shadow-2xl overflow-hidden relative p-6 sm:p-8 text-right cursor-default max-h-[90vh] overflow-y-auto border border-purple-100 dir-rtl">
+            <button onclick="toggleModal('terms-modal')" class="absolute top-4 left-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 font-bold text-xl flex items-center justify-center transition-colors z-30">&times;</button>
+            
+            <div class="flex items-center gap-3 text-oz-primary mb-6 border-b border-slate-100 pb-4">
+                <div class="w-12 h-12 rounded-2xl bg-purple-100 text-oz-primary flex items-center justify-center font-black text-2xl shrink-0 shadow-inner">📜</div>
+                <div>
+                    <h3 class="text-2xl font-black text-slate-900">תקנון האתר, תנאי שימוש והזמנה</h3>
+                    <p class="text-xs text-oz-primary font-bold">מכון עוז – תשמישי קדושה וארנקי יוקרה לגבר</p>
+                </div>
+            </div>
+
+            <div class="space-y-4 text-xs text-slate-700 leading-relaxed font-medium">
+                <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                    <h4 class="font-extrabold text-sm text-oz-primary mb-1">1. כללי ומפעיל האתר</h4>
+                    <p>אתר מכון עוז (להלן: "האתר") מופעל על ידי מכון עוז תשמישי קדושה (כתובת: שלום מנצורה 48, ראש העין, טלפון: 052-686-7192). כל שימוש או רכישה באתר מהווים הסכמה מלאה לתנאי תקנון זה.</p>
+                </div>
+
+                <div class="p-4 bg-purple-50/60 rounded-2xl border border-purple-100">
+                    <h4 class="font-extrabold text-sm text-oz-primary mb-1">2. כשרות, הידור והשגחת סת"ם</h4>
+                    <p>כל תשמישי הקדושה (תפילין, מזוזות, ספרי תורה) נכתבים ונבדקים על ידי סופרי סת"ם מורשים ובעלי תעודת הסמכה בתוקף. כל קלף עובר הגהת מחשב למניעת אותיות מחוברות/חסרות לצד הגהת גברא קפדנית ע"י מומחי המכון.</p>
+                </div>
+
+                <div class="p-4 bg-emerald-50/60 rounded-2xl border border-emerald-100">
+                    <h4 class="font-extrabold text-sm text-emerald-900 mb-1">3. אבטחה, סליקה ופרטיות (SSL 256-bit)</h4>
+                    <p>האתר מאובטח ברמת SSL 256-bit המחמירה ביותר בתקן PCI-DSS. פרטי כרטיסי האשראי של הלקוח אינם נשמרים בשרתי האתר ומועברים ישירות לשרתי הסליקה המורשים. הפרטיות ופרטי ההתקשרות של הלקוחות שמורים בדיסקרטיות מלאה.</p>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                    <h4 class="font-extrabold text-sm text-oz-primary mb-1">4. תהליך ההזמנה, מחירים ומע"מ</h4>
+                    <p>כל המחירים באתר כוללים מע"מ כחוק. עם סיום ההזמנה נשלחת חשבונית/אישור הזמנה מיידי במייל וב-SMS. מכון עוז שומר לעצמו את הזכות לעדכן מחירים ומבצעים מעת לעת.</p>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                    <h4 class="font-extrabold text-sm text-oz-primary mb-1">5. דין וסמכות שיפוט</h4>
+                    <p>על תקנון זה ועל כל מערכת היחסים בין המזמין לבין האתר יחולו דיני מדינת ישראל בלבד. לבתי המשפט המוסמכים במחוז מרכז תהיה סמכות השיפוט הבלעדית בכל עניין הנובע מתקנון זה.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ACCESSIBILITY STATEMENT MODAL -->
+    <div id="accessibility-modal" onclick="if(event.target===this) toggleModal('accessibility-modal')" class="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[999999] hidden flex items-center justify-center p-4 cursor-pointer">
+        <div class="bg-white w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden relative p-6 text-right cursor-default max-h-[85vh] overflow-y-auto border border-purple-100 dir-rtl">
+            <button onclick="toggleModal('accessibility-modal')" class="absolute top-4 left-4 text-slate-400 hover:text-slate-600 font-bold text-2xl z-30">&times;</button>
+            <div class="flex items-center gap-3 text-oz-primary mb-4 border-b border-slate-100 pb-3">
+                <div class="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center font-black text-xl">♿</div>
+                <div>
+                    <h3 class="text-xl font-black text-slate-800">הצהרת נגישות ע"פ החוק</h3>
+                    <p class="text-xs text-slate-500">מכון עוז מונגש לכלל הלקוחות ע"פ תקנות נגישות לשירות</p>
+                </div>
+            </div>
+            <div class="space-y-3 text-xs text-slate-700 leading-relaxed font-medium">
+                <p>מכון עוז רואה בחשיבות עליונה את מתן השירות השוויוני, המכבד, והנגיש לכלל האזרחים, לרבות אנשים עם מוגבלויות.</p>
+                <h4 class="font-bold text-oz-primary">התאמות הנגישות באתר:</h4>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>תפריט נגישות צף המאפשר הגדלת/הקטנת גופן, ניגודיות גבוהה, והדגשת קישורים.</li>
+                    <li>תמיכה מלאה בניווט מקלדת ותקורת קורא מסך.</li>
+                    <li>מבנה אתר רספונסיבי המותאם לכל סוגי המסכים.</li>
+                </ul>
+                <h4 class="font-bold text-oz-primary">רכז נגישות וצור קשר:</h4>
+                <p>במידה ומצאתם רכיב שאינו נגיש מספיק, נשמח שתפנו אלינו ונפתור זאת בהקדם:</p>
+                <p>📞 טלפון: 052-686-7192 | 📍 כתובת החנות: שלום מנצורה 48, ראש העין</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- EXIT INTENT DISCOUNT POPUP -->
+    <div id="exit-intent-popup" onclick="if(event.target===this) toggleModal('exit-intent-popup')" class="fixed inset-0 bg-slate-900/70 backdrop-blur-md z-[9999999] hidden flex items-center justify-center p-4 cursor-pointer">
+        <div class="bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden relative p-6 text-center cursor-default border-2 border-amber-400 dir-rtl animate-toast">
+            <button onclick="toggleModal('exit-intent-popup')" class="absolute top-4 left-4 text-slate-400 hover:text-slate-600 font-bold text-2xl z-30">&times;</button>
+            <div class="w-16 h-16 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center mx-auto mb-4 text-3xl font-black shadow-inner">🎁</div>
+            <span class="bg-amber-400 text-slate-950 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider">מתנה מיוחדת לפני שעוזבים!</span>
+            <h3 class="text-2xl font-black text-slate-900 mt-3 mb-2">מחכים! קבל 10% הנחה על הקנייה הראשונה</h3>
+            <p class="text-xs text-slate-600 mb-6 font-medium">הרשם עכשיו וקבל קופון בלעדי לשימוש מיידי בקופה: <strong class="text-oz-primary font-black">OZ10</strong></p>
+            <form onsubmit="claimExitDiscount(event)" class="space-y-3">
+                <input type="text" id="exit-intent-input" placeholder="הכנס כתובת דוא&quot;ל או נייד" class="w-full p-3.5 border border-slate-200 rounded-2xl text-xs font-bold text-center outline-none focus:border-oz-primary" />
+                <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-black text-xs rounded-2xl shadow-xl transition-all active:scale-95 cursor-pointer">קבל קופון 10% הנחה עכשיו ⚡</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- TALLIT SIZE CALCULATOR MODAL -->
+    <div id="tallit-calc-modal" onclick="if(event.target===this) toggleModal('tallit-calc-modal')" class="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[999999] hidden flex items-center justify-center p-4 cursor-pointer">
+        <div class="bg-white w-full max-w-xl rounded-3xl shadow-2xl overflow-hidden relative p-6 text-right cursor-default border border-purple-100 dir-rtl">
+            <button onclick="toggleModal('tallit-calc-modal')" class="absolute top-4 left-4 text-slate-400 hover:text-slate-600 font-bold text-2xl z-30">&times;</button>
+            <div class="flex items-center gap-3 text-oz-primary mb-4 border-b border-purple-100 pb-3">
+                <div class="w-12 h-12 rounded-2xl bg-purple-100 text-oz-primary flex items-center justify-center font-black text-2xl shrink-0">📐</div>
+                <div>
+                    <h3 class="text-xl font-black text-slate-900">מחשבון התאמת גודל טלית</h3>
+                    <p class="text-xs text-oz-primary font-bold">מצא את מידת הטלית המדויקת לפי הגובה וסגנון העטיפה</p>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">מה הגובה שלך? (בס"מ)</label>
+                    <input type="number" id="calc-height" placeholder="לדוגמה: 175" class="w-full p-3 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary" />
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">סגנון כיסוי ועטיפה מועדף</label>
+                    <select id="calc-style" class="w-full p-3 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary">
+                        <option value="standard">כיסוי סטנדרטי (עטיפה מקובלת)</option>
+                        <option value="wide">כיסוי רחב ומלא (עטיפה ארוכה עד הברכיים)</option>
+                        <option value="katan">טלית קטן / גופייה (לבישה תחת החולצה)</option>
+                    </select>
+                </div>
+                <button onclick="calculateTallitSize()" class="w-full py-3.5 bg-oz-primary hover:bg-oz-hover text-white font-black text-xs rounded-2xl shadow-lg transition-all">חשב מידה מתאימה ⚡</button>
+                <div id="calc-result" class="hidden p-4 bg-purple-50 rounded-2xl border border-purple-200 text-center font-bold text-xs text-oz-primary"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GIFT FITTING QUIZ MODAL -->
+    <div id="gift-quiz-modal" onclick="if(event.target===this) toggleModal('gift-quiz-modal')" class="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[999999] hidden flex items-center justify-center p-4 cursor-pointer">
+        <div class="bg-white w-full max-w-xl rounded-3xl shadow-2xl overflow-hidden relative p-6 text-right cursor-default border border-purple-100 dir-rtl">
+            <button onclick="toggleModal('gift-quiz-modal')" class="absolute top-4 left-4 text-slate-400 hover:text-slate-600 font-bold text-2xl z-30">&times;</button>
+            <div class="flex items-center gap-3 text-oz-primary mb-4 border-b border-purple-100 pb-3">
+                <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center font-black text-2xl shrink-0">🎁</div>
+                <div>
+                    <h3 class="text-xl font-black text-slate-900">שאלון התאמת מתנה חכם</h3>
+                    <p class="text-xs text-amber-800 font-bold">ענה על 2 שאלות קצרות ונתאים לך את המתנה המושלמת</p>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-2">למי מיועדת המתנה?</label>
+                    <div class="grid grid-cols-3 gap-2 text-xs font-bold">
+                        <button onclick="selectQuizOption('target', 'bar-mitzvah', this)" class="quiz-target-btn p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-oz-primary transition-all text-center">נער בר מצווה 👦</button>
+                        <button onclick="selectQuizOption('target', 'groom', this)" class="quiz-target-btn p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-oz-primary transition-all text-center">חתן / ארוס 🤵</button>
+                        <button onclick="selectQuizOption('target', 'father', this)" class="quiz-target-btn p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-oz-primary transition-all text-center">אבא / חבר 👨</button>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-2">מה מסגרת התקציב שלך?</label>
+                    <div class="grid grid-cols-3 gap-2 text-xs font-bold">
+                        <button onclick="selectQuizOption('budget', 'low', this)" class="quiz-budget-btn p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-oz-primary transition-all text-center">עד ₪200</button>
+                        <button onclick="selectQuizOption('budget', 'mid', this)" class="quiz-budget-btn p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-oz-primary transition-all text-center">₪200 - ₪600</button>
+                        <button onclick="selectQuizOption('budget', 'high', this)" class="quiz-budget-btn p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-oz-primary transition-all text-center">₪600+</button>
+                    </div>
+                </div>
+                <button onclick="runGiftQuiz()" class="w-full py-3.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-black text-xs rounded-2xl shadow-lg transition-all">הצג מתנות מומלצות ✨</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGIN & ACCOUNT MODAL -->
+    <div id="login-modal" onclick="if(event.target===this) toggleModal('login-modal')" class="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[999999] hidden flex items-center justify-center p-4 cursor-pointer">
+        <div class="bg-white w-full max-w-md rounded-3xl shadow-2xl overflow-hidden relative p-6 text-right cursor-default border border-purple-100 dir-rtl">
+            <button onclick="toggleModal('login-modal')" class="absolute top-4 left-4 text-slate-400 hover:text-slate-600 font-bold text-2xl z-30">&times;</button>
+            <div class="text-center mb-6">
+                <div class="w-14 h-14 rounded-full bg-purple-100 text-oz-primary flex items-center justify-center mx-auto mb-3 font-black text-2xl">👤</div>
+                <h3 class="text-xl font-black text-slate-900">התחברות לחשבון אישי</h3>
+                <p class="text-xs text-slate-500 mt-1">התחבר כדי לצפות בהזמנות שמורות ולשמור מוצרים במועדפים</p>
+            </div>
+            <form onsubmit="handleUserLogin(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">שם מלא</label>
+                    <input type="text" id="login-name-input" required placeholder="ישראל ישראלי" class="w-full p-3 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary" />
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">מספר טלפון נייד</label>
+                    <input type="tel" id="login-phone-input" required placeholder="052-686-7192" class="w-full p-3 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary" />
+                </div>
+                <button type="submit" class="w-full py-3.5 bg-oz-primary hover:bg-oz-hover text-white font-black text-xs rounded-2xl shadow-lg transition-all">התחבר עכשיו ⚡</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ARTICLE READER MODAL (מגזין והלכה 📖) -->
+    <div id="article-modal" onclick="if(event.target===this) closeArticleModal()" class="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[999999] hidden flex items-center justify-center p-4 sm:p-6 overflow-y-auto cursor-pointer">
+        <div class="bg-white w-full max-w-3xl rounded-3xl shadow-2xl overflow-hidden relative text-right cursor-default border border-purple-100 dir-rtl my-8 max-h-[90vh] flex flex-col">
+            <!-- Modal Header Bar -->
+            <div class="p-4 px-6 bg-slate-50 border-b border-slate-100 flex items-center justify-between shrink-0">
+                <div class="flex items-center gap-2">
+                    <span class="text-lg">📖</span>
+                    <span class="font-black text-sm text-slate-800">מגזין והלכה • מכון עוז</span>
+                </div>
+                <button onclick="closeArticleModal()" class="w-8 h-8 rounded-full bg-slate-200/60 hover:bg-slate-200 text-slate-600 flex items-center justify-center font-black text-lg transition-colors">&times;</button>
+            </div>
+
+            <!-- Dynamic Content Area -->
+            <div id="article-modal-body" class="p-6 sm:p-8 overflow-y-auto space-y-6">
+                <!-- Article details injected dynamically by openArticleModal(id) -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CRM & AUTOMATED SMS MARKETING DASHBOARD MODAL -->
+    <div id="crm-modal" onclick="if(event.target===this) toggleModal('crm-modal')" class="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[999999] hidden flex items-center justify-center p-4 cursor-pointer">
+        <div class="bg-white w-full max-w-5xl rounded-3xl shadow-2xl overflow-hidden relative p-6 sm:p-8 text-right cursor-default max-h-[90vh] overflow-y-auto border border-purple-100 dir-rtl">
+            <button onclick="toggleModal('crm-modal')" class="absolute top-4 left-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 font-bold text-xl flex items-center justify-center transition-colors z-30" title="סגור וחזור">&times;</button>
+            <div id="crm-modal-content">
+                <!-- Injected via JS dynamically -->
+            </div>
+        </div>
+    </div>
+
+
