@@ -207,9 +207,13 @@ function renderProducts() {
                 const isTallit = pCat === 'tallitot-tzitzit' || pCatName.includes('טלית') || pCatName.includes('ציצית') || pName.includes('טלית') || pName.includes('ציצית');
                 if (!isTallit) return false;
             }
-            else if (state.selectedCategory === 'mezuzot') {
+            else if (state.selectedCategory === 'mezuzot' || state.selectedCategory.startsWith('mezuzot-')) {
                 const isMezuzah = pCat === 'mezuzot' || pCatName.includes('מזוזה') || pName.includes('מזוזה');
                 if (!isMezuzah) return false;
+                if (state.selectedCategory === 'mezuzot-epoxy' && !pName.includes('אפוקסי') && (!p.subcategory || !p.subcategory.includes('אפוקסי'))) return false;
+                if (state.selectedCategory === 'mezuzot-plastic' && !pName.includes('פלסטיק') && (!p.subcategory || !p.subcategory.includes('פלסטיק'))) return false;
+                if (state.selectedCategory === 'mezuzot-aluminum' && !pName.includes('אלומיניום') && (!p.subcategory || !p.subcategory.includes('אלומיניום'))) return false;
+                if (state.selectedCategory === 'mezuzot-wood' && !pName.includes('עץ') && !pName.includes('זית') && (!p.subcategory || !p.subcategory.includes('עץ'))) return false;
             }
             else if (state.selectedCategory === 'books') {
                 const isBook = pCat === 'books' || pCatName.includes('ספר') || pCatName.includes('סידור') || pName.includes('ספר') || pName.includes('סידור') || pName.includes('חומש') || pName.includes('תהילים');
