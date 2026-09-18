@@ -48,8 +48,8 @@
 
         <!-- TOP ANNOUNCEMENT BAR -->
     <div class="bg-gradient-to-r from-[#0F172A] via-[#1E1B4B] to-[#0F172A] text-white text-xs py-2 px-4 shadow-inner">
-        <div class="max-w-7xl mx-auto flex items-center justify-between font-bold">
-            <div class="flex items-center gap-4">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-3 sm:gap-6 font-bold text-center">
+            <div class="flex items-center gap-3 sm:gap-4 flex-wrap justify-center">
                 <a href="tel:0526867192" class="hover:text-amber-300 transition-colors flex items-center gap-1.5" title="חייג עכשיו">
                     <svg class="w-3.5 h-3.5 text-amber-400 stroke-current stroke-2 fill-none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.828-1.41-5.123-3.705-6.533-6.533l1.293-.97c.362-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
                     <span>052-686-7192</span>
@@ -511,16 +511,15 @@
                         </div>
                     </div>
 
-                    <!-- Dedicated Wishlist / Liked Products Sidebar Button -->
-                            <button onclick="openAccountPageWithWishlist()" class="w-full text-right py-3 px-3.5 mt-2.5 rounded-2xl font-black text-xs bg-gradient-to-r from-red-500 via-rose-500 to-red-600 text-white flex justify-between items-center shadow-lg shadow-red-500/20 hover:from-red-600 hover:to-rose-700 transition-all active:scale-95 cursor-pointer" title="מוצרים שאהבתי - החשבון שלי">
-                                <div class="flex items-center gap-2">
-                                    <span class="text-sm">❤️</span>
-                                    <span>מוצרים שאהבתי</span>
-                                    <span id="sidebar-wishlist-badge" class="bg-white text-red-600 text-[10px] font-black py-0.5 px-2 rounded-full hidden">0</span>
-                                </div>
-                                <svg class="w-4 h-4 stroke-current stroke-2 fill-none inline" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
-                            </button>
-                        </div>
+                        <!-- Dedicated Wishlist / Liked Products Sidebar Button -->
+                        <button onclick="openAccountPageWithWishlist()" class="w-full text-right py-3 px-3.5 mt-2.5 rounded-2xl font-black text-xs bg-gradient-to-r from-red-500 via-rose-500 to-red-600 text-white flex justify-between items-center shadow-lg shadow-red-500/20 hover:from-red-600 hover:to-rose-700 transition-all active:scale-95 cursor-pointer" title="מוצרים שאהבתי - החשבון שלי">
+                            <div class="flex items-center gap-2">
+                                <span class="text-sm">❤️</span>
+                                <span>מוצרים שאהבתי</span>
+                                <span id="sidebar-wishlist-badge" class="bg-white text-red-600 text-[10px] font-black py-0.5 px-2 rounded-full hidden">0</span>
+                            </div>
+                            <svg class="w-4 h-4 stroke-current stroke-2 fill-none inline" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+                        </button>
                     </div>
 
                     <!-- Price Filter Chips -->
