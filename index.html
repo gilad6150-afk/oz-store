@@ -6665,6 +6665,17 @@ function closeProductPage() {
     scrollToTarget('shop', 80);
 }
 
+function isStamProduct(p) {
+    if (!p) return false;
+    const cat = (p.category || '').toLowerCase();
+    const name = (p.name || '').toLowerCase();
+    const catName = (p.category_name || '').toLowerCase();
+    if (name.includes('בית מזוזה') || name.includes('בתי מזוזה')) return false;
+    return cat === 'stam' || cat === 'tefillin' || 
+           name.includes('תפילין') || name.includes('ספר תורה') || 
+           (name.includes('מזוזה') && (name.includes('קלף') || name.includes('כשר')));
+}
+
 function generateProductPageHTML(p) {
     const isFav = state.wishlist.includes(Number(p.id));
     const related = products.filter(x => String(x.id) !== String(p.id) && (x.category === p.category || x.category_name === p.category_name)).slice(0, 3);
