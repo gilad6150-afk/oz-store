@@ -16,7 +16,7 @@
             <div class="grid grid-cols-2 gap-2 text-xs font-bold">
                 <button onclick="changeFontSize(1)" class="p-2.5 bg-purple-50 hover:bg-purple-100 rounded-xl text-oz-primary border border-purple-100 transition-colors">א+ הגדלת גופן</button>
                 <button onclick="changeFontSize(-1)" class="p-2.5 bg-purple-50 hover:bg-purple-100 rounded-xl text-oz-primary border border-purple-100 transition-colors">א- הקטנת גופן</button>
-                <button onclick="toggleHighContrast()" class="p-2.5 bg-slate-900 text-amber-300 hover:bg-black rounded-xl border border-slate-700 transition-colors">ניגודיות גבוהה</button>
+                <button onclick="toggleHighContrast()" class="p-2.5 bg-slate-900 text-purple-200 hover:bg-black rounded-xl border border-slate-700 transition-colors">ניגודיות גבוהה</button>
                 <button onclick="toggleHighlightLinks()" class="p-2.5 bg-purple-50 hover:bg-purple-100 rounded-xl text-oz-primary border border-purple-100 transition-colors">הדגשת קישורים</button>
                 <button onclick="toggleReadableFont()" class="p-2.5 bg-purple-50 hover:bg-purple-100 rounded-xl text-oz-primary border border-purple-100 transition-colors">גופן קריא</button>
                 <button onclick="resetAccessibility()" class="p-2.5 bg-slate-100 hover:bg-slate-200 rounded-xl text-slate-600 transition-colors">איפוס הגדרות</button>
@@ -155,7 +155,7 @@
                         </li>
                     </ul>
 
-                    <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-[11px] text-amber-900 font-bold">
+                    <div class="p-3 bg-purple-50 rounded-xl border border-purple-200 text-[11px] text-purple-900 font-bold">
                         ⚠️ <strong>סייגים לזכות הביטול ע"פ סעיף 14ג(ד) לחוק:</strong> מוצרים שיוצרו/הותאמו במיוחד עבור הצרכן (כגון חריטת שמות ממוחשבת אישית, או כתיבת סת"ם מיוחדת לשמה שהוזמנה מראש) אינם ניתנים לביטול לאחר תחילת ביצוע העבודה.
                     </div>
                 </div>
@@ -249,10 +249,10 @@
 
     <!-- EXIT INTENT DISCOUNT POPUP -->
     <div id="exit-intent-popup" onclick="if(event.target===this) toggleModal('exit-intent-popup')" class="fixed inset-0 bg-slate-900/70 backdrop-blur-md z-[9999999] hidden flex items-center justify-center p-4 cursor-pointer">
-        <div class="bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden relative p-6 text-center cursor-default border-2 border-amber-400 dir-rtl animate-toast">
+        <div class="bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden relative p-6 text-center cursor-default border-2 border-purple-400 dir-rtl animate-toast">
             <button onclick="toggleModal('exit-intent-popup')" class="absolute top-4 left-4 text-slate-400 hover:text-slate-600 font-bold text-2xl z-30">&times;</button>
             <div class="w-16 h-16 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center mx-auto mb-4 text-3xl font-black shadow-inner">🎁</div>
-            <span class="bg-amber-400 text-slate-950 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider">מתנה מיוחדת לפני שעוזבים!</span>
+            <span class="bg-purple-600 text-slate-950 px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider">מתנה מיוחדת לפני שעוזבים!</span>
             <h3 class="text-2xl font-black text-slate-900 mt-3 mb-2">מחכים! קבל 10% הנחה על הקנייה הראשונה</h3>
             <p class="text-xs text-slate-600 mb-6 font-medium">הרשם עכשיו וקבל קופון בלעדי לשימוש מיידי בקופה: <strong class="text-oz-primary font-black">OZ10</strong></p>
             <form onsubmit="claimExitDiscount(event)" class="space-y-3">
@@ -320,7 +320,7 @@
                         <button onclick="selectQuizOption('budget', 'high', this)" class="quiz-budget-btn p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-oz-primary transition-all text-center">₪600+</button>
                     </div>
                 </div>
-                <button onclick="runGiftQuiz()" class="w-full py-3.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-black text-xs rounded-2xl shadow-lg transition-all">הצג מתנות מומלצות ✨</button>
+                <button onclick="runGiftQuiz()" class="w-full py-3.5 bg-purple-600 hover:bg-purple-600 text-slate-950 font-black text-xs rounded-2xl shadow-lg transition-all">הצג מתנות מומלצות ✨</button>
             </div>
         </div>
     </div>

@@ -15,7 +15,7 @@
                 <!-- PROMINENT SEARCH BAR (CENTER - EXECUTIVE E-COMMERCE DESIGN) -->
                 <div onclick="toggleModal('search-modal')" class="hidden md:flex flex-1 max-w-xl mx-2 xl:mx-6 relative cursor-pointer group">
                     <input type="text" readonly placeholder="חפש תפילין, מזוזות, טליתות, ארנקים, ספרי קודש..." class="w-full pl-10 pr-4 py-2 rounded-full border border-slate-200 bg-slate-50 text-xs sm:text-sm text-slate-700 pointer-events-none group-hover:border-oz-primary group-hover:bg-white transition-all shadow-inner" />
-                    <button class="absolute left-1.5 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-oz-primary text-white flex items-center justify-center group-hover:bg-amber-600 transition-colors">
+                    <button class="absolute left-1.5 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-oz-primary text-white flex items-center justify-center group-hover:bg-purple-600 transition-colors">
                         <svg class="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
                     </button>
                 </div>
@@ -29,13 +29,13 @@
                     </button>
 
                     <!-- User Account Button (Navigates directly to My Account Page) -->
-                    <button id="user-nav-btn" onclick="openAccountPage()" class="flex items-center gap-2 py-1.5 px-3 rounded-full bg-slate-100 hover:bg-purple-100 text-slate-700 hover:text-amber-600 transition-colors text-xs font-bold" title="החשבון שלי">
+                    <button id="user-nav-btn" onclick="openAccountPage()" class="flex items-center gap-2 py-1.5 px-3 rounded-full bg-slate-100 hover:bg-purple-100 text-slate-700 hover:text-purple-300 transition-colors text-xs font-bold" title="החשבון שלי">
                         <svg class="w-4.5 h-4.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
                         <span id="user-label" class="hidden sm:inline font-bold">החשבון שלי</span>
                     </button>
 
                     <!-- Wishlist Header Heart Button (Navigates directly to Wishlist tab in My Account) -->
-                    <button onclick="openAccountPageWithWishlist()" class="relative w-9 h-9 rounded-full bg-slate-100 hover:bg-purple-100 text-slate-700 hover:text-amber-600 flex items-center justify-center transition-colors" title="מוצרים שאהבתי - החשבון שלי">
+                    <button onclick="openAccountPageWithWishlist()" class="relative w-9 h-9 rounded-full bg-slate-100 hover:bg-purple-100 text-slate-700 hover:text-purple-300 flex items-center justify-center transition-colors" title="מוצרים שאהבתי - החשבון שלי">
                         <svg class="w-4.5 h-4.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
                         <span id="wishlist-badge" class="hidden absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center">0</span>
                     </button>
@@ -44,7 +44,7 @@
                     <button onclick="toggleCartDrawer()" class="flex items-center gap-2 px-3.5 py-2 bg-oz-primary hover:bg-oz-hover text-white font-extrabold text-xs rounded-full shadow-md transition-all active:scale-95" title="פתח סל קניות">
                         <div class="relative">
                             <svg class="w-4.5 h-4.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119.993z"/></svg>
-                            <span id="header-cart-badge" class="hidden absolute -top-2 -right-2 bg-amber-400 text-slate-950 font-black text-[10px] w-4 h-4 rounded-full flex items-center justify-center border border-purple-900">0</span>
+                            <span id="header-cart-badge" class="hidden absolute -top-2 -right-2 bg-purple-600 text-slate-950 font-black text-[10px] w-4 h-4 rounded-full flex items-center justify-center border border-purple-900">0</span>
                         </div>
                         <span id="header-cart-total" class="hidden sm:inline font-black">0 פריטים</span>
                     </button>
@@ -53,18 +53,18 @@
         </div>
 
         <!-- LOWER ROW: DEDICATED CATEGORY NAVIGATION BAR (EXECUTIVE SPACIOUS LAYOUT) -->
-        <div class="bg-[#1E1B4B] text-white shadow-inner border-t border-purple-950">
+        <div class="bg-gradient-to-r from-[#1E1B4B] via-[#2E1065] to-[#1E1B4B] text-white border-t border-purple-900/80 shadow-md">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <nav class="hidden lg:flex items-center justify-center gap-4 xl:gap-8 font-extrabold text-xs xl:text-sm text-slate-100 whitespace-nowrap dir-rtl">
+                <nav class="hidden lg:flex items-center justify-center gap-4 xl:gap-8 font-extrabold text-xs xl:text-sm text-white whitespace-nowrap dir-rtl">
                     
                     <!-- Category 1: STAM & Tefillin -->
                     <div class="relative group/menu py-2.5">
-                        <a href="#shop" onclick="filterCategory('stam'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-amber-300 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/10">
+                        <a href="#shop" onclick="filterCategory('stam'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-purple-200 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/15">
                             <span class="whitespace-nowrap">תשמישי קדושה וסת"ם</span>
-                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-amber-400 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-purple-300 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
                         </a>
                         <div class="mega-menu absolute top-full right-0 w-[480px] bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 grid grid-cols-2 gap-2.5 z-50 text-right dir-rtl text-slate-800">
-                            <div onclick="filterCategory('stam'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
+                            <div onclick="filterCategory('stam'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
                                 <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
                                 <div>
                                     <div class="font-black text-xs text-slate-800">תפילין מהודרות</div>
@@ -72,7 +72,7 @@
                                 </div>
                             </div>
 
-                            <div onclick="filterCategory('stam'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
+                            <div onclick="filterCategory('stam'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
                                 <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
                                 <div>
                                     <div class="font-black text-xs text-slate-800">מזוזות - קלף</div>
@@ -80,7 +80,7 @@
                                 </div>
                             </div>
 
-                            <div onclick="filterCategory('stam'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
+                            <div onclick="filterCategory('stam'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
                                 <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
                                 <div>
                                     <div class="font-black text-xs text-slate-800">ספר תורה</div>
@@ -88,7 +88,7 @@
                                 </div>
                             </div>
 
-                            <div onclick="filterCategory('stam'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
+                            <div onclick="filterCategory('stam'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
                                 <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
                                 <div>
                                     <div class="font-black text-xs text-slate-800">ציוד לסופרי סת"ם</div>
@@ -100,33 +100,33 @@
 
                     <!-- Category 2: Mezuzah Cases -->
                     <div class="relative group/menu py-2.5">
-                        <a href="#shop" onclick="filterCategory('mezuzot'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-amber-300 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/10">
+                        <a href="#shop" onclick="filterCategory('mezuzot'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-purple-200 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/15">
                             <span class="whitespace-nowrap">בתי מזוזה</span>
-                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-amber-400 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-purple-300 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
                         </a>
                         <div class="mega-menu absolute top-full right-0 w-[520px] bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 grid grid-cols-2 gap-2.5 z-50 text-right dir-rtl text-slate-800">
-                            <div onclick="filterCategory('mezuzot-epoxy'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
+                            <div onclick="filterCategory('mezuzot-epoxy'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
                                 <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
                                 <div>
                                     <div class="font-black text-xs text-slate-800">בתי מזוזה אפוקסי</div>
                                     <div class="text-[11px] text-slate-500 font-medium">עיצובים מודרניים ואמנותיים ביציקה</div>
                                 </div>
                             </div>
-                            <div onclick="filterCategory('mezuzot-plastic'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
+                            <div onclick="filterCategory('mezuzot-plastic'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
                                 <img src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
                                 <div>
                                     <div class="font-black text-xs text-slate-800">בתי מזוזה פלסטיק</div>
                                     <div class="text-[11px] text-slate-500 font-medium">עמידים למזג אוויר ואיכותיים</div>
                                 </div>
                             </div>
-                            <div onclick="filterCategory('mezuzot-aluminum'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
+                            <div onclick="filterCategory('mezuzot-aluminum'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
                                 <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
                                 <div>
                                     <div class="font-black text-xs text-slate-800">בתי מזוזה אלומיניום</div>
                                     <div class="text-[11px] text-slate-500 font-medium">אלומיניום מוברש יוקרתי ועמיד</div>
                                 </div>
                             </div>
-                            <div onclick="filterCategory('mezuzot-wood'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
+                            <div onclick="filterCategory('mezuzot-wood'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
                                 <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
                                 <div>
                                     <div class="font-black text-xs text-slate-800">בתי מזוזה עץ זית וקלאסי</div>
@@ -138,12 +138,12 @@
 
                     <!-- Category 3: Tallitot & Tzitzit -->
                     <div class="relative group/menu py-2.5">
-                        <a href="#shop" onclick="filterCategory('tallitot-tzitzit'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-amber-300 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/10">
+                        <a href="#shop" onclick="filterCategory('tallitot-tzitzit'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-purple-200 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/15">
                             <span class="whitespace-nowrap">טליות וציציות</span>
-                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-amber-400 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-purple-300 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
                         </a>
                         <div class="mega-menu absolute top-full right-0 w-[520px] bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 grid grid-cols-2 gap-2.5 z-50 text-right dir-rtl text-slate-800">
-                            <div onclick="filterCategory('tallitot-tzitzit'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
+                            <div onclick="filterCategory('tallitot-tzitzit'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
                                 <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
                                 <div>
                                     <div class="font-black text-xs text-slate-800">טליתות צמר מהודרות</div>
@@ -151,7 +151,7 @@
                                 </div>
                             </div>
 
-                            <div onclick="filterCategory('tallitot-tzitzit'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
+                            <div onclick="filterCategory('tallitot-tzitzit'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
                                 <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
                                 <div>
                                     <div class="font-black text-xs text-slate-800">טלית חב"ד ובני אור</div>
@@ -159,7 +159,7 @@
                                 </div>
                             </div>
 
-                            <div onclick="filterCategory('tallitot-tzitzit'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
+                            <div onclick="filterCategory('tallitot-tzitzit'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
                                 <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
                                 <div>
                                     <div class="font-black text-xs text-slate-800">ציציות צמר וכותנה</div>
@@ -167,7 +167,7 @@
                                 </div>
                             </div>
 
-                            <div onclick="filterCategory('tallitot-tzitzit'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
+                            <div onclick="filterCategory('tallitot-tzitzit'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
                                 <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
                                 <div>
                                     <div class="font-black text-xs text-slate-800">גופיות ציצית Dry-Fit</div>
@@ -175,7 +175,7 @@
                                 </div>
                             </div>
 
-                            <div onclick="toggleModal('tallit-calc-modal')" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-slate-200 col-span-2 bg-purple-50/50">
+                            <div onclick="toggleModal('tallit-calc-modal')" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-slate-200 col-span-2 bg-purple-50/50">
                                 <div class="w-11 h-11 rounded-lg bg-oz-primary text-white flex items-center justify-center shrink-0"><svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-6h6"/></svg></div>
                                 <div>
                                     <div class="font-black text-xs text-oz-primary">מחשבון התאמת גודל טלית</div>
@@ -187,19 +187,19 @@
 
                     <!-- Category 4: Tefillin & Tallit Bags -->
                     <div class="relative group/menu py-2.5">
-                        <a href="#shop" onclick="filterCategory('tefillin-bags'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-amber-300 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/10">
+                        <a href="#shop" onclick="filterCategory('tefillin-bags'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-purple-200 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/15">
                             <span class="whitespace-nowrap">תיקים לטלית ולתפילין</span>
-                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-amber-400 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-purple-300 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
                         </a>
                         <div class="mega-menu absolute top-full right-0 w-[450px] bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 grid grid-cols-1 gap-2.5 z-50 text-right dir-rtl text-slate-800">
-                            <div onclick="filterCategory('tefillin-bags-leather'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
+                            <div onclick="filterCategory('tefillin-bags-leather'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
                                 <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
                                 <div>
                                     <div class="font-black text-xs text-slate-800">תיקי עור יוקרתיים לטלית ותפילין</div>
                                     <div class="text-[11px] text-slate-500 font-medium">עור נאפה איכותי / רקמה אישית</div>
                                 </div>
                             </div>
-                            <div onclick="filterCategory('tefillin-bags-velvet'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
+                            <div onclick="filterCategory('tefillin-bags-velvet'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
                                 <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
                                 <div>
                                     <div class="font-black text-xs text-slate-800">סטים קלאסיים מקטיפה</div>
@@ -211,19 +211,19 @@
 
                     <!-- Category 5: Holy Books & Siddurim -->
                     <div class="relative group/menu py-2.5">
-                        <a href="#shop" onclick="filterCategory('books'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-amber-300 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/10">
+                        <a href="#shop" onclick="filterCategory('books'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-purple-200 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/15">
                             <span class="whitespace-nowrap">ספרי קודש וסידורים</span>
-                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-amber-400 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-purple-300 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
                         </a>
                         <div class="mega-menu absolute top-full right-0 w-[450px] bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 grid grid-cols-2 gap-2.5 z-50 text-right dir-rtl text-slate-800">
-                            <div onclick="filterCategory('books-siddurim'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
+                            <div onclick="filterCategory('books-siddurim'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
                                 <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
                                 <div>
                                     <div class="font-black text-xs text-slate-800">סידורים ומחזורים מהודרים</div>
                                     <div class="text-[11px] text-slate-500 font-medium">כריכות עור ודמוי עור יוקרתיות</div>
                                 </div>
                             </div>
-                            <div onclick="filterCategory('books-tehillim'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
+                            <div onclick="filterCategory('books-tehillim'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
                                 <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
                                 <div>
                                     <div class="font-black text-xs text-slate-800">ספרי תהילים חטיבתיים</div>
@@ -235,19 +235,19 @@
 
                     <!-- Category 6: Men's Luxury Wallets -->
                     <div class="relative group/menu py-2.5">
-                        <a href="#shop" onclick="filterCategory('wallets'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-amber-300 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/10">
+                        <a href="#shop" onclick="filterCategory('wallets'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-purple-200 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/15">
                             <span class="whitespace-nowrap">ארנקים לגבר</span>
-                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-amber-400 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-purple-300 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
                         </a>
                         <div class="mega-menu absolute top-full right-0 w-[450px] bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 grid grid-cols-2 gap-2.5 z-50 text-right dir-rtl text-slate-800">
-                            <div onclick="filterCategory('wallets'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
+                            <div onclick="filterCategory('wallets'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
                                 <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
                                 <div>
                                     <div class="font-black text-xs text-slate-800">ארנקי עור נאפה איטלקי</div>
                                     <div class="text-[11px] text-slate-500 font-medium">100% עור אמיתי עם הגנת RFID</div>
                                 </div>
                             </div>
-                            <div onclick="filterCategory('wallets'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
+                            <div onclick="filterCategory('wallets'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
                                 <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
                                 <div>
                                     <div class="font-black text-xs text-slate-800">ארנקים דקים לכרטיסים</div>
@@ -259,12 +259,12 @@
 
                     <!-- Category 7: Gifts & Judaica -->
                     <div class="relative group/menu py-2.5">
-                        <a href="#shop" onclick="filterCategory('gifts'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-amber-300 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/10">
+                        <a href="#shop" onclick="filterCategory('gifts'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-purple-200 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/15">
                             <span class="whitespace-nowrap">מתנות ויודאיקה</span>
-                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-amber-400 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-purple-300 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
                         </a>
                         <div class="mega-menu absolute top-full left-0 lg:right-auto w-[450px] bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 grid grid-cols-2 gap-2.5 z-50 text-right dir-rtl text-slate-800">
-                            <div onclick="filterCategory('gifts'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
+                            <div onclick="filterCategory('gifts'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
                                 <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
                                 <div>
                                     <div class="font-black text-xs text-slate-800">מארזים ומתנות יודאיקה</div>
@@ -272,11 +272,11 @@
                                 </div>
                             </div>
 
-                            <div onclick="toggleModal('gift-quiz-modal')" class="p-2.5 rounded-xl hover:bg-amber-50 cursor-pointer flex items-center gap-3 transition-colors border border-amber-200 bg-amber-50/40">
+                            <div onclick="toggleModal('gift-quiz-modal')" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-purple-200 bg-purple-50/40">
                                 <div class="w-11 h-11 rounded-lg bg-amber-600 text-white flex items-center justify-center shrink-0"><svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H4.5a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0v13.875"/></svg></div>
                                 <div>
-                                    <div class="font-black text-xs text-amber-900">שאלון התאמת מתנה חכם</div>
-                                    <div class="text-[11px] text-amber-700 font-medium">מצא מתנה לפי אירוע ותקציב</div>
+                                    <div class="font-black text-xs text-purple-900">שאלון התאמת מתנה חכם</div>
+                                    <div class="text-[11px] text-purple-700 font-medium">מצא מתנה לפי אירוע ותקציב</div>
                                 </div>
                             </div>
                         </div>
@@ -289,23 +289,23 @@
 
     <!-- FIXED MOBILE BOTTOM NAVIGATION BAR (UX Optimized for Smartphones) -->
     <div class="fixed bottom-0 left-0 right-0 z-[99999] lg:hidden bg-white/95 backdrop-blur-md border-t border-slate-200/80 shadow-2xl px-2 py-1.5 flex items-center justify-around text-slate-700 dir-rtl">
-        <a href="#shop" onclick="resetFilters(); closeProductPage(); closeAccountPage(); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="flex flex-col items-center gap-0.5 p-1.5 text-[10px] font-bold text-slate-700 hover:text-amber-600 active:scale-95 transition-all">
+        <a href="#shop" onclick="resetFilters(); closeProductPage(); closeAccountPage(); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="flex flex-col items-center gap-0.5 p-1.5 text-[10px] font-bold text-slate-700 hover:text-purple-300 active:scale-95 transition-all">
             <svg class="w-5 h-5 fill-none stroke-current stroke-2 text-slate-600" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
             <span class="whitespace-nowrap">בית</span>
         </a>
-        <a href="#shop" onclick="closeProductPage(); closeAccountPage(); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="flex flex-col items-center gap-0.5 p-1.5 text-[10px] font-bold text-slate-700 hover:text-amber-600 active:scale-95 transition-all">
+        <a href="#shop" onclick="closeProductPage(); closeAccountPage(); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="flex flex-col items-center gap-0.5 p-1.5 text-[10px] font-bold text-slate-700 hover:text-purple-300 active:scale-95 transition-all">
             <svg class="w-5 h-5 fill-none stroke-current stroke-2 text-slate-600" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119.993z"/></svg>
             <span class="whitespace-nowrap">קטלוג</span>
         </a>
-        <button onclick="toggleModal('search-modal')" class="flex flex-col items-center gap-0.5 p-1.5 text-[10px] font-bold text-slate-700 hover:text-amber-600 active:scale-95 transition-all">
+        <button onclick="toggleModal('search-modal')" class="flex flex-col items-center gap-0.5 p-1.5 text-[10px] font-bold text-slate-700 hover:text-purple-300 active:scale-95 transition-all">
             <svg class="w-5 h-5 fill-none stroke-current stroke-2 text-slate-600" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
             <span class="whitespace-nowrap">חיפוש</span>
         </button>
-        <button onclick="toggleCartDrawer()" class="flex flex-col items-center gap-0.5 p-1.5 text-[10px] font-bold text-slate-700 hover:text-amber-600 active:scale-95 transition-all relative">
+        <button onclick="toggleCartDrawer()" class="flex flex-col items-center gap-0.5 p-1.5 text-[10px] font-bold text-slate-700 hover:text-purple-300 active:scale-95 transition-all relative">
             <svg class="w-5 h-5 fill-none stroke-current stroke-2 text-slate-600" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3-3h-1.5m0 0l-1.12-4.48A1.125 1.125 0 013.006 5.5H16.5a1.125 1.125 0 011.08 1.42l-1.5 6a1.125 1.125 0 01-1.08.83H7.5z"/></svg>
             <span class="whitespace-nowrap">סל קניות</span>
         </button>
-        <button onclick="openAccountPage()" class="flex flex-col items-center gap-0.5 p-1.5 text-[10px] font-bold text-slate-700 hover:text-amber-600 active:scale-95 transition-all">
+        <button onclick="openAccountPage()" class="flex flex-col items-center gap-0.5 p-1.5 text-[10px] font-bold text-slate-700 hover:text-purple-300 active:scale-95 transition-all">
             <svg class="w-5 h-5 fill-none stroke-current stroke-2 text-slate-600" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
             <span class="whitespace-nowrap">החשבון שלי</span>
         </button>

@@ -193,7 +193,7 @@
                                 <div class="flex items-center gap-1 text-[10px] font-extrabold text-slate-500">
                                     <span class="bg-white px-1.5 py-0.5 rounded border border-slate-200">Visa</span>
                                     <span class="bg-white px-1.5 py-0.5 rounded border border-slate-200">Mastercard</span>
-                                    <span class="bg-amber-100 text-amber-900 px-1.5 py-0.5 rounded border border-amber-300">Bit</span>
+                                    <span class="bg-amber-100 text-purple-900 px-1.5 py-0.5 rounded border border-amber-300">Bit</span>
                                 </div>
                             </label>
 
@@ -264,9 +264,9 @@
                             </div>
 
                             ${couponPercent > 0 ? `
-                            <div class="flex justify-between text-amber-900 bg-amber-50/90 p-2 rounded-xl border border-amber-300">
+                            <div class="flex justify-between text-purple-900 bg-purple-50/90 p-2 rounded-xl border border-amber-300">
                                 <span class="font-extrabold flex items-center gap-1">🎟️ קופון ${state.appliedCoupon} (${couponPercent}%-):</span>
-                                <span class="font-black text-amber-900">-₪${couponDiscount}</span>
+                                <span class="font-black text-purple-900">-₪${couponDiscount}</span>
                             </div>
                             ` : ''}
 
@@ -301,10 +301,10 @@
                             const offerItem = recs && recs.length > 0 ? recs[0] : (prods.length > 0 ? prods[0] : null);
                             if (!offerItem) return '';
                             return `
-                            <div class="p-4 bg-white rounded-2xl border border-amber-200 shadow-sm space-y-3">
-                                <div class="font-black text-xs text-amber-900 flex items-center justify-between">
+                            <div class="p-4 bg-white rounded-2xl border border-purple-200 shadow-sm space-y-3">
+                                <div class="font-black text-xs text-purple-900 flex items-center justify-between">
                                     <span class="flex items-center gap-1">🎁 <strong>מוצר הטבה מותאם אישית עבורך:</strong></span>
-                                    <span class="bg-amber-100 text-amber-900 text-[10px] font-black px-2 py-0.5 rounded-full">הטבה בקופה 🔥</span>
+                                    <span class="bg-amber-100 text-purple-900 text-[10px] font-black px-2 py-0.5 rounded-full">הטבה בקופה 🔥</span>
                                 </div>
                                 <div class="flex items-center justify-between text-xs font-bold text-slate-700 border-b border-slate-100 pb-2">
                                     <span>תעודת הגהת מחשב וגברא מוסמכת</span>
@@ -523,7 +523,7 @@
                 <div class="w-10 h-10 rounded-full bg-oz-primary text-white flex items-center justify-center font-black text-lg shrink-0">📱</div>
                 <div class="flex-grow">
                     <div class="flex items-center justify-between border-b border-slate-700 pb-1 mb-1">
-                        <span class="text-xs font-black text-amber-400">SMS אוטומטי נשלח בהצלחה ל-${phone}</span>
+                        <span class="text-xs font-black text-purple-300">SMS אוטומטי נשלח בהצלחה ל-${phone}</span>
                         <span class="text-[10px] text-slate-400">עכשיו</span>
                     </div>
                     <p class="text-xs text-slate-200 leading-relaxed font-medium">${text}</p>
@@ -635,29 +635,29 @@
                         <div class="flex items-center gap-2.5">
                             <span class="text-2xl">💳</span>
                             <div>
-                                <h4 class="font-black text-sm text-amber-400 flex items-center gap-2">
+                                <h4 class="font-black text-sm text-purple-300 flex items-center gap-2">
                                     <span>חיבור סליקה וחשבוניות Invoice4U</span>
-                                    <span class="bg-amber-400 text-slate-950 text-[10px] font-black px-2 py-0.5 rounded-full">פעיל ⚡</span>
+                                    <span class="bg-purple-600 text-slate-950 text-[10px] font-black px-2 py-0.5 rounded-full">פעיל ⚡</span>
                                 </h4>
                                 <p class="text-[11px] text-slate-300 font-medium">הכנס מפתחות API מתוך חשבון Invoice4U לסליקת אשראי בלייב והפקת חשבוניות מס-קבלה אוטומטיות</p>
                             </div>
                         </div>
-                        <button onclick="saveInvoice4USettingsFromUI()" class="py-2.5 px-4 bg-amber-400 hover:bg-amber-500 text-slate-950 font-black text-xs rounded-xl shadow-lg transition-all active:scale-95 cursor-pointer flex items-center gap-1.5">
+                        <button onclick="saveInvoice4USettingsFromUI()" class="py-2.5 px-4 bg-purple-600 hover:bg-purple-600 text-slate-950 font-black text-xs rounded-xl shadow-lg transition-all active:scale-95 cursor-pointer flex items-center gap-1.5">
                             <span>💾 שמור הגדרות API</span>
                         </button>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
                         <div>
-                            <label class="block text-[11px] font-bold text-amber-300 mb-1">Invoice4U ApiToken / API Key</label>
-                            <input type="password" id="i4u-api-token" placeholder="הכנס מפתח API" value="${Invoice4UService.getConfig().apiToken || ''}" class="w-full p-2.5 bg-slate-800/90 border border-slate-700 rounded-xl text-xs font-mono text-white outline-none focus:border-amber-400 transition-colors" />
+                            <label class="block text-[11px] font-bold text-purple-200 mb-1">Invoice4U ApiToken / API Key</label>
+                            <input type="password" id="i4u-api-token" placeholder="הכנס מפתח API" value="${Invoice4UService.getConfig().apiToken || ''}" class="w-full p-2.5 bg-slate-800/90 border border-slate-700 rounded-xl text-xs font-mono text-white outline-none focus:border-purple-400 transition-colors" />
                         </div>
                         <div>
-                            <label class="block text-[11px] font-bold text-amber-300 mb-1">ClientID / Account ID</label>
-                            <input type="text" id="i4u-client-id" placeholder="מזהה לקוח" value="${Invoice4UService.getConfig().clientId || ''}" class="w-full p-2.5 bg-slate-800/90 border border-slate-700 rounded-xl text-xs font-mono text-white outline-none focus:border-amber-400 transition-colors" />
+                            <label class="block text-[11px] font-bold text-purple-200 mb-1">ClientID / Account ID</label>
+                            <input type="text" id="i4u-client-id" placeholder="מזהה לקוח" value="${Invoice4UService.getConfig().clientId || ''}" class="w-full p-2.5 bg-slate-800/90 border border-slate-700 rounded-xl text-xs font-mono text-white outline-none focus:border-purple-400 transition-colors" />
                         </div>
                         <div>
-                            <label class="block text-[11px] font-bold text-amber-300 mb-1">Company ID / ח"פ חברה</label>
-                            <input type="text" id="i4u-company-id" placeholder="ח&quot;פ החברה" value="${Invoice4UService.getConfig().companyId || ''}" class="w-full p-2.5 bg-slate-800/90 border border-slate-700 rounded-xl text-xs font-mono text-white outline-none focus:border-amber-400 transition-colors" />
+                            <label class="block text-[11px] font-bold text-purple-200 mb-1">Company ID / ח"פ חברה</label>
+                            <input type="text" id="i4u-company-id" placeholder="ח&quot;פ החברה" value="${Invoice4UService.getConfig().companyId || ''}" class="w-full p-2.5 bg-slate-800/90 border border-slate-700 rounded-xl text-xs font-mono text-white outline-none focus:border-purple-400 transition-colors" />
                         </div>
                     </div>
                 </div>
@@ -689,8 +689,8 @@
                         <div class="text-2xl font-black text-emerald-600">${totalCustomers}</div>
                         <div class="text-[11px] font-bold text-slate-600">לקוחות משלמים</div>
                     </div>
-                    <div class="bg-amber-50 p-4 rounded-2xl border border-amber-100 text-center">
-                        <div class="text-2xl font-black text-amber-700">₪${totalRevenue}</div>
+                    <div class="bg-purple-50 p-4 rounded-2xl border border-amber-100 text-center">
+                        <div class="text-2xl font-black text-purple-700">₪${totalRevenue}</div>
                         <div class="text-[11px] font-bold text-slate-600">סה"כ רכישות במאגר</div>
                     </div>
                     <div class="bg-blue-50 p-4 rounded-2xl border border-blue-100 text-center">
