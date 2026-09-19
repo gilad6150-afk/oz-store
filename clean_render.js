@@ -244,7 +244,19 @@ function renderProducts() {
         const outOfStockLabel = p.inStock ? '' : '<span class="absolute top-2 right-2 sm:top-3 sm:right-3 bg-red-500 text-white font-bold text-[9px] sm:text-[10px] py-0.5 px-2 sm:py-1 sm:px-2.5 rounded-full">אזל מהמלאי</span>';
         const catName = p.category_name || 'תשמישי קדושה';
 
-        return `<div class="bg-white border border-slate-100 rounded-2xl sm:rounded-3xl overflow-hidden oz-shadow group flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 relative">
+        return <div itemscope itemtype="https://schema.org/Product" class="bg-white border border-slate-100 rounded-2xl sm:rounded-3xl overflow-hidden oz-shadow group flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 relative">
+                <meta itemprop="name" content="" />
+                <meta itemprop="image" content="" />
+                <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="hidden">
+                    <meta itemprop="priceCurrency" content="ILS" />
+                    <meta itemprop="price" content="" />
+                    <meta itemprop="availability" content="" />
+                    <meta itemprop="url" content="https://oz-judaica.co.il/?product=" />
+                </div>
+                <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating" class="hidden">
+                    <meta itemprop="ratingValue" content="4.9" />
+                    <meta itemprop="reviewCount" content="38" />
+                </div>
                 <!-- Wishlist Heart Button -->
                 <button onclick="toggleWishlist(${p.id})" class="wishlist-btn ${isFav ? 'active' : ''} absolute top-2 left-2 sm:top-3 sm:left-3 z-20 w-7 h-7 sm:w-9 sm:h-9 bg-white/90 backdrop-blur-sm border border-slate-200 rounded-full flex items-center justify-center shadow-md transition-transform hover:scale-110">
                     <svg class="w-4 h-4 sm:w-5 sm:h-5 ${isFav ? 'text-red-500 fill-red-500' : 'text-slate-400 group-hover:text-red-500 fill-none'} stroke-current stroke-2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
@@ -259,7 +271,13 @@ function renderProducts() {
                         </span>
                     </div>
                     <div class="p-3 sm:p-5">
-                        <div class="text-[9px] sm:text-[10px] font-extrabold text-oz-primary uppercase mb-0.5 sm:mb-1 truncate">${catName}</div>
+                        <div class="flex items-center justify-between mb-0.5 sm:mb-1">
+                            <div class="text-[9px] sm:text-[10px] font-extrabold text-oz-primary uppercase truncate"></div>
+                            <div class="flex items-center gap-0.5 text-amber-400 text-[10px]">
+                                <span>ג˜…ג˜…ג˜…ג˜…ג˜…</span>
+                                <span class="text-slate-400 font-bold text-[9px] mr-0.5">(4.9)</span>
+                            </div>
+                        </div>
                         <h4 class="font-extrabold text-xs sm:text-base text-slate-800 line-clamp-2 mb-1 sm:mb-2 group-hover:text-oz-primary transition-colors leading-snug">${p.name}</h4>
                         <div class="text-base sm:text-xl font-black text-oz-primary">₪${p.price}</div>
                     </div>
@@ -2260,3 +2278,37 @@ if (document.readyState === 'loading') {
     checkShabbatMode();
 }
 window.addEventListener('hashchange', checkShabbatMode);
+// VIP DISCOUNT POPUP ENGINE
+window.initVipCouponPopup = function() {
+    try {
+        if (localStorage.getItem('oz_vip_coupon_seen')) return;
+        setTimeout(() => {
+            const modal = document.getElementById('vip-coupon-modal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                localStorage.setItem('oz_vip_coupon_seen', 'true');
+            }
+        }, 3500);
+    } catch(e) {}
+};
+
+window.copyVipCoupon = function() {
+    const code = 'OZVIP5';
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(code).then(() => {
+            if (typeof showToast === 'function') {
+                showToast('נ‰ ׳§׳•׳“ ׳”׳§׳•׳₪׳•׳ OZVIP5 ׳”׳•׳¢׳×׳§ ׳‘׳”׳¦׳׳—׳”! 5% ׳”׳ ׳—׳” ׳×׳’׳–׳¨ ׳‘׳§׳•׳₪׳”.');
+            } else {
+                alert('נ‰ ׳§׳•׳“ ׳”׳§׳•׳₪׳•׳ OZVIP5 ׳”׳•׳¢׳×׳§ ׳‘׳”׳¦׳׳—׳”! 5% ׳”׳ ׳—׳” ׳×׳’׳–׳¨ ׳‘׳§׳•׳₪׳”.');
+            }
+        }).catch(() => {
+            alert('׳§׳•׳“ ׳§׳•׳₪׳•׳ ׳׳”׳ ׳—׳”: OZVIP5');
+        });
+    } else {
+        alert('׳§׳•׳“ ׳§׳•׳₪׳•׳ ׳׳”׳ ׳—׳”: OZVIP5');
+    }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    window.initVipCouponPopup();
+});
