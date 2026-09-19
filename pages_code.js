@@ -193,7 +193,7 @@
                                 <div class="flex items-center gap-1 text-[10px] font-extrabold text-slate-500">
                                     <span class="bg-white px-1.5 py-0.5 rounded border border-slate-200">Visa</span>
                                     <span class="bg-white px-1.5 py-0.5 rounded border border-slate-200">Mastercard</span>
-                                    <span class="bg-amber-100 text-purple-900 px-1.5 py-0.5 rounded border border-amber-300">Bit</span>
+                                    <span class="bg-purple-600 text-purple-900 px-1.5 py-0.5 rounded border border-purple-600">Bit</span>
                                 </div>
                             </label>
 
@@ -264,7 +264,7 @@
                             </div>
 
                             ${couponPercent > 0 ? `
-                            <div class="flex justify-between text-purple-900 bg-purple-50/90 p-2 rounded-xl border border-amber-300">
+                            <div class="flex justify-between text-purple-900 bg-purple-50/90 p-2 rounded-xl border border-purple-600">
                                 <span class="font-extrabold flex items-center gap-1">🎟️ קופון ${state.appliedCoupon} (${couponPercent}%-):</span>
                                 <span class="font-black text-purple-900">-₪${couponDiscount}</span>
                             </div>
@@ -304,7 +304,7 @@
                             <div class="p-4 bg-white rounded-2xl border border-purple-200 shadow-sm space-y-3">
                                 <div class="font-black text-xs text-purple-900 flex items-center justify-between">
                                     <span class="flex items-center gap-1">🎁 <strong>מוצר הטבה מותאם אישית עבורך:</strong></span>
-                                    <span class="bg-amber-100 text-purple-900 text-[10px] font-black px-2 py-0.5 rounded-full">הטבה בקופה 🔥</span>
+                                    <span class="bg-purple-600 text-purple-900 text-[10px] font-black px-2 py-0.5 rounded-full">הטבה בקופה 🔥</span>
                                 </div>
                                 <div class="flex items-center justify-between text-xs font-bold text-slate-700 border-b border-slate-100 pb-2">
                                     <span>תעודת הגהת מחשב וגברא מוסמכת</span>
@@ -318,7 +318,7 @@
                                             <div class="text-[11px] text-oz-primary font-black">₪${offerItem.price}</div>
                                         </div>
                                     </div>
-                                    <button type="button" onclick="addCheckoutSpecialOffer('${offerItem.id}')" class="py-2 px-3.5 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-950 font-black text-xs rounded-xl shadow-sm transition-all active:scale-95 cursor-pointer">
+                                    <button type="button" onclick="addCheckoutSpecialOffer('${offerItem.id}')" class="py-2 px-3.5 bg-gradient-to-r from-purple-600 to-indigo-900 hover:from-purple-600 hover:to-indigo-900 text-white font-black text-xs rounded-xl shadow-sm transition-all active:scale-95 cursor-pointer">
                                         + הוסף לסל
                                     </button>
                                 </div>
@@ -637,12 +637,12 @@
                             <div>
                                 <h4 class="font-black text-sm text-purple-300 flex items-center gap-2">
                                     <span>חיבור סליקה וחשבוניות Invoice4U</span>
-                                    <span class="bg-purple-600 text-slate-950 text-[10px] font-black px-2 py-0.5 rounded-full">פעיל ⚡</span>
+                                    <span class="bg-purple-600 text-white text-[10px] font-black px-2 py-0.5 rounded-full">פעיל ⚡</span>
                                 </h4>
                                 <p class="text-[11px] text-slate-300 font-medium">הכנס מפתחות API מתוך חשבון Invoice4U לסליקת אשראי בלייב והפקת חשבוניות מס-קבלה אוטומטיות</p>
                             </div>
                         </div>
-                        <button onclick="saveInvoice4USettingsFromUI()" class="py-2.5 px-4 bg-purple-600 hover:bg-purple-600 text-slate-950 font-black text-xs rounded-xl shadow-lg transition-all active:scale-95 cursor-pointer flex items-center gap-1.5">
+                        <button onclick="saveInvoice4USettingsFromUI()" class="py-2.5 px-4 bg-purple-600 hover:bg-purple-600 text-white font-black text-xs rounded-xl shadow-lg transition-all active:scale-95 cursor-pointer flex items-center gap-1.5">
                             <span>💾 שמור הגדרות API</span>
                         </button>
                     </div>
@@ -689,7 +689,7 @@
                         <div class="text-2xl font-black text-emerald-600">${totalCustomers}</div>
                         <div class="text-[11px] font-bold text-slate-600">לקוחות משלמים</div>
                     </div>
-                    <div class="bg-purple-50 p-4 rounded-2xl border border-amber-100 text-center">
+                    <div class="bg-purple-50 p-4 rounded-2xl border border-purple-600 text-center">
                         <div class="text-2xl font-black text-purple-700">₪${totalRevenue}</div>
                         <div class="text-[11px] font-bold text-slate-600">סה"כ רכישות במאגר</div>
                     </div>

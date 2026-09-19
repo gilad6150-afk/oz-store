@@ -77,7 +77,7 @@ const crmEngineCode = `
                 <div class="w-10 h-10 rounded-full bg-oz-primary text-white flex items-center justify-center font-black text-lg shrink-0">📱</div>
                 <div class="flex-grow">
                     <div class="flex items-center justify-between border-b border-slate-700 pb-1 mb-1">
-                        <span class="text-xs font-black text-amber-400">SMS אוטומטי נשלח בהצלחה ל-\${phone}</span>
+                        <span class="text-xs font-black text-purple-600">SMS אוטומטי נשלח בהצלחה ל-\${phone}</span>
                         <span class="text-[10px] text-slate-400">עכשיו</span>
                     </div>
                     <p class="text-xs text-slate-200 leading-relaxed font-medium">\${text}</p>
@@ -195,8 +195,8 @@ const crmEngineCode = `
                         <div class="text-2xl font-black text-emerald-600">\${totalCustomers}</div>
                         <div class="text-[11px] font-bold text-slate-600">לקוחות משלמים</div>
                     </div>
-                    <div class="bg-amber-50 p-4 rounded-2xl border border-amber-100 text-center">
-                        <div class="text-2xl font-black text-amber-700">₪\${totalRevenue}</div>
+                    <div class="bg-purple-600 p-4 rounded-2xl border border-purple-600 text-center">
+                        <div class="text-2xl font-black text-purple-600">₪\${totalRevenue}</div>
                         <div class="text-[11px] font-bold text-slate-600">סה"כ רכישות במאגר</div>
                     </div>
                     <div class="bg-blue-50 p-4 rounded-2xl border border-blue-100 text-center">

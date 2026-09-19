@@ -1,4 +1,4 @@
-const disclaimerHtml = `<div class="p-4 bg-amber-50 border-r-4 border-amber-500 rounded-2xl text-amber-900 text-xs font-bold leading-relaxed mb-6">⚠️ <strong>לתשומת לב הקוראים והלומדים:</strong> התוכן המובא במאמר זה מוגש לשם העשרה, עיון ומידע כללי בלבד. אין לראות בכתוב משום הלכה פסוקה, פסק הלכה מורשה או תחליף להזמנת פסיקה אישית מרב מורה הוראה או דמות סמכותית רוחנית. בכל שאלה מעשית יש לפנות לרב מוסמך.</div>`;
+const disclaimerHtml = `<div class="p-4 bg-purple-600 border-r-4 border-purple-600 rounded-2xl text-purple-600 text-xs font-bold leading-relaxed mb-6">⚠️ <strong>לתשומת לב הקוראים והלומדים:</strong> התוכן המובא במאמר זה מוגש לשם העשרה, עיון ומידע כללי בלבד. אין לראות בכתוב משום הלכה פסוקה, פסק הלכה מורשה או תחליף להזמנת פסיקה אישית מרב מורה הוראה או דמות סמכותית רוחנית. בכל שאלה מעשית יש לפנות לרב מוסמך.</div>`;
 
 const articlesDB = [
     {

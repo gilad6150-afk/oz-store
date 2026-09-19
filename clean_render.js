@@ -441,7 +441,7 @@ function openArticleModal(id) {
             <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover" loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/30 to-transparent flex flex-col justify-end p-6 text-white">
                 <div class="flex items-center gap-2 mb-2">
-                    <span class="bg-purple-600 text-slate-950 font-black text-[10px] py-1 px-3 rounded-full">${article.category}</span>
+                    <span class="bg-purple-600 text-white font-black text-[10px] py-1 px-3 rounded-full">${article.category}</span>
                     <span class="bg-white/20 backdrop-blur-md text-white font-bold text-[10px] py-1 px-3 rounded-full">${article.readTime || '5 דקות קריאה'}</span>
                 </div>
                 <h2 class="text-xl sm:text-2xl font-black text-white leading-tight">${article.title}</h2>
@@ -449,7 +449,7 @@ function openArticleModal(id) {
         </div>
 
         <!-- Halachic Disclaimer Banner -->
-        <div class="p-4 bg-purple-50/90 border-r-4 border-amber-500 rounded-2xl text-amber-950 text-xs font-bold leading-relaxed shadow-sm">
+        <div class="p-4 bg-purple-50/90 border-r-4 border-purple-600 rounded-2xl text-purple-600 text-xs font-bold leading-relaxed shadow-sm">
             ⚠️ <strong>לתשומת לב הקוראים והלומדים:</strong> התוכן המובא במאמר זה מוגש לשם העשרה, עיון ומידע כללי בלבד. אין לראות בכתוב משום הלכה פסוקה, פסק הלכה מורשה או תחליף להזמנת פסיקה אישית מרב מורה הוראה או דמות סמכותית רוחנית. בכל שאלה מעשית יש לפנות לרב מוסמך.
         </div>
 
@@ -907,7 +907,7 @@ function generateProductPageHTML(p) {
                                 <span>+ הוסף לסל הקניות</span>
                             </button>
                             
-                            <button onclick="buyNowFromPDP('${p.id}')" ${!p.inStock ? 'disabled' : ''} class="py-3.5 px-5 bg-purple-600 hover:bg-purple-600 text-slate-950 font-black text-xs rounded-xl shadow-md transition-all active:scale-95 flex items-center justify-center gap-1.5">
+                            <button onclick="buyNowFromPDP('${p.id}')" ${!p.inStock ? 'disabled' : ''} class="py-3.5 px-5 bg-purple-600 hover:bg-purple-600 text-white font-black text-xs rounded-xl shadow-md transition-all active:scale-95 flex items-center justify-center gap-1.5">
                                 <span>קנה עכשיו ⚡</span>
                             </button>
 
@@ -1097,7 +1097,7 @@ function generateProductPageHTML(p) {
                     </div>
 
                     <div class="mt-4 pt-2 flex justify-center sm:justify-start">
-                        <button id="seo-btn-pdp" onclick="toggleSeoExpand('pdp')" class="py-2.5 px-6 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-950 font-black text-xs sm:text-sm rounded-xl shadow-lg transition-all transform hover:scale-105 active:scale-95 cursor-pointer">
+                        <button id="seo-btn-pdp" onclick="toggleSeoExpand('pdp')" class="py-2.5 px-6 bg-gradient-to-r from-purple-600 to-indigo-900 hover:from-purple-600 hover:to-indigo-900 text-white font-black text-xs sm:text-sm rounded-xl shadow-lg transition-all transform hover:scale-105 active:scale-95 cursor-pointer">
                             קרא עוד... ↓
                         </button>
                     </div>
@@ -1397,7 +1397,7 @@ function renderSitemapPageHTML() {
                         <div onclick="closeSitemapPage(); filterCategory('${cat.id}')" class="p-4 bg-slate-50/70 hover:bg-purple-50/70 border border-slate-200/80 hover:border-purple-300 rounded-2xl transition-all cursor-pointer group space-y-1.5 shadow-sm">
                             <h3 class="font-black text-xs text-slate-900 group-hover:text-oz-primary transition-colors flex items-center justify-between">
                                 <span>${cat.name}</span>
-                                <span class="text-amber-500 group-hover:translate-x-[-3px] transition-transform">←</span>
+                                <span class="text-purple-600 group-hover:translate-x-[-3px] transition-transform">←</span>
                             </h3>
                             <p class="text-[11px] text-slate-500 font-medium leading-snug">${cat.desc}</p>
                         </div>
@@ -1409,7 +1409,7 @@ function renderSitemapPageHTML() {
             <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 oz-shadow space-y-4">
                 <div class="flex items-center justify-between border-b border-slate-100 pb-3 flex-wrap gap-2">
                     <div class="flex items-center gap-2">
-                        <span class="w-8 h-8 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-black text-base shrink-0">🛍️</span>
+                        <span class="w-8 h-8 rounded-xl bg-purple-600 text-purple-600 flex items-center justify-center font-black text-base shrink-0">🛍️</span>
                         <h2 class="font-black text-lg text-slate-900">2. מוצרי החנות (אינדקס מוצרים ישיר)</h2>
                     </div>
                     <span class="text-xs font-bold text-slate-400">סה"כ ${allProds.length} מוצרים בקטלוג</span>
@@ -1451,7 +1451,7 @@ function renderSitemapPageHTML() {
                                     <div class="text-[10px] text-purple-600 font-bold">${a.category} • ${a.readTime || '5 דק\''}</div>
                                 </div>
                             </div>
-                            <span class="text-xs font-black text-amber-500 group-hover:translate-x-[-3px] transition-transform shrink-0">קרא ←</span>
+                            <span class="text-xs font-black text-purple-600 group-hover:translate-x-[-3px] transition-transform shrink-0">קרא ←</span>
                         </div>
                     `).join('')}
                 </div>
@@ -1466,27 +1466,27 @@ function renderSitemapPageHTML() {
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-xs font-bold">
                     <button onclick="toggleModal('terms-modal')" class="p-4 bg-slate-50 hover:bg-purple-50 border border-slate-200 rounded-2xl text-right transition-all flex items-center justify-between group">
                         <span class="text-slate-800 group-hover:text-oz-primary">📜 תקנון האתר ותנאי הזמנה</span>
-                        <span class="text-amber-500">←</span>
+                        <span class="text-purple-600">←</span>
                     </button>
                     <button onclick="toggleModal('terms-modal')" class="p-4 bg-slate-50 hover:bg-purple-50 border border-slate-200 rounded-2xl text-right transition-all flex items-center justify-between group">
                         <span class="text-slate-800 group-hover:text-oz-primary">🔒 אבטחה וסליקה בתקן SSL</span>
-                        <span class="text-amber-500">←</span>
+                        <span class="text-purple-600">←</span>
                     </button>
                     <button onclick="toggleModal('accessibility-modal')" class="p-4 bg-slate-50 hover:bg-purple-50 border border-slate-200 rounded-2xl text-right transition-all flex items-center justify-between group">
                         <span class="text-slate-800 group-hover:text-oz-primary">♿ הצהרת נגישות ע"פ החוק</span>
-                        <span class="text-amber-500">←</span>
+                        <span class="text-purple-600">←</span>
                     </button>
                     <button onclick="toggleModal('shipping-returns-modal')" class="p-4 bg-slate-50 hover:bg-purple-50 border border-slate-200 rounded-2xl text-right transition-all flex items-center justify-between group">
                         <span class="text-slate-800 group-hover:text-oz-primary">🚚 זמני אספקה ומשלוחים</span>
-                        <span class="text-amber-500">←</span>
+                        <span class="text-purple-600">←</span>
                     </button>
                     <button onclick="openAccountPage()" class="p-4 bg-slate-50 hover:bg-purple-50 border border-slate-200 rounded-2xl text-right transition-all flex items-center justify-between group">
                         <span class="text-slate-800 group-hover:text-oz-primary">👑 החשבון שלי ומועדון VIP</span>
-                        <span class="text-amber-500">←</span>
+                        <span class="text-purple-600">←</span>
                     </button>
                     <a href="https://maps.app.goo.gl/daBGid7dAtGxSzaB7" target="_blank" class="p-4 bg-slate-50 hover:bg-purple-50 border border-slate-200 rounded-2xl text-right transition-all flex items-center justify-between group">
                         <span class="text-slate-800 group-hover:text-oz-primary">📍 ניווט לחנות בראש העין</span>
-                        <span class="text-amber-500">←</span>
+                        <span class="text-purple-600">←</span>
                     </a>
                 </div>
             </div>
@@ -1577,7 +1577,7 @@ function renderAccountWishlist() {
                     <div class="bg-slate-50/50 p-3.5 rounded-2xl border border-slate-200/80 flex flex-col justify-between hover:bg-slate-50 transition-all">
                         <div onclick="closeAccountPage(); openProductPage('${r.id}')" class="cursor-pointer space-y-2">
                             <img src="${r.image}" class="w-full h-32 object-cover rounded-xl shadow-sm" />
-                            <div class="text-[9px] font-black text-purple-700 bg-amber-100 px-2 py-0.5 rounded-md inline-block">הטבת VIP מיוחדת</div>
+                            <div class="text-[9px] font-black text-purple-700 bg-purple-600 px-2 py-0.5 rounded-md inline-block">הטבת VIP מיוחדת</div>
                             <h5 class="font-black text-xs text-slate-800 line-clamp-1">${r.name}</h5>
                             <div class="text-xs font-black text-oz-primary">₪${r.price}</div>
                         </div>
@@ -1599,7 +1599,7 @@ function renderAccountWishlist() {
                         הוסף את המוצרים שאהבת לסל ועבור לקופה לקבלת 10% הנחה מלאה + משלוח מהיר עד הבית!
                     </div>
                 </div>
-                <button onclick="closeAccountPage(); toggleCartDrawer()" class="py-3 px-6 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-950 font-black text-xs rounded-2xl shadow-lg hover:scale-105 active:scale-95 transition-all shrink-0 cursor-pointer">
+                <button onclick="closeAccountPage(); toggleCartDrawer()" class="py-3 px-6 bg-gradient-to-r from-purple-600 to-indigo-900 hover:from-purple-600 hover:to-indigo-900 text-white font-black text-xs rounded-2xl shadow-lg hover:scale-105 active:scale-95 transition-all shrink-0 cursor-pointer">
                     עבור לסל הקניות והקופה 🛒
                 </button>
             </div>
@@ -1713,7 +1713,7 @@ function renderAccountPageHTML() {
                     <!-- Customer Greeting & Status -->
                     <div class="flex items-center gap-4">
                         <div class="relative shrink-0">
-                            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-amber-300 via-amber-400 to-amber-500 text-slate-950 flex items-center justify-center font-black text-2xl sm:text-3xl shadow-lg border-2 border-purple-200">
+                            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-900 text-white flex items-center justify-center font-black text-2xl sm:text-3xl shadow-lg border-2 border-purple-200">
                                 👑
                             </div>
                             <span class="absolute -bottom-1 -right-1 bg-emerald-500 w-4 h-4 rounded-full border-2 border-[#29114D]" title="מחובר כעת"></span>
@@ -1721,7 +1721,7 @@ function renderAccountPageHTML() {
                         <div class="space-y-1">
                             <div class="flex items-center gap-2.5 flex-wrap">
                                 <h1 class="text-xl sm:text-2xl font-black text-white tracking-tight">שלום, ${user.name}!</h1>
-                                <span class="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 text-slate-950 font-black text-[10px] py-1 px-3 rounded-full shadow-md flex items-center gap-1">
+                                <span class="bg-gradient-to-r from-purple-600 via-purple-700 to-indigo-900 text-white font-black text-[10px] py-1 px-3 rounded-full shadow-md flex items-center gap-1">
                                     <span>🌟</span> חבר מועדון VIP OZ
                                 </span>
                                 <button onclick="switchAccountTab('edit-profile')" class="py-1 px-3 bg-purple-600/20 hover:bg-purple-600/30 text-purple-200 font-bold text-xs rounded-xl border border-purple-400/40 transition-all flex items-center gap-1 cursor-pointer">
@@ -1743,13 +1743,13 @@ function renderAccountPageHTML() {
                             <div class="text-[10px] font-bold text-purple-200 uppercase tracking-wider">מאזן נקודות VIP OZ</div>
                             <div class="text-2xl sm:text-3xl font-black text-purple-200 my-0.5 flex items-center gap-1">
                                 <span>150</span>
-                                <span class="text-xs font-bold text-amber-200">נקודות</span>
+                                <span class="text-xs font-bold text-purple-600">נקודות</span>
                             </div>
                             <div class="text-[10px] text-purple-100 font-bold">150 נקודות = 10% הנחה (עד ₪150 חיסכון)</div>
                         </div>
 
                         <div class="w-full sm:w-auto shrink-0 border-t sm:border-t-0 sm:border-r border-white/15 pt-3 sm:pt-0 sm:pr-4">
-                            <button onclick="redeemPoints()" class="w-full py-2.5 px-5 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-xs rounded-xl shadow-lg hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-1.5 cursor-pointer">
+                            <button onclick="redeemPoints()" class="w-full py-2.5 px-5 bg-gradient-to-r from-purple-600 via-purple-700 to-indigo-900 hover:from-purple-600 hover:to-indigo-900 text-white font-black text-xs rounded-xl shadow-lg hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-1.5 cursor-pointer">
                                 <span>🎁</span> ממש 150 נקודות ל-10% הנחה
                             </button>
                         </div>
@@ -1787,7 +1787,7 @@ function renderAccountPageHTML() {
                             <span class="text-base">🎁</span>
                             <span class="font-bold text-purple-100 text-[11px]">הטבת מועדון</span>
                         </div>
-                        <span class="font-black bg-purple-600 text-slate-950 text-[10px] py-0.5 px-2 rounded-full">10% OFF</span>
+                        <span class="font-black bg-purple-600 text-white text-[10px] py-0.5 px-2 rounded-full">10% OFF</span>
                     </div>
 
                     <div onclick="switchAccountTab('edit-profile')" class="bg-white/5 hover:bg-white/10 border border-white/10 p-2.5 rounded-xl cursor-pointer transition-all flex items-center justify-between col-span-2 sm:col-span-1">
@@ -1795,7 +1795,7 @@ function renderAccountPageHTML() {
                             <span class="text-base">✏️</span>
                             <span class="font-bold text-purple-100 text-[11px]">פרטי חשבון</span>
                         </div>
-                        <span class="font-black bg-purple-600 text-slate-950 text-[10px] py-0.5 px-2 rounded-full">ערוך</span>
+                        <span class="font-black bg-purple-600 text-white text-[10px] py-0.5 px-2 rounded-full">ערוך</span>
                     </div>
                 </div>
             </div>
@@ -1966,21 +1966,21 @@ function renderAccountPageHTML() {
                         <h3 class="font-black text-slate-900 text-base flex items-center gap-2">
                             <span>🎁</span> מועדון VIP OZ – צבירה ומימוש נקודות
                         </h3>
-                        <span class="text-xs font-black text-purple-700 bg-amber-100 px-3 py-1 rounded-full">מאזן נוכחי: 150 נקודות</span>
+                        <span class="text-xs font-black text-purple-700 bg-purple-600 px-3 py-1 rounded-full">מאזן נוכחי: 150 נקודות</span>
                     </div>
 
-                    <div class="bg-gradient-to-r from-purple-50 via-purple-100/50 to-amber-50/50 p-5 rounded-2xl border border-purple-200 space-y-4">
+                    <div class="bg-gradient-to-r from-purple-50 via-purple-100/50 to-indigo-900/50 p-5 rounded-2xl border border-purple-200 space-y-4">
                         <div class="flex items-center justify-between flex-wrap gap-3">
                             <div>
                                 <h4 class="font-black text-sm text-slate-900">התקדמות לדרגת VIP Diamond ✨</h4>
                                 <p class="text-xs text-slate-600">צבור עוד 50 נקודות לקבלת 15% הנחה קבועה ומשלוחים בחינם!</p>
                             </div>
-                            <button onclick="redeemPoints()" class="py-2.5 px-5 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black text-xs rounded-xl shadow-md hover:scale-105 transition-all">
+                            <button onclick="redeemPoints()" class="py-2.5 px-5 bg-gradient-to-r from-purple-600 to-indigo-900 text-white font-black text-xs rounded-xl shadow-md hover:scale-105 transition-all">
                                 ממש 150 נקודות ל-10% הנחה 🎁
                             </button>
                         </div>
                         <div class="w-full bg-slate-200 rounded-full h-3 overflow-hidden">
-                            <div class="bg-gradient-to-r from-amber-400 to-oz-primary h-full rounded-full" style="width: 75%"></div>
+                            <div class="bg-gradient-to-r from-purple-600 to-oz-primary h-full rounded-full" style="width: 75%"></div>
                         </div>
                     </div>
 
@@ -2086,7 +2086,7 @@ function renderAccountPageHTML() {
 
                         <!-- Submit Button -->
                         <div class="pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-                            <button type="submit" class="w-full sm:w-auto py-3.5 px-8 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 text-slate-950 font-black text-xs sm:text-sm rounded-xl shadow-lg hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer">
+                            <button type="submit" class="w-full sm:w-auto py-3.5 px-8 bg-gradient-to-r from-purple-600 via-purple-700 to-indigo-900 hover:from-purple-600 hover:to-indigo-900 text-white font-black text-xs sm:text-sm rounded-xl shadow-lg hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer">
                                 <span>💾</span> שמור עדכון פרטי חשבון
                             </button>
                             <span class="text-[11px] text-slate-400 font-medium">✨ הפרטים יישמרו וימולאו אוטומטית בכל רכישה באתר</span>
@@ -2120,7 +2120,7 @@ function renderAccountPageHTML() {
                     </div>
 
                     <div class="mt-4 pt-2 flex justify-center sm:justify-start">
-                        <button id="seo-btn-account" onclick="toggleSeoExpand('account')" class="py-2.5 px-6 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-950 font-black text-xs sm:text-sm rounded-xl shadow-lg transition-all transform hover:scale-105 active:scale-95 cursor-pointer">
+                        <button id="seo-btn-account" onclick="toggleSeoExpand('account')" class="py-2.5 px-6 bg-gradient-to-r from-purple-600 to-indigo-900 hover:from-purple-600 hover:to-indigo-900 text-white font-black text-xs sm:text-sm rounded-xl shadow-lg transition-all transform hover:scale-105 active:scale-95 cursor-pointer">
                             קרא עוד... ↓
                         </button>
                     </div>
@@ -2221,7 +2221,7 @@ function showShabbatOverlay() {
             <div class="absolute -bottom-12 -left-12 w-40 h-40 bg-purple-600/30 rounded-full blur-3xl pointer-events-none"></div>
 
             <!-- Candle Icon -->
-            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-gradient-to-br from-amber-300 via-amber-400 to-amber-500 text-slate-950 flex items-center justify-center mx-auto text-4xl sm:text-5xl shadow-2xl border-2 border-purple-200 animate-pulse">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-900 text-white flex items-center justify-center mx-auto text-4xl sm:text-5xl shadow-2xl border-2 border-purple-200 animate-pulse">
                 🕯️🕯️
             </div>
             
