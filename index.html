@@ -43,6 +43,13 @@
         .animate-toast { animation: toastIn 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
         .mega-menu { opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.25s ease; }
         .group\/menu:hover .mega-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        /* Hide Netlify floating badge & drawer */
+        #netlify-badge, .netlify-badge, [data-netlify-drawer], iframe[src*="netlify"], #netlify-modal-root, div[class*="netlify-drawer"], div[id*="netlify-drawer"] {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
         /* Hide scrollbars for smooth horizontal carousel */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
