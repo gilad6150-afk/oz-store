@@ -713,34 +713,13 @@ function addToCartFromPDP(id) {
     const p = products.find(x => String(x.id) === String(id));
     if (!p) return;
 
-    if (pdpEngravingState.enabled && pdpEngravingState.text.trim()) {
-        const engravingText = pdpEngravingState.text.trim();
-        const styleLabel = pdpEngravingState.style === 'silver_foil' ? 'חריטת כסף' : (pdpEngravingState.style === 'gold_embroidery' ? 'רקמת זהב' : 'חריטת זהב');
-        const customizedItem = {
-            ...p,
-            id: p.id + '_eng_' + Date.now(),
-            name: p.name + ' (כולל הקדשה)',
-            price: p.price + 29,
-            originalPrice: p.price,
-            engraving: {
-                text: engravingText,
-                style: pdpEngravingState.style,
-                label: styleLabel,
-                price: 29
-            },
-            qty: pdpSelectedQty
-        };
-        state.cart.push(customizedItem);
-        showToast('🎉 הוסף לסל: ' + p.name + ' כולל ' + styleLabel + ' ("' + engravingText + '")');
+    const existing = state.cart.find(i => String(i.id) === String(id) && !i.engraving);
+    if (existing) {
+        existing.qty += pdpSelectedQty;
     } else {
-        const existing = state.cart.find(i => String(i.id) === String(id) && !i.engraving);
-        if (existing) {
-            existing.qty += pdpSelectedQty;
-        } else {
-            state.cart.push({ ...p, qty: pdpSelectedQty });
-        }
-        showToast('🎉 הוסף לסל: ' + p.name + ' (x' + pdpSelectedQty + ')');
+        state.cart.push({ ...p, qty: pdpSelectedQty });
     }
+    showToast('🎉 הוסף לסל: ' + p.name + ' (x' + pdpSelectedQty + ')');
     
     updateCartUI();
     toggleCartDrawer();
@@ -871,11 +850,6 @@ function generateProductPageHTML(p) {
                 <div class="flex flex-col gap-3">
                     <div class="h-72 sm:h-96 rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shadow-inner relative group">
                         <img id="pdp-main-img" src="${p.images && p.images.length ? p.images[0] : p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                        <div id="pdp-engraving-live-overlay" class="hidden absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-xl bg-slate-950/80 backdrop-blur-md border border-amber-400/50 shadow-2xl text-center transition-all pointer-events-none z-20">
-                            <span id="pdp-engraving-live-text" class="text-sm sm:text-base font-black tracking-wider leading-none" style="background: linear-gradient(135deg, #FFE082 0%, #FFB300 50%, #FFF8E1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.9));">
-                                ישראל ישראלי
-                            </span>
-                        </div>
                         ${isStam ? '<span class="absolute top-3 right-3 bg-oz-primary text-white font-black text-[11px] py-1 px-3 rounded-full shadow-md">100% כשר מוסמך ✨</span>' : '<span class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-sm text-white font-black text-[11px] py-1 px-3 rounded-full shadow-md">100% איכות ואחריות ✨</span>'}
                         ${!p.inStock ? '<span class="absolute top-3 left-3 bg-red-600 text-white font-black text-[11px] py-1 px-3 rounded-full shadow-md">אזל מהמלאי</span>' : ''}
                     </div>
@@ -934,39 +908,6 @@ function generateProductPageHTML(p) {
                             <div class="flex items-center gap-1.5">
                                 <span class="text-emerald-600 font-bold">✓</span>
                                 <span>🏪 איסוף עצמי מראש העין - ₪0</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Personalized Engraving & Embroidery Live Selector -->
-                    <div class="p-4 bg-gradient-to-br from-amber-50/90 via-purple-50/40 to-amber-50/90 rounded-2xl border-2 border-amber-300 shadow-sm space-y-3 text-right dir-rtl">
-                        <div class="flex items-center justify-between">
-                            <label class="flex items-center gap-2 cursor-pointer font-black text-xs text-slate-900">
-                                <input type="checkbox" id="pdp-engraving-toggle" onchange="togglePDPEngraving(this.checked)" class="w-4 h-4 text-amber-600 rounded focus:ring-amber-500 cursor-pointer" />
-                                <span class="flex items-center gap-1.5">✍️ הוסף חריטה / רקמה אישית בלייב</span>
-                            </label>
-                            <span class="text-[11px] font-black text-amber-900 bg-amber-100 px-2.5 py-0.5 rounded-full border border-amber-300 shadow-sm">+₪29 בלבד</span>
-                        </div>
-
-                        <div id="pdp-engraving-controls" class="hidden space-y-2.5 pt-1">
-                            <div>
-                                <label class="block text-[11px] font-bold text-slate-700 mb-1">הקלד שם או הקדשה להדמיה בלייב:</label>
-                                <input type="text" id="pdp-engraving-input" oninput="updatePDPEngravingText(this.value)" placeholder="למשל: ישראל ישראלי" maxlength="30" class="w-full p-2.5 bg-white border border-amber-300 rounded-xl text-xs font-bold text-slate-900 outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200 transition-all shadow-inner" />
-                            </div>
-
-                            <div>
-                                <label class="block text-[11px] font-bold text-slate-700 mb-1">בחר גוון / סגנון חריטה:</label>
-                                <div class="grid grid-cols-3 gap-2 text-[11px] font-bold">
-                                    <button type="button" onclick="selectPDPEngravingStyle('gold_foil')" class="pdp-style-btn p-2 rounded-xl border-2 border-amber-500 ring-2 ring-amber-500 bg-amber-100 text-amber-950 font-black transition-all flex items-center justify-center gap-1 shadow-sm cursor-pointer" data-style="gold_foil">
-                                        <span>🌟 זהב</span>
-                                    </button>
-                                    <button type="button" onclick="selectPDPEngravingStyle('silver_foil')" class="pdp-style-btn p-2 rounded-xl border border-slate-200 bg-slate-100 text-slate-800 transition-all flex items-center justify-center gap-1 cursor-pointer" data-style="silver_foil">
-                                        <span>🪙 כסף</span>
-                                    </button>
-                                    <button type="button" onclick="selectPDPEngravingStyle('gold_embroidery')" class="pdp-style-btn p-2 rounded-xl border border-amber-200 bg-amber-50 text-amber-900 transition-all flex items-center justify-center gap-1 cursor-pointer" data-style="gold_embroidery">
-                                        <span>🧵 רקמה</span>
-                                    </button>
-                                </div>
                             </div>
                         </div>
                     </div>
