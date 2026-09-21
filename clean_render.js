@@ -338,23 +338,41 @@ window.toggleArticlePreviewMode = function() {
 function updateSchedulerStatusUI() {
     const statusText = document.getElementById('scheduler-status-text');
     const btnText = document.getElementById('preview-mode-btn-text');
-    if (!statusText || !btnText) return;
+    const launchInput = document.getElementById('scheduler-launch-date-input');
+    const visibleCountEl = document.getElementById('scheduler-visible-count');
+    const totalCountEl = document.getElementById('scheduler-total-count');
 
     const isPreview = localStorage.getItem('oz_articles_preview_all') === 'true';
     const db = (typeof articlesDB !== 'undefined' ? articlesDB : (typeof articles !== 'undefined' ? articles : []));
     const visible = ArticleScheduler.getVisibleArticles();
     const upcoming = db.length - visible.length;
 
-    if (isPreview) {
-        statusText.textContent = `מצב תצוגה מקדימה פעיל: מציג את כל ${db.length} המאמרים`;
-        btnText.textContent = '🔒 חזור לתזמון אוטומטי יומי';
-    } else {
-        if (upcoming > 0) {
-            statusText.textContent = `פורסמו ${visible.length} מאמרים | המאמר הבא ישתחרר מחר בחצות ⏰ (נותרו עוד ${upcoming} מאמרים בתור)`;
+    if (visibleCountEl) visibleCountEl.textContent = isPreview ? `${db.length} (מצב מנהל)` : visible.length;
+    if (totalCountEl) totalCountEl.textContent = `${db.length} מאמרים`;
+
+    if (statusText) {
+        if (isPreview) {
+            statusText.textContent = `מצב תצוגה מקדימה פעיל: מציג את כל ${db.length} המאמרים במגזין האתר`;
         } else {
-            statusText.textContent = `כל ${db.length} המאמרים פורסמו בהצלחה ⏰`;
+            if (upcoming > 0) {
+                statusText.textContent = `פורסמו ${visible.length} מאמרים | המאמר הבא ישתחרר מחר בחצות ⏰ (נותרו עוד ${upcoming} מאמרים בתור)`;
+            } else {
+                statusText.textContent = `כל ${db.length} המאמרים פורסמו בהצלחה ⏰`;
+            }
         }
-        btnText.textContent = '👁️ מצב תצוגה מקדימה לכל המאמרים (מנהל)';
+    }
+
+    if (btnText) {
+        if (isPreview) {
+            btnText.textContent = '🔒 חזור לתזמון אוטומטי יומי (הצג רק גלויים)';
+        } else {
+            btnText.textContent = '👁️ מצב תצוגה מקדימה לכל המאמרים (מנהל)';
+        }
+    }
+
+    if (launchInput) {
+        const launch = localStorage.getItem('oz_articles_launch_date') || '2026-09-17';
+        launchInput.value = launch;
     }
 }
 

@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>מכון עוז | תשמישי קדושה, תפילין מהודרות וארנקי יוקרה לגבר - חנות אונליין</title>
-        <meta name="keywords" content="׳׳×׳ ׳•׳× ׳׳’׳‘׳¨, ׳›׳™׳¡׳•׳™ ׳׳×׳₪׳™׳׳™׳, ׳×׳™׳§ ׳׳×׳₪׳™׳׳™׳, ׳׳×׳ ׳” ׳׳‘׳¨ ׳׳¦׳•׳•׳”, ׳׳×׳ ׳” ׳׳—׳×׳, ׳×׳₪׳™׳׳™׳ ׳׳”׳•׳“׳¨׳•׳×, ׳×׳₪׳™׳׳™׳ ׳׳‘׳¨ ׳׳¦׳•׳•׳”, ׳§׳׳£ ׳׳–׳•׳–׳” ׳›׳©׳¨, ׳‘׳×׳™ ׳׳–׳•׳–׳” ׳׳¢׳•׳¦׳‘׳™׳, ׳˜׳׳™׳× ׳¦׳׳¨ ׳˜׳”׳•׳¨, ׳˜׳׳™׳× ׳׳—׳×׳, ׳¦׳™׳¦׳™׳× ׳¢׳‘׳•׳“׳× ׳™׳“, ׳׳¨׳ ׳§ ׳¢׳•׳¨ ׳™׳•׳§׳¨׳×׳™ ׳׳’׳‘׳¨, ׳¡׳˜ ׳§׳™׳“׳•׳© ׳•׳”׳‘׳“׳׳”, ׳×׳©׳׳™׳©׳™ ׳§׳“׳•׳©׳” ׳׳©׳׳•׳— ׳׳›׳ ׳”׳׳¨׳¥, ׳׳›׳•׳ ׳¢׳•׳–">
-    <meta name="description" content="׳׳›׳•׳ ׳¢׳•׳– ג€“ ׳—׳ ׳•׳× ׳×׳©׳׳™׳©׳™ ׳§׳“׳•׳©׳”, ׳™׳•׳“׳׳™׳§׳” ׳•׳׳¨׳ ׳§׳™ ׳¢׳•׳¨ ׳₪׳¨׳™׳׳™׳•׳ ׳¢׳ ׳׳©׳׳•׳—׳™׳ ׳׳”׳™׳¨׳™׳ ׳׳›׳ ׳—׳׳§׳™ ׳”׳׳¨׳¥ (1-3 ׳™׳׳™ ׳¢׳¡׳§׳™׳). ׳׳×׳ ׳•׳× ׳׳’׳‘׳¨, ׳›׳™׳¡׳•׳™ ׳׳×׳₪׳™׳׳™׳, ׳×׳₪׳™׳׳™׳ ׳׳”׳•׳“׳¨׳•׳×, ׳׳–׳•׳–׳•׳× ׳›׳©׳¨׳•׳× ׳•׳¡׳˜׳™׳ ׳׳‘׳¨ ׳׳¦׳•׳•׳” ׳•׳׳—׳×׳.">
+    <meta name="keywords" content="מתנות לגבר, כיסוי לתפילין, תיק לתפילין, מתנה לבר מצווה, מתנה לחתן, תפילין מהודרות, תפילין לבר מצווה, קלף מזוזה כשר, בתים למזוזה מעוצבים, טלית צמר טהור, טלית לחתן, ציצית עבודת יד, ארנק עור יוקרתי לגבר, סט קידוש והבדלה, תשמישי קדושה משלוח לכל הארץ, מכון עוז">
+    <meta name="description" content="מכון עוז – חנות תשמישי קדושה, יודאיקה וארנקי עור פרימיום עם משלוחים מהירים לכל חלקי הארץ (1-3 ימי עסקים). מתנות לגבר, כיסוי לתפילין, תפילין מהודרות, מזוזות כשרות וסטים לבר מצווה ולחתן.">
 <!-- OFFICIAL BRAND FAVICON -->
     <link rel="icon" type="image/png" href="public/oz_logo_transparent.png">
     <link rel="shortcut icon" type="image/png" href="public/oz_logo_transparent.png">
@@ -1488,6 +1488,11 @@
                             </div>
                             <p class="text-slate-500 font-medium">בתיאום מראש מחנות מכון עוז: <strong>שלום מנצורה 48, ראש העין</strong></p>
                         </div>
+                    </div>
+
+                    <div class="p-3 bg-amber-50 border border-amber-200 rounded-xl text-amber-900 font-bold flex items-start gap-2 text-xs">
+                        <span class="text-amber-600 text-sm shrink-0">⚠️</span>
+                        <span><strong>הבהרת אזורי משלוח:</strong> המשלוחים מבוצעים לכל רחבי הארץ (למעט אזורים מסוכנים / מגבלות ביטחוניות שאינם במפת חלוקת חברות השליחויות).</span>
                     </div>
                 </div>
 
@@ -5415,11 +5420,96 @@ const articlesDB = [
             document.body.classList.remove('bg-slate-900', 'text-white');
         }
 
-        // Checkout & High UX Payment Modal
+        //         // Checkout & High UX 2-Step Payment Modal
         function openCheckoutModal() {
+            state.checkoutStep = 1;
             renderCheckoutModal();
             toggleModal('checkout-modal');
         }
+
+        window.switchCheckoutStep = function(step) {
+            state.checkoutStep = step;
+            const step1Panel = document.getElementById('checkout-step-1');
+            const step2Panel = document.getElementById('checkout-step-2');
+            const tab1 = document.getElementById('step-tab-1');
+            const tab2 = document.getElementById('step-tab-2');
+
+            if (!step1Panel || !step2Panel) {
+                if (typeof renderCheckoutModal === 'function') renderCheckoutModal();
+                return;
+            }
+
+            if (step === 1) {
+                step1Panel.classList.remove('hidden');
+                step2Panel.classList.add('hidden');
+                if (tab1) {
+                    tab1.className = "py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer bg-oz-primary text-white shadow-md border border-oz-primary";
+                    tab1.querySelector('.step-num-badge').className = "w-6 h-6 rounded-full bg-white text-oz-primary text-xs font-black flex items-center justify-center shrink-0";
+                }
+                if (tab2) {
+                    tab2.className = "py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer bg-white text-slate-600 border border-slate-200 hover:bg-purple-50";
+                    tab2.querySelector('.step-num-badge').className = "w-6 h-6 rounded-full bg-slate-200 text-slate-700 text-xs font-black flex items-center justify-center shrink-0";
+                }
+            } else {
+                step1Panel.classList.add('hidden');
+                step2Panel.classList.remove('hidden');
+                if (tab2) {
+                    tab2.className = "py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer bg-oz-primary text-white shadow-md border border-oz-primary";
+                    tab2.querySelector('.step-num-badge').className = "w-6 h-6 rounded-full bg-white text-oz-primary text-xs font-black flex items-center justify-center shrink-0";
+                }
+                if (tab1) {
+                    tab1.className = "py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer bg-white text-slate-600 border border-slate-200 hover:bg-purple-50";
+                    tab1.querySelector('.step-num-badge').className = "w-6 h-6 rounded-full bg-slate-200 text-slate-700 text-xs font-black flex items-center justify-center shrink-0";
+                }
+            }
+        };
+
+        window.goToCheckoutPaymentStep = function(e) {
+            if (e) e.preventDefault();
+            const name = document.getElementById('checkout-name');
+            const phone = document.getElementById('checkout-phone');
+            const city = document.getElementById('checkout-city');
+            const street = document.getElementById('checkout-street');
+
+            if (name && !name.value.trim()) {
+                alert('אנא הוסף את שמך המלא למשלוח');
+                name.focus();
+                return false;
+            }
+            if (phone && !phone.value.trim()) {
+                alert('אנא הוסף מספר טלפון נייד להתקשרות');
+                phone.focus();
+                return false;
+            }
+            if (city && !city.value.trim()) {
+                alert('אנא הזן עיר / יישוב למשלוח');
+                city.focus();
+                return false;
+            }
+            if (street && !street.value.trim()) {
+                alert('אנא הזן כתובת מלאה ומספר בית למשלוח');
+                street.focus();
+                return false;
+            }
+
+            // Save user details into state
+            state.user = state.user || {};
+            state.user.name = name.value.trim();
+            state.user.phone = phone.value.trim();
+            state.user.city = city.value.trim();
+            state.user.street = street.value.trim();
+            const email = document.getElementById('checkout-email');
+            if (email) state.user.email = email.value.trim();
+            try { localStorage.setItem('oz_user', JSON.stringify(state.user)); } catch(err){}
+
+            // Update shipping summary display in step 2 if present
+            const shippingSummary = document.getElementById('step2-delivery-summary');
+            if (shippingSummary) {
+                shippingSummary.textContent = `${state.user.name} | ${state.user.phone} | ${state.user.street}, ${state.user.city}`;
+            }
+
+            switchCheckoutStep(2);
+        };
 
         window.applyCouponCode = function(code) {
             const coupon = (code || '').trim().toUpperCase();
@@ -5461,6 +5551,7 @@ const articlesDB = [
             const container = document.getElementById('checkout-modal-content');
             if (!container) return;
 
+            let currentStep = state.checkoutStep || 1;
             let subtotal = state.cart.reduce((acc, i) => acc + (i.price * i.qty), 0);
             let discount5Percent = Math.round(subtotal * 0.05);
             let couponPercent = state.couponPercent || 0;
@@ -5473,7 +5564,7 @@ const articlesDB = [
 
             if (state.cart.length === 0) {
                 container.innerHTML = `
-                    <div class="text-center py-12 px-4">
+                    <div class="text-center py-12 px-4 dir-rtl">
                         <div class="w-16 h-16 bg-purple-50 text-oz-primary rounded-full flex items-center justify-center mx-auto mb-3 text-2xl font-black">🛒</div>
                         <h3 class="text-xl font-black text-slate-800 mb-2">סל הקניות שלך ריק</h3>
                         <p class="text-xs text-slate-500 mb-6">אנא הוסף מוצרים לסל לפני מעבר לקופה</p>
@@ -5484,157 +5575,331 @@ const articlesDB = [
             }
 
             container.innerHTML = `
-                <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
-                    <div class="flex items-center gap-2">
-                        <div class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center font-black text-xl">🔒</div>
-                        <div>
-                            <h3 class="text-xl font-black text-slate-800">קופה מאובטחת 256-Bit</h3>
-                            <p class="text-xs text-slate-500">השלם את ההזמנה שלך בבטחה ממכון עוז</p>
+                <!-- HEADER & STEPPER PROGRESS BAR -->
+                <div class="border-b border-slate-100 pb-4 mb-5 dir-rtl">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-2.5">
+                            <div class="w-10 h-10 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-black text-xl shrink-0">🔒</div>
+                            <div>
+                                <h3 class="text-xl font-black text-slate-900">קופה מאובטחת SSL 256-Bit</h3>
+                                <p class="text-xs text-slate-500 font-medium">השלמת הזמנה מהירה ומאובטחת במכון עוז</p>
+                            </div>
+                        </div>
+                        <span class="text-xs font-black text-oz-primary bg-purple-50 py-1.5 px-3 rounded-full border border-purple-100 hidden sm:inline-block">משלוח מהיר 1-3 ימים 🚚</span>
+                    </div>
+
+                    <!-- 2-STEP VISUAL PROGRESS TABS -->
+                    <div class="bg-slate-50 p-1.5 rounded-2xl border border-slate-200/80">
+                        <div class="grid grid-cols-2 gap-2 text-center text-xs font-black">
+                            <button type="button" onclick="switchCheckoutStep(1)" id="step-tab-1" class="py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer ${currentStep === 1 ? 'bg-oz-primary text-white shadow-md border border-oz-primary' : 'bg-white text-slate-600 border border-slate-200 hover:bg-purple-50'}">
+                                <span class="step-num-badge w-6 h-6 rounded-full ${currentStep === 1 ? 'bg-white text-oz-primary' : 'bg-slate-200 text-slate-700'} text-xs font-black flex items-center justify-center shrink-0">1</span>
+                                <span class="truncate">פרטים אישיים ומשלוח 🚚</span>
+                            </button>
+                            <button type="button" onclick="switchCheckoutStep(2)" id="step-tab-2" class="py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer ${currentStep === 2 ? 'bg-oz-primary text-white shadow-md border border-oz-primary' : 'bg-white text-slate-600 border border-slate-200 hover:bg-purple-50'}">
+                                <span class="step-num-badge w-6 h-6 rounded-full ${currentStep === 2 ? 'bg-white text-oz-primary' : 'bg-slate-200 text-slate-700'} text-xs font-black flex items-center justify-center shrink-0">2</span>
+                                <span class="truncate">תשלום ואישור הזמנה 💳</span>
+                            </button>
                         </div>
                     </div>
-                    <span class="text-xs font-black text-oz-primary bg-purple-50 py-1.5 px-3 rounded-full border border-purple-100">משלוח מהיר 1-3 ימים 🚚</span>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                    <!-- Form Details -->
-                    <form onsubmit="handleCompleteOrder(event)" class="space-y-4">
-                        <h4 class="font-black text-sm text-slate-800 border-b border-slate-100 pb-2">1. פרטי המשלוח והלקוח:</h4>
-                        
-                        <div>
-                            <label class="block text-xs font-bold text-slate-600 mb-1">שם מלא *</label>
-                            <input type="text" id="checkout-name" required placeholder="ישראל ישראלי" class="w-full p-3 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary" value="${state.user ? (state.user.name || '') : ''}" />
-                        </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start dir-rtl">
+                    <!-- LEFT COLUMN: MULTI-STEP FORM PANELS (7 COLS) -->
+                    <div class="lg:col-span-7 space-y-4">
+                        <form onsubmit="handleCompleteOrder(event)">
+                            
+                            <!-- ========================================== -->
+                            <!-- STEP 1: PERSONAL DETAILS & SHIPPING -->
+                            <!-- ========================================== -->
+                            <div id="checkout-step-1" class="${currentStep === 1 ? '' : 'hidden'} space-y-4">
+                                <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm space-y-4">
+                                    <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                                        <h4 class="font-black text-sm text-slate-900 flex items-center gap-2">
+                                            <span class="w-6 h-6 rounded-full bg-purple-100 text-oz-primary text-xs font-black flex items-center justify-center">1</span>
+                                            <span>פרטי הלקוח והמשלוח:</span>
+                                        </h4>
+                                        <span class="text-[11px] text-slate-400 font-medium">* שדות חובה</span>
+                                    </div>
 
-                        <div class="grid grid-cols-2 gap-3">
-                            <div>
-                                <label class="block text-xs font-bold text-slate-600 mb-1">טלפון נייד *</label>
-                                <input type="tel" id="checkout-phone" required placeholder="052-686-7192" class="w-full p-3 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary" value="${state.user ? (state.user.phone || state.user.contact || '') : ''}" />
+                                    <div>
+                                        <label class="block text-xs font-bold text-slate-700 mb-1">שם מלא *</label>
+                                        <input type="text" id="checkout-name" required autocomplete="name" placeholder="ישראל ישראלי" class="w-full p-3 bg-slate-50/50 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary focus:bg-white transition-colors" value="${state.user ? (state.user.name || '') : ''}" />
+                                    </div>
+
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                        <div>
+                                            <label class="block text-xs font-bold text-slate-700 mb-1">טלפון נייד להתקשרות *</label>
+                                            <input type="tel" id="checkout-phone" required autocomplete="tel" placeholder="052-686-7192" class="w-full p-3 bg-slate-50/50 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary focus:bg-white transition-colors dir-ltr text-right" value="${state.user ? (state.user.phone || state.user.contact || '') : ''}" />
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-bold text-slate-700 mb-1">עיר / יישוב בישראל *</label>
+                                            <input type="text" id="checkout-city" required autocomplete="address-level2" list="israel-cities-list" placeholder="הקלד עיר (למשל: ראש העין, ירושלים, תל אביב...)" class="w-full p-3 bg-slate-50/50 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary focus:bg-white transition-colors" value="${state.user ? (state.user.city || '') : ''}" />
+                                            <datalist id="israel-cities-list">
+                                                <option value="ראש העין"></option>
+                                                <option value="ירושלים"></option>
+                                                <option value="תל אביב - יפו"></option>
+                                                <option value="בני ברק"></option>
+                                                <option value="פתח תקווה"></option>
+                                                <option value="חיפה"></option>
+                                                <option value="אשדוד"></option>
+                                                <option value="נתניה"></option>
+                                                <option value="באר שבע"></option>
+                                                <option value="חולון"></option>
+                                                <option value="רמת גן"></option>
+                                                <option value="רחובות"></option>
+                                                <option value="אשקלון"></option>
+                                                <option value="בת ים"></option>
+                                                <option value="בית שמש"></option>
+                                                <option value="כפר סבא"></option>
+                                                <option value="הרצליה"></option>
+                                                <option value="חדרה"></option>
+                                                <option value="מודיעין-מכבים-רעות"></option>
+                                                <option value="אלעד"></option>
+                                                <option value="ביתר עילית"></option>
+                                                <option value="מודיעין עילית"></option>
+                                                <option value="צפת"></option>
+                                                <option value="טבריה"></option>
+                                                <option value="עכו"></option>
+                                                <option value="נהריה"></option>
+                                                <option value="עפולה"></option>
+                                                <option value="קריית גת"></option>
+                                                <option value="ראשון לציון"></option>
+                                                <option value="רעננה"></option>
+                                                <option value="נצרת"></option>
+                                                <option value="לוד"></option>
+                                                <option value="רמלה"></option>
+                                                <option value="אריאל"></option>
+                                                <option value="מעלה אדומים"></option>
+                                                <option value="אילת"></option>
+                                                <option value="יבנה"></option>
+                                                <option value="חריש"></option>
+                                                <option value="נוף הגליל"></option>
+                                            </datalist>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-xs font-bold text-slate-700 mb-1">כתובת מגורים ומספר בית בישראל *</label>
+                                        <input type="text" id="checkout-street" required autocomplete="street-address" list="israel-streets-list" placeholder="שלום מנצורה 48 (או התחל להקליד רחוב)" class="w-full p-3 bg-slate-50/50 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary focus:bg-white transition-colors" value="${state.user ? (state.user.street || '') : ''}" />
+                                        <datalist id="israel-streets-list">
+                                            <option value="שלום מנצורה"></option>
+                                            <option value="הרצל"></option>
+                                            <option value="ז'בוטינסקי"></option>
+                                            <option value="בן גוריון"></option>
+                                            <option value="דרך יפו"></option>
+                                            <option value="רוטשילד"></option>
+                                            <option value="הרב קוק"></option>
+                                            <option value="רמב&quot;ם"></option>
+                                            <option value="חזון איש"></option>
+                                            <option value="רבי עקיבא"></option>
+                                            <option value="דרך חברון"></option>
+                                            <option value="הנביאים"></option>
+                                            <option value="יפו"></option>
+                                            <option value="המלך ג'ורג'"></option>
+                                            <option value="דיזנגוף"></option>
+                                            <option value="אלנבי"></option>
+                                            <option value="אבן גבירול"></option>
+                                            <option value="ביאליק"></option>
+                                            <option value="סוקולוב"></option>
+                                            <option value="ארלוזורוב"></option>
+                                            <option value="שדרות ירושלים"></option>
+                                        </datalist>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-xs font-bold text-slate-700 mb-1 flex items-center justify-between">
+                                            <span>כתובת דוא"ל (אימייל)</span>
+                                            <span class="text-[10px] text-oz-primary font-black bg-purple-50 px-2 py-0.5 rounded-full border border-purple-100">אופציונלי לקבלה דיגיטלית 📧</span>
+                                        </label>
+                                        <input type="email" id="checkout-email" autocomplete="email" placeholder="example@domain.co.il (לקבלת חשבונית מס-קבלה ועדכוני משלוח)" class="w-full p-3 bg-slate-50/50 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary focus:bg-white transition-colors" value="${state.user ? (state.user.email || '') : ''}" />
+                                    </div>
+                                </div>
+
+                                <!-- SHIPPING METHOD SELECTION -->
+                                <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm space-y-3">
+                                    <h4 class="font-black text-sm text-slate-900 border-b border-slate-100 pb-2">בחר שיטת משלוח וזמן אספקה:</h4>
+                                    
+                                    <div class="space-y-2 text-xs font-bold">
+                                        <label class="p-3 bg-purple-50/70 border border-purple-200 rounded-xl flex items-center justify-between cursor-pointer hover:bg-purple-100 transition-all">
+                                            <div class="flex items-center gap-2">
+                                                <input type="radio" name="checkout-shipping" value="70" ${selectedShippingFee === 70 ? 'checked' : ''} onchange="updateCheckoutFee(70, 'משלוח מהיר (1-3 ימים)')" class="text-oz-primary" />
+                                                <span>🚀 <strong>משלוח מהיר</strong> (1-3 ימי עסקים עד הבית)</span>
+                                            </div>
+                                            <span class="font-black text-oz-primary">₪70</span>
+                                        </label>
+
+                                        <label class="p-3 bg-purple-50/70 border border-purple-200 rounded-xl flex items-center justify-between cursor-pointer hover:bg-purple-100 transition-all">
+                                            <div class="flex items-center gap-2">
+                                                <input type="radio" name="checkout-shipping" value="35" ${selectedShippingFee === 35 ? 'checked' : ''} onchange="updateCheckoutFee(35, 'משלוח רגיל (5-10 ימי עסקים)')" class="text-oz-primary" />
+                                                <span>🚚 <strong>משלוח רגיל</strong> (5-10 ימי עסקים)</span>
+                                            </div>
+                                            <span class="font-black text-oz-primary">₪35</span>
+                                        </label>
+
+                                        <label class="p-3 bg-purple-50/70 border border-purple-200 rounded-xl flex items-center justify-between cursor-pointer hover:bg-purple-100 transition-all">
+                                            <div class="flex items-center gap-2">
+                                                <input type="radio" name="checkout-shipping" value="19" ${selectedShippingFee === 19 ? 'checked' : ''} onchange="updateCheckoutFee(19, 'נקודת איסוף HFD בכל הארץ')" class="text-oz-primary" />
+                                                <span>📦 <strong>נקודת איסוף HFD PickUP</strong> (לוקרים וחנויות בכל הארץ)</span>
+                                            </div>
+                                            <span class="font-black text-oz-primary">₪19</span>
+                                        </label>
+
+                                        <!-- HFD PICKUP POINTS INTERACTIVE SELECTOR -->
+                                        <div id="hfd-pickup-container" class="${selectedShippingFee === 19 ? '' : 'hidden'} p-4 bg-purple-100/80 border-2 border-purple-300 rounded-2xl space-y-3 dir-rtl">
+                                            <div class="flex items-center justify-between">
+                                                <span class="text-xs font-black text-oz-primary flex items-center gap-1.5">
+                                                    <span>📍</span> בחירת נקודת איסוף HFD PickUP
+                                                </span>
+                                                <span class="text-[10px] font-bold text-purple-900 bg-white px-2 py-0.5 rounded-full border border-purple-200 shadow-sm">רשת HFD שליחויות</span>
+                                            </div>
+
+                                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                                <div>
+                                                    <label class="block text-[11px] font-bold text-slate-700 mb-1">1. עיר לנקודת איסוף HFD:</label>
+                                                    <select id="hfd-city-select" onchange="window.onHFDCityChange(this.value)" class="w-full p-2.5 bg-white border border-purple-300 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary shadow-sm">
+                                                        <option value="">-- בחר עיר --</option>
+                                                    </select>
+                                                </div>
+                                                <div>
+                                                    <label class="block text-[11px] font-bold text-slate-700 mb-1">2. נקודת חלוקה / לוקר PickUP:</label>
+                                                    <select id="hfd-point-select" onchange="window.onHFDPointChange(this.value)" class="w-full p-2.5 bg-white border border-purple-300 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary shadow-sm" disabled>
+                                                        <option value="">-- בחר תחילה עיר --</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <!-- Selected Point Info Preview Box -->
+                                            <div id="hfd-selected-point-card" class="hidden p-3 bg-white rounded-xl border border-purple-200 text-xs space-y-1 shadow-sm">
+                                                <div class="font-black text-oz-primary flex items-center justify-between">
+                                                    <span id="hfd-card-name">שם הנקודה</span>
+                                                    <span id="hfd-card-code" class="text-[10px] bg-purple-100 px-2 py-0.5 rounded font-mono font-black text-purple-900">קוד HFD</span>
+                                                </div>
+                                                <div class="text-slate-700 text-[11px] font-bold" id="hfd-card-address">כתובת</div>
+                                                <div class="text-[10px] text-slate-500 font-medium" id="hfd-card-hours">שעות פעילות</div>
+                                            </div>
+                                        </div>
+
+                                        <label class="p-3 bg-purple-50/70 border border-purple-200 rounded-xl flex items-center justify-between cursor-pointer hover:bg-purple-100 transition-all">
+                                            <div class="flex items-center gap-2">
+                                                <input type="radio" name="checkout-shipping" value="0" ${selectedShippingFee === 0 ? 'checked' : ''} onchange="updateCheckoutFee(0, 'איסוף עצמי בתיאום מראש מראש העין')" class="text-oz-primary" />
+                                                <span>🏪 <strong>איסוף עצמי</strong> מראש העין (שלום מנצורה 48)</span>
+                                            </div>
+                                            <span class="font-black text-emerald-600">₪0 (חינם)</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="p-3 bg-amber-50/80 border border-amber-200 rounded-xl text-amber-900 font-bold flex items-start gap-2 text-xs mt-2">
+                                        <span class="text-amber-600 text-sm shrink-0">⚠️</span>
+                                        <span><strong>הבהרת אזורי משלוח:</strong> המשלוחים מבוצעים לכל רחבי הארץ (למעט אזורים מסוכנים / מגבלות ביטחוניות שאינם במפת חלוקת השליחים).</span>
+                                    </div>
+                                </div>
+
+                                <button type="button" onclick="goToCheckoutPaymentStep(event)" class="w-full py-4 bg-oz-primary hover:bg-oz-hover text-white font-black text-sm rounded-2xl shadow-xl shadow-purple-600/20 transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer">
+                                    <span>המשך לתשלום וסיכום הזמנה 💳 ←</span>
+                                </button>
                             </div>
-                            <div>
-                                <label class="block text-xs font-bold text-slate-600 mb-1">עיר / יישוב *</label>
-                                <input type="text" id="checkout-city" required placeholder="ראש העין" class="w-full p-3 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary" value="${state.user ? (state.user.city || '') : ''}" />
+
+                            <!-- ========================================== -->
+                            <!-- STEP 2: PAYMENT & ORDER CONFIRMATION -->
+                            <!-- ========================================== -->
+                            <div id="checkout-step-2" class="${currentStep === 2 ? '' : 'hidden'} space-y-4">
+                                
+                                <!-- SHIPPING SUMMARY BANNER -->
+                                <div class="bg-purple-50/80 p-3.5 rounded-2xl border border-purple-200 flex items-center justify-between text-xs font-bold text-slate-800">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-oz-primary text-base">📍</span>
+                                        <div>
+                                            <div class="text-[11px] text-slate-500 font-medium">יעד המשלוח שנרשם:</div>
+                                            <div id="step2-delivery-summary" class="font-black text-slate-900">${state.user ? (state.user.name || 'לקוח') + ' | ' + (state.user.phone || '') + ' | ' + (state.user.street || '') + ' ' + (state.user.city || '') : 'פרטי משלוח מעודכנים'}</div>
+                                        </div>
+                                    </div>
+                                    <button type="button" onclick="switchCheckoutStep(1)" class="py-1 px-2.5 bg-white text-oz-primary border border-purple-200 rounded-lg text-[11px] font-black hover:bg-purple-100 transition-colors">
+                                        ערוך פרטים ✏️
+                                    </button>
+                                </div>
+
+                                <!-- PAYMENT METHOD SELECTION -->
+                                <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm space-y-4">
+                                    <h4 class="font-black text-sm text-slate-900 border-b border-slate-100 pb-2 flex items-center justify-between">
+                                        <span>אמצעי תשלום וסליקה מאובטחת:</span>
+                                        <span class="text-[10px] font-bold text-oz-primary bg-purple-100 px-2 py-0.5 rounded-full">🔒 SSL 256-Bit</span>
+                                    </h4>
+                                    
+                                    <div class="space-y-2 text-xs font-bold">
+                                        <label class="p-3 bg-purple-50 border-2 border-oz-primary rounded-xl flex items-center justify-between cursor-pointer hover:bg-purple-100 transition-all">
+                                            <div class="flex items-center gap-2">
+                                                <input type="radio" name="payment-method" value="invoice4u_credit" checked onchange="togglePaymentMethodFields('invoice4u_credit')" class="text-oz-primary" />
+                                                <span class="text-slate-900 font-black">💳 כרטיס אשראי / Bit / Apple Pay (Invoice4U)</span>
+                                            </div>
+                                            <div class="flex items-center gap-1 text-[10px] font-extrabold text-slate-500">
+                                                <span class="bg-white px-1.5 py-0.5 rounded border border-slate-200">Visa</span>
+                                                <span class="bg-white px-1.5 py-0.5 rounded border border-slate-200">Mastercard</span>
+                                                <span class="bg-purple-600 text-purple-900 px-1.5 py-0.5 rounded border border-purple-600">Bit</span>
+                                            </div>
+                                        </label>
+
+                                        <label class="p-3 bg-purple-50/60 border border-purple-200 rounded-xl flex items-center justify-between cursor-pointer hover:bg-purple-100 transition-all">
+                                            <div class="flex items-center gap-2">
+                                                <input type="radio" name="payment-method" value="phone_order" onchange="togglePaymentMethodFields('phone_order')" class="text-oz-primary" />
+                                                <span class="text-slate-800">📞 הזמנה טלפונית / תשלום במזומן באיסוף</span>
+                                            </div>
+                                            <span class="text-[10px] text-slate-500">נציג יחזור אליך</span>
+                                        </label>
+                                    </div>
+
+                                    <!-- Invoice4U Credit Card Form -->
+                                    <div id="invoice4u-card-fields" class="p-4 bg-purple-50/80 rounded-2xl border border-purple-200 space-y-3 dir-rtl">
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-xs font-black text-oz-primary flex items-center gap-1.5">
+                                                <span>🔒</span> הזנת פרטי אשראי מאובטחים (תקן PCI-DSS via Invoice4U)
+                                            </span>
+                                            <span class="text-[10px] text-emerald-700 font-bold bg-emerald-100 px-2 py-0.5 rounded-full">סליקה מיידית</span>
+                                        </div>
+                                        <div>
+                                            <label class="block text-[11px] font-bold text-slate-700 mb-1">מספר כרטיס אשראי</label>
+                                            <input type="text" id="cc-number" placeholder="4580 •••• •••• ••••" maxlength="19" class="w-full p-2.5 bg-white border border-purple-200 rounded-xl text-xs font-mono font-bold text-slate-800 outline-none focus:border-oz-primary" />
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-2">
+                                            <div>
+                                                <label class="block text-[11px] font-bold text-slate-700 mb-1">תוקף (MM/YY)</label>
+                                                <input type="text" id="cc-exp" placeholder="12/28" maxlength="5" class="w-full p-2.5 bg-white border border-purple-200 rounded-xl text-xs font-mono font-bold text-center text-slate-800 outline-none focus:border-oz-primary" />
+                                            </div>
+                                            <div>
+                                                <label class="block text-[11px] font-bold text-slate-700 mb-1">CVV (3 ספרות)</label>
+                                                <input type="text" id="cc-cvv" placeholder="123" maxlength="4" class="w-full p-2.5 bg-white border border-purple-200 rounded-xl text-xs font-mono font-bold text-center text-slate-800 outline-none focus:border-oz-primary" />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="block text-[11px] font-bold text-slate-700 mb-1">מספר תעודת זהות של בעל הכרטיס</label>
+                                            <input type="text" id="cc-id" placeholder="012345678" maxlength="9" class="w-full p-2.5 bg-white border border-purple-200 rounded-xl text-xs font-mono font-bold text-slate-800 outline-none focus:border-oz-primary" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" id="checkout-submit-btn" class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-sm rounded-2xl shadow-xl shadow-emerald-600/20 transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer">
+                                    <span>אישור הזמנה ותשלום מאובטח 🔒 (<span id="checkout-final-btn-val">₪${finalTotal}</span>)</span>
+                                </button>
+
+                                <button type="button" onclick="switchCheckoutStep(1)" class="w-full py-2 text-slate-500 hover:text-slate-800 font-bold text-xs transition-colors text-center cursor-pointer">
+                                    ← חזור לעריכת פרטי משלוח וכתובת
+                                </button>
                             </div>
-                        </div>
+                        </form>
+                    </div>
 
-                        <div>
-                            <label class="block text-xs font-bold text-slate-600 mb-1">כתובת ומספר בית *</label>
-                            <input type="text" id="checkout-street" required placeholder="שלום מנצורה 48" class="w-full p-3 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary" value="${state.user ? (state.user.street || '') : ''}" />
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-bold text-slate-600 mb-1 flex items-center justify-between">
-                                <span>כתובת דוא"ל (אימייל)</span>
-                                <span class="text-[10px] text-oz-primary font-black bg-purple-50 px-2.5 py-0.5 rounded-full border border-purple-100">אופציונלי – לקבלת קבלה דיגיטלית ועדכוני משלוח 📧</span>
-                            </label>
-                            <input type="email" id="checkout-email" placeholder="example@domain.co.il (לקבלת חשבונית מס-קבלה ועדכוני משלוח)" class="w-full p-3 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary transition-all shadow-sm" value="${state.user ? (state.user.email || '') : ''}" />
-                        </div>
-
-                        <h4 class="font-black text-sm text-slate-800 border-b border-slate-100 pb-2 pt-2">2. בחר שיטת משלוח וזמן אספקה:</h4>
-                        
-                        <div class="space-y-2 text-xs font-bold">
-                            <label class="p-3 bg-purple-50/70 border border-purple-200 rounded-xl flex items-center justify-between cursor-pointer hover:bg-purple-100 transition-all">
-                                <div class="flex items-center gap-2">
-                                    <input type="radio" name="checkout-shipping" value="70" ${selectedShippingFee === 70 ? 'checked' : ''} onchange="updateCheckoutFee(70, 'משלוח מהיר (1-3 ימים)')" class="text-oz-primary" />
-                                    <span>🚀 <strong>משלוח מהיר</strong> (1-3 ימי עסקים)</span>
-                                </div>
-                                <span class="font-black text-oz-primary">₪70</span>
-                            </label>
-
-                            <label class="p-3 bg-purple-50/70 border border-purple-200 rounded-xl flex items-center justify-between cursor-pointer hover:bg-purple-100 transition-all">
-                                <div class="flex items-center gap-2">
-                                    <input type="radio" name="checkout-shipping" value="35" ${selectedShippingFee === 35 ? 'checked' : ''} onchange="updateCheckoutFee(35, 'משלוח רגיל (5-10 ימי עסקים)')" class="text-oz-primary" />
-                                    <span>🚚 <strong>משלוח רגיל</strong> (5-10 ימי עסקים)</span>
-                                </div>
-                                <span class="font-black text-oz-primary">₪35</span>
-                            </label>
-
-                            <label class="p-3 bg-purple-50/70 border border-purple-200 rounded-xl flex items-center justify-between cursor-pointer hover:bg-purple-100 transition-all">
-                                <div class="flex items-center gap-2">
-                                    <input type="radio" name="checkout-shipping" value="19" ${selectedShippingFee === 19 ? 'checked' : ''} onchange="updateCheckoutFee(19, 'נקודת איסוף בכל הארץ')" class="text-oz-primary" />
-                                    <span>📦 <strong>נקודת איסוף</strong> בכל הארץ</span>
-                                </div>
-                                <span class="font-black text-oz-primary">₪19</span>
-                            </label>
-
-                            <label class="p-3 bg-purple-50/70 border border-purple-200 rounded-xl flex items-center justify-between cursor-pointer hover:bg-purple-100 transition-all">
-                                <div class="flex items-center gap-2">
-                                    <input type="radio" name="checkout-shipping" value="0" ${selectedShippingFee === 0 ? 'checked' : ''} onchange="updateCheckoutFee(0, 'איסוף עצמי בתיאום מראש מראש העין')" class="text-oz-primary" />
-                                    <span>🏪 <strong>איסוף עצמי</strong> מראש העין (שלום מנצורה 48)</span>
-                                </div>
-                                <span class="font-black text-emerald-600">₪0 (חינם)</span>
-                            </label>
-                        </div>
-
-                        <h4 class="font-black text-sm text-slate-800 border-b border-slate-100 pb-2 pt-2 flex items-center justify-between">
-                            <span>3. אמצעי תשלום וסליקת אשראי מאובטחת:</span>
-                            <span class="text-[10px] font-bold text-oz-primary bg-purple-100 px-2.5 py-0.5 rounded-full flex items-center gap-1">🔒 Invoice4U SSL 256-bit</span>
+                    <!-- RIGHT COLUMN: ORDER SUMMARY & UPSELL (5 COLS) -->
+                    <div class="lg:col-span-5 bg-purple-50/50 p-5 rounded-3xl border border-purple-100 space-y-4">
+                        <h4 class="font-black text-sm text-slate-800 border-b border-purple-100 pb-2 flex items-center justify-between">
+                            <span>סיכום ההזמנה שלך:</span>
+                            <span class="text-xs font-black text-oz-primary">${state.cart.length} מוצרים</span>
                         </h4>
-                        
-                        <div class="space-y-2 text-xs font-bold">
-                            <label class="p-3 bg-purple-50 border-2 border-oz-primary rounded-xl flex items-center justify-between cursor-pointer hover:bg-purple-100 transition-all">
-                                <div class="flex items-center gap-2">
-                                    <input type="radio" name="payment-method" value="invoice4u_credit" checked onchange="togglePaymentMethodFields('invoice4u_credit')" class="text-oz-primary" />
-                                    <span class="text-slate-900 font-black">💳 כרטיס אשראי / Bit / Apple Pay (Invoice4U)</span>
-                                </div>
-                                <div class="flex items-center gap-1 text-[10px] font-extrabold text-slate-500">
-                                    <span class="bg-white px-1.5 py-0.5 rounded border border-slate-200">Visa</span>
-                                    <span class="bg-white px-1.5 py-0.5 rounded border border-slate-200">Mastercard</span>
-                                    <span class="bg-purple-600 text-purple-900 px-1.5 py-0.5 rounded border border-purple-600">Bit</span>
-                                </div>
-                            </label>
-
-                            <label class="p-3 bg-purple-50/60 border border-purple-200 rounded-xl flex items-center justify-between cursor-pointer hover:bg-purple-100 transition-all">
-                                <div class="flex items-center gap-2">
-                                    <input type="radio" name="payment-method" value="phone_order" onchange="togglePaymentMethodFields('phone_order')" class="text-oz-primary" />
-                                    <span class="text-slate-800">📞 הזמנה טלפונית / תשלום במזומן באיסוף</span>
-                                </div>
-                                <span class="text-[10px] text-slate-500">נציג יחזור אליך</span>
-                            </label>
-                        </div>
-
-                        <!-- Invoice4U Credit Card Form -->
-                        <div id="invoice4u-card-fields" class="p-4 bg-purple-50/80 rounded-2xl border border-purple-200 space-y-3 dir-rtl">
-                            <div class="flex items-center justify-between">
-                                <span class="text-xs font-black text-oz-primary flex items-center gap-1.5">
-                                    <span>🔒</span> הזנת פרטי אשראי מאובטחים (תקן PCI-DSS via Invoice4U)
-                                </span>
-                                <span class="text-[10px] text-emerald-700 font-bold bg-emerald-100 px-2 py-0.5 rounded-full">סליקה מיידית</span>
-                            </div>
-                            <div>
-                                <label class="block text-[11px] font-bold text-slate-700 mb-1">מספר כרטיס אשראי</label>
-                                <input type="text" id="cc-number" placeholder="4580 •••• •••• ••••" maxlength="19" class="w-full p-2.5 bg-white border border-purple-200 rounded-xl text-xs font-mono font-bold text-slate-800 outline-none focus:border-oz-primary" />
-                            </div>
-                            <div class="grid grid-cols-2 gap-2">
-                                <div>
-                                    <label class="block text-[11px] font-bold text-slate-700 mb-1">תוקף (MM/YY)</label>
-                                    <input type="text" id="cc-exp" placeholder="12/28" maxlength="5" class="w-full p-2.5 bg-white border border-purple-200 rounded-xl text-xs font-mono font-bold text-center text-slate-800 outline-none focus:border-oz-primary" />
-                                </div>
-                                <div>
-                                    <label class="block text-[11px] font-bold text-slate-700 mb-1">CVV (3 ספרות)</label>
-                                    <input type="text" id="cc-cvv" placeholder="123" maxlength="4" class="w-full p-2.5 bg-white border border-purple-200 rounded-xl text-xs font-mono font-bold text-center text-slate-800 outline-none focus:border-oz-primary" />
-                                </div>
-                            </div>
-                            <div>
-                                <label class="block text-[11px] font-bold text-slate-700 mb-1">מספר תעודת זהות של בעל הכרטיס</label>
-                                <input type="text" id="cc-id" placeholder="012345678" maxlength="9" class="w-full p-2.5 bg-white border border-purple-200 rounded-xl text-xs font-mono font-bold text-slate-800 outline-none focus:border-oz-primary" />
-                            </div>
-                        </div>
-
-                        <button type="submit" id="checkout-submit-btn" class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-sm rounded-2xl shadow-xl shadow-emerald-600/20 transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer">
-                            <span>אישור הזמנה ותשלום מאובטח 🔒 (<span id="checkout-final-btn-val">₪${finalTotal}</span>)</span>
-                        </button>
-                    </form>
-
-                    <!-- Order Summary & Upsell Proposals -->
-                    <div class="bg-purple-50/50 p-5 rounded-3xl border border-purple-100 space-y-4">
-                        <h4 class="font-black text-sm text-slate-800 border-b border-purple-100 pb-2">סיכום ההזמנה שלך:</h4>
                         
                         <div class="space-y-2 max-h-48 overflow-y-auto">
                             ${state.cart.map(i => `
                                 <div class="flex flex-col gap-0.5 border-b border-purple-100/60 pb-1.5">
                                     <div class="flex items-center justify-between text-xs font-bold text-slate-800">
-                                        <span>${i.name} (x${i.qty})</span>
-                                        <span class="text-oz-primary font-black">₪${i.price * i.qty}</span>
+                                        <span class="truncate max-w-[170px]">${i.name} (x${i.qty})</span>
+                                        <span class="text-oz-primary font-black shrink-0">₪${i.price * i.qty}</span>
                                     </div>
                                     ${i.engraving ? `<div class="text-[10px] font-black text-amber-900 bg-amber-100 px-2 py-0.5 rounded border border-amber-300 self-start">✍️ הקדשה: "${i.engraving.text}" (${i.engraving.label})</div>` : ''}
                                 </div>
@@ -5676,6 +5941,7 @@ const articlesDB = [
                                 <span>עלות משלוח:</span>
                                 <span id="checkout-shipping-cost-val" class="font-black text-slate-900">₪${selectedShippingFee}</span>
                             </div>
+
                             <div class="flex justify-between text-base font-black text-oz-primary pt-2 border-t border-purple-200">
                                 <span>סה"כ סופי לתשלום:</span>
                                 <span id="checkout-final-total-val">₪${finalTotal}</span>
@@ -5690,24 +5956,24 @@ const articlesDB = [
                             const offerItem = recs && recs.length > 0 ? recs[0] : (prods.length > 0 ? prods[0] : null);
                             if (!offerItem) return '';
                             return `
-                            <div class="p-4 bg-white rounded-2xl border border-purple-200 shadow-sm space-y-3">
+                            <div class="p-3.5 bg-white rounded-2xl border border-purple-200 shadow-sm space-y-2.5">
                                 <div class="font-black text-xs text-purple-900 flex items-center justify-between">
-                                    <span class="flex items-center gap-1">🎁 <strong>מוצר הטבה מותאם אישית עבורך:</strong></span>
-                                    <span class="bg-purple-600 text-purple-900 text-[10px] font-black px-2 py-0.5 rounded-full">הטבה בקופה 🔥</span>
+                                    <span class="flex items-center gap-1">🎁 <strong>מוצר הטבה מותאם אישית:</strong></span>
+                                    <span class="bg-purple-600 text-purple-900 text-[10px] font-black px-2 py-0.5 rounded-full">הטבה 🔥</span>
                                 </div>
-                                <div class="flex items-center justify-between text-xs font-bold text-slate-700 border-b border-slate-100 pb-2">
+                                <div class="flex items-center justify-between text-[11px] font-bold text-slate-700 border-b border-slate-100 pb-1.5">
                                     <span>תעודת הגהת מחשב וגברא מוסמכת</span>
                                     <span class="text-emerald-600 font-black">חינם! 🎁</span>
                                 </div>
-                                <div class="flex items-center justify-between gap-3 text-xs font-bold text-slate-700">
-                                    <div class="flex items-center gap-2.5">
-                                        <img src="${offerItem.image}" alt="${offerItem.name}" class="w-11 h-11 object-cover rounded-lg border border-slate-100 shrink-0" />
+                                <div class="flex items-center justify-between gap-2 text-xs font-bold text-slate-700">
+                                    <div class="flex items-center gap-2">
+                                        <img src="${offerItem.image}" alt="${offerItem.name}" class="w-10 h-10 object-cover rounded-lg border border-slate-100 shrink-0" />
                                         <div>
-                                            <div class="text-slate-900 font-black truncate max-w-[150px]">${offerItem.name}</div>
+                                            <div class="text-slate-900 font-black truncate max-w-[120px]">${offerItem.name}</div>
                                             <div class="text-[11px] text-oz-primary font-black">₪${offerItem.price}</div>
                                         </div>
                                     </div>
-                                    <button type="button" onclick="addCheckoutSpecialOffer('${offerItem.id}')" class="py-2 px-3.5 bg-gradient-to-r from-purple-600 to-indigo-900 hover:from-purple-600 hover:to-indigo-900 text-white font-black text-xs rounded-xl shadow-sm transition-all active:scale-95 cursor-pointer">
+                                    <button type="button" onclick="addCheckoutSpecialOffer('${offerItem.id}')" class="py-1.5 px-3 bg-purple-600 hover:bg-purple-500 text-white font-black text-[11px] rounded-xl shadow-sm transition-all active:scale-95 cursor-pointer shrink-0">
                                         + הוסף לסל
                                     </button>
                                 </div>
@@ -5805,7 +6071,175 @@ const articlesDB = [
             }
         }
 
+        // ==========================================
+        // HFD PICKUP LOGISTICS & LOCKERS ENGINE
+        // ==========================================
+        window.HFDPickupService = {
+            pointsDatabase: {
+                "ראש העין": [
+                    { id: "HFD-101", name: "לוקר PickUP HFD - סופר פארם שוהם", address: "רחוב שוהם 1, ראש העין", hours: "א'-ה': 08:00-22:00, ו': 08:00-14:30" },
+                    { id: "HFD-102", name: "חנות PickUP HFD - דפוס מנצורה", address: "שלום מנצורה 48, ראש העין", hours: "א'-ה': 08:30-19:00" },
+                    { id: "HFD-103", name: "לוקר 24/7 HFD - תחנת פז ראש העין", address: "אזור תעשייה אפק, ראש העין", hours: "פתוח 24/7" }
+                ],
+                "תל אביב - יפו": [
+                    { id: "HFD-201", name: "לוקר PickUP HFD - דיזנגוף סנטר", address: "דיזנגוף 50, תל אביב (קומה 1)", hours: "א'-ה': 09:00-21:00, ו': 09:00-14:00" },
+                    { id: "HFD-202", name: "חנות PickUP HFD - מכולת השכונה", address: "אבן גבירול 45, תל אביב", hours: "א'-ה': 07:30-20:00" },
+                    { id: "HFD-203", name: "לוקר 24/7 HFD - פז אלנבי", address: "אלנבי 120, תל אביב", hours: "פתוח 24/7" }
+                ],
+                "ירושלים": [
+                    { id: "HFD-301", name: "לוקר PickUP HFD - קניון מלחה", address: "אגודת ספורט בית\"ר 1, ירושלים", hours: "א'-ה': 09:30-21:30" },
+                    { id: "HFD-302", name: "חנות PickUP HFD - יודאיקה המרכז", address: "רחוב יפו 92, ירושלים", hours: "א'-ה': 09:00-19:00" },
+                    { id: "HFD-303", name: "לוקר PickUP HFD - רמת אשכול", address: "רחוב פארן 7, ירושלים", hours: "א'-ה': 08:00-20:00" }
+                ],
+                "בני ברק": [
+                    { id: "HFD-401", name: "חנות PickUP HFD - ספרים וקודש", address: "רבי עקיבא 80, בני ברק", hours: "א'-ה': 09:00-21:00" },
+                    { id: "HFD-402", name: "לוקר PickUP HFD - חזון איש", address: "חזון איש 40, בני ברק", hours: "א'-ה': 08:00-21:30" }
+                ],
+                "פתח תקווה": [
+                    { id: "HFD-501", name: "לוקר PickUP HFD - הקניון הגדול", address: "ז'בוטינסקי 72, פתח תקווה", hours: "א'-ה': 09:30-21:30" },
+                    { id: "HFD-502", name: "חנות PickUP HFD - שטמפפר", address: "שטמפפר 15, פתח תקווה", hours: "א'-ה': 08:30-19:30" }
+                ],
+                "אלעד": [
+                    { id: "HFD-601", name: "חנות PickUP HFD - מרכז אלעד", address: "שמעון הצדיק 12, אלעד", hours: "א'-ה': 09:00-20:30" }
+                ],
+                "מודיעין עילית": [
+                    { id: "HFD-701", name: "חנות PickUP HFD - קפלין", address: "נתיבות המשפט 30, מודיעין עילית", hours: "א'-ה': 09:00-21:00" }
+                ],
+                "בית שמש": [
+                    { id: "HFD-801", name: "חנות PickUP HFD - מרכז נעימי", address: "דרך יצחק רבין 2, בית שמש", hours: "א'-ה': 09:00-21:00" }
+                ],
+                "חיפה": [
+                    { id: "HFD-901", name: "לוקר PickUP HFD - גרנד קניון", address: "שמחה גולן 54, חיפה", hours: "א'-ה': 09:30-21:30" }
+                ],
+                "באר שבע": [
+                    { id: "HFD-1001", name: "לוקר PickUP HFD - קניון הנגב", address: "צומת אליעזר קפלן, באר שבע", hours: "א'-ה': 09:30-21:30" }
+                ],
+                "נתניה": [
+                    { id: "HFD-1101", name: "לוקר PickUP HFD - עיר ימים", address: "זלמן שזר 2, נתניה", hours: "א'-ה': 09:30-21:30" }
+                ],
+                "אשדוד": [
+                    { id: "HFD-1201", name: "לוקר PickUP HFD - ביג פאשן", address: "הכלניות 1, אשדוד", hours: "א'-ה': 09:30-21:30" }
+                ],
+                "ראשון לציון": [
+                    { id: "HFD-1301", name: "לוקר PickUP HFD - קניון הזהב", address: "דוד סחרוב 21, ראשון לציון", hours: "א'-ה': 09:30-21:30" }
+                ],
+                "חולון": [
+                    { id: "HFD-1401", name: "לוקר PickUP HFD - קניון חולון", address: "גולדה מאיר 7, חולון", hours: "א'-ה': 09:30-21:30" }
+                ],
+                "רמת גן": [
+                    { id: "HFD-1501", name: "חנות PickUP HFD - ז'בוטינסקי", address: "ז'בוטינסקי 102, רמת גן", hours: "א'-ה': 08:30-20:00" }
+                ]
+            },
+            getCities: function() {
+                return Object.keys(this.pointsDatabase);
+            },
+            getPointsForCity: function(cityName) {
+                if (!cityName) return [];
+                const foundKey = Object.keys(this.pointsDatabase).find(k => k.trim() === cityName.trim() || cityName.includes(k) || k.includes(cityName));
+                if (foundKey) return this.pointsDatabase[foundKey];
+
+                return [
+                    { id: "HFD-" + Math.floor(100 + Math.random() * 900), name: "לוקר PickUP HFD מרכזי - " + cityName, address: "מרכז מסחרי ראשי, " + cityName, hours: "א'-ה': 08:00-20:00" },
+                    { id: "HFD-" + Math.floor(100 + Math.random() * 900), name: "חנות PickUP HFD - " + cityName, address: "רחוב ראשי, " + cityName, hours: "א'-ה': 08:30-19:00" }
+                ];
+            }
+        };
+
+        window.initHFDPickupUI = function() {
+            const citySelect = document.getElementById('hfd-city-select');
+            if (!citySelect) return;
+
+            citySelect.innerHTML = '<option value="">-- בחר עיר לנקודת איסוף --</option>';
+            const cities = window.HFDPickupService.getCities();
+            cities.forEach(c => {
+                const opt = document.createElement('option');
+                opt.value = c;
+                opt.textContent = c;
+                citySelect.appendChild(opt);
+            });
+
+            const customerCity = document.getElementById('checkout-city')?.value?.trim();
+            if (customerCity) {
+                const matchCity = cities.find(c => c.trim() === customerCity || customerCity.includes(c) || c.includes(customerCity));
+                if (matchCity) {
+                    citySelect.value = matchCity;
+                    window.onHFDCityChange(matchCity);
+                } else {
+                    citySelect.value = customerCity;
+                    window.onHFDCityChange(customerCity);
+                }
+            }
+        };
+
+        window.onHFDCityChange = function(cityName) {
+            const pointSelect = document.getElementById('hfd-point-select');
+            const cardBox = document.getElementById('hfd-selected-point-card');
+            if (!pointSelect) return;
+
+            if (!cityName) {
+                pointSelect.disabled = true;
+                pointSelect.innerHTML = '<option value="">-- בחר תחילה עיר --</option>';
+                if (cardBox) cardBox.classList.add('hidden');
+                state.selectedHFDPoint = null;
+                return;
+            }
+
+            const points = window.HFDPickupService.getPointsForCity(cityName);
+            pointSelect.disabled = false;
+            pointSelect.innerHTML = '<option value="">-- בחר חנות / לוקר PickUP --</option>';
+
+            points.forEach(p => {
+                const opt = document.createElement('option');
+                opt.value = p.id;
+                opt.textContent = p.name + ' (' + p.address + ')';
+                opt.dataset.pointJson = JSON.stringify(p);
+                pointSelect.appendChild(opt);
+            });
+
+            if (points.length > 0) {
+                pointSelect.selectedIndex = 1;
+                window.onHFDPointChange(points[0].id);
+            }
+        };
+
+        window.onHFDPointChange = function(pointId) {
+            const pointSelect = document.getElementById('hfd-point-select');
+            const cardBox = document.getElementById('hfd-selected-point-card');
+            if (!pointSelect) return;
+
+            const opt = pointSelect.options[pointSelect.selectedIndex];
+            if (!opt || !opt.dataset.pointJson) {
+                if (cardBox) cardBox.classList.add('hidden');
+                state.selectedHFDPoint = null;
+                return;
+            }
+
+            const p = JSON.parse(opt.dataset.pointJson);
+            state.selectedHFDPoint = p;
+
+            if (cardBox) {
+                cardBox.classList.remove('hidden');
+                document.getElementById('hfd-card-name').textContent = '📍 ' + p.name;
+                document.getElementById('hfd-card-code').textContent = p.id;
+                document.getElementById('hfd-card-address').textContent = '🏠 כתובת: ' + p.address;
+                document.getElementById('hfd-card-hours').textContent = '⏰ שעות: ' + p.hours;
+            }
+        };
+
         function updateCheckoutFee(fee, label) {
+            state.selectedShippingFee = fee;
+            state.selectedShippingLabel = label;
+
+            const pickupContainer = document.getElementById('hfd-pickup-container');
+            if (pickupContainer) {
+                if (fee === 19) {
+                    pickupContainer.classList.remove('hidden');
+                    window.initHFDPickupUI();
+                } else {
+                    pickupContainer.classList.add('hidden');
+                }
+            }
+
             const subtotal = state.cart.reduce((acc, i) => acc + (i.price * i.qty), 0);
             const discount5Percent = Math.round(subtotal * 0.05);
             const subtotalAfterDiscount = subtotal - discount5Percent;
@@ -6317,9 +6751,67 @@ const articlesDB = [
                         </table>
                     </div>
                 </div>
+
+                <!-- ARTICLE SCHEDULER CONTROL PANEL FOR STORE MANAGER -->
+                <div class="mt-8 pt-6 border-t-2 border-purple-100 dir-rtl">
+                    <div class="bg-gradient-to-br from-slate-900 via-purple-950 to-slate-900 text-white p-5 rounded-2xl shadow-xl border border-purple-700">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-purple-600/30 border border-purple-400/40 text-purple-300 flex items-center justify-center font-black text-xl shrink-0">📖</div>
+                                <div>
+                                    <h4 class="font-black text-base text-purple-200 flex items-center gap-2">
+                                        <span>ניהול ותזמון מאמרים (Article Scheduler Engine)</span>
+                                        <span class="bg-purple-600 text-white text-[10px] font-black px-2.5 py-0.5 rounded-full">מנהל בלבד 🔒</span>
+                                    </h4>
+                                    <p class="text-xs text-slate-300 font-medium mt-0.5">שחרור יומי אוטומטי של מאמרים למנועי חיפוש (SEO) וצפייה במצב תצוגה מקדימה</p>
+                                </div>
+                            </div>
+                            <button onclick="toggleArticlePreviewMode()" class="py-2.5 px-4 bg-purple-600 hover:bg-purple-500 text-white font-black text-xs rounded-xl shadow-md transition-all active:scale-95 cursor-pointer flex items-center gap-1.5 shrink-0">
+                                <span id="preview-mode-btn-text">👁️ מצב תצוגה מקדימה לכל המאמרים</span>
+                            </button>
+                        </div>
+
+                        <div class="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80 mb-4 flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-xs font-bold text-slate-200">
+                                <span class="text-purple-400 text-base">ℹ️</span>
+                                <span id="scheduler-status-text">טוען סטטוס תזמון מאמרים...</span>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs pt-1">
+                            <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700">
+                                <div class="text-[11px] font-bold text-purple-300 mb-1">תאריך השקת סדרת המאמרים</div>
+                                <div class="flex gap-2">
+                                    <input type="date" id="scheduler-launch-date-input" class="w-full p-2 bg-slate-900 border border-slate-600 rounded-lg text-xs font-mono text-white outline-none focus:border-purple-400" />
+                                    <button onclick="saveLaunchDateFromUI()" class="py-2 px-3 bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs rounded-lg shrink-0 transition-colors">שמור</button>
+                                </div>
+                            </div>
+                            <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700 text-center flex flex-col justify-center">
+                                <div class="text-lg font-black text-emerald-400" id="scheduler-visible-count">-</div>
+                                <div class="text-[11px] font-bold text-slate-300">מאמרים גלויים ללקוחות כרגע</div>
+                            </div>
+                            <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700 text-center flex flex-col justify-center">
+                                <div class="text-lg font-black text-amber-400" id="scheduler-total-count">-</div>
+                                <div class="text-[11px] font-bold text-slate-300">סה"כ מאמרים במאגר (DB)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             `;
 
             container.innerHTML = html;
+            setTimeout(() => {
+                if (typeof updateSchedulerStatusUI === 'function') updateSchedulerStatusUI();
+            }, 50);
+        };
+
+        window.saveLaunchDateFromUI = function() {
+            const input = document.getElementById('scheduler-launch-date-input');
+            if (!input || !input.value) return;
+            localStorage.setItem('oz_articles_launch_date', input.value);
+            if (typeof updateSchedulerStatusUI === 'function') updateSchedulerStatusUI();
+            if (typeof renderArticles === 'function') renderArticles();
+            alert('✅ תאריך ההשקה עודכן בהצלחה!');
         };
 
         window.exportCRMLeadsCSV = function() {
@@ -7063,23 +7555,41 @@ window.toggleArticlePreviewMode = function() {
 function updateSchedulerStatusUI() {
     const statusText = document.getElementById('scheduler-status-text');
     const btnText = document.getElementById('preview-mode-btn-text');
-    if (!statusText || !btnText) return;
+    const launchInput = document.getElementById('scheduler-launch-date-input');
+    const visibleCountEl = document.getElementById('scheduler-visible-count');
+    const totalCountEl = document.getElementById('scheduler-total-count');
 
     const isPreview = localStorage.getItem('oz_articles_preview_all') === 'true';
     const db = (typeof articlesDB !== 'undefined' ? articlesDB : (typeof articles !== 'undefined' ? articles : []));
     const visible = ArticleScheduler.getVisibleArticles();
     const upcoming = db.length - visible.length;
 
-    if (isPreview) {
-        statusText.textContent = `מצב תצוגה מקדימה פעיל: מציג את כל ${db.length} המאמרים`;
-        btnText.textContent = '🔒 חזור לתזמון אוטומטי יומי';
-    } else {
-        if (upcoming > 0) {
-            statusText.textContent = `פורסמו ${visible.length} מאמרים | המאמר הבא ישתחרר מחר בחצות ⏰ (נותרו עוד ${upcoming} מאמרים בתור)`;
+    if (visibleCountEl) visibleCountEl.textContent = isPreview ? `${db.length} (מצב מנהל)` : visible.length;
+    if (totalCountEl) totalCountEl.textContent = `${db.length} מאמרים`;
+
+    if (statusText) {
+        if (isPreview) {
+            statusText.textContent = `מצב תצוגה מקדימה פעיל: מציג את כל ${db.length} המאמרים במגזין האתר`;
         } else {
-            statusText.textContent = `כל ${db.length} המאמרים פורסמו בהצלחה ⏰`;
+            if (upcoming > 0) {
+                statusText.textContent = `פורסמו ${visible.length} מאמרים | המאמר הבא ישתחרר מחר בחצות ⏰ (נותרו עוד ${upcoming} מאמרים בתור)`;
+            } else {
+                statusText.textContent = `כל ${db.length} המאמרים פורסמו בהצלחה ⏰`;
+            }
         }
-        btnText.textContent = '👁️ מצב תצוגה מקדימה לכל המאמרים (מנהל)';
+    }
+
+    if (btnText) {
+        if (isPreview) {
+            btnText.textContent = '🔒 חזור לתזמון אוטומטי יומי (הצג רק גלויים)';
+        } else {
+            btnText.textContent = '👁️ מצב תצוגה מקדימה לכל המאמרים (מנהל)';
+        }
+    }
+
+    if (launchInput) {
+        const launch = localStorage.getItem('oz_articles_launch_date') || '2026-09-17';
+        launchInput.value = launch;
     }
 }
 
