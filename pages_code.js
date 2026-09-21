@@ -143,6 +143,14 @@
                             <input type="text" id="checkout-street" required placeholder="שלום מנצורה 48" class="w-full p-3 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary" value="${state.user ? (state.user.street || '') : ''}" />
                         </div>
 
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 mb-1 flex items-center justify-between">
+                                <span>כתובת דוא"ל (אימייל)</span>
+                                <span class="text-[10px] text-oz-primary font-black bg-purple-50 px-2.5 py-0.5 rounded-full border border-purple-100">אופציונלי – לקבלת קבלה דיגיטלית ועדכוני משלוח 📧</span>
+                            </label>
+                            <input type="email" id="checkout-email" placeholder="example@domain.co.il (לקבלת חשבונית מס-קבלה ועדכוני משלוח)" class="w-full p-3 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary transition-all shadow-sm" value="${state.user ? (state.user.email || '') : ''}" />
+                        </div>
+
                         <h4 class="font-black text-sm text-slate-800 border-b border-slate-100 pb-2 pt-2">2. בחר שיטת משלוח וזמן אספקה:</h4>
                         
                         <div class="space-y-2 text-xs font-bold">

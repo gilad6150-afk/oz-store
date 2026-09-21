@@ -2062,8 +2062,11 @@ function renderAccountPageHTML() {
                                 </div>
                             </div>
                             <div class="mt-3">
-                                <label class="block text-xs font-bold text-slate-700 mb-1">כתובת דוא"ל (אימייל לקבלת חשבוניות)</label>
-                                <input type="email" id="profile-email" value="${user.email || ''}" placeholder="israel@gmail.com" class="w-full p-3 bg-white border border-slate-300 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary focus:ring-2 focus:ring-purple-100 transition-all" />
+                                <label class="block text-xs font-bold text-slate-700 mb-1 flex items-center justify-between">
+                                    <span>כתובת דוא"ל (אימייל)</span>
+                                    <span class="text-[10px] text-oz-primary font-black bg-purple-50 px-2.5 py-0.5 rounded-full border border-purple-100">אופציונלי – לקבלת קבלות דיגיטליות ועדכונים 📧</span>
+                                </label>
+                                <input type="email" id="profile-email" value="${user.email || ''}" placeholder="example@domain.co.il (לקבלת חשבונית מס-קבלה ועדכוני משלוח)" class="w-full p-3 bg-white border border-slate-300 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-oz-primary focus:ring-2 focus:ring-purple-100 transition-all shadow-sm" />
                             </div>
                         </div>
 
