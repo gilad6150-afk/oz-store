@@ -6,11 +6,11 @@ const articlesDB = [
         title: "איך בוחרים תפילין מהודרות לבר מצווה? מדריך מקיף לסוגי בתים, כתב ורצועות",
         category: "תפילין וסת\"ם",
         readTime: "8 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80",
         summary: "כל מה שצריך לדעת לפני רכישת תפילין ראשונות לנער בר מצווה: ההבדל בין בהמה גסה לדקה, נוסחאות הכתב, בדיקת מחשב מול הגהת גברא, וטיפים לשמירה לאורך שנים.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">רכישת תפילין לבר מצווה – צעד רוחני ומשמעותי בחיים</h3>
-            <p class="text-xs text-slate-600 leading-relaxed mb-4">הגעה לגיל מצוות היא אחת התחנות המרגשות ביותר בחייו של הנער והמשפחה. מצוות תפילין היא אות וקשר נצחי בין עם ישראל לאבינו שבשמים. כאשר ניגשים לרכוש תפילין, מדובר בהשקעה דורית המשמשת את הנער יום-יום למשך עשרות שנים. לכן, חשוב להבין את הפרמטרים הקובעים את רמת הכשרות, ההידור והעמידות.</p>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">הגעה לגיל מצוות היא אחת התחנות המרגשות ביותר בחייו של הנער והמשפחה. מצוות תפילין היא אות וקשר נצחי בין עם ישראל לאבינו שבשמים. כאשר ניגשים לרכוש תפילין, מדובר בהשקעה דורית המשמשת את הנער יום-יום למשך עשרות שנים.</p>
             <h4 class="font-black text-base text-oz-primary mb-2">1. סוג הבית: בהמה גסה מול בהמה דקה</h4>
             <p class="text-xs text-slate-600 leading-relaxed mb-3">הבתים מבהמה גסה (עור עגל עבה) חזקים ועמידים במיוחד ואינם מושפעים משינויי טמפרטורה, לחות או זיעה. מומלץ בחום לכל נער בר מצווה. ניתן להתרשם מ<a href="javascript:openProductPage('1')" class="text-oz-primary font-black underline hover:text-oz-hover">תפילין מהודרות מבהמה גסה במכון עוז</a>.</p>
             <h4 class="font-black text-base text-oz-primary mb-2">2. הגהת הפרשיות: הגהת גברא לצד הגהת מחשב</h4>
@@ -29,7 +29,7 @@ const articlesDB = [
         title: "הלכות ומנהגי בדיקת מזוזות: מתי חובה לבדוק ואיך שומרים על הקלף?",
         category: "מזוזות ובית",
         readTime: "7 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80",
         summary: "כללי בדיקת מזוזה תקופתית, השפעת האקלים הישראלי על קלף הסת\"ם, וכיצד להתאים בית מזוזה אוטם ועמיד לפתח הבית.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">מצוות מזוזה – שמיכת ההגנה של הבית היהודי</h3>
@@ -47,7 +47,7 @@ const articlesDB = [
         title: "סוד קשירת הציצית: עבודת יד למול מכונה, פתיל תכלת ומנהגי הקהילות",
         category: "טליתות וציציות",
         readTime: "6 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80",
         summary: "הבדלים הלכתיים בין ציצית עבודת יד למכונה, מנהגי הקשרים של הרמב\"ם, הראב\"ד והאר\"י, וכיצד לבחור מידה מדויקת בטלית.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">מצוות ציצית – זיכרון לכל מצוות ה'</h3>
@@ -60,7 +60,7 @@ const articlesDB = [
         title: "כתיבת ספר תורה מהודר: תהליך היצירה, סוגי הקלף, הדיו והגהות הסופר",
         category: "ספרי תורה",
         readTime: "9 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=800&q=80",
         summary: "תהליך כתיבת ספר תורה מראשיתו ועד להכנסתו לארון הקודש: בחירת הקלף, סוגי הדיו, כתיבה לשמה, והגהת מחשב כפולה.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">כתיבת ספר תורה – המצווה הראשונה והאחרונה בתורה</h3>
@@ -72,7 +72,7 @@ const articlesDB = [
         title: "איך לבחור בית מזוזה מעוצב? שילוב בין אסתטיקה מודרנית להלכה צרופה",
         category: "מזוזות ובית",
         readTime: "5 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
         summary: "סקירת חומרי גלם לבתי מזוזה: עץ זית, אפוקסי, אלומיניום, זכוכית ונירוסטה, וכיצד לשמור על הקלף יבש ושמור.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">בית המזוזה – פאר והידור המצווה</h3>
@@ -85,7 +85,7 @@ const articlesDB = [
         title: "מדריך לכיסוי וארנק תפילין: הגנה על התפילין מפני חום, לחות ונפילות",
         category: "תפילין וסת\"ם",
         readTime: "6 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80",
         summary: "חשיבות תיק מגן קשיח או נרתיק קטיפה מרופד לתפילין. טיפים למניעת נזקי חום ברכב ושמירה על ריבוע הבתים.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">שמירה על התפילין – נרתיקים ותיקי מגן</h3>
@@ -97,7 +97,7 @@ const articlesDB = [
         title: "טלית צמר רחלים טהורה: סוגי אריג, עטרה, קשרים וטיפול נכון",
         category: "טליתות וציציות",
         readTime: "7 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=800&q=80",
         summary: "יתרונות טלית צמר טהור, סוגי הלבנה ודחיות כתמים, ובחירת מידה מתאימה לפי גובה המתפלל.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">טלית צמר טהור – התעטפות בקדושה</h3>
@@ -109,7 +109,7 @@ const articlesDB = [
         title: "בר מצווה בכותל ובבית הכנסת: רשימת ציוד מלאה, הכנות ומנהגים",
         category: "יודאיקה ומתנות",
         readTime: "8 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1548625361-1851e5e0a6d5?auto=format&fit=crop&w=800&q=80",
         summary: "כל מה שצריך לארגן ליום הבר מצווה: תפילין, טלית, סידור עם חריטת שם, נרתיקים, ורשימת תזכורות לחתן המצווה.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">חגיגת בר מצווה – רשימת הכנות מקיפה</h3>
@@ -121,7 +121,7 @@ const articlesDB = [
         title: "פרשיית פיטום הקטורת על קלף: סגולות, הלכות כתיבה וקריאה יומיומית",
         category: "תפילין וסת\"ם",
         readTime: "6 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=800&q=80",
         summary: "סגולת קריאת פיטום הקטורת מתוך קלף כשר שנכתב על ידי סופר סת\"ם: שמירה, פרנסה וביטול מגפות.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">סגולת פיטום הקטורת מן הקלף</h3>
@@ -133,7 +133,7 @@ const articlesDB = [
         title: "מגילת אסתר בכתב ידו של סופר סת\"ם: כשרות, הידור וסוגי הנרתיקים",
         category: "תפילין וסת\"ם",
         readTime: "7 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80",
         summary: "כיצד בוחרים מגילת אסתר כשרה לפורים? גובה הקלף (11, 21, 28 שורות), נוסח המלך, ונרתיק עץ זית או כסף.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">מגילת אסתר מהודרת לקריאת פורים</h3>
@@ -145,7 +145,7 @@ const articlesDB = [
         title: "כשרות ספרי קודש וסידורים: הדפסה מהודרת, כריכת עור ואחזקה נכונה",
         category: "יודאיקה ומתנות",
         readTime: "6 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80",
         summary: "כיצד לבחור סידורים וחומשים בכריכת עור יוקרתית? שמירה על הדפים מפני בלאי, חריטת שמות מזהב, וספרי קודש לכל משפחה.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">ספרי קודש וסידורים מהודרים בכריכת עור</h3>
@@ -157,7 +157,7 @@ const articlesDB = [
         title: "מזוזה לחדר ילדים ולמשרד: מיקום קביעה, ברכות וכללי הידור",
         category: "מזוזות ובית",
         readTime: "6 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80",
         summary: "הנחיות הלכתיות לקביעת מזוזות בחדרי הבית השונים: מתי מברכים ומתי קובעים ללא ברכה, מיקום גובה המזוזה בשליש העליון, ובית מזוזה מותאם לילדים.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">קביעת מזוזה בחדרי הבית ובמשרד</h3>
@@ -169,7 +169,7 @@ const articlesDB = [
         title: "כיצד שומרים על רצועות תפילין שחורות וכשרות לאורך שנים?",
         category: "תפילין וסת\"ם",
         readTime: "5 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
         summary: "הלכות השחרת רצועות התפילין, סוגי הדיו הכשר לשחיקת רצועות, שמירה על עור הרצועה מגמישות ובלאי, וחידוש הצבע לשם מצוות תפילין.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">השחרת רצועות תפילין ושמירה על כשרותן</h3>
@@ -181,7 +181,7 @@ const articlesDB = [
         title: "גביעי קידוש וסט הבדלה: חומרי גלם (כסף, אפוקסי, עץ זית) ומנהגי השבת",
         category: "יודאיקה ומתנות",
         readTime: "7 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80",
         summary: "מנהג הקידוש על היין בכלי מלא וגדוש (כוס של ברכה). סקירת גביעי כסף 925, גביעי עץ זית משולבים אפוקסי, וצלחות הבדלה מעוצבות.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">כוס של ברכה – גביעי קידוש וסטים להבדלה</h3>
@@ -193,7 +193,7 @@ const articlesDB = [
         title: "תפילין של רש\"י ורבינו תם: ההבדלים, מנהגי הקהילות וסדר ההנחה",
         category: "תפילין וסת\"ם",
         readTime: "8 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80",
         summary: "מהי מחלוקת רש\"י ורבינו תם בסדר פרשיות התפילין? מתי מתחילים להניח תפילין של רבינו תם, וכיצד מקפידים על חילוף הנרתיקים והבתים.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">תפילין של רש"י ותפילין של רבינו תם</h3>
@@ -205,7 +205,7 @@ const articlesDB = [
         title: "חנוכיות ונרות שבת מעוצבים: אומנות יודאיקה ישראלית משולבת מסורת",
         category: "יודאיקה ומתנות",
         readTime: "6 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80",
         summary: "עיצובי יודאיקה מודרניים לחגים ולשבתות: חנוכיות שמן זית זכוכית ואפוקסי, פמוטי שבת בודדים וזוגיים, ומתנות הוקרה מקוריות.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">אומנות היודאיקה – חנוכיות ופמוטי שבת</h3>
@@ -217,7 +217,7 @@ const articlesDB = [
         title: "בדיקת מחשב מול הגהת גברא בסת\"ם: למה חובה לשלב את שתיהן?",
         category: "תפילין וסת\"ם",
         readTime: "7 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
         summary: "חשיבות השילוב בין מגהיה אנושי מוסמך (גברא) לבדיקת סורק אופטי ממוחשב. כיצד מתגלות אותיות חסרות או מחוברות ומבטיחים כשרות 100%.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">הגהה כפולה בסת"ם – מחשב וגברא</h3>
@@ -229,7 +229,7 @@ const articlesDB = [
         title: "מתנות יודאיקה לחתן וכלה: רעיונות מקוריים וערכיים לבית היהודי",
         category: "יודאיקה ומתנות",
         readTime: "6 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=800&q=80",
         summary: "רעיונות למתנות חתן וכלה: סט הבדלה מעוצב, כיסוי חלה מרשים, מזוזות יוקרתיות לבית החדש, וארנקי עור פרימיום מבית מכון עוז.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">מתנות חתן וכלה לבית החדש והמאושר</h3>
@@ -241,7 +241,7 @@ const articlesDB = [
         title: "שופר איל כשר ומהודר: תקיעות ראש השנה, בדיקת סדקים וטיפול",
         category: "חגים ומועדים",
         readTime: "7 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80",
         summary: "כשרות השופר לפי ההלכה, בדיקת נקבים וסדקים, והבדלים בין שופר איל לשופר תימני (תקיה/קודו) לראש השנה.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">קול השופר – התעוררות תשובה וקדושה</h3>
@@ -253,7 +253,7 @@ const articlesDB = [
         title: "כיסוי לחלה ומפת שבת: עיצוב שולחן השבת בהידור וביופי תורני",
         category: "יודאיקה ומתנות",
         readTime: "5 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80",
         summary: "מנהג כיסוי החלות בשבת, רקמת זהב וכסף, ועיצוב שולחן השבת ביופי ובקדושה.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">כבוד השבת ועונג שבת</h3>
@@ -265,7 +265,7 @@ const articlesDB = [
         title: "ארבעת המינים למהדרין: מדריך לבחירת לולב, אתרוג, הדסים וערבות",
         category: "חגים ומועדים",
         readTime: "8 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=800&q=80",
         summary: "כיצד לבחור סט ארבעת המינים כשר למהדרין? סימני אתרוג בלתי מורכב, לולב סגור בראשו, הדסים משולשים וערבות נחלים.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">מצוות ארבעת המינים – שמחת חג הסוכות</h3>
@@ -277,7 +277,7 @@ const articlesDB = [
         title: "סדר הנחת תפילין למתחילים: מדריך מפורט צעד אחר צעד עם הברכות",
         category: "תפילין וסת\"ם",
         readTime: "7 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?auto=format&fit=crop&w=800&q=80",
         summary: "מדריך מעשי וברור להנחת תפילין של יד ושל ראש, סדר הכריכות על הזרוע והאצבע, ונוסח הברכות לפי מנהג ספרד ואשכנז.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">מצוות תפילין – קשר נצחי בין אדם ליוצרו</h3>
@@ -289,7 +289,7 @@ const articlesDB = [
         title: "סגולות המזוזה והגנת הבית: אילו קלפים מתאימים לכל פתח?",
         category: "מזוזות ובית",
         readTime: "6 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?auto=format&fit=crop&w=800&q=80",
         summary: "כיצד תורמת המזוזה להגנה וברכה בבית? הבדלים בין גודלי קלפים (10, 12, 15 ס\"מ), איכות הכתב, והגנה מפני לחות.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">המזוזה – השומר של שערי הבית</h3>
@@ -301,7 +301,7 @@ const articlesDB = [
         title: "איך מנקים ושומרים על טלית צמר טהורה? טיפים לשמירת הצבע והציצית",
         category: "טליתות וציציות",
         readTime: "5 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1520006403909-838d6b92c22e?auto=format&fit=crop&w=800&q=80",
         summary: "טיפים מעשיים לשמירה על טלית צמר: מניעת הצהבת הצמר, הסרת כתמי זיעה ויין, שמירת פתילי הציצית וקיפול נכון.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">אחזקה וטיפול בטלית צמר טהור</h3>
@@ -313,7 +313,7 @@ const articlesDB = [
         title: "חידוש, הגהה ושיקום ספרי תורה עתיקים: טכנולוגיות מתקדמות בסת\"ם",
         category: "ספרי תורה",
         readTime: "8 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=800&q=80",
         summary: "תהליך חידוש ספר תורה: חיזוק הדיו, תיקון תפירות היריעות, הגהת סורק אופטי והשבת ספר התורה לארון הקודש.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">השבת עטרה ליושנה – חידוש ספרי תורה</h3>
@@ -325,7 +325,7 @@ const articlesDB = [
         title: "הלכות ומנהגי כתיבת סת\"ם: דיו כשר, נוצה מול קולמוס שמיר וסגולות הקלף",
         category: "תפילין וסת\"ם",
         readTime: "6 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=800&q=80",
         summary: "כיצד מייצרים דיו כשר לשמה? הבדלי הקולמוסים (נוצת עוף, קולמוס שמיר, מתכת ופלסטיק) והשפעתם על יופי הכתב בסת\"ם.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">אמנות כתיבת הסת"ם והידוריה</h3>
@@ -337,7 +337,7 @@ const articlesDB = [
         title: "כיצד בוחרים ארנק עור יוקרתי לגבר? עור נאפה 100% מול דמוי עור ואיכות תפרים",
         category: "ארנקים ותיקים",
         readTime: "6 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=80",
         summary: "המדריך המלא לבחירת ארנק עור נאפה 100% פרימיום: בדיקת רכות העור, עמידות התפרים, חלוקת תאים חכמה, ואריכות ימים.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">ארנקי עור פרימיום לגבר מבית מכון עוז</h3>
@@ -350,7 +350,7 @@ const articlesDB = [
         title: "מזוזה לכניסה הראשית מול חדרי שינה: הלכות קביעת מזוזה ונוסח הברכות",
         category: "מזוזות ובית",
         readTime: "6 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
         summary: "כללי מיקום המזוזה בכניסה הראשית ובחדרים פנימיים: צד ימין של הנכנס, גובה שליש עליון, וזווית ההטיה לפי המנהג.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">הלכות קביעת מזוזה בכל פתחי הבית</h3>
@@ -362,7 +362,7 @@ const articlesDB = [
         title: "תפילין לחיילים ולמטיילים: תיק קשיח אטום למים, הגנת חום וטיפים לשטח",
         category: "תפילין וסת\"ם",
         readTime: "6 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=800&q=80",
         summary: "כיצד מגינים על התפילין במהלך שירות צבאי או טיולים? תיקי מזוודה קשיחים, נרתיקים אטומים למים, ומניעת נזקי זיעה וחום.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">שמירה על התפילין בתנאי שטח וצבא</h3>
@@ -374,7 +374,7 @@ const articlesDB = [
         title: "חשיבות בדיקת תפילין ומזוזות בחודש אלול: הכנה רוחנית לימים הנוראים",
         category: "תפילין וסת\"ם",
         readTime: "6 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80",
         summary: "מנהג ישראל לבדוק את התפילין והמזוזות בחודש אלול לפני ראש השנה ויום כיפור. בדיקת מחשב וגברא במכון עוז בראש העין.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">בדיקת תשמישי קדושה בחודש אלול</h3>
@@ -386,7 +386,7 @@ const articlesDB = [
         title: "מנהגי חתן ביום החתונה: טלית חדשה, סט הבדלה ומתנות קודש",
         category: "טליתות וציציות",
         readTime: "6 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80",
         summary: "הכנות החתן ליום חופתו: התעטפות בטלית חדשה תחת החופה, ברכת שהחיינו, וסטי מתנות מהודרים מבית מכון עוז.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">מנהגי חתן – טלית ומוצרי קודש לחופה</h3>
@@ -398,7 +398,7 @@ const articlesDB = [
         title: "הגנה עתידנית לכרטיסי אשראי: ארנק עור לגבר עם טכנולוגיית הגנת RFID",
         category: "ארנקים ותיקים",
         readTime: "5 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1606503153255-59d8b8b82176?auto=format&fit=crop&w=800&q=80",
         summary: "מהי טכנולוגיית RFID Blocking בארנקים? כיצד היא מונעת גניבת נתוני אשראי מרחוק, ושילובה בארנקי עור נאפה של מכון עוז.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">ארנקי עור לגבר עם הגנת RFID Blocking</h3>
@@ -410,7 +410,7 @@ const articlesDB = [
         title: "כיסוי לטלית ותפילין בעיצוב אישי: רקמת שמות, אותיות זהב ואיכות קטיפה",
         category: "טליתות וציציות",
         readTime: "6 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1563170351-be82bc888aa4?auto=format&fit=crop&w=800&q=80",
         summary: "אפשרויות חריטה ורקמה אישית על גבי נרתיקי טלית ותפילין: רקמת שמות בזהב וכסף, סגירת רוכסן עמידה, ומתנה מרגשת לבר מצווה.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">נרתיקי טלית ותפילין עם רקמת שם אישית</h3>
@@ -422,7 +422,7 @@ const articlesDB = [
         title: "מהו קלף משוח (שלול) מול קלף נטורל בסת\"ם? הידור מצווה ועמידות לדורות",
         category: "תפילין וסת\"ם",
         readTime: "7 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1568667256549-094345857637?auto=format&fit=crop&w=800&q=80",
         summary: "הבדלים הלכתיים ואיכותיים בין קלף משוח בסיד לקלף נטורל טבעי. מדוע פוסקים רבים מעדיפים קלף נטורל ללא משיחה.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">סוגי הקלף בסת"ם – נטורל מול משוח</h3>
@@ -434,7 +434,7 @@ const articlesDB = [
         title: "ארנק מפתח וארנק כרטיסים אלגנטי: פתרונות ניידות וסדר לגבר המודרני",
         category: "ארנקים ותיקים",
         readTime: "5 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1585488763177-bde7d15fd3cf?auto=format&fit=crop&w=800&q=80",
         summary: "פתרונות נשיאה קומפקטיים לגבר: ארנקי כרטיסים נשלפים, ארנקי מפתחות מעור נאפה, ונוחות מקסימלית בכיס.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">ארנקי כרטיסים ומפתחות קומפקטיים מעור נאפה</h3>
@@ -446,7 +446,7 @@ const articlesDB = [
         title: "סגולת שבירת הכוס בחופה וגביע קידוש מכסף טהור: מנהגים ומשמעות רוחנית",
         category: "יודאיקה ומתנות",
         readTime: "6 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=800&q=80",
         summary: "המנהג העתיק לזכר חורבן ירושלים בחופה, בחירת גביע קידוש מכסף טהור 925, ומזכרת יוקרתית לזוג הצעיר.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">זכר לחורבן וגביעי קידוש מכסף טהור</h3>
@@ -458,7 +458,7 @@ const articlesDB = [
         title: "מזוזות עמידות לתנאי חוץ: בתי מזוזה מאלומיניום מוברש ואפוקסי אטום",
         category: "מזוזות ובית",
         readTime: "6 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1558036117-15d82a90b9b1?auto=format&fit=crop&w=800&q=80",
         summary: "פתרונות איטום מתקדמים לבתי מזוזה המותקנים בשערים חיצוניים, מרפסות וחצרות: אטם סיליקון, אפוקסי עמיד בשמש, ונירוסטה.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">בתי מזוזה עמידים לגשם ולחום שמש ישיר</h3>
@@ -470,7 +470,7 @@ const articlesDB = [
         title: "סדר לימוד לבר מצווה: קריאת בתורה, הנחת תפילין וקבלת עול מצוות",
         category: "תפילין וסת\"ם",
         readTime: "7 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80",
         summary: "כיצד מכינים את נער הבר מצווה לקראת עליתו לתורה? לימוד הטעמים, הנחת התפילין בהתרגשות, וקבלת עול מצוות בשמחה.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">הכנת נער הבר מצווה ליום המיוחל</h3>
@@ -482,7 +482,7 @@ const articlesDB = [
         title: "ארנק עור עם סגירת מגנט מול רוכסן היקפי: איך לבחור את הדגם המדויק עבורך?",
         category: "ארנקים ותיקים",
         readTime: "5 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
         summary: "השוואה בין דגמי ארנקים לגבר: יתרונות סגירת מגנט מהירה מול רוכסן היקפי המגן על שטרות ומטבעות.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">סוגי סגירות בארנקי עור פרימיום</h3>
@@ -494,7 +494,7 @@ const articlesDB = [
         title: "הלכות שבת ויום טוב בחנות אונליין: שמירת שבת כהלכתה במכירות אינטרנט",
         category: "יודאיקה ומתנות",
         readTime: "6 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1499209974431-9dac3cea0047?auto=format&fit=crop&w=800&q=80",
         summary: "חשיבות סגירת חנות האונליין בשבתות ובחגי ישראל: מנגנון שבת אוטומטי במכון עוז ושמירת קדושת השבת.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">שמירת שבת כהלכתה באתר מכון עוז</h3>
@@ -506,7 +506,7 @@ const articlesDB = [
         title: "ברכת המזון וברכת מעין שלוש: סידורי כיס מהודרים ומתנות לאורחים באירועים",
         category: "יודאיקה ומתנות",
         readTime: "5 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=800&q=80",
         summary: "מזכרות תורניות לאורחים בבר מצווה, חתונה וברית: שירונים, ברכונים וספרוני ברכת המזון בכריכת עור ואפוקסי.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">מזכרות ברכונים וסידורי כיס לאירועים</h3>
@@ -518,7 +518,7 @@ const articlesDB = [
         title: "הבדלים בין כתב בית יוסף, כתב וא\"ו וכתב אדמו\"ר הזקן בתפילין ומזוזות",
         category: "תפילין וסת\"ם",
         readTime: "8 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=800&q=80",
         summary: "סוגי הכתב בסת\"ם לפי הקהילות: כתב וועליש (ספרדי), כתב בית יוסף (אשכנז), וכתב אדמו\"ר הזקן (חב\"ד).",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">נוסחאות הכתב בתפילין ומזוזות</h3>
@@ -530,7 +530,7 @@ const articlesDB = [
         title: "שימור וניקוי מוצרי עור נאפה פרימיום: שמירה על המראה היוקרתי והרכות",
         category: "ארנקים ותיקים",
         readTime: "5 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80",
         summary: "טיפים לתחזוקת ארנקי עור נאפה ותיקי עור: שימוש בקרם לחות ייעודי לעור, מניעת כתמים, ושמירה על הגמישות.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">אחזקת ארנקי עור נאפה 100% פרימיום</h3>
@@ -542,7 +542,7 @@ const articlesDB = [
         title: "מתנות הוקרה ושי לצוות עובדים ומנהלים: סטי יודאיקה וארנקי עור איכותיים",
         category: "יודאיקה ומתנות",
         readTime: "6 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80",
         summary: "רעיונות למתנות לחגים ולרגעי הוקרה בחברות: סטי ארנקי עור עם חריטת לוגו, בתי מזוזות מעוצבים, ומתנות יוקרה לגבר.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">מתנות הוקרה ושי לעובדים ומנהלים</h3>
@@ -554,7 +554,7 @@ const articlesDB = [
         title: "מדריך מקיף לאבחון וטיפול בבעיות כשרות בתפילין: חלודה ברצועות, סדקים ויופי האותיות",
         category: "תפילין וסת\"ם",
         readTime: "8 דקות קריאה",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
         summary: "כיצד מזהים בעיות בתפילין ישנות? שחיקת הריבוע בבתים, חלודה ברצועות, סדקים בדיו, והצורך בבדיקת מחשב וגברא במכון עוז.",
         content: disclaimerHtml + `
             <h3 class="font-black text-xl text-slate-900 mb-3">אבחון וחידוש תפילין במכון עוז בראש העין</h3>
