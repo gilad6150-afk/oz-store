@@ -2297,15 +2297,15 @@ window.copyVipCoupon = function() {
     if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(code).then(() => {
             if (typeof showToast === 'function') {
-                showToast('נ‰ ׳§׳•׳“ ׳”׳§׳•׳₪׳•׳ OZVIP5 ׳”׳•׳¢׳×׳§ ׳‘׳”׳¦׳׳—׳”! 5% ׳”׳ ׳—׳” ׳×׳’׳–׳¨ ׳‘׳§׳•׳₪׳”.');
+                showToast('🎉 קוד הקופון OZVIP5 הועתק בהצלחה! 5% הנחה תגזר בקופה.');
             } else {
-                alert('נ‰ ׳§׳•׳“ ׳”׳§׳•׳₪׳•׳ OZVIP5 ׳”׳•׳¢׳×׳§ ׳‘׳”׳¦׳׳—׳”! 5% ׳”׳ ׳—׳” ׳×׳’׳–׳¨ ׳‘׳§׳•׳₪׳”.');
+                alert('🎉 קוד הקופון OZVIP5 הועתק בהצלחה! 5% הנחה תגזר בקופה.');
             }
         }).catch(() => {
-            alert('׳§׳•׳“ ׳§׳•׳₪׳•׳ ׳׳”׳ ׳—׳”: OZVIP5');
+            alert('קוד קופון להנחה: OZVIP5');
         });
     } else {
-        alert('׳§׳•׳“ ׳§׳•׳₪׳•׳ ׳׳”׳ ׳—׳”: OZVIP5');
+        alert('קוד קופון להנחה: OZVIP5');
     }
 };
 
