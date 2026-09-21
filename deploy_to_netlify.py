@@ -6,12 +6,13 @@ import urllib.request
 store_dir = r"C:\Users\97254\.gemini\antigravity\scratch\oz-store"
 zip_path = r"C:\Users\97254\.gemini\antigravity\scratch\oz-store\site_deploy.zip"
 
-# Create clean ZIP of public site assets
 with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
-    # Add index.html as root index.html
-    zipf.write(os.path.join(store_dir, "index.html"), "index.html")
-    
-    # Add public folder if exists
+    for filename in ["index.html", "google_merchant_feed.xml", "sitemap.xml", "robots.txt", "_headers"]:
+        file_path = os.path.join(store_dir, filename)
+        if os.path.exists(file_path):
+            zipf.write(file_path, filename)
+            print(f"Added {filename}")
+
     public_dir = os.path.join(store_dir, "public")
     if os.path.exists(public_dir):
         for root, dirs, files in os.walk(public_dir):
@@ -22,7 +23,6 @@ with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
 
 print(f"Zip created successfully: {os.path.getsize(zip_path)} bytes")
 
-# Deploy zip to Netlify API endpoint (Anonymous site creation)
 url = "https://api.netlify.com/api/v1/sites"
 headers = {
     "Content-Type": "application/zip",
@@ -49,13 +49,11 @@ try:
         print(f"Admin URL: {admin_url}")
         print(f"Site ID: {site_id}")
         
-        # Save deployment details to json file
         deploy_info = {
             "ssl_url": ssl_url,
             "subdomain": subdomain,
             "admin_url": admin_url,
-            "site_id": site_id,
-            "timestamp": "2026-09-17T16:17:00+03:00"
+            "site_id": site_id
         }
         with open(os.path.join(store_dir, "deploy_info.json"), "w", encoding="utf-8") as out_f:
             json.dump(deploy_info, out_f, indent=2, ensure_ascii=False)

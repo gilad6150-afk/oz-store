@@ -1,19 +1,24 @@
-[System.Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-$files = Get-ChildItem 'C:\Users\97254\.gemini\antigravity\scratch\oz-store' -Include *.html,*.js -Recurse
+$utf8 = New-Object System.Text.UTF8Encoding($false)
+$dir = "C:\Users\97254\.gemini\antigravity\scratch\oz-store"
 
-$bad = @()
+$files = Get-ChildItem -Path $dir -Include *.html,*.js,*.xml,*.json -Recurse
 
-foreach ($f in $files) {
-    if ($f.FullName -like "*node_modules*" -or $f.FullName -like "*brain*") { continue }
-    $content = [System.IO.File]::ReadAllText($f.FullName, [System.Text.Encoding]::UTF8)
-    if ($content.Contains([char]0x05F3 + [char]0x05DB) -or $content.Contains([char]0x05E2 + [char]0x20AC)) {
-        Write-Host "BAD FILE:" $f.Name
-        $bad += $f.Name
-    } else {
-        Write-Host "CLEAN FILE:" $f.Name
+$badCount = 0
+
+foreach ($file in $files) {
+    if ($file.FullName -like "*node_modules*" -or $file.FullName -like "*.git*") { continue }
+    
+    $text = [System.IO.File]::ReadAllText($file.FullName, $utf8)
+    
+    # Check for Mojibake markers: ׳ (0x05F3 / 0xD7 0xB3), ג (0x05D2)
+    if ($text.Contains([char]0x05F3) -or $text.Contains("ג€") -or $text.Contains("׳’")) {
+        Write-Host "⚠️ Mojibake found in file:" $file.Name
+        $badCount++
     }
 }
 
-if ($bad.Count -eq 0) {
-    Write-Host "SUCCESS: ZERO MOJIBAKE IN ALL HTML AND JS FILES!"
+if ($badCount -eq 0) {
+    Write-Host "✅ 100% CLEAN UTF-8! ZERO Mojibake detected across all HTML/JS/XML files!"
+} else {
+    Write-Host "❌ Total files with Mojibake:" $badCount
 }
