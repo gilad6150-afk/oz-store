@@ -2313,16 +2313,18 @@ document.addEventListener('DOMContentLoaded', () => {
     window.initVipCouponPopup();
 });
 
-// OZ SMART AI & WHATSAPP ASSISTANT BOT ENGINE
+// OZ SMART AI ASSISTANT BOT ENGINE
 window.toggleOzBotChat = function() {
     const win = document.getElementById('oz-bot-chat-window');
     if (!win) return;
-    if (win.classList.contains('hidden')) {
+    if (win.classList.contains('hidden') || win.style.display === 'none') {
         win.classList.remove('hidden');
+        win.style.display = 'flex';
         const inp = document.getElementById('oz-bot-input');
         if (inp) inp.focus();
     } else {
         win.classList.add('hidden');
+        win.style.display = 'none';
     }
 };
 

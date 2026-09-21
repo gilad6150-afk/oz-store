@@ -28,69 +28,69 @@
         </div>
     </div>
 
-    <!-- NON-INTRUSIVE DISCREET SMART AI & WHATSAPP CHAT ASSISTANT -->
+    <!-- NON-INTRUSIVE DISCREET SMART AI CHAT ASSISTANT -->
     <div class="fixed bottom-20 right-6 sm:bottom-6 sm:right-20 z-[9999998]">
         <!-- Discreet Floating Trigger Button (NEVER auto-opens or pops up) -->
-        <button onclick="toggleOzBotChat()" class="group relative flex items-center gap-2 py-2.5 px-4 bg-gradient-to-r from-[#1E1B4B] via-purple-900 to-emerald-700 hover:from-purple-950 hover:to-emerald-800 text-white rounded-full shadow-2xl border-2 border-white/80 transition-all transform hover:scale-105 active:scale-95 cursor-pointer dir-rtl" title="שירות ומענה מהיר" aria-label="שירות ומענה מהיר">
+        <button onclick="toggleOzBotChat()" class="group relative flex items-center gap-2 py-2.5 px-4 bg-gradient-to-r from-[#1E1B4B] via-purple-900 to-indigo-900 hover:from-purple-950 hover:to-indigo-950 text-white rounded-full shadow-2xl border-2 border-white/80 transition-all transform hover:scale-105 active:scale-95 cursor-pointer dir-rtl" title="שירות ומענה מהיר" aria-label="שירות ומענה מהיר">
             <span class="text-base sm:text-lg">💬</span>
             <span class="text-xs font-black hidden sm:inline text-purple-100">שירות ומענה 24/6</span>
             <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
         </button>
+    </div>
 
-        <!-- Smart Chat Panel Window (Hidden by default, zero intrusive popups) -->
-        <div id="oz-bot-chat-window" class="hidden absolute bottom-14 right-0 w-[350px] sm:w-[380px] max-w-[92vw] h-[500px] max-h-[75vh] bg-white rounded-3xl shadow-2xl border border-purple-200/90 flex flex-col text-right dir-rtl overflow-hidden z-[9999999]">
-            
-            <!-- Chat Window Header -->
-            <div class="p-4 bg-gradient-to-r from-[#1E1B4B] via-purple-950 to-[#1E1B4B] text-white flex items-center justify-between border-b border-purple-800/50">
-                <div class="flex items-center gap-2.5">
-                    <div class="w-9 h-9 rounded-2xl bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 flex items-center justify-center font-black text-lg">🤖</div>
-                    <div>
-                        <h4 class="font-black text-sm text-white flex items-center gap-1.5">
-                            <span>מכון עוז – מענה דיגיטלי</span>
-                        </h4>
-                        <p class="text-[11px] text-emerald-300 font-bold flex items-center gap-1">
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                            <span>זמין 24/6 | מענה מיידי לשאלות</span>
-                        </p>
-                    </div>
+    <!-- Smart Chat Panel Window (Fixed directly to viewport, zero intrusive popups) -->
+    <div id="oz-bot-chat-window" class="hidden fixed bottom-24 right-4 sm:bottom-20 sm:right-20 w-[350px] sm:w-[380px] max-w-[92vw] h-[480px] max-h-[75vh] bg-white rounded-3xl shadow-2xl border-2 border-purple-200 flex flex-col text-right dir-rtl overflow-hidden z-[9999999]">
+        
+        <!-- Chat Window Header -->
+        <div class="p-4 bg-gradient-to-r from-[#1E1B4B] via-purple-950 to-[#1E1B4B] text-white flex items-center justify-between border-b border-purple-800/50">
+            <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-2xl bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 flex items-center justify-center font-black text-lg">🤖</div>
+                <div>
+                    <h4 class="font-black text-sm text-white flex items-center gap-1.5">
+                        <span>מכון עוז – מענה דיגיטלי</span>
+                    </h4>
+                    <p class="text-[11px] text-emerald-300 font-bold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span>זמין 24/6 | מענה מיידי לשאלות</span>
+                    </p>
                 </div>
-                <button onclick="toggleOzBotChat()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-lg flex items-center justify-center transition-colors cursor-pointer">&times;</button>
             </div>
+            <button onclick="toggleOzBotChat()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-lg flex items-center justify-center transition-colors cursor-pointer">&times;</button>
+        </div>
 
-            <!-- Messages Scroll Area -->
-            <div id="oz-bot-messages" class="flex-grow p-4 overflow-y-auto space-y-3 bg-purple-50/30 text-xs">
-                <!-- Initial Welcome Bubble -->
-                <div class="flex justify-start mb-2">
-                    <div class="bg-white border border-purple-200/80 text-slate-800 p-3.5 rounded-2xl rounded-tl-none max-w-[90%] text-xs font-medium shadow-sm space-y-2">
-                        <div class="font-extrabold text-[11px] text-oz-primary flex items-center gap-1">
-                            <span>📜 שלום וברוכים הבאים למכון עוז!</span>
-                        </div>
-                        <p class="leading-relaxed">
-                            אשמח לענות לכם מיד על כל שאלה לגבי תפילין, קלפי מזוזה, זמני משלוח, שעות פתיחה בחנות בראש העין, ארנקי עור או התאמת מוצר!
-                        </p>
+        <!-- Messages Scroll Area -->
+        <div id="oz-bot-messages" class="flex-grow p-4 overflow-y-auto space-y-3 bg-purple-50/30 text-xs">
+            <!-- Initial Welcome Bubble -->
+            <div class="flex justify-start mb-2">
+                <div class="bg-white border border-purple-200/80 text-slate-800 p-3.5 rounded-2xl rounded-tl-none max-w-[90%] text-xs font-medium shadow-sm space-y-2">
+                    <div class="font-extrabold text-[11px] text-oz-primary flex items-center gap-1">
+                        <span>📜 שלום וברוכים הבאים למכון עוז!</span>
                     </div>
-                </div>
-
-                <!-- Quick Question Chips -->
-                <div class="space-y-1.5 pt-1">
-                    <div class="text-[10px] font-extrabold text-slate-400 pr-1">שאלות נפוצות בלחיצה:</div>
-                    <div class="flex flex-wrap gap-1.5">
-                        <button onclick="askOzBotQuestion('כשרות והגהת סת\"ם')" class="py-1.5 px-2.5 rounded-xl bg-purple-100/80 hover:bg-purple-200 text-purple-950 font-bold text-[11px] transition-all text-right border border-purple-200/60 cursor-pointer">📜 כשרות והגהת סת"ם</button>
-                        <button onclick="askOzBotQuestion('זמני ועלויות משלוח')" class="py-1.5 px-2.5 rounded-xl bg-purple-100/80 hover:bg-purple-200 text-purple-950 font-bold text-[11px] transition-all text-right border border-purple-200/60 cursor-pointer">🚚 זמני ועלויות משלוח</button>
-                        <button onclick="askOzBotQuestion('כתובת ושעות פתיחה')" class="py-1.5 px-2.5 rounded-xl bg-purple-100/80 hover:bg-purple-200 text-purple-950 font-bold text-[11px] transition-all text-right border border-purple-200/60 cursor-pointer">📍 כתובת ושעות פתיחה</button>
-                        <button onclick="askOzBotQuestion('איך בוחרים מזוזה?')" class="py-1.5 px-2.5 rounded-xl bg-purple-100/80 hover:bg-purple-200 text-purple-950 font-bold text-[11px] transition-all text-right border border-purple-200/60 cursor-pointer">🚪 איך בוחרים מזוזה?</button>
-                        <button onclick="askOzBotQuestion('ארנקי עור נאפה')" class="py-1.5 px-2.5 rounded-xl bg-purple-100/80 hover:bg-purple-200 text-purple-950 font-bold text-[11px] transition-all text-right border border-purple-200/60 cursor-pointer">👛 ארנקי עור נאפה</button>
-                    </div>
+                    <p class="leading-relaxed">
+                        אשמח לענות לכם מיד על כל שאלה לגבי תפילין, קלפי מזוזה, זמני משלוח, שעות פתיחה בחנות בראש העין, ארנקי עור או התאמת מוצר!
+                    </p>
                 </div>
             </div>
 
-            <!-- Footer Input Area -->
-            <div class="p-3 border-t border-purple-100 bg-white">
-                <form onsubmit="event.preventDefault(); sendOzBotMessage();" class="flex items-center gap-2">
-                    <input type="text" id="oz-bot-input" placeholder="הקלד שאלה או מילת מפתח..." class="flex-grow py-2 px-3 rounded-xl bg-slate-100 border border-slate-200 focus:outline-none focus:border-oz-primary text-xs font-bold text-slate-800" />
-                    <button type="submit" class="py-2 px-3.5 bg-oz-primary hover:bg-oz-hover text-white rounded-xl font-bold text-xs shadow-md transition-all shrink-0 cursor-pointer">שלח</button>
-                </form>
+            <!-- Quick Question Chips -->
+            <div class="space-y-1.5 pt-1">
+                <div class="text-[10px] font-extrabold text-slate-400 pr-1">שאלות נפוצות בלחיצה:</div>
+                <div class="flex flex-wrap gap-1.5">
+                    <button onclick="askOzBotQuestion('כשרות והגהת סת\"ם')" class="py-1.5 px-2.5 rounded-xl bg-purple-100/80 hover:bg-purple-200 text-purple-950 font-bold text-[11px] transition-all text-right border border-purple-200/60 cursor-pointer">📜 כשרות והגהת סת"ם</button>
+                    <button onclick="askOzBotQuestion('זמני ועלויות משלוח')" class="py-1.5 px-2.5 rounded-xl bg-purple-100/80 hover:bg-purple-200 text-purple-950 font-bold text-[11px] transition-all text-right border border-purple-200/60 cursor-pointer">🚚 זמני ועלויות משלוח</button>
+                    <button onclick="askOzBotQuestion('כתובת ושעות פתיחה')" class="py-1.5 px-2.5 rounded-xl bg-purple-100/80 hover:bg-purple-200 text-purple-950 font-bold text-[11px] transition-all text-right border border-purple-200/60 cursor-pointer">📍 כתובת ושעות פתיחה</button>
+                    <button onclick="askOzBotQuestion('איך בוחרים מזוזה?')" class="py-1.5 px-2.5 rounded-xl bg-purple-100/80 hover:bg-purple-200 text-purple-950 font-bold text-[11px] transition-all text-right border border-purple-200/60 cursor-pointer">🚪 איך בוחרים מזוזה?</button>
+                    <button onclick="askOzBotQuestion('ארנקי עור נאפה')" class="py-1.5 px-2.5 rounded-xl bg-purple-100/80 hover:bg-purple-200 text-purple-950 font-bold text-[11px] transition-all text-right border border-purple-200/60 cursor-pointer">👛 ארנקי עור נאפה</button>
+                </div>
             </div>
+        </div>
+
+        <!-- Footer Input Area -->
+        <div class="p-3 border-t border-purple-100 bg-white">
+            <form onsubmit="event.preventDefault(); sendOzBotMessage();" class="flex items-center gap-2">
+                <input type="text" id="oz-bot-input" placeholder="הקלד שאלה או מילת מפתח..." class="flex-grow py-2 px-3 rounded-xl bg-slate-100 border border-slate-200 focus:outline-none focus:border-oz-primary text-xs font-bold text-slate-800" />
+                <button type="submit" class="py-2 px-3.5 bg-oz-primary hover:bg-oz-hover text-white rounded-xl font-bold text-xs shadow-md transition-all shrink-0 cursor-pointer">שלח</button>
+            </form>
         </div>
     </div>
 
