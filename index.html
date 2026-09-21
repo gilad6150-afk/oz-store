@@ -1321,23 +1321,16 @@
                         <button onclick="askOzBotQuestion('כתובת ושעות פתיחה')" class="py-1.5 px-2.5 rounded-xl bg-purple-100/80 hover:bg-purple-200 text-purple-950 font-bold text-[11px] transition-all text-right border border-purple-200/60 cursor-pointer">📍 כתובת ושעות פתיחה</button>
                         <button onclick="askOzBotQuestion('איך בוחרים מזוזה?')" class="py-1.5 px-2.5 rounded-xl bg-purple-100/80 hover:bg-purple-200 text-purple-950 font-bold text-[11px] transition-all text-right border border-purple-200/60 cursor-pointer">🚪 איך בוחרים מזוזה?</button>
                         <button onclick="askOzBotQuestion('ארנקי עור נאפה')" class="py-1.5 px-2.5 rounded-xl bg-purple-100/80 hover:bg-purple-200 text-purple-950 font-bold text-[11px] transition-all text-right border border-purple-200/60 cursor-pointer">👛 ארנקי עור נאפה</button>
-                        <button onclick="askOzBotQuestion('שיחה ב-WhatsApp מול נציג')" class="py-1.5 px-2.5 rounded-xl bg-emerald-100 text-emerald-900 font-bold text-[11px] transition-all text-right border border-emerald-300 cursor-pointer">💬 שיחה ב-WhatsApp</button>
                     </div>
                 </div>
             </div>
 
             <!-- Footer Input Area -->
-            <div class="p-3 border-t border-purple-100 bg-white space-y-2">
+            <div class="p-3 border-t border-purple-100 bg-white">
                 <form onsubmit="event.preventDefault(); sendOzBotMessage();" class="flex items-center gap-2">
                     <input type="text" id="oz-bot-input" placeholder="הקלד שאלה או מילת מפתח..." class="flex-grow py-2 px-3 rounded-xl bg-slate-100 border border-slate-200 focus:outline-none focus:border-oz-primary text-xs font-bold text-slate-800" />
                     <button type="submit" class="py-2 px-3.5 bg-oz-primary hover:bg-oz-hover text-white rounded-xl font-bold text-xs shadow-md transition-all shrink-0 cursor-pointer">שלח</button>
                 </form>
-
-                <div class="text-center pt-1 border-t border-slate-100">
-                    <a href="https://wa.me/972526867192" target="_blank" class="text-[11px] font-extrabold text-emerald-700 hover:underline flex items-center justify-center gap-1">
-                        <span>💬 מעבר לשיחה בוואטסאפ מול גלעד (052-686-7192)</span>
-                    </a>
-                </div>
             </div>
         </div>
     </div>
@@ -8619,11 +8612,11 @@ window.sendOzBotMessage = function() {
 function generateOzBotReply(q) {
     const query = q.toLowerCase();
 
-    if (query.includes('whatsapp') || query.includes('וואטסאפ') || query.includes('ווטסאפ') || query.includes('נציג') || query.includes('אדם') || query.includes('בנאדם')) {
-        return `אשמח להעביר אותך לשיחה ישירה ב-WhatsApp מול גלעד מנהל מכון עוז!<br><br>
-        <a href="https://wa.me/972526867192" target="_blank" class="inline-flex items-center gap-1.5 py-2 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs rounded-xl shadow-md transition-all">
-            <span>💬 לחץ כאן לפתיחת צ'אט ב-WhatsApp</span>
-        </a>`;
+    if (query.includes('נציג') || query.includes('אדם') || query.includes('בנאדם') || query.includes('טלפון')) {
+        return `📍 <strong>שירות לקוחות וייעוץ מול גלעד מנהל מכון עוז:</strong><br>
+        • 📞 <strong>טלפון ישיר:</strong> 052-686-7192<br>
+        • <strong>שעות מענה:</strong> ימים א'-ה': 09:00-19:00 | ימי שישי: 09:00-13:00<br>
+        • <strong>כתובת החנות:</strong> רחוב שלום מנצורה 48, ראש העין`;
     }
 
     if (query.includes('כשר') || query.includes('סת"ם') || query.includes('סתם') || query.includes('הגהה') || query.includes('מחשב') || query.includes('סופר') || query.includes('קלף')) {
@@ -8638,7 +8631,7 @@ function generateOzBotReply(q) {
         • <strong>זמן אספקה:</strong> 2-5 ימי עסקים לכל חלקי הארץ.`;
     }
 
-    if (query.includes('כתובת') || query.includes('איפה') || query.includes('מיקום') || query.includes('חנות') || query.includes('שעות') || query.includes('טלפון') || query.includes('איסוף')) {
+    if (query.includes('כתובת') || query.includes('איפה') || query.includes('מיקום') || query.includes('חנות') || query.includes('שעות') || query.includes('איסוף')) {
         return `📍 <strong>כתובת ושעות פעילות:</strong><br>
         • <strong>כתובת החנות:</strong> רחוב שלום מנצורה 48, ראש העין.<br>
         • <strong>שעות פתיחה:</strong> ימים א'-ה': 09:00-19:00 | ימי שישי: 09:00-13:00.<br>
@@ -8670,10 +8663,7 @@ function generateOzBotReply(q) {
     }
 
     return `תודה על פנייתך! 📜<br>
-    למענה ספציפי ומיידי מול גלעד מנהל מכון עוז, ניתן ליצור קשר בטלפון <strong>052-686-7192</strong> או בשיחת WhatsApp מהירה:<br><br>
-    <a href="https://wa.me/972526867192" target="_blank" class="inline-flex items-center gap-1.5 py-2 px-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs rounded-xl shadow-md transition-all">
-        <span>💬 מעבר לצ'אט ב-WhatsApp</span>
-    </a>`;
+    למענה ספציפי מול גלעד מנהל מכון עוז, ניתן ליצור קשר בטלפון <strong>052-686-7192</strong> או להגיע לחנות ברחוב שלום מנצורה 48, ראש העין.`;
 }
 
         function initApp() {

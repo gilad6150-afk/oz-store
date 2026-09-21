@@ -1,5 +1,5 @@
     <!-- FLOATING ACCESSIBILITY WIDGET & TOOLBAR -->
-    <div class="fixed bottom-6 right-6 z-[9999999]">
+    <div class="fixed bottom-20 right-4 sm:bottom-6 sm:right-6 z-[9998]">
         <button onclick="toggleAccessibilityMenu()" class="w-12 h-12 rounded-full bg-oz-primary hover:bg-oz-hover text-white flex items-center justify-center shadow-2xl border-2 border-white transition-all transform hover:scale-110 active:scale-95" title="תפריט נגישות" aria-label="תפריט נגישות">
             <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/></svg>
         </button>
@@ -80,23 +80,16 @@
                         <button onclick="askOzBotQuestion('כתובת ושעות פתיחה')" class="py-1.5 px-2.5 rounded-xl bg-purple-100/80 hover:bg-purple-200 text-purple-950 font-bold text-[11px] transition-all text-right border border-purple-200/60 cursor-pointer">📍 כתובת ושעות פתיחה</button>
                         <button onclick="askOzBotQuestion('איך בוחרים מזוזה?')" class="py-1.5 px-2.5 rounded-xl bg-purple-100/80 hover:bg-purple-200 text-purple-950 font-bold text-[11px] transition-all text-right border border-purple-200/60 cursor-pointer">🚪 איך בוחרים מזוזה?</button>
                         <button onclick="askOzBotQuestion('ארנקי עור נאפה')" class="py-1.5 px-2.5 rounded-xl bg-purple-100/80 hover:bg-purple-200 text-purple-950 font-bold text-[11px] transition-all text-right border border-purple-200/60 cursor-pointer">👛 ארנקי עור נאפה</button>
-                        <button onclick="askOzBotQuestion('שיחה ב-WhatsApp מול נציג')" class="py-1.5 px-2.5 rounded-xl bg-emerald-100 text-emerald-900 font-bold text-[11px] transition-all text-right border border-emerald-300 cursor-pointer">💬 שיחה ב-WhatsApp</button>
                     </div>
                 </div>
             </div>
 
             <!-- Footer Input Area -->
-            <div class="p-3 border-t border-purple-100 bg-white space-y-2">
+            <div class="p-3 border-t border-purple-100 bg-white">
                 <form onsubmit="event.preventDefault(); sendOzBotMessage();" class="flex items-center gap-2">
                     <input type="text" id="oz-bot-input" placeholder="הקלד שאלה או מילת מפתח..." class="flex-grow py-2 px-3 rounded-xl bg-slate-100 border border-slate-200 focus:outline-none focus:border-oz-primary text-xs font-bold text-slate-800" />
                     <button type="submit" class="py-2 px-3.5 bg-oz-primary hover:bg-oz-hover text-white rounded-xl font-bold text-xs shadow-md transition-all shrink-0 cursor-pointer">שלח</button>
                 </form>
-
-                <div class="text-center pt-1 border-t border-slate-100">
-                    <a href="https://wa.me/972526867192" target="_blank" class="text-[11px] font-extrabold text-emerald-700 hover:underline flex items-center justify-center gap-1">
-                        <span>💬 מעבר לשיחה בוואטסאפ מול גלעד (052-686-7192)</span>
-                    </a>
-                </div>
             </div>
         </div>
     </div>
