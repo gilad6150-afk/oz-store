@@ -1,6 +1,4 @@
-$utf8BOM = New-Object System.Text.UTF8Encoding($true)
-$psCode = @'
-$utf8NoBOM = New-Object System.Text.UTF8Encoding($false)
+$utf8 = New-Object System.Text.UTF8Encoding($false)
 $dir = "C:\Users\97254\.gemini\antigravity\scratch\oz-store"
 $outPath = Join-Path $dir "articles_data.js"
 
@@ -16,14 +14,14 @@ $titlesList = @(
     'טלית צמר רחלים טהורה: סוגי אריג, עטרה, קשרים וטיפול נכון',
     'בר מצווה בכותל ובבית הכנסת: רשימת ציוד מלאה, הכנות ומנהגים',
     'פרשיית פיטום הקטורת על קלף: סגולות, הלכות כתיבה וקריאה יומיומית',
-    'מגילת אסתר בכתב ידו של סופר סתם: כשרות, הידור וסוגי הנרתיקים',
+    'מגילת אסתר בכתב ידו של סופר סת"ם: כשרות, הידור וסוגי הנרתיקים',
     'כשרות ספרי קודש וסידורים: הדפסה מהודרת, כריכת עור ואחזקה נכונה',
     'מזוזה לחדר ילדים ולמשרד: מיקום קביעה, ברכות וכללי הידור',
     'כיצד שומרים על רצועות תפילין שחורות וכשרות לאורך שנים?',
     'גביעי קידוש וסט הבדלה: חומרי גלם (כסף, אפוקסי, עץ זית) ומנהגי השבת',
-    'תפילין של רשי ורבינו תם: ההבדלים, מנהגי הקהילות וסדר ההנחה',
+    'תפילין של רש"י ורבינו תם: ההבדלים, מנהגי הקהילות וסדר ההנחה',
     'חנוכיות ונרות שבת מעוצבים: אומנות יודאיקה ישראלית משולבת מסורת',
-    'בדיקת מחשב מול הגהת גברא בסתם: למה חובה לשלב את שתיהן?',
+    'בדיקת מחשב מול הגהת גברא בסת"ם: למה חובה לשלב את שתיהן?',
     'מתנות יודאיקה לחתן וכלה: רעיונות מקוריים וערכיים לבית היהודי',
     'שופר איל כשר ומהודר: תקיעות ראש השנה, בדיקת סדקים וטיפול',
     'כיסוי לחלה ומפת שבת: עיצוב שולחן השבת בהידור וביופי תורני',
@@ -31,8 +29,8 @@ $titlesList = @(
     'סדר הנחת תפילין למתחילים: מדריך מפורט צעד אחר צעד עם הברכות',
     'סגולות המזוזה והגנת הבית: אילו קלפים מתאימים לכל פתח?',
     'איך מנקים ושומרים על טלית צמר טהורה? טיפים לשמירת הצבע והציצית',
-    'חידוש, הגהה ושיקום ספרי תורה עתיקים: טכנולוגיות מתקדמות בסתם',
-    'הלכות ומנהגי כתיבת סתם: דיו כשר, נוצה מול קולמוס שמיר וסגולות הקלף',
+    'חידוש, הגהה ושיקום ספרי תורה עתיקים: טכנולוגיות מתקדמות בסת"ם',
+    'הלכות ומנהגי כתיבת סת"ם: דיו כשר, נוצה מול קולמוס שמיר וסגולות הקלף',
     'כיצד בוחרים ארנק עור יוקרתי לגבר? עור נאפה 100% מול דמוי עור ואיכות תפרים',
     'מזוזה לכניסה הראשית מול חדרי שינה: הלכות קביעת מזוזה ונוסח הברכות',
     'תפילין לחיילים ולמטיילים: תיק קשיח אטום למים, הגנת חום וטיפים לשטח',
@@ -40,7 +38,7 @@ $titlesList = @(
     'מנהגי חתן ביום החתונה: טלית חדשה, סט הבדלה ומתנות קודש',
     'הגנה עתידנית לכרטיסי אשראי: ארנק עור לגבר עם טכנולוגיית הגנת RFID',
     'כיסוי לטלית ותפילין בעיצוב אישי: רקמת שמות, אותיות זהב ואיכות קטיפה',
-    'מהו קלף משוח (שלול) מול קלף נטורל בסתם? הידור מצווה ועמידות לדורות',
+    'מהו קלף משוח (שלול) מול קלף נטורל בסת"ם? הידור מצווה ועמידות לדורות',
     'ארנק מפתח וארנק כרטיסים אלגנטי: פתרונות ניידות וסדר לגבר המודרני',
     'סגולת שבירת הכוס בחופה וגביע קידוש מכסף טהור: מנהגים ומשמעות רוחנית',
     'מזוזות עמידות לתנאי חוץ: בתי מזוזה מאלומיניום מוברש ואפוקסי אטום',
@@ -48,7 +46,7 @@ $titlesList = @(
     'ארנק עור עם סגירת מגנט מול רוכסן היקפי: איך לבחור את הדגם המדויק עבורך?',
     'הלכות שבת ויום טוב בחנות אונליין: שמירת שבת כהלכתה במכירות אינטרנט',
     'ברכת המזון וברכת מעין שלוש: סידורי כיס מהודרים ומתנות לאורחים באירועים',
-    'הבדלים בין כתב בית יוסף, כתב ואו וכתב אדמורים בתפילין ומזוזות',
+    'הבדלים בין כתב בית יוסף, כתב וא"ו וכתב אדמו"ר הזקן בתפילין ומזוזות',
     'שימור וניקוי מוצרי עור נאפה פרימיום: שמירה על המראה היוקרתי והרכות',
     'מתנות הוקרה ושי לצוות עובדים ומנהלים: סטי יודאיקה וארנקי עור איכותיים',
     'מדריך מקיף לאבחון וטיפול בבעיות כשרות בתפילין: חלודה ברצועות, סדקים ויופי האותיות'
@@ -62,27 +60,27 @@ for ($i = 0; $i -lt 45; $i++) {
     $id = $i + 1
     $rawTitle = $titlesList[$i]
     $escapedTitle = $rawTitle.Replace('"', '\"')
+    
+    $cat = 'תפילין וסת"ם'
+    if ($rawTitle -like '*ארנק*' -or $rawTitle -like '*תיק*') { $cat = 'ארנקים ותיקים' }
+    elseif ($rawTitle -like '*מזוז*') { $cat = 'מזוזות ובית' }
+    elseif ($rawTitle -like '*טלית*' -or $rawTitle -like '*ציצית*') { $cat = 'טליתות וציציות' }
+    elseif ($rawTitle -like '*חג*' -or $rawTitle -like '*מינים*') { $cat = 'חגים ומועדים' }
+    elseif ($rawTitle -like '*מתנו*' -or $rawTitle -like '*גביע*' -or $rawTitle -like '*שבת*') { $cat = 'יודאיקה ומתנות' }
 
-    $cat = "תפילין וסתם"
-    if ($rawTitle -like '*ארנק*' -or $rawTitle -like '*תיק*') { $cat = "ארנקים ותיקים" }
-    elseif ($rawTitle -like '*מזוז*') { $cat = "מזוזות ובית" }
-    elseif ($rawTitle -like '*טלית*' -or $rawTitle -like '*ציצית*') { $cat = "טליתות וציציות" }
-    elseif ($rawTitle -like '*חג*' -or $rawTitle -like '*מינים*') { $cat = "חגים ומועדים" }
-    elseif ($rawTitle -like '*מתנו*' -or $rawTitle -like '*גביע*' -or $rawTitle -like '*שבת*') { $cat = "יודאיקה ומתנות" }
-
-    $img = "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80"
-    if ($cat -eq "ארנקים ותיקים") {
-        $img = "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=600&q=80"
-    } elseif ($cat -eq "מזוזות ובית") {
-        $img = "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80"
-    } elseif ($cat -eq "טליתות וציציות") {
-        $img = "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80"
+    $img = 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80'
+    if ($cat -eq 'ארנקים ותיקים') {
+        $img = 'https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=600&q=80'
+    } elseif ($cat -eq 'מזוזות ובית') {
+        $img = 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=600&q=80'
+    } elseif ($cat -eq 'טליתות וציציות') {
+        $img = 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80'
     }
 
     $summary = "מדריך מקצועי ומורחב מבית מכון עוז בראש העין בנושא $rawTitle. כל הטיפים, המידע ההלכתי וההנחיות המעשיות לקנייה נבונה.".Replace('"', '\"')
-    $content = "<h3 class=`"font-black text-xl text-slate-900 mb-3`">$escapedTitle</h3><p class=`"text-xs text-slate-600 leading-relaxed mb-4`">במכון עוז אנו מביאים לכם את המידע ההלכתי והמקצועי המקיף ביותר. כל מוצרינו עוברים בדיקות איכות קפדניות ואחריות מלאה מבית היצרן.</p><h4 class=`"font-black text-base text-oz-primary mb-2`">דגשים וטיפים זהב מפי מומחי מכון עוז:</h4><ul class=`"list-disc list-inside space-y-2 text-xs font-bold text-slate-700 mb-4`"><li>הקפדה על מוצרים מקוריים עם אחריות בית היצרן מכון עוז.</li><li>בדיקה ממוחשבת כפולה לכל מוצרי הסתם והיודאיקה.</li><li>משלוחים מהירים ובטוחים לכל חלקי הארץ (למעט אזורים מסוכנים).</li></ul><div class=`"p-4 bg-purple-50 rounded-2xl border border-purple-100 text-xs text-oz-primary font-bold mb-4`">📞 <strong>לייעוץ והזמנות אישיות:</strong> צרו קשר עם גלעד מנהל המכון בטלפון 052-686-7192 או הגיעו לחנות ברחוב שלום מנצורה 48, ראש העין.</div>"
+    $content = "<h3 class=`"font-black text-xl text-slate-900 mb-3`">$escapedTitle</h3><p class=`"text-xs text-slate-600 leading-relaxed mb-4`">במכון עוז אנו מביאים לכם את המידע ההלכתי והמקצועי המקיף ביותר. כל מוצרינו עוברים בדיקות איכות קפדניות ואחריות מלאה מבית היצרן.</p><h4 class=`"font-black text-base text-oz-primary mb-2`">דגשים וטיפים זהב מפי מומחי מכון עוז:</h4><ul class=`"list-disc list-inside space-y-2 text-xs font-bold text-slate-700 mb-4`"><li>הקפדה על מוצרים מקוריים עם אחריות בית היצרן מכון עוז.</li><li>בדיקה ממוחשבת כפולה לכל מוצרי הסת`"ם והיודאיקה.</li><li>משלוחים מהירים ובטוחים לכל חלקי הארץ (למעט אזורים מסוכנים).</li></ul><div class=`"p-4 bg-purple-50 rounded-2xl border border-purple-100 text-xs text-oz-primary font-bold mb-4`">📞 <strong>לייעוץ והזמנות אישיות:</strong> צרו קשר עם גלעד מנהל המכון בטלפון 052-686-7192 או הגיעו לחנות ברחוב שלום מנצורה 48, ראש העין.</div>"
 
-    $comma = if ($i -lt 44) { "," } else { "" }
+    $comma = if ($i -lt 44) { ',' } else { '' }
 
     [void]$sb.AppendLine("    {")
     [void]$sb.AppendLine("        id: $id,")
@@ -97,10 +95,6 @@ for ($i = 0; $i -lt 45; $i++) {
 
 [void]$sb.AppendLine("];")
 
-[System.IO.File]::WriteAllText($outPath, $sb.ToString(), $utf8NoBOM)
-Write-Host "SUCCESS_ARTICLES_45"
-'@
+[System.IO.File]::WriteAllText($outPath, $sb.ToString(), $utf8)
 
-$targetScript = Join-Path "C:\Users\97254\.gemini\antigravity\scratch\oz-store" "run_articles_builder.ps1"
-[System.IO.File]::WriteAllText($targetScript, $psCode, $utf8BOM)
-Write-Host "Script saved with UTF-8 BOM to:" $targetScript
+Write-Host "✅ Generated 45 articles cleanly in articles_data.js!"

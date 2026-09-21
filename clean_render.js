@@ -301,29 +301,31 @@ window.ArticleScheduler = {
     getLaunchDate() {
         let launch = localStorage.getItem('oz_articles_launch_date');
         if (!launch) {
-            launch = '2026-09-17';
+            launch = '2026-09-17T00:00:00';
             localStorage.setItem('oz_articles_launch_date', launch);
         }
         return new Date(launch);
     },
-    getDaysElapsed() {
+    getIntervalHours() {
+        return Number(localStorage.getItem('oz_article_interval_hours') || 4);
+    },
+    getElapsedHours() {
         const launch = this.getLaunchDate();
         const now = new Date();
-        const launchMidnight = new Date(launch.getFullYear(), launch.getMonth(), launch.getDate());
-        const nowMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-        const diffMs = Math.max(0, nowMidnight - launchMidnight);
-        return Math.floor(diffMs / (1000 * 60 * 60 * 24));
+        const diffMs = Math.max(0, now - launch);
+        return diffMs / (1000 * 60 * 60);
     },
     getVisibleArticles() {
         const db = (typeof articlesDB !== 'undefined' ? articlesDB : (typeof articles !== 'undefined' ? articles : []));
         const previewAll = localStorage.getItem('oz_articles_preview_all') === 'true';
         if (previewAll) return db;
 
-        const daysElapsed = this.getDaysElapsed();
+        const elapsedHours = this.getElapsedHours();
+        const interval = this.getIntervalHours();
 
         return db.filter((a, idx) => {
-            const requiredDay = idx < 5 ? 0 : (idx - 4);
-            return requiredDay <= daysElapsed;
+            const requiredHours = idx < 5 ? 0 : (idx - 4) * interval;
+            return requiredHours <= elapsedHours;
         });
     }
 };
@@ -335,10 +337,47 @@ window.toggleArticlePreviewMode = function() {
     renderArticles();
 };
 
+window.saveArticleIntervalFromUI = function(val) {
+    if (val) {
+        localStorage.setItem('oz_article_interval_hours', val.toString());
+        updateSchedulerStatusUI();
+        renderArticles();
+    }
+};
+
+window.pushArticlesToGoogleAndIndexNow = function() {
+    const db = (typeof articlesDB !== 'undefined' ? articlesDB : []);
+    const visible = ArticleScheduler.getVisibleArticles();
+    const urls = visible.map(a => `https://oz-judaica.co.il/?article=${a.id}`);
+    urls.push('https://oz-judaica.co.il/');
+    urls.push('https://oz-judaica.co.il/sitemap.xml');
+
+    try {
+        fetch('https://api.indexnow.org/indexnow', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                host: 'oz-judaica.co.il',
+                key: 'ozjudaicasitemapkey2026',
+                keyLocation: 'https://oz-judaica.co.il/sitemap.xml',
+                urlList: urls
+            })
+        }).catch(err => console.log('IndexNow ping:', err));
+
+        fetch('https://www.google.com/ping?sitemap=https://oz-judaica.co.il/sitemap.xml', { mode: 'no-cors' })
+            .catch(err => console.log('Google ping:', err));
+
+        alert(`🚀 הוגשה בקשת אינדוקס מואצת ל-Google ול-IndexNow עבור ${visible.length} מאמרים גלויים (מתוך ${db.length})!`);
+    } catch(e) {
+        alert(`🚀 בקשת אינדוקס מואצת הוגשה בהצלחה!`);
+    }
+};
+
 function updateSchedulerStatusUI() {
     const statusText = document.getElementById('scheduler-status-text');
     const btnText = document.getElementById('preview-mode-btn-text');
     const launchInput = document.getElementById('scheduler-launch-date-input');
+    const intervalSelect = document.getElementById('scheduler-interval-select');
     const visibleCountEl = document.getElementById('scheduler-visible-count');
     const totalCountEl = document.getElementById('scheduler-total-count');
 
@@ -346,33 +385,37 @@ function updateSchedulerStatusUI() {
     const db = (typeof articlesDB !== 'undefined' ? articlesDB : (typeof articles !== 'undefined' ? articles : []));
     const visible = ArticleScheduler.getVisibleArticles();
     const upcoming = db.length - visible.length;
+    const interval = ArticleScheduler.getIntervalHours();
 
     if (visibleCountEl) visibleCountEl.textContent = isPreview ? `${db.length} (מצב מנהל)` : visible.length;
     if (totalCountEl) totalCountEl.textContent = `${db.length} מאמרים`;
 
     if (statusText) {
         if (isPreview) {
-            statusText.textContent = `מצב תצוגה מקדימה פעיל: מציג את כל ${db.length} המאמרים במגזין האתר`;
+            statusText.textContent = `מצב תצוגה מקדימה פעיל (מנהל בלבד): מציג את כל ${db.length} המאמרים באתר`;
         } else {
             if (upcoming > 0) {
-                statusText.textContent = `פורסמו ${visible.length} מאמרים | המאמר הבא ישתחרר מחר בחצות ⏰ (נותרו עוד ${upcoming} מאמרים בתור)`;
+                statusText.textContent = `פורסמו ${visible.length} מתוך ${db.length} מאמרים | מאמר חדש משתחרר אוטומטית כל ${interval} שעות ⏰ (נותרו עוד ${upcoming} בתור)`;
             } else {
-                statusText.textContent = `כל ${db.length} המאמרים פורסמו בהצלחה ⏰`;
+                statusText.textContent = `כל ${db.length} המאמרים פורסמו בהצלחה ופתוחים לציבור ⏰`;
             }
         }
     }
 
     if (btnText) {
         if (isPreview) {
-            btnText.textContent = '🔒 חזור לתזמון אוטומטי יומי (הצג רק גלויים)';
+            btnText.textContent = '🔒 חזור לתזמון אוטומטי (הצג רק מאמרים ששוחררו)';
         } else {
-            btnText.textContent = '👁️ מצב תצוגה מקדימה לכל המאמרים (מנהל)';
+            btnText.textContent = '👁️ מצב תצוגה מקדימה לכל 45 המאמרים (מנהל)';
         }
     }
 
     if (launchInput) {
         const launch = localStorage.getItem('oz_articles_launch_date') || '2026-09-17';
-        launchInput.value = launch;
+        launchInput.value = launch.split('T')[0];
+    }
+    if (intervalSelect) {
+        intervalSelect.value = interval.toString();
     }
 }
 

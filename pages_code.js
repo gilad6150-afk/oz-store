@@ -1426,12 +1426,17 @@
                                         <span>ניהול ותזמון מאמרים (Article Scheduler Engine)</span>
                                         <span class="bg-purple-600 text-white text-[10px] font-black px-2.5 py-0.5 rounded-full">מנהל בלבד 🔒</span>
                                     </h4>
-                                    <p class="text-xs text-slate-300 font-medium mt-0.5">שחרור יומי אוטומטי של מאמרים למנועי חיפוש (SEO) וצפייה במצב תצוגה מקדימה</p>
+                                    <p class="text-xs text-slate-300 font-medium mt-0.5">שחרור אוטומטי של 45 מאמרים למנועי חיפוש (SEO) ודחיפה מואצת לגוגל ול-IndexNow</p>
                                 </div>
                             </div>
-                            <button onclick="toggleArticlePreviewMode()" class="py-2.5 px-4 bg-purple-600 hover:bg-purple-500 text-white font-black text-xs rounded-xl shadow-md transition-all active:scale-95 cursor-pointer flex items-center gap-1.5 shrink-0">
-                                <span id="preview-mode-btn-text">👁️ מצב תצוגה מקדימה לכל המאמרים</span>
-                            </button>
+                            <div class="flex items-center gap-2 flex-wrap">
+                                <button onclick="pushArticlesToGoogleAndIndexNow()" class="py-2.5 px-4 bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs rounded-xl shadow-md transition-all active:scale-95 cursor-pointer flex items-center gap-1.5 shrink-0">
+                                    <span>🚀 דחף מאמרים לאינדוקס בגוגל (Google & IndexNow)</span>
+                                </button>
+                                <button onclick="toggleArticlePreviewMode()" class="py-2.5 px-4 bg-purple-600 hover:bg-purple-500 text-white font-black text-xs rounded-xl shadow-md transition-all active:scale-95 cursor-pointer flex items-center gap-1.5 shrink-0">
+                                    <span id="preview-mode-btn-text">👁️ מצב תצוגה מקדימה לכל המאמרים</span>
+                                </button>
+                            </div>
                         </div>
 
                         <div class="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80 mb-4 flex items-center justify-between">
@@ -1441,13 +1446,25 @@
                             </div>
                         </div>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs pt-1">
+                        <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 text-xs pt-1">
                             <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700">
-                                <div class="text-[11px] font-bold text-purple-300 mb-1">תאריך השקת סדרת המאמרים</div>
+                                <div class="text-[11px] font-bold text-purple-300 mb-1">תאריך השקה ראשוני</div>
                                 <div class="flex gap-2">
                                     <input type="date" id="scheduler-launch-date-input" class="w-full p-2 bg-slate-900 border border-slate-600 rounded-lg text-xs font-mono text-white outline-none focus:border-purple-400" />
                                     <button onclick="saveLaunchDateFromUI()" class="py-2 px-3 bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs rounded-lg shrink-0 transition-colors">שמור</button>
                                 </div>
+                            </div>
+                            <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700">
+                                <div class="text-[11px] font-bold text-purple-300 mb-1">קצב שחרור מאמרים</div>
+                                <select id="scheduler-interval-select" onchange="saveArticleIntervalFromUI(this.value)" class="w-full p-2 bg-slate-900 border border-slate-600 rounded-lg text-xs font-bold text-white outline-none focus:border-purple-400">
+                                    <option value="1">כל 1 שעה (שחרור מהיר ⚡)</option>
+                                    <option value="2">כל 2 שעות</option>
+                                    <option value="3">כל 3 שעות</option>
+                                    <option value="4" selected>כל 4 שעות (מומלץ ✨)</option>
+                                    <option value="6">כל 6 שעות</option>
+                                    <option value="12">כל 12 שעות</option>
+                                    <option value="24">כל 24 שעות (יומי)</option>
+                                </select>
                             </div>
                             <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700 text-center flex flex-col justify-center">
                                 <div class="text-lg font-black text-emerald-400" id="scheduler-visible-count">-</div>
@@ -1455,7 +1472,7 @@
                             </div>
                             <div class="bg-slate-800/60 p-3 rounded-xl border border-slate-700 text-center flex flex-col justify-center">
                                 <div class="text-lg font-black text-amber-400" id="scheduler-total-count">-</div>
-                                <div class="text-[11px] font-bold text-slate-300">סה"כ מאמרים במאגר (DB)</div>
+                                <div class="text-[11px] font-bold text-slate-300">סה"כ מאמרים במאגר (45 מאמרים)</div>
                             </div>
                         </div>
                     </div>
