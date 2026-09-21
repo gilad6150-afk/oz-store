@@ -1253,6 +1253,9 @@ function updateCartUI() {
             `).join('');
         }
     }
+    if (typeof trackAbandonedCart === 'function') {
+        trackAbandonedCart();
+    }
 }
 
 // VIP MY ACCOUNT PAGE LOGIC & RENDERERS
