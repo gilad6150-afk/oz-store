@@ -2312,3 +2312,127 @@ window.copyVipCoupon = function() {
 document.addEventListener('DOMContentLoaded', () => {
     window.initVipCouponPopup();
 });
+
+// OZ SMART AI & WHATSAPP ASSISTANT BOT ENGINE
+window.toggleOzBotChat = function() {
+    const win = document.getElementById('oz-bot-chat-window');
+    if (!win) return;
+    if (win.classList.contains('hidden')) {
+        win.classList.remove('hidden');
+        const inp = document.getElementById('oz-bot-input');
+        if (inp) inp.focus();
+    } else {
+        win.classList.add('hidden');
+    }
+};
+
+window.askOzBotQuestion = function(questionText) {
+    const inp = document.getElementById('oz-bot-input');
+    if (inp) {
+        inp.value = questionText;
+        window.sendOzBotMessage();
+    }
+};
+
+window.sendOzBotMessage = function() {
+    const input = document.getElementById('oz-bot-input');
+    const container = document.getElementById('oz-bot-messages');
+    if (!input || !container) return;
+
+    const userMsg = input.value.trim();
+    if (!userMsg) return;
+
+    // Helper escapeHtml
+    const safeMsg = userMsg.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+    // Append User Message Bubble
+    const userBubble = document.createElement('div');
+    userBubble.className = 'flex justify-start mb-2';
+    userBubble.innerHTML = `
+        <div class="bg-purple-900 text-white py-2 px-3.5 rounded-2xl rounded-tr-none max-w-[85%] text-xs font-bold shadow-sm">
+            ${safeMsg}
+        </div>
+    `;
+    container.appendChild(userBubble);
+    input.value = '';
+
+    // Auto Scroll
+    container.scrollTop = container.scrollHeight;
+
+    // Response Generation
+    setTimeout(() => {
+        const botReply = generateOzBotReply(userMsg);
+        const botBubble = document.createElement('div');
+        botBubble.className = 'flex justify-end mb-2';
+        botBubble.innerHTML = `
+            <div class="bg-white border border-purple-200/80 text-slate-800 py-2.5 px-3.5 rounded-2xl rounded-tl-none max-w-[90%] text-xs font-medium shadow-sm space-y-2">
+                <div class="font-extrabold text-[11px] text-oz-primary flex items-center gap-1">
+                    <span>🤖 מענה מכון עוז</span>
+                </div>
+                <div class="leading-relaxed text-slate-700">${botReply}</div>
+            </div>
+        `;
+        container.appendChild(botBubble);
+        container.scrollTop = container.scrollHeight;
+    }, 350);
+};
+
+function generateOzBotReply(q) {
+    const query = q.toLowerCase();
+
+    if (query.includes('whatsapp') || query.includes('וואטסאפ') || query.includes('ווטסאפ') || query.includes('נציג') || query.includes('אדם') || query.includes('בנאדם')) {
+        return `אשמח להעביר אותך לשיחה ישירה ב-WhatsApp מול גלעד מנהל מכון עוז!<br><br>
+        <a href="https://wa.me/972526867192" target="_blank" class="inline-flex items-center gap-1.5 py-2 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs rounded-xl shadow-md transition-all">
+            <span>💬 לחץ כאן לפתיחת צ'אט ב-WhatsApp</span>
+        </a>`;
+    }
+
+    if (query.includes('כשר') || query.includes('סת"ם') || query.includes('סתם') || query.includes('הגהה') || query.includes('מחשב') || query.includes('סופר') || query.includes('קלף')) {
+        return `📜 <strong>כשרות והגהת סת"ם במכון עוז:</strong><br>
+        כל מוצרי הסת"ם (תפילין, מזוזות, ספרי תורה) נכתבים ע"י סופרי סת"ם יראי שמיים מוסמכים, ועוברים <strong>הגהת גברא כפולה לצד בדיקת מחשב אופטית מוסמכת</strong>. כל מוצר מגיע עם תעודת אישור הגהה ואחריות מלאה!`;
+    }
+
+    if (query.includes('משלוח') || query.includes('מחיר משלוח') || query.includes('מתי יגיע') || query.includes('עלות משלוח') || query.includes('חינם')) {
+        return `🚚 <strong>מידע על משלוחים:</strong><br>
+        • <strong>משלוח חינם</strong> בכל הזמנה מעל ₪399!<br>
+        • הזמנות עד ₪399: דמי משלוח מוזלים של ₪35 בלבד עד פתח הבית.<br>
+        • <strong>זמן אספקה:</strong> 2-5 ימי עסקים לכל חלקי הארץ.`;
+    }
+
+    if (query.includes('כתובת') || query.includes('איפה') || query.includes('מיקום') || query.includes('חנות') || query.includes('שעות') || query.includes('טלפון') || query.includes('איסוף')) {
+        return `📍 <strong>כתובת ושעות פעילות:</strong><br>
+        • <strong>כתובת החנות:</strong> רחוב שלום מנצורה 48, ראש העין.<br>
+        • <strong>שעות פתיחה:</strong> ימים א'-ה': 09:00-19:00 | ימי שישי: 09:00-13:00.<br>
+        • 📞 <strong>טלפון ליצירת קשר וייעוץ:</strong> 052-686-7192. ניתן לבצע איסוף עצמי בתיאום מראש.`;
+    }
+
+    if (query.includes('מזוזה') || query.includes('מזוזות') || query.includes('אפוקסי') || query.includes('פלסטיק') || query.includes('אלומיניום') || query.includes('גודל')) {
+        return `🚪 <strong>בתי מזוזה וקלפים:</strong><br>
+        במכון עוז תמצאו בתי מזוזה יוקרתיים מאפוקסי, פלסטיק עמיד, אלומיניום מוברש ועץ זית.<br>
+        • <strong>גודל קלף מומלץ:</strong> 10 ס"מ, 12 ס"מ, או 15 ס"מ.<br>
+        • כל הקלפים שנכתבו ע"י סופר סת"ם מוסמך מגיעים עם תעודת בדיקה!`;
+    }
+
+    if (query.includes('ארנק') || query.includes('ארנקים') || query.includes('עור') || query.includes('תיק') || query.includes('נרתיק')) {
+        return `👛 <strong>ארנקים ותיקי עור נאפה לגבר:</strong><br>
+        קולקציית הארנקים מיוצרת מ-100% עור נאפה פרימיום עם הגנת RFID נגד גניבת אשראי. בנוסף אנו מציעים תיקים מהודרים ומגינים לטלית ולתפילין.`;
+    }
+
+    if (query.includes('תפילין') || query.includes('בר מצווה') || query.includes('נוסח') || query.includes('בהמה גסה')) {
+        return `✨ <strong>תפילין מהודרות במכון עוז:</strong><br>
+        אנו מתמחים בייצור בתים ופרשיות מבהמה גסה (עור עגל עבה לשמירה על ריבוע מדויק לכל החיים) בנוסח ספרדי, אשכנזי, חב"ד ותימני.<br>
+        כל סט מגיע עם תעודת הגהת מחשב, אחריות מורחבת ונרתיק מגן.`;
+    }
+
+    if (query.includes('שבת') || query.includes('חג') || query.includes('תשלום') || query.includes('אשראי') || query.includes('אחריות')) {
+        return `🛡️ <strong>אבטחה ושמירת שבת:</strong><br>
+        • אתר מכון עוז שומר שבת ואינו פעיל בשבתות ובחגי ישראל.<br>
+        • הרכישה באתר מאובטחת בתקן PCI-DSS עם אפשרות לפריסת תשלומים ואחריות מלאה על כל מוצר.`;
+    }
+
+    return `תודה על פנייתך! 📜<br>
+    למענה ספציפי ומיידי מול גלעד מנהל מכון עוז, ניתן ליצור קשר בטלפון <strong>052-686-7192</strong> או בשיחת WhatsApp מהירה:<br><br>
+    <a href="https://wa.me/972526867192" target="_blank" class="inline-flex items-center gap-1.5 py-2 px-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs rounded-xl shadow-md transition-all">
+        <span>💬 מעבר לצ'אט ב-WhatsApp</span>
+    </a>`;
+}
