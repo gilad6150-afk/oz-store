@@ -6072,9 +6072,52 @@ const articlesDB = [
         }
 
         // ==========================================
-        // HFD PICKUP LOGISTICS & LOCKERS ENGINE
+        // HFD PICKUP LOGISTICS & LOCKERS ENGINE (RUNCOM LOGISTICS API)
         // ==========================================
         window.HFDPickupService = {
+            getTokenConfig: function() {
+                try {
+                    return JSON.parse(localStorage.getItem('oz_hfd_config') || '{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwczovL3J1bmNvbS5jby5pbC9jbGFpbXMvY2xpZW50bm8iOiIxNTMzMiIsImh0dHBzOi8vcnVuY29tLmNvLmlsL2NsYWltcy9waHJhc2UiOiI4YzFlZTM4Mi1hM2YwLTRmNjYtOTQ3YS04M2M2OWEzNmMxMzQiLCJleHAiOjE4NDUxOTg3ODUsImlzcyI6Imh0dHBzOi8vcnVuY29tLmNvLmlsIiwiYXVkIjoiaHR0cHM6Ly9ydW5jb20uY28uaWwifQ.xISRwlXxQC895NpGV1_U_B7THpCOMUhwk33iOnCAhMo","clientNo":"15332"}');
+                } catch(e) {
+                    return {
+                        token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwczovL3J1bmNvbS5jby5pbC9jbGFpbXMvY2xpZW50bm8iOiIxNTMzMiIsImh0dHBzOi8vcnVuY29tLmNvLmlsL2NsYWltcy9waHJhc2UiOiI4YzFlZTM4Mi1hM2YwLTRmNjYtOTQ3YS04M2M2OWEzNmMxMzQiLCJleHAiOjE4NDUxOTg3ODUsImlzcyI6Imh0dHBzOi8vcnVuY29tLmNvLmlsIiwiYXVkIjoiaHR0cHM6Ly9ydW5jb20uY28uaWwifQ.xISRwlXxQC895NpGV1_U_B7THpCOMUhwk33iOnCAhMo",
+                        clientNo: "15332"
+                    };
+                }
+            },
+            saveTokenConfig: function(token, clientNo) {
+                try {
+                    localStorage.setItem('oz_hfd_config', JSON.stringify({ token, clientNo }));
+                } catch(e){}
+            },
+            fetchLiveHFDPoints: async function(cityName) {
+                const config = this.getTokenConfig();
+                console.log("📦 [HFD RUNCOM LOGISTICS API DISPATCH]:", { clientNo: config.clientNo, city: cityName });
+
+                try {
+                    const res = await fetch(`https://runcom.co.il/api/pickup/points?city=${encodeURIComponent(cityName)}&clientno=${config.clientNo}`, {
+                        headers: {
+                            'Authorization': 'Bearer ' + config.token,
+                            'Accept': 'application/json'
+                        }
+                    });
+                    if (res.ok) {
+                        const data = await res.json();
+                        if (data && Array.isArray(data) && data.length > 0) {
+                            return data.map(p => ({
+                                id: p.Code || p.id || ("HFD-" + p.ID),
+                                name: p.Name || ("PickUP HFD - " + (p.Address || cityName)),
+                                address: (p.Address || '') + (p.City ? ', ' + p.City : ''),
+                                hours: p.OpeningHours || "א'-ה': 08:00-20:00"
+                            }));
+                        }
+                    }
+                } catch(e) {
+                    console.warn("⚠️ HFD Runcom live API fetch encountered CORS/network handler:", e);
+                }
+
+                return this.getPointsForCity(cityName);
+            },
             pointsDatabase: {
                 "ראש העין": [
                     { id: "HFD-101", name: "לוקר PickUP HFD - סופר פארם שוהם", address: "רחוב שוהם 1, ראש העין", hours: "א'-ה': 08:00-22:00, ו': 08:00-14:30" },
@@ -6171,7 +6214,7 @@ const articlesDB = [
             }
         };
 
-        window.onHFDCityChange = function(cityName) {
+        window.onHFDCityChange = async function(cityName) {
             const pointSelect = document.getElementById('hfd-point-select');
             const cardBox = document.getElementById('hfd-selected-point-card');
             if (!pointSelect) return;
@@ -6184,7 +6227,10 @@ const articlesDB = [
                 return;
             }
 
-            const points = window.HFDPickupService.getPointsForCity(cityName);
+            pointSelect.disabled = true;
+            pointSelect.innerHTML = '<option value="">⏳ טוען נקודות איסוף HFD...</option>';
+
+            const points = await window.HFDPickupService.fetchLiveHFDPoints(cityName);
             pointSelect.disabled = false;
             pointSelect.innerHTML = '<option value="">-- בחר חנות / לוקר PickUP --</option>';
 
