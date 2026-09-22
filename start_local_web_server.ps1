@@ -1,8 +1,9 @@
 $listener = New-Object System.Net.HttpListener
-$listener.Prefixes.Add("http://localhost:8080/")
+$listener.Prefixes.Add("http://localhost:8085/")
+$listener.Prefixes.Add("http://127.0.0.1:8085/")
 try {
     $listener.Start()
-    Write-Host "✅ Local web server started successfully on http://localhost:8080/"
+    Write-Host "✅ Local web server started successfully on http://localhost:8085/"
 } catch {
     Write-Host "Port 8080 in use or listener failed: $_"
 }
