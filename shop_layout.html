@@ -1,5 +1,5 @@
     <!-- DYNAMIC MAIN CONTENT CONTAINER -->
-    <main id="main-content" class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+    <main id="main-content" class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pb-28 sm:pb-8 w-full">
         <div id="shop" class="w-full space-y-6">
             
             <!-- TOP VISUAL CATEGORY GALLERY (Clean, Uncluttered & Image-Based) -->
@@ -19,7 +19,7 @@
                 <!-- Horizontal Scrollable Visual Category Cards Carousel -->
                 <div class="flex items-center gap-3 overflow-x-auto no-scrollbar pb-2 pt-1 text-right">
                     
-                    <!-- Card: All Products -->
+                    <!-- Card 1: All Products -->
                     <button onclick="filterCategory('all', this)" class="cat-btn shrink-0 w-32 h-36 sm:w-40 sm:h-44 relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 border-2 border-purple-900 bg-[#1E1B4B] text-white cursor-pointer group">
                         <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=400&q=80" alt="כל המוצרים" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-500" />
                         <div class="absolute inset-0 bg-gradient-to-t from-[#1E1B4B] via-[#1E1B4B]/60 to-transparent"></div>
@@ -29,89 +29,294 @@
                         </div>
                     </button>
 
-                    <!-- Card: STAM -->
-                    <button onclick="filterCategory('stam', this)" class="cat-btn shrink-0 w-32 h-36 sm:w-40 sm:h-44 relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 border-2 border-transparent hover:border-oz-primary bg-slate-900 text-white cursor-pointer group">
-                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80" alt="תשמישי קדושה וסתם" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-500" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent"></div>
-                        <div class="absolute bottom-3 right-3 left-3 text-right z-10">
-                            <span class="text-xs sm:text-sm font-black block leading-tight text-white">📜 סת"ם ותשמישי קדושה</span>
-                            <span class="text-[10px] text-purple-200 font-bold block mt-0.5">תפילין, מזוזות וספרי תורה</span>
-                        </div>
-                    </button>
-
-                    <!-- Card: Mezuzot -->
-                    <button onclick="filterCategory('mezuzot', this)" class="cat-btn shrink-0 w-32 h-36 sm:w-40 sm:h-44 relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 border-2 border-transparent hover:border-oz-primary bg-slate-900 text-white cursor-pointer group">
-                        <img src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=400&q=80" alt="בתי מזוזה" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-500" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent"></div>
-                        <div class="absolute bottom-3 right-3 left-3 text-right z-10">
-                            <span class="text-xs sm:text-sm font-black block leading-tight text-white">🚪 בתי מזוזה</span>
-                            <span class="text-[10px] text-purple-200 font-bold block mt-0.5">אפוקסי, פלסטיק ואלומיניום</span>
-                        </div>
-                    </button>
-
-                    <!-- Card: Tallitot & Tzitzit -->
+                    <!-- Card 2: Tallitot & Tzitzit -->
                     <button onclick="filterCategory('tallitot-tzitzit', this)" class="cat-btn shrink-0 w-32 h-36 sm:w-40 sm:h-44 relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 border-2 border-transparent hover:border-oz-primary bg-slate-900 text-white cursor-pointer group">
                         <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=400&q=80" alt="טליות וציציות" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-500" />
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent"></div>
                         <div class="absolute bottom-3 right-3 left-3 text-right z-10">
                             <span class="text-xs sm:text-sm font-black block leading-tight text-white">✡️ טליות וציציות</span>
-                            <span class="text-[10px] text-purple-200 font-bold block mt-0.5">צמר רחלים, כותנה ודרייפיט</span>
+                            <span class="text-[10px] text-purple-200 font-bold block mt-0.5">טליתות וציציות (233)</span>
                         </div>
                     </button>
 
-                    <!-- Card: Tefillin Bags -->
-                    <button onclick="filterCategory('tefillin-bags', this)" class="cat-btn shrink-0 w-32 h-36 sm:w-40 sm:h-44 relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 border-2 border-transparent hover:border-oz-primary bg-slate-900 text-white cursor-pointer group">
-                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=400&q=80" alt="תיקים לטלית ולתפילין" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-500" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent"></div>
-                        <div class="absolute bottom-3 right-3 left-3 text-right z-10">
-                            <span class="text-xs sm:text-sm font-black block leading-tight text-white">💼 תיקים לטלית ולתפילין</span>
-                            <span class="text-[10px] text-purple-200 font-bold block mt-0.5">תיקים ומארזי מגן מהודרים</span>
-                        </div>
-                    </button>
-
-                    <!-- Card: Books & Siddurim -->
-                    <button onclick="filterCategory('books', this)" class="cat-btn shrink-0 w-32 h-36 sm:w-40 sm:h-44 relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 border-2 border-transparent hover:border-oz-primary bg-slate-900 text-white cursor-pointer group">
-                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80" alt="ספרי קודש וסידורים" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-500" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent"></div>
-                        <div class="absolute bottom-3 right-3 left-3 text-right z-10">
-                            <span class="text-xs sm:text-sm font-black block leading-tight text-white">📚 ספרי קודש וסידורים</span>
-                            <span class="text-[10px] text-purple-200 font-bold block mt-0.5">סידורים, ברכונים וחומשים</span>
-                        </div>
-                    </button>
-
-                    <!-- Card: Wallets -->
-                    <button onclick="filterCategory('wallets', this)" class="cat-btn shrink-0 w-32 h-36 sm:w-40 sm:h-44 relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 border-2 border-transparent hover:border-oz-primary bg-slate-900 text-white cursor-pointer group">
-                        <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=400&q=80" alt="ארנקים לגבר" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-500" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent"></div>
-                        <div class="absolute bottom-3 right-3 left-3 text-right z-10">
-                            <span class="text-xs sm:text-sm font-black block leading-tight text-white">👛 ארנקים לגבר</span>
-                            <span class="text-[10px] text-purple-200 font-bold block mt-0.5">100% עור נאפה עם RFID</span>
-                        </div>
-                    </button>
-
-                    <!-- Card: Gifts -->
+                    <!-- Card 3: Gifts & Judaica -->
                     <button onclick="filterCategory('gifts', this)" class="cat-btn shrink-0 w-32 h-36 sm:w-40 sm:h-44 relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 border-2 border-transparent hover:border-oz-primary bg-slate-900 text-white cursor-pointer group">
                         <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=400&q=80" alt="מתנות ויודאיקה" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-500" />
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent"></div>
                         <div class="absolute bottom-3 right-3 left-3 text-right z-10">
                             <span class="text-xs sm:text-sm font-black block leading-tight text-white">🎁 מתנות ויודאיקה</span>
-                            <span class="text-[10px] text-purple-200 font-bold block mt-0.5">מארזי שי ויוקרה</span>
+                            <span class="text-[10px] text-purple-200 font-bold block mt-0.5">תמונות, בשמים, מארזים וארנקים</span>
+                        </div>
+                    </button>
+
+                    <!-- Card 4: Tefillin Bags -->
+                    <button onclick="filterCategory('tefillin-bags', this)" class="cat-btn shrink-0 w-32 h-36 sm:w-40 sm:h-44 relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 border-2 border-transparent hover:border-oz-primary bg-slate-900 text-white cursor-pointer group">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=400&q=80" alt="תיקים לטלית ותפילין" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent"></div>
+                        <div class="absolute bottom-3 right-3 left-3 text-right z-10">
+                            <span class="text-xs sm:text-sm font-black block leading-tight text-white">💼 תיקים לטלית ותפילין</span>
+                            <span class="text-[10px] text-purple-200 font-bold block mt-0.5">תפדניות וכיסויי דמוי עור</span>
+                        </div>
+                    </button>
+
+                    <!-- Card 5: Sacred Books -->
+                    <button onclick="filterCategory('books', this)" class="cat-btn shrink-0 w-32 h-36 sm:w-40 sm:h-44 relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 border-2 border-transparent hover:border-oz-primary bg-slate-900 text-white cursor-pointer group">
+                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80" alt="ספרי קודש" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent"></div>
+                        <div class="absolute bottom-3 right-3 left-3 text-right z-10">
+                            <span class="text-xs sm:text-sm font-black block leading-tight text-white">📚 ספרי קודש</span>
+                            <span class="text-[10px] text-purple-200 font-bold block mt-0.5">סידורים, תהילים וחומשים</span>
+                        </div>
+                    </button>
+
+                    <!-- Card 6: STAM -->
+                    <button onclick="filterCategory('stam', this)" class="cat-btn shrink-0 w-32 h-36 sm:w-40 sm:h-44 relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:scale-105 active:scale-95 border-2 border-transparent hover:border-oz-primary bg-slate-900 text-white cursor-pointer group">
+                        <img src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=400&q=80" alt="תשמישי קדושה וסתם" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-500" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent"></div>
+                        <div class="absolute bottom-3 right-3 left-3 text-right z-10">
+                            <span class="text-xs sm:text-sm font-black block leading-tight text-white">📜 תשמישי קדושה וסת"ם</span>
+                            <span class="text-[10px] text-purple-200 font-bold block mt-0.5">תפילין, מזוזות ובתי מזוזה</span>
                         </div>
                     </button>
                 </div>
 
-                <!-- Subcategories Bar for Mezuzot -->
-                <div id="mezuzot-subcategories" class="pt-2 border-t border-slate-100 flex items-center gap-2 overflow-x-auto no-scrollbar text-xs font-semibold">
-                    <span class="text-slate-400 text-[11px] shrink-0 font-extrabold">תת קטגוריות מזוזה:</span>
-                    <button onclick="filterCategory('mezuzot-epoxy', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-purple-50/80 text-purple-900 border border-purple-200/80 hover:bg-purple-100 transition-all cursor-pointer">
+                <!-- Subcategories Quick Navigation Bar -->
+                <div id="quick-subcategories" class="pt-2 border-t border-slate-100 flex items-center gap-2 overflow-x-auto no-scrollbar text-xs font-semibold">
+                    <span class="text-slate-400 text-[11px] shrink-0 font-extrabold">תת-קטגוריות פופולריות:</span>
+                    <button onclick="filterSubcategory('tallitot-tzitzit', 'טליתות', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 hover:bg-purple-100 transition-all cursor-pointer">
+                        ✡️ טליתות
+                    </button>
+                    <button onclick="filterSubcategory('tallitot-tzitzit', 'ציציות', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 hover:bg-purple-100 transition-all cursor-pointer">
+                        🧵 ציציות
+                    </button>
+                    <button onclick="filterSubcategory('gifts', 'תמונות זכוכית וקנבס', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 hover:bg-purple-100 transition-all cursor-pointer">
+                        🖼️ תמונות זכוכית וקנבס
+                    </button>
+                    <button onclick="filterSubcategory('gifts', 'בשמים וריחות להבדלה', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 hover:bg-purple-100 transition-all cursor-pointer">
+                        🌿 בשמים וריחות להבדלה
+                    </button>
+                    <button onclick="filterSubcategory('gifts', 'ארנקים לגבר', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 hover:bg-purple-100 transition-all cursor-pointer">
+                        👛 ארנקים לגבר
+                    </button>
+                    <button onclick="filterSubcategory('tefillin-bags', 'תיקים לתפילין', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 hover:bg-purple-100 transition-all cursor-pointer">
+                        💼 תיקים לתפילין
+                    </button>
+                    <button onclick="filterSubcategory('tefillin-bags', 'כיסוי טלית ותפילין', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 hover:bg-purple-100 transition-all cursor-pointer">
+                        ✨ כיסוי טלית ותפילין
+                    </button>
+                    <button onclick="filterSubcategory('stam', 'בתי מזוזה מאפוקסי', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 hover:bg-purple-100 transition-all cursor-pointer">
                         ✨ בתי מזוזה אפוקסי
                     </button>
-                    <button onclick="filterCategory('mezuzot-plastic', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer">
+                    <button onclick="filterSubcategory('stam', 'בתי מזוזה מפלסטיק', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 hover:bg-purple-100 transition-all cursor-pointer">
                         🛡️ בתי מזוזה פלסטיק
                     </button>
-                    <button onclick="filterCategory('mezuzot-aluminum', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer">
+                    <button onclick="filterSubcategory('stam', 'בתי מזוזה מאלומיניום', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 hover:bg-purple-100 transition-all cursor-pointer">
                         🏢 בתי מזוזה אלומיניום
                     </button>
+                </div>
+
+                <!-- Subcategories Bar for Tallit (20 Subcategories) -->
+                                <!-- SPECIALIZED TALLIT & TZITZIT FILTER BAR (SCOPED ONLY TO TALLIT & TZITZIT) -->
+                <div id="tallit-specialized-filter-bar" class="hidden pt-4 pb-4 border-t border-purple-100 bg-gradient-to-r from-indigo-950 via-purple-950 to-slate-950 p-4 sm:p-5 rounded-2xl text-white shadow-xl space-y-4 text-right transition-all">
+                    <div class="flex items-center justify-between border-b border-purple-800/60 pb-3">
+                        <div class="flex items-center gap-2">
+                            <span class="text-xl">ג¡ן¸</span>
+                            <div>
+                                <h4 class="font-black text-sm sm:text-base text-amber-300">׳׳¡׳ ׳ ׳™ ׳׳™׳›׳•׳× ׳׳×׳§׳“׳׳™׳ ׳׳˜׳׳™׳×׳•׳× ׳•׳¦׳™׳¦׳™׳•׳× (׳™׳™׳—׳•׳“׳™ ׳׳׳—׳׳§׳”)</h4>
+                                <p class="text-[11px] text-purple-200 font-medium">׳¡׳™׳ ׳•׳ ׳׳×׳§׳“׳ ׳׳₪׳™ ׳”׳›׳©׳¨׳™׳, ׳¡׳•׳’׳™ ׳‘׳“, ׳“׳’׳׳™ ׳׳¨׳™׳’׳”, ׳₪׳×׳™׳׳™׳ ׳•׳׳™׳“׳•׳×</p>
+                            </div>
+                        </div>
+                        <button type="button" onclick="resetTallitSpecialFilters()" class="text-xs font-bold text-amber-300 hover:text-white bg-white/10 hover:bg-white/20 py-1.5 px-3 rounded-xl border border-white/20 transition-all flex items-center gap-1 cursor-pointer">
+                            <span>נ”„</span>
+                            <span>׳׳™׳₪׳•׳¡ ׳׳¡׳ ׳ ׳™ ׳˜׳׳™׳×</span>
+                        </button>
+                    </div>
+
+                    <!-- Filter Select Controls Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 text-xs">
+                        <!-- 1. Badatz / Certifications -->
+                        <div class="space-y-1">
+                            <label class="font-extrabold text-purple-200 text-[11px] block">נ“ ׳”׳›׳©׳¨ ׳•׳”׳©׳’׳—׳”:</label>
+                            <select id="tallit-cert-select" onchange="filterTallitSpec('cert', this.value)" class="w-full bg-slate-900 border border-purple-500/40 rounded-xl p-2 text-white font-semibold text-xs outline-none focus:border-amber-400 cursor-pointer">
+                                <option value="all">׳›׳ ׳”׳”׳›׳©׳¨׳™׳</option>
+                                <option value="׳”׳¢׳“׳” ׳”׳—׳¨׳“׳™׳×">׳‘׳“"׳¥ ׳”׳¢׳“׳” ׳”׳—׳¨׳“׳™׳×</option>
+                                <option value="׳‘׳™׳× ׳™׳•׳¡׳£">׳‘׳“"׳¥ ׳‘׳™׳× ׳™׳•׳¡׳£</option>
+                                <option value="׳׳ ׳“׳">׳”׳¨׳‘ ׳׳ ׳“׳</option>
+                                <option value="׳׳—׳₪׳•׳“">׳”׳¨׳‘ ׳׳—׳₪׳•׳“</option>
+                            </select>
+                        </div>
+
+                        <!-- 2. Fabric Type -->
+                        <div class="space-y-1">
+                            <label class="font-extrabold text-purple-200 text-[11px] block">נ§¶ ׳¡׳•׳’ ׳‘׳“ ׳•׳—׳•׳׳¨:</label>
+                            <select id="tallit-fabric-select" onchange="filterTallitSpec('fabric', this.value)" class="w-full bg-slate-900 border border-purple-500/40 rounded-xl p-2 text-white font-semibold text-xs outline-none focus:border-amber-400 cursor-pointer">
+                                <option value="all">׳›׳ ׳¡׳•׳’׳™ ׳”׳‘׳“׳™׳</option>
+                                <option value="׳¦׳׳¨">100% ׳¦׳׳¨ ׳¨׳—׳׳™׳</option>
+                                <option value="׳›׳•׳×׳ ׳”">100% ׳›׳•׳×׳ ׳”</option>
+                                <option value="׳“׳¨׳™׳™׳₪׳™׳˜">Dry-Fit (׳׳ ׳“׳£ ׳–׳™׳¢׳”)</option>
+                                <option value="׳’׳•׳₪׳™׳”">׳’׳•׳₪׳™׳™׳× ׳¦׳™׳¦׳™׳×</option>
+                            </select>
+                        </div>
+
+                        <!-- 3. Model / Weave -->
+                        <div class="space-y-1">
+                            <label class="font-extrabold text-purple-200 text-[11px] block">נ¨ ׳¡׳’׳ ׳•׳ ׳׳¨׳™׳’׳” ׳•׳“׳’׳:</label>
+                            <select id="tallit-model-select" onchange="filterTallitSpec('model', this.value)" class="w-full bg-slate-900 border border-purple-500/40 rounded-xl p-2 text-white font-semibold text-xs outline-none focus:border-amber-400 cursor-pointer">
+                                <option value="all">׳›׳ ׳”׳“׳’׳׳™׳</option>
+                                <option value="׳×׳©׳‘׳¥">׳×׳©׳‘׳¥ (׳׳•׳ ׳¢ ׳”׳—׳׳§׳”)</option>
+                                <option value="׳₪׳׳¨ ׳§׳">׳₪׳׳¨ ׳§׳ (׳“׳•׳—׳” ׳›׳×׳׳™׳)</option>
+                                <option value="׳‘׳™׳× ׳™׳•׳¡׳£">׳‘׳™׳× ׳™׳•׳¡׳£</option>
+                                <option value="׳—׳‘׳“">׳—׳‘"׳“</option>
+                                <option value="׳‘׳ ׳™ ׳׳•׳¨">׳‘׳ ׳™ ׳׳•׳¨</option>
+                                <option value="׳׳¢׳׳•׳×">׳׳¢׳׳•׳×</option>
+                            </select>
+                        </div>
+
+                        <!-- 4. Strings & Tying -->
+                        <div class="space-y-1">
+                            <label class="font-extrabold text-purple-200 text-[11px] block">נ§µ ׳₪׳×׳™׳׳™׳ ׳•׳§׳©׳™׳¨׳•׳×:</label>
+                            <select id="tallit-strings-select" onchange="filterTallitSpec('strings', this.value)" class="w-full bg-slate-900 border border-purple-500/40 rounded-xl p-2 text-white font-semibold text-xs outline-none focus:border-amber-400 cursor-pointer">
+                                <option value="all">׳›׳ ׳¡׳•׳’׳™ ׳”׳§׳©׳™׳¨׳•׳×</option>
+                                <option value="׳×׳›׳׳×">׳₪׳×׳™׳ ׳×׳›׳׳×</option>
+                                <option value="׳¢׳‘׳•׳“׳× ׳™׳“">׳¢׳‘׳•׳“׳× ׳™׳“ (׳׳©׳׳”)</option>
+                                <option value="׳׳›׳•׳ ׳”">׳׳›׳•׳ ׳” ׳׳”׳•׳“׳¨׳×</option>
+                                <option value="׳—׳‘׳“">׳§׳©׳™׳¨׳× ׳—׳‘"׳“</option>
+                                <option value="׳¡׳₪׳¨׳“׳™">׳§׳©׳™׳¨׳” ׳¡׳₪׳¨׳“׳™׳×</option>
+                            </select>
+                        </div>
+
+                        <!-- 5. Size Selection -->
+                        <div class="space-y-1">
+                            <label class="font-extrabold text-purple-200 text-[11px] block">נ“ ׳׳™׳“׳” ׳׳‘׳•׳§׳©׳×:</label>
+                            <select id="tallit-size-select" onchange="filterTallitSpec('size', this.value)" class="w-full bg-slate-900 border border-purple-500/40 rounded-xl p-2 text-white font-semibold text-xs outline-none focus:border-amber-400 cursor-pointer">
+                                <option value="all">׳›׳ ׳”׳׳™׳“׳•׳×</option>
+                                <option value="45">׳׳™׳“׳” 45</option>
+                                <option value="50">׳׳™׳“׳” 50</option>
+                                <option value="55">׳׳™׳“׳” 55</option>
+                                <option value="60">׳׳™׳“׳” 60</option>
+                                <option value="70">׳׳™׳“׳” 70</option>
+                                <option value="80">׳׳™׳“׳” 80</option>
+                                <option value="S">S / ׳™׳׳“׳™׳</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tallit-subcategories" class="pt-3 border-t border-slate-100 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-slate-700 text-xs shrink-0 font-extrabold flex items-center gap-1.5">
+                            <span>✡️</span>
+                            <span>תת-קטגוריות טליתות (20 דגמים מהודרים):</span>
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 text-xs font-semibold">
+                        <button onclick="filterCategory('tallit-beit-yosef', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-purple-50/80 text-purple-900 border border-purple-200/80 hover:bg-purple-100 transition-all cursor-pointer whitespace-nowrap">
+                            📜 טלית בית יוסף (מהודר) 100% צמר
+                        </button>
+                        <button onclick="filterCategory('tallit-shacharit', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            🌅 טלית שחרית
+                        </button>
+                        <button onclick="filterCategory('tallit-kutna', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            🌱 טלית כותנה
+                        </button>
+                        <button onclick="filterCategory('tallit-meutzevet', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            🎨 טלית מעוצבת
+                        </button>
+                        <button onclick="filterCategory('tallit-choshen', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            💎 טלית חושן
+                        </button>
+                        <button onclick="filterCategory('tallit-ori', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            ✨ טלית אורי
+                        </button>
+                        <button onclick="filterCategory('tallit-aviv', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            🌸 טלית אביב
+                        </button>
+                        <button onclick="filterCategory('tallit-shabbat', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            👑 טלית לשבת
+                        </button>
+                        <button onclick="filterCategory('tallit-bareket', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            💚 טלית דגם ברקת
+                        </button>
+                        <button onclick="filterCategory('tallit-tzamar-aa', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            🐑 טלית צמר א.א - 100% צמר
+                        </button>
+                        <button onclick="filterCategory('tallit-gvanim', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            🌈 טלית גוונים
+                        </button>
+                        <button onclick="filterCategory('tallit-peer-kal', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            🪶 טלית פאר קל 100% צמר - קל ונושם
+                        </button>
+                        <button onclick="filterCategory('tallit-bnei-or', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            ☀️ טלית בני אור - טלית מעוצבת - עשויה צמר טהור
+                        </button>
+                        <button onclick="filterCategory('tallit-sapir', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            💙 טלית דגם ספיר
+                        </button>
+                        <button onclick="filterCategory('tallit-temani', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            🕌 טלית לתמנים - טלית תימנית
+                        </button>
+                        <button onclick="filterCategory('tallit-maalot', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            ⭐ טלית מעלות
+                        </button>
+                        <button onclick="filterCategory('tallit-belzer', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            🕍 טלית בעלזער
+                        </button>
+                        <button onclick="filterCategory('tallit-chabad', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            📖 טליתות חב"ד - צמר ומשי - טלית חב"ד
+                        </button>
+                        <button onclick="filterCategory('tallit-klil-techelet', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            🌊 טלית כליל תכלת
+                        </button>
+                        <button onclick="filterCategory('tallit-tashbetz', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            🛡️ טלית תשבץ
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Subcategories Bar for Tzitzit -->
+                <div id="tzitzit-subcategories" class="pt-3 border-t border-slate-100 space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-slate-700 text-xs shrink-0 font-extrabold flex items-center gap-1.5">
+                            <span>👕</span>
+                            <span>תת-קטגוריות ציצית וציצית קטן:</span>
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 text-xs font-semibold">
+                        <button onclick="filterCategory('tzitzit-tzamar', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-purple-50/80 text-purple-900 border border-purple-200/80 hover:bg-purple-100 transition-all cursor-pointer whitespace-nowrap">
+                            🐑 ציצית צמר רחלים (לשמה)
+                        </button>
+                        <button onclick="filterCategory('tzitzit-kutna', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            🌱 ציצית 100% כותנה
+                        </button>
+                        <button onclick="filterCategory('tzitzit-dryfit', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            ⚡ גופיית ציצית Dry-Fit מנדפת זיעה
+                        </button>
+                        <button onclick="filterCategory('tzitzit-cotton-undershirt', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            👕 גופיית ציצית כותנה אלסטית
+                        </button>
+                        <button onclick="filterCategory('tzitzit-kids', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            👦 ציצית ילדים ונוער
+                        </button>
+                        <button onclick="filterCategory('tzitzit-chabad', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            📖 ציצית חב"ד (צמר / כותנה)
+                        </button>
+                        <button onclick="filterCategory('tzitzit-techelet', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            🌊 ציצית משולבת פתילי תכלת
+                        </button>
+                        <button onclick="filterCategory('tzitzit-hand-made', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            ✂️ ציצית עבודת יד לשמה
+                        </button>
+                        <button onclick="filterCategory('tzitzit-v-neck', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            📐 גופיית ציצית צוואר V / עגול
+                        </button>
+                        <button onclick="filterCategory('tzitzit-tzamar-white', this)" class="cat-btn shrink-0 py-1.5 px-3 rounded-xl bg-slate-100 text-slate-800 border border-slate-200/80 hover:bg-slate-200 transition-all cursor-pointer whitespace-nowrap">
+                            ✨ ציצית צמר מולבנת מהודרת
+                        </button>
+                    </div>
                 </div>
                 </div>
 

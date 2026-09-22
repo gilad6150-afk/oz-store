@@ -57,226 +57,166 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <nav class="hidden lg:flex items-center justify-center gap-4 xl:gap-8 font-extrabold text-xs xl:text-sm text-white whitespace-nowrap dir-rtl">
                     
-                    <!-- Category 1: STAM & Tefillin -->
-                    <div class="relative group/menu py-2.5">
-                        <a href="#shop" onclick="filterCategory('stam'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-purple-200 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/15">
-                            <span class="whitespace-nowrap">תשמישי קדושה וסת"ם</span>
-                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-purple-300 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
-                        </a>
-                        <div class="mega-menu absolute top-full right-0 w-[480px] bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 grid grid-cols-2 gap-2.5 z-50 text-right dir-rtl text-slate-800">
-                            <div onclick="filterCategory('stam'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
-                                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
-                                <div>
-                                    <div class="font-black text-xs text-slate-800">תפילין מהודרות</div>
-                                    <div class="text-[11px] text-slate-500 font-medium">לבר מצווה / אשכנז / ספרד</div>
-                                </div>
-                            </div>
-
-                            <div onclick="filterCategory('stam'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
-                                <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
-                                <div>
-                                    <div class="font-black text-xs text-slate-800">מזוזות - קלף</div>
-                                    <div class="text-[11px] text-slate-500 font-medium">קלפים כשרים 10-15 ס"מ</div>
-                                </div>
-                            </div>
-
-                            <div onclick="filterCategory('stam'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
-                                <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
-                                <div>
-                                    <div class="font-black text-xs text-slate-800">ספר תורה</div>
-                                    <div class="text-[11px] text-slate-500 font-medium">ספרי תורה ספרדי ואשכנזי</div>
-                                </div>
-                            </div>
-
-                            <div onclick="filterCategory('stam'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
-                                <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
-                                <div>
-                                    <div class="font-black text-xs text-slate-800">ציוד לסופרי סת"ם</div>
-                                    <div class="text-[11px] text-slate-500 font-medium">שולחנות, דיו וקולמוסים</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Category 2: Mezuzah Cases -->
-                    <div class="relative group/menu py-2.5">
-                        <a href="#shop" onclick="filterCategory('mezuzot'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-purple-200 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/15">
-                            <span class="whitespace-nowrap">בתי מזוזה</span>
-                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-purple-300 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
-                        </a>
-                        <div class="mega-menu absolute top-full right-0 w-[520px] bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 grid grid-cols-2 gap-2.5 z-50 text-right dir-rtl text-slate-800">
-                            <div onclick="filterCategory('mezuzot-epoxy'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
-                                <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
-                                <div>
-                                    <div class="font-black text-xs text-slate-800">בתי מזוזה אפוקסי</div>
-                                    <div class="text-[11px] text-slate-500 font-medium">עיצובים מודרניים ואמנותיים ביציקה</div>
-                                </div>
-                            </div>
-                            <div onclick="filterCategory('mezuzot-plastic'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
-                                <img src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
-                                <div>
-                                    <div class="font-black text-xs text-slate-800">בתי מזוזה פלסטיק</div>
-                                    <div class="text-[11px] text-slate-500 font-medium">עמידים למזג אוויר ואיכותיים</div>
-                                </div>
-                            </div>
-                            <div onclick="filterCategory('mezuzot-aluminum'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
-                                <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
-                                <div>
-                                    <div class="font-black text-xs text-slate-800">בתי מזוזה אלומיניום</div>
-                                    <div class="text-[11px] text-slate-500 font-medium">אלומיניום מוברש יוקרתי ועמיד</div>
-                                </div>
-                            </div>
-                            <div onclick="filterCategory('mezuzot-wood'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
-                                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
-                                <div>
-                                    <div class="font-black text-xs text-slate-800">בתי מזוזה עץ זית וקלאסי</div>
-                                    <div class="text-[11px] text-slate-500 font-medium">עבודת יד אותנטית ויוקרתית</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Category 3: Tallitot & Tzitzit -->
+                    <!-- Category 1: Tallitot & Tzitzit -->
                     <div class="relative group/menu py-2.5">
                         <a href="#shop" onclick="filterCategory('tallitot-tzitzit'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-purple-200 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/15">
                             <span class="whitespace-nowrap">טליות וציציות</span>
                             <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-purple-300 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
                         </a>
-                        <div class="mega-menu absolute top-full right-0 w-[520px] bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 grid grid-cols-2 gap-2.5 z-50 text-right dir-rtl text-slate-800">
-                            <div onclick="filterCategory('tallitot-tzitzit'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
-                                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
+                        <div class="mega-menu absolute top-full right-0 w-[420px] bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 grid grid-cols-2 gap-2.5 z-50 text-right dir-rtl text-slate-800">
+                            <div onclick="filterSubcategory('tallitot-tzitzit', 'טליתות'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-purple-200">
+                                <span class="text-2xl">🧣</span>
                                 <div>
-                                    <div class="font-black text-xs text-slate-800">טליתות צמר מהודרות</div>
-                                    <div class="text-[11px] text-slate-500 font-medium">מעלות / תשבץ / פאר קל / בית יוסף</div>
+                                    <div class="font-black text-xs text-slate-800">טליתות</div>
+                                    <div class="text-[11px] text-slate-500 font-medium">צמר טהור, בית יוסף, חב"ד ותימנית</div>
                                 </div>
                             </div>
 
-                            <div onclick="filterCategory('tallitot-tzitzit'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
-                                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
+                            <div onclick="filterSubcategory('tallitot-tzitzit', 'ציציות'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-purple-200">
+                                <span class="text-2xl">👕</span>
                                 <div>
-                                    <div class="font-black text-xs text-slate-800">טלית חב"ד ובני אור</div>
-                                    <div class="text-[11px] text-slate-500 font-medium">בטנת משי טהור / פסים צבעוניים</div>
-                                </div>
-                            </div>
-
-                            <div onclick="filterCategory('tallitot-tzitzit'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
-                                <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
-                                <div>
-                                    <div class="font-black text-xs text-slate-800">ציציות צמר וכותנה</div>
-                                    <div class="text-[11px] text-slate-500 font-medium">100% צמר לשמה / כותנה V</div>
-                                </div>
-                            </div>
-
-                            <div onclick="filterCategory('tallitot-tzitzit'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
-                                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
-                                <div>
-                                    <div class="font-black text-xs text-slate-800">גופיות ציצית Dry-Fit</div>
-                                    <div class="text-[11px] text-slate-500 font-medium">מנדפות זיעה לספורט ויום-יום</div>
-                                </div>
-                            </div>
-
-                            <div onclick="toggleModal('tallit-calc-modal')" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-slate-200 col-span-2 bg-purple-50/50">
-                                <div class="w-11 h-11 rounded-lg bg-oz-primary text-white flex items-center justify-center shrink-0"><svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-6h6"/></svg></div>
-                                <div>
-                                    <div class="font-black text-xs text-oz-primary">מחשבון התאמת גודל טלית</div>
-                                    <div class="text-[11px] text-slate-600 font-medium">לחץ כאן לחישוב המידה המדויקת לפי הגובה שלך</div>
+                                    <div class="font-black text-xs text-slate-800">ציציות</div>
+                                    <div class="text-[11px] text-slate-500 font-medium">ציציות צמר, כותנה ו-Dry-Fit</div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Category 4: Tefillin & Tallit Bags -->
-                    <div class="relative group/menu py-2.5">
-                        <a href="#shop" onclick="filterCategory('tefillin-bags'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-purple-200 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/15">
-                            <span class="whitespace-nowrap">תיקים לטלית ולתפילין</span>
-                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-purple-300 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
-                        </a>
-                        <div class="mega-menu absolute top-full right-0 w-[450px] bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 grid grid-cols-1 gap-2.5 z-50 text-right dir-rtl text-slate-800">
-                            <div onclick="filterCategory('tefillin-bags-leather'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
-                                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
-                                <div>
-                                    <div class="font-black text-xs text-slate-800">תיקי עור יוקרתיים לטלית ותפילין</div>
-                                    <div class="text-[11px] text-slate-500 font-medium">עור נאפה איכותי / רקמה אישית</div>
-                                </div>
-                            </div>
-                            <div onclick="filterCategory('tefillin-bags-velvet'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
-                                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
-                                <div>
-                                    <div class="font-black text-xs text-slate-800">סטים קלאסיים מקטיפה</div>
-                                    <div class="text-[11px] text-slate-500 font-medium">קטיפה איכותית עם מעטפת הגנה</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Category 5: Holy Books & Siddurim -->
-                    <div class="relative group/menu py-2.5">
-                        <a href="#shop" onclick="filterCategory('books'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-purple-200 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/15">
-                            <span class="whitespace-nowrap">ספרי קודש וסידורים</span>
-                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-purple-300 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
-                        </a>
-                        <div class="mega-menu absolute top-full right-0 w-[450px] bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 grid grid-cols-2 gap-2.5 z-50 text-right dir-rtl text-slate-800">
-                            <div onclick="filterCategory('books-siddurim'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
-                                <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
-                                <div>
-                                    <div class="font-black text-xs text-slate-800">סידורים ומחזורים מהודרים</div>
-                                    <div class="text-[11px] text-slate-500 font-medium">כריכות עור ודמוי עור יוקרתיות</div>
-                                </div>
-                            </div>
-                            <div onclick="filterCategory('books-tehillim'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
-                                <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
-                                <div>
-                                    <div class="font-black text-xs text-slate-800">ספרי תהילים חטיבתיים</div>
-                                    <div class="text-[11px] text-slate-500 font-medium">עם הקדשות אישיות ומתנות</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Category 6: Men's Luxury Wallets -->
-                    <div class="relative group/menu py-2.5">
-                        <a href="#shop" onclick="filterCategory('wallets'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-purple-200 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/15">
-                            <span class="whitespace-nowrap">ארנקים לגבר</span>
-                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-purple-300 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
-                        </a>
-                        <div class="mega-menu absolute top-full right-0 w-[450px] bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 grid grid-cols-2 gap-2.5 z-50 text-right dir-rtl text-slate-800">
-                            <div onclick="filterCategory('wallets'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
-                                <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
-                                <div>
-                                    <div class="font-black text-xs text-slate-800">ארנקי עור נאפה איטלקי</div>
-                                    <div class="text-[11px] text-slate-500 font-medium">100% עור אמיתי עם הגנת RFID</div>
-                                </div>
-                            </div>
-                            <div onclick="filterCategory('wallets'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
-                                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
-                                <div>
-                                    <div class="font-black text-xs text-slate-800">ארנקים דקים לכרטיסים</div>
-                                    <div class="text-[11px] text-slate-500 font-medium">עיצוב מינימליסטי ויוקרתי</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Category 7: Gifts & Judaica -->
+                    <!-- Category 2: Gifts & Judaica -->
                     <div class="relative group/menu py-2.5">
                         <a href="#shop" onclick="filterCategory('gifts'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-purple-200 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/15">
                             <span class="whitespace-nowrap">מתנות ויודאיקה</span>
                             <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-purple-300 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
                         </a>
-                        <div class="mega-menu absolute top-full left-0 lg:right-auto w-[450px] bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 grid grid-cols-2 gap-2.5 z-50 text-right dir-rtl text-slate-800">
-                            <div onclick="filterCategory('gifts'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-slate-200">
-                                <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=120&q=80" class="w-11 h-11 rounded-lg object-cover shadow-sm shrink-0" />
+                        <div class="mega-menu absolute top-full right-0 w-[520px] bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 grid grid-cols-2 gap-2.5 z-50 text-right dir-rtl text-slate-800">
+                            <div onclick="filterSubcategory('gifts', 'תמונות זכוכית וקנבס'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-purple-200">
+                                <span class="text-2xl">🖼️</span>
                                 <div>
-                                    <div class="font-black text-xs text-slate-800">מארזים ומתנות יודאיקה</div>
-                                    <div class="text-[11px] text-slate-500 font-medium">סטי יודאיקה ותשמישי קדושה</div>
+                                    <div class="font-black text-xs text-slate-800">תמונות זכוכית וקנבס</div>
+                                    <div class="text-[11px] text-slate-500 font-medium">תמונות רבנים ודיוקנאות קודש</div>
                                 </div>
                             </div>
 
-                            <div onclick="toggleModal('gift-quiz-modal')" class="p-2.5 rounded-xl hover:bg-white/15 cursor-pointer flex items-center gap-3 transition-colors border border-purple-200 bg-purple-50/40">
-                                <div class="w-11 h-11 rounded-lg bg-purple-600 text-white flex items-center justify-center shrink-0"><svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H4.5a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0v13.875"/></svg></div>
+                            <div onclick="filterSubcategory('gifts', 'בשמים וריחות להבדלה'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-purple-200">
+                                <span class="text-2xl">🌿</span>
                                 <div>
-                                    <div class="font-black text-xs text-purple-900">שאלון התאמת מתנה חכם</div>
-                                    <div class="text-[11px] text-purple-700 font-medium">מצא מתנה לפי אירוע ותקציב</div>
+                                    <div class="font-black text-xs text-slate-800">בשמים וריחות להבדלה</div>
+                                    <div class="text-[11px] text-slate-500 font-medium">בשמים וניחוחות להבדלה</div>
+                                </div>
+                            </div>
+
+                            <div onclick="filterSubcategory('gifts', 'מארזים ומתנות יודאיקה'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-purple-200">
+                                <span class="text-2xl">🎁</span>
+                                <div>
+                                    <div class="font-black text-xs text-slate-800">מארזים ומתנות יודאיקה</div>
+                                    <div class="text-[11px] text-slate-500 font-medium">סטי שי ויוקרה לאירועים</div>
+                                </div>
+                            </div>
+
+                            <div onclick="filterSubcategory('gifts', 'ארנקים לגבר'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-purple-200">
+                                <span class="text-2xl">👛</span>
+                                <div>
+                                    <div class="font-black text-xs text-slate-800">ארנקים לגבר</div>
+                                    <div class="text-[11px] text-slate-500 font-medium">100% עור נאפה יוקרתי</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Tefillin & Tallit Bags -->
+                    <div class="relative group/menu py-2.5">
+                        <a href="#shop" onclick="filterCategory('tefillin-bags'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-purple-200 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/15">
+                            <span class="whitespace-nowrap">תיקים לטלית ותפילין</span>
+                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-purple-300 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                        </a>
+                        <div class="mega-menu absolute top-full right-0 w-[460px] bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 grid grid-cols-2 gap-2.5 z-50 text-right dir-rtl text-slate-800">
+                            <div onclick="filterSubcategory('tefillin-bags', 'תיקים לתפילין'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-purple-200">
+                                <span class="text-2xl">🎒</span>
+                                <div>
+                                    <div class="font-black text-xs text-slate-800">תיקים לתפילין</div>
+                                    <div class="text-[11px] text-slate-500 font-medium">תפדניות ותיקים ייעודיים לתפילין</div>
+                                </div>
+                            </div>
+
+                            <div onclick="filterSubcategory('tefillin-bags', 'כיסוי טלית ותפילין'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-purple-200">
+                                <span class="text-2xl">💼</span>
+                                <div>
+                                    <div class="font-black text-xs text-slate-800">כיסוי טלית ותפילין</div>
+                                    <div class="text-[11px] text-slate-500 font-medium">כיסויים דמוי עור, עור וקטיפה</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 4: Holy Books -->
+                    <div class="relative group/menu py-2.5">
+                        <a href="#shop" onclick="filterCategory('books'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-purple-200 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/15">
+                            <span class="whitespace-nowrap">ספרי קודש</span>
+                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-purple-300 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                        </a>
+                        <div class="mega-menu absolute top-full right-0 w-[420px] bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 grid grid-cols-1 gap-2.5 z-50 text-right dir-rtl text-slate-800">
+                            <div onclick="filterCategory('books'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-purple-200">
+                                <span class="text-2xl">📚</span>
+                                <div>
+                                    <div class="font-black text-xs text-slate-800">ספרי קודש וסידורים</div>
+                                    <div class="text-[11px] text-slate-500 font-medium">סידורים, מחזורים, תהילים וחומשים</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 5: STAM & Mezuzot -->
+                    <div class="relative group/menu py-2.5">
+                        <a href="#shop" onclick="filterCategory('stam'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="hover:text-purple-200 transition-colors flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/15">
+                            <span class="whitespace-nowrap">תשמישי קדושה וסת"ם</span>
+                            <svg class="w-3.5 h-3.5 inline stroke-current stroke-2 text-purple-300 group-hover/menu:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+                        </a>
+                        <div class="mega-menu absolute top-full right-0 w-[540px] bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 grid grid-cols-2 gap-2.5 z-50 text-right dir-rtl text-slate-800">
+                            <div onclick="filterSubcategory('stam', 'תפילין'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-purple-200">
+                                <span class="text-2xl">📜</span>
+                                <div>
+                                    <div class="font-black text-xs text-slate-800">תפילין</div>
+                                    <div class="text-[11px] text-slate-500 font-medium">תפילין מהודרות אשכנז / ספרד</div>
+                                </div>
+                            </div>
+
+                            <div onclick="filterSubcategory('stam', 'ספר תורה'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-purple-200">
+                                <span class="text-2xl">👑</span>
+                                <div>
+                                    <div class="font-black text-xs text-slate-800">ספר תורה</div>
+                                    <div class="text-[11px] text-slate-500 font-medium">ספרי תורה וציוד סת"ם</div>
+                                </div>
+                            </div>
+
+                            <div onclick="filterSubcategory('stam', 'מזוזות'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-purple-200">
+                                <span class="text-2xl">✍️</span>
+                                <div>
+                                    <div class="font-black text-xs text-slate-800">מזוזות</div>
+                                    <div class="text-[11px] text-slate-500 font-medium">קלפי מזוזות כשרים בהשגחה</div>
+                                </div>
+                            </div>
+
+                            <div onclick="filterSubcategory('stam', 'בתי מזוזה מאלומיניום'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-purple-200">
+                                <span class="text-2xl">🚪</span>
+                                <div>
+                                    <div class="font-black text-xs text-slate-800">בתי מזוזה מאלומיניום</div>
+                                    <div class="text-[11px] text-slate-500 font-medium">אלומיניום מוברש ויוקרתי</div>
+                                </div>
+                            </div>
+
+                            <div onclick="filterSubcategory('stam', 'בתי מזוזה מפלסטיק'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-purple-200">
+                                <span class="text-2xl">🛡️</span>
+                                <div>
+                                    <div class="font-black text-xs text-slate-800">בתי מזוזה מפלסטיק</div>
+                                    <div class="text-[11px] text-slate-500 font-medium">עמידים לתנאי חוץ ומזג אוויר</div>
+                                </div>
+                            </div>
+
+                            <div onclick="filterSubcategory('stam', 'בתי מזוזה מאפוקסי'); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="p-2.5 rounded-xl hover:bg-purple-50 cursor-pointer flex items-center gap-3 transition-colors border border-transparent hover:border-purple-200">
+                                <span class="text-2xl">✨</span>
+                                <div>
+                                    <div class="font-black text-xs text-slate-800">בתי מזוזה מאפוקסי</div>
+                                    <div class="text-[11px] text-slate-500 font-medium">עיצובים מודרניים ביציקה</div>
                                 </div>
                             </div>
                         </div>

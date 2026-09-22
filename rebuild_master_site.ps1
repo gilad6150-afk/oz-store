@@ -14,6 +14,7 @@ $footer = Read-CleanFile "footer.html"
 $modals = Read-CleanFile "modals.html"
 $floating_cart = Read-CleanFile "floating_cart.html"
 $pages_code = Read-CleanFile "pages_code.js"
+$admin_supplier_system = Read-CleanFile "admin_supplier_system.js"
 $clean_render = Read-CleanFile "clean_render.js"
 $products_data = Read-CleanFile "products_data.js"
 $articles_data = Read-CleanFile "articles_data.js"
@@ -27,6 +28,9 @@ $logoWhiteB64 = "data:image/png;base64," + [System.Convert]::ToBase64String($log
 $clean_nav = $clean_nav.Replace('public/oz_logo_transparent.png', $logoTransB64)
 $footer = $footer.Replace('public/oz_logo_white.png', $logoWhiteB64)
 
+# Combine JS modules
+$combinedJs = $admin_supplier_system + "`n`n" + $pages_code
+
 $html = $layout_frame
 $html = $html.Replace('/* TOP_BAR_PLACEHOLDER */', $top_bar)
 $html = $html.Replace('/* CLEAN_NAV_PLACEHOLDER */', $clean_nav)
@@ -37,7 +41,7 @@ $html = $html.Replace('/* FLOATING_CART_PLACEHOLDER */', $floating_cart)
 $html = $html.Replace('/* MODALS_PLACEHOLDER */', $modals)
 $html = $html.Replace('/* PRODUCTS_DATA_PLACEHOLDER */', $products_data)
 $html = $html.Replace('/* ARTICLES_DATA_PLACEHOLDER */', $articles_data)
-$html = $html.Replace('/* PAGES_CODE_PLACEHOLDER */', $pages_code)
+$html = $html.Replace('/* PAGES_CODE_PLACEHOLDER */', $combinedJs)
 $html = $html.Replace('/* CLEAN_RENDER_PLACEHOLDER */', $clean_render)
 
 $indexPath = Join-Path $dir "index.html"
@@ -48,4 +52,4 @@ $livePath2 = "C:\Users\97254\.gemini\antigravity\brain\0df20abb-5fd9-4081-b9e0-a
 if (Test-Path (Split-Path $livePath1)) { [System.IO.File]::WriteAllText($livePath1, $html, $utf8) }
 if (Test-Path (Split-Path $livePath2)) { [System.IO.File]::WriteAllText($livePath2, $html, $utf8) }
 
-Write-Host "✅ Master index.html rebuilt successfully with Invoice4U Live Clearing & Merchant Feed!"
+Write-Host "✅ Master index.html rebuilt successfully with Admin & Supplier Automation System!"

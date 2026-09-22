@@ -176,7 +176,10 @@
             let totalDiscount = discount5Percent + couponDiscount;
 
             let subtotalAfterDiscount = Math.max(0, subtotal - totalDiscount);
-            let selectedShippingFee = typeof state.selectedShippingFee !== 'undefined' ? state.selectedShippingFee : 35;
+            const glassInfo = typeof calculateGlassShippingInfo === 'function' ? calculateGlassShippingInfo(state.cart) : { hasGlass: false, glassFee: 35 };
+            const isFreeShippingEligible = subtotal >= 399 && !glassInfo.hasGlass;
+            let defaultShippingFee = glassInfo.hasGlass ? glassInfo.glassFee : (isFreeShippingEligible ? 0 : 35);
+            let selectedShippingFee = typeof state.selectedShippingFee !== 'undefined' ? state.selectedShippingFee : defaultShippingFee;
             let finalTotal = subtotalAfterDiscount + selectedShippingFee;
 
             if (state.cart.length === 0) {
@@ -335,7 +338,30 @@
                                 <!-- SHIPPING METHOD SELECTION -->
                                 <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm space-y-3">
                                     <h4 class="font-black text-sm text-slate-900 border-b border-slate-100 pb-2">בחר שיטת משלוח וזמן אספקה:</h4>
+                                    ${glassInfo.hasGlass ? `
+                                     <div class="p-2.5 bg-slate-50/90 border border-slate-200/80 rounded-xl text-[10.5px] text-slate-600 space-y-0.5 my-2 leading-tight">
+                                         <div class="font-bold text-slate-700 flex items-center justify-between">
+                                             <span>ℹ️ דמי משלוח תמונות זכוכית: ₪${glassInfo.glassFee}</span>
+                                             ${glassInfo.isDiscounted ? '<span class="text-[9.5px] text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">₪15 הנחת רכישה משולבת</span>' : '<span class="text-[9.5px] text-slate-500 font-normal">אריזת מגן חיצונית</span>'}
+                                         </div>
+                                         <p class="text-[10px] text-slate-500 leading-snug font-normal">
+                                             * דמי משלוח בסיסיים: ₪50 תמיד עבור תמונות זכוכית (אינם מתבטלים בהגעה ל-₪399, עקב עלות האריזה והשינוע המוגן של מוצרי זכוכית שבירים מספק חיצוני). ${glassInfo.isDiscounted ? 'עלות המשלוח הוזלה ל-₪35 עקב רכישת מוצר נוסף.' : ''}
+                                         </p>
+                                     </div>
+                                     ` : ''}
                                     
+                                     ${isFreeShippingEligible ? `
+                                     <div class="p-3.5 bg-emerald-50/90 border border-emerald-200/90 rounded-2xl text-xs text-slate-800 space-y-1 shadow-sm my-2">
+                                         <div class="font-black text-emerald-900 flex items-center justify-between">
+                                             <span class="flex items-center gap-1.5"><span class="text-base">🎉</span> <strong>מגיע לך משלוח חינם עד הבית!</strong></span>
+                                             <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2.5 py-0.5 rounded-full font-black border border-emerald-200">₪0 בקופה</span>
+                                         </div>
+                                         <p class="text-[11px] text-emerald-700 font-medium leading-relaxed">
+                                             הגעת לסכום של ₪${subtotal} (מעל ₪399). דמי המשלוח הרגילים התאפסו אוטומטית ל-₪0! תוכל גם לבחור באיסוף עצמי או נקודת חלוקה לבחירתך.
+                                         </p>
+                                     </div>
+                                     ` : ''}
+
                                     <div class="space-y-2 text-xs font-bold">
                                         <label class="p-3 bg-purple-50/70 border border-purple-200 rounded-xl flex items-center justify-between cursor-pointer hover:bg-purple-100 transition-all">
                                             <div class="flex items-center gap-2">
@@ -345,12 +371,12 @@
                                             <span class="font-black text-oz-primary">₪70</span>
                                         </label>
 
-                                        <label class="p-3 bg-purple-50/70 border border-purple-200 rounded-xl flex items-center justify-between cursor-pointer hover:bg-purple-100 transition-all">
+                                        <label class="p-3 ${isFreeShippingEligible ? 'bg-emerald-50/80 border-emerald-300' : 'bg-purple-50/70 border-purple-200'} border rounded-xl flex items-center justify-between cursor-pointer hover:bg-purple-100 transition-all">
                                             <div class="flex items-center gap-2">
-                                                <input type="radio" name="checkout-shipping" value="35" ${selectedShippingFee === 35 ? 'checked' : ''} onchange="updateCheckoutFee(35, 'משלוח רגיל (5-10 ימי עסקים)')" class="text-oz-primary" />
-                                                <span>🚚 <strong>משלוח רגיל</strong> (5-10 ימי עסקים)</span>
+                                                <input type="radio" name="checkout-shipping" value="${isFreeShippingEligible ? 0 : 35}" ${selectedShippingFee === 0 || selectedShippingFee === 35 ? 'checked' : ''} onchange="updateCheckoutFee(${isFreeShippingEligible ? 0 : 35}, '${isFreeShippingEligible ? 'משלוח חינם עד הבית (5-10 ימי עסקים)' : 'משלוח רגיל (5-10 ימי עסקים)'}')" class="text-oz-primary" />
+                                                <span>🚚 <strong>משלוח רגיל עד הבית</strong> (5-10 ימי עסקים) ${isFreeShippingEligible ? '<span class="text-emerald-700 font-extrabold mr-1">(חינם! 🎉)</span>' : ''}</span>
                                             </div>
-                                            <span class="font-black text-oz-primary">₪35</span>
+                                            <span class="font-black ${isFreeShippingEligible ? 'text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded-lg border border-emerald-200' : 'text-oz-primary'}">${isFreeShippingEligible ? '₪0 (חינם)' : '₪35'}</span>
                                         </label>
 
                                         <label class="p-3 bg-purple-50/70 border border-purple-200 rounded-xl flex items-center justify-between cursor-pointer hover:bg-purple-100 transition-all">
@@ -565,34 +591,44 @@
                             </div>
                         </div>
 
-                        <!-- Personalized Special Offer Item -->
+                        <!-- Personalized 3-Item 5% Off Checkout Upsell Box -->
                         ${(() => {
                             const excludeIds = state.cart.map(i => String(i.id));
-                            const recs = typeof UserTracker !== 'undefined' ? UserTracker.getPersonalizedProducts(1, excludeIds) : [];
+                            const recs = typeof UserTracker !== 'undefined' ? UserTracker.getPersonalizedProducts(3, excludeIds) : [];
                             const prods = (typeof products !== 'undefined' && products.length > 0 ? products : (typeof realProductsDB !== 'undefined' ? realProductsDB : []));
-                            const offerItem = recs && recs.length > 0 ? recs[0] : (prods.length > 0 ? prods[0] : null);
-                            if (!offerItem) return '';
+                            let itemsToOffer = recs && recs.length > 0 ? recs : prods.filter(p => !excludeIds.includes(String(p.id)));
+                            itemsToOffer = itemsToOffer.slice(0, 3);
+                            if (!itemsToOffer || itemsToOffer.length === 0) return '';
                             return `
-                            <div class="p-3.5 bg-white rounded-2xl border border-purple-200 shadow-sm space-y-2.5">
-                                <div class="font-black text-xs text-purple-900 flex items-center justify-between">
-                                    <span class="flex items-center gap-1">🎁 <strong>מוצר הטבה מותאם אישית:</strong></span>
-                                    <span class="bg-purple-600 text-purple-900 text-[10px] font-black px-2 py-0.5 rounded-full">הטבה 🔥</span>
-                                </div>
-                                <div class="flex items-center justify-between text-[11px] font-bold text-slate-700 border-b border-slate-100 pb-1.5">
-                                    <span>תעודת הגהת מחשב וגברא מוסמכת</span>
-                                    <span class="text-emerald-600 font-black">חינם! 🎁</span>
-                                </div>
-                                <div class="flex items-center justify-between gap-2 text-xs font-bold text-slate-700">
-                                    <div class="flex items-center gap-2">
-                                        <img src="${offerItem.image}" alt="${offerItem.name}" class="w-10 h-10 object-cover rounded-lg border border-slate-100 shrink-0" />
-                                        <div>
-                                            <div class="text-slate-900 font-black truncate max-w-[120px]">${offerItem.name}</div>
-                                            <div class="text-[11px] text-oz-primary font-black">₪${offerItem.price}</div>
-                                        </div>
+                            <div class="p-3.5 bg-gradient-to-br from-purple-50 via-white to-indigo-50/60 rounded-2xl border border-purple-200/90 shadow-sm space-y-2.5 dir-rtl">
+                                <div class="flex items-center justify-between border-b border-purple-100 pb-2">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="text-base">✨</span>
+                                        <h5 class="font-black text-xs text-purple-950">מוצרים מומלצים עבורך (5% הנחת קופה בלעדית):</h5>
                                     </div>
-                                    <button type="button" onclick="addCheckoutSpecialOffer('${offerItem.id}')" class="py-1.5 px-3 bg-purple-600 hover:bg-purple-500 text-white font-black text-[11px] rounded-xl shadow-sm transition-all active:scale-95 cursor-pointer shrink-0">
-                                        + הוסף לסל
-                                    </button>
+                                    <span class="text-[9.5px] font-black text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full border border-emerald-200">רק בקופה 🔥</span>
+                                </div>
+
+                                <div class="space-y-2">
+                                    ${itemsToOffer.map(item => {
+                                        const discPrice = Math.round(item.price * 0.95);
+                                        return `
+                                        <div class="p-2.5 bg-white rounded-xl border border-purple-100 hover:border-purple-300 shadow-sm flex items-center justify-between gap-2 transition-all">
+                                            <img src="${item.image}" alt="${item.name}" class="w-11 h-11 object-cover rounded-xl border border-slate-100 shrink-0" />
+                                            <div class="flex-grow min-w-0 text-right">
+                                                <div class="text-[11.5px] font-black text-slate-800 truncate">${item.name}</div>
+                                                <div class="flex items-center gap-1.5 mt-0.5">
+                                                    <span class="text-xs font-black text-emerald-700 bg-emerald-50 px-1.5 py-0.2 rounded border border-emerald-200">₪${discPrice}</span>
+                                                    <span class="text-[10px] text-slate-400 line-through font-bold">₪${item.price}</span>
+                                                    <span class="text-[9px] text-purple-900 font-extrabold bg-purple-100 px-1.5 py-0.2 rounded-full">5%- קופה</span>
+                                                </div>
+                                            </div>
+                                            <button type="button" onclick="window.addCheckoutSpecialOffer('${item.id}', ${discPrice})" class="py-1.5 px-3 bg-oz-primary hover:bg-oz-hover text-white font-black text-[11px] rounded-xl shadow-sm transition-all active:scale-95 shrink-0 flex items-center gap-1 cursor-pointer">
+                                                <span>+ הוסף</span>
+                                            </button>
+                                        </div>
+                                        `;
+                                    }).join('')}
                                 </div>
                             </div>
                             `;
@@ -601,6 +637,34 @@
                 </div>
             `;
         }
+
+        window.addCheckoutSpecialOffer = function(id, discountedPrice) {
+            const numericId = Number(id);
+            const prods = (typeof products !== 'undefined' && products.length > 0 ? products : (typeof realProductsDB !== 'undefined' ? realProductsDB : []));
+            const item = prods.find(p => Number(p.id) === numericId);
+            if (!item) return;
+
+            const finalPrice = discountedPrice || Math.round(item.price * 0.95);
+            const existing = state.cart.find(i => Number(i.id) === numericId);
+
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                state.cart.push({
+                    ...item,
+                    price: finalPrice,
+                    originalPrice: item.price,
+                    qty: 1,
+                    isCheckoutSpecialOffer: true
+                });
+            }
+
+            if (typeof updateCartUI === 'function') updateCartUI();
+            if (typeof renderCheckoutModal === 'function') renderCheckoutModal();
+            if (typeof showToast === 'function') {
+                showToast('🔥 הוסף לקופה בהנחת 5%: ' + item.name + ' (₪' + finalPrice + ')');
+            }
+        };
 
         function handleCompleteOrder(e) {
             e.preventDefault();

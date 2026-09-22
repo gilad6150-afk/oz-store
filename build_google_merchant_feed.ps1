@@ -1,10 +1,8 @@
 $utf8NoBOM = New-Object System.Text.UTF8Encoding($false)
 $dir = "C:\Users\97254\.gemini\antigravity\scratch\oz-store"
 
-# Read products_data.js
 $productsJs = [System.IO.File]::ReadAllText((Join-Path $dir "products_data.js"), $utf8NoBOM)
 
-# Extract JSON array from window.PRODUCTS_DATA = [...]
 $jsonStart = $productsJs.IndexOf('[')
 $jsonEnd = $productsJs.LastIndexOf(']')
 $jsonStr = $productsJs.Substring($jsonStart, $jsonEnd - $jsonStart + 1)
@@ -17,9 +15,9 @@ $xml = @"
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
   <channel>
-    <title>מכון עוז - Google Merchant Center Product Feed</title>
+    <title>עוז יודאיקה - Google Merchant Center Product Feed</title>
     <link>https://oz-judaica.co.il</link>
-    <description>פיד מוצרים רשמי עבור Google Shopping והופעה במנוע החיפוש של גוגל</description>
+    <description>פיד מוצרים רשמי של עוז יודאיקה עבור Google Shopping, קמפיינים ב-Google Ads והופעה במנוע החיפוש של גוגל</description>
 "@
 
 foreach ($p in $products) {
@@ -32,6 +30,13 @@ foreach ($p in $products) {
     $price = "$($p.price) ILS"
     $avail = if ($p.inStock) { "in_stock" } else { "out_of_stock" }
     $catName = [System.Security.SecurityElement]::Escape($p.category_name)
+    $subCat = if ($p.subcategory) { [System.Security.SecurityElement]::Escape($p.subcategory) } else { $catName }
+
+    # Map Google Product Category
+    $gCategory = "Religious &amp; Ceremonial &gt; Religious Apparel"
+    if ($p.category -eq 'tallitot-tzitzit' -or $title -match 'טלית|ציצית') {
+        $gCategory = "Apparel &amp; Accessories &gt; Religious Apparel &gt; Prayer Shawls"
+    }
 
     $xml += @"
 
@@ -44,8 +49,9 @@ foreach ($p in $products) {
       <g:condition>new</g:condition>
       <g:availability>$avail</g:availability>
       <g:price>$price</g:price>
-      <g:brand>מכון עוז</g:brand>
-      <g:product_type>$catName</g:product_type>
+      <g:brand>עוז יודאיקה</g:brand>
+      <g:google_product_category>$gCategory</g:google_product_category>
+      <g:product_type>$catName &gt; $subCat</g:product_type>
       <g:identifier_exists>no</g:identifier_exists>
     </item>
 "@
@@ -59,4 +65,4 @@ $xml += @"
 
 $feedPath = Join-Path $dir "google_merchant_feed.xml"
 [System.IO.File]::WriteAllText($feedPath, $xml, $utf8NoBOM)
-Write-Host "Google Merchant XML Feed generated successfully at google_merchant_feed.xml!"
+Write-Host "Google Merchant XML Feed regenerated successfully with 100% Oz Judaica branding!"

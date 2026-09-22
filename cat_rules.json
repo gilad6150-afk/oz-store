@@ -1,0 +1,51 @@
+{
+  "tallitot_tzitzit": {
+    "key": "tallitot-tzitzit",
+    "cat_name": "טליות וציציות",
+    "sub_tzitzit": "ציציות",
+    "sub_tallitot": "טליתות",
+    "tzitzit_words": ["ציצית", "גופיית", "Dry-Fit"]
+  },
+  "gifts": {
+    "key": "gifts",
+    "cat_name": "מתנות ויודאיקה",
+    "sub_fragrance": "בשמים וריחות להבדלה",
+    "sub_wallets": "ארנקים לגבר",
+    "sub_pictures": "תמונות זכוכית וקנבס",
+    "sub_gifts": "מארזים ומתנות יודאיקה",
+    "fragrance_words": ["בשמים", "להבדלה"],
+    "wallet_words": ["ארנק"],
+    "picture_words": ["תמונה", "קנבס", "זכוכית", "דיוקן", "מרן", "הרב", "בבא", "מזמור", "ברכת", "שלום", "הבירה", "כותל", "מקדש", "אשר יצר"]
+  },
+  "tefillin_bags": {
+    "key": "tefillin-bags",
+    "cat_name": "תיקים לטלית ותפילין",
+    "sub_single": "תיקים לתפילין",
+    "sub_combined": "כיסוי טלית ותפילין",
+    "single_words": ["תפדנית", "רק לתפילין", "דק קטן"]
+  },
+  "books": {
+    "key": "books",
+    "cat_name": "ספרי קודש",
+    "sub_books": "ספרי קודש וסידורים",
+    "book_words": ["ספר", "סידור", "תהילים", "חומש"]
+  },
+  "stam": {
+    "key": "stam",
+    "cat_name": "תשמישי קדושה וסת\"ם",
+    "sub_alum": "בתי מזוזה מאלומיניום",
+    "sub_epoxy": "בתי מזוזה מאפוקסי",
+    "sub_plastic": "בתי מזוזה מפלסטיק",
+    "sub_mezuzot": "מזוזות",
+    "sub_cases": "בתי מזוזה",
+    "sub_torah": "ספר תורה",
+    "sub_tefillin": "תפילין",
+    "alum_words": ["אלומיניום", "מוברש"],
+    "epoxy_words": ["אפוקסי", "יציקה"],
+    "plastic_words": ["פלסטיק", "שקוף"],
+    "parchment_words": ["קלף"],
+    "case_words": ["מזוזה", "מזוזות", "מזוז"],
+    "torah_words": ["תורה"],
+    "tefillin_words": ["תפילין"]
+  }
+}

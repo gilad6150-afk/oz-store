@@ -1,3 +1,52 @@
+
+window.calculateGlassShippingInfo = function(cart) {
+    if (!cart || !Array.isArray(cart) || cart.length === 0) {
+        return { hasGlass: false, glassFee: 0, isDiscounted: false, hasOtherItems: false, fee: 35 };
+    }
+    const hasGlass = cart.some(i => {
+        const cat = (i.category || '').toLowerCase();
+        const name = (i.name || '').toLowerCase();
+        const catName = (i.category_name || '').toLowerCase();
+        return name.includes('זכוכית') || cat.includes('rabbis-pics') || cat.includes('rabbis-pics-glass') || catName.includes('תמונות רבנים') || catName.includes('זכוכית') || name.includes('תמונות רבנים');
+    });
+
+    if (!hasGlass) {
+        const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+        return { hasGlass: false, glassFee: 0, isDiscounted: false, hasOtherItems: false, fee: total >= 399 ? 0 : 35 };
+    }
+
+    const hasOtherItems = cart.some(i => {
+        const cat = (i.category || '').toLowerCase();
+        const name = (i.name || '').toLowerCase();
+        const catName = (i.category_name || '').toLowerCase();
+        return !(name.includes('זכוכית') || cat.includes('rabbis-pics') || cat.includes('rabbis-pics-glass') || catName.includes('תמונות רבנים') || catName.includes('זכוכית') || name.includes('תמונות רבנים'));
+    });
+
+    const glassFee = hasOtherItems ? 35 : 50;
+    return {
+        hasGlass: true,
+        glassFee: glassFee,
+        isDiscounted: hasOtherItems,
+        hasOtherItems: hasOtherItems,
+        fee: glassFee
+    };
+};
+
+window.isExternalSupplierProduct = function(p) {
+    if (!p) return false;
+    const cat = (p.category || '').toLowerCase();
+    const name = (p.name || '').toLowerCase();
+    const catName = (p.category_name || '').toLowerCase();
+
+    return cat === 'tefillin-bags' || cat === 'tallitot-tzitzit' || cat === 'wallets' || cat === 'books' || cat === 'gifts' ||
+           name.includes('שמעק') || name.includes('משכן') || name.includes('לבורסה') || name.includes('תמונות') ||
+           catName.includes('תיק') || catName.includes('טלית') || catName.includes('ציצית');
+};
+
+window.getExternalSupplierNoticeHTML = function(p) {
+    if (!isExternalSupplierProduct(p)) return '';
+    return '<div class="mt-2 text-[10.5px] text-amber-950 bg-amber-50/80 p-2.5 rounded-xl border border-amber-200/80 flex items-start gap-1.5 leading-tight shadow-sm"><span class="text-amber-700 font-bold text-xs shrink-0">ℹ️</span><span><strong>הבהרת אספקה:</strong> מוצר זה מסופק/מיוצר באמצעות ספק מורשה חיצוני. ייתכנו שינויים קלים בלוחות הזמנים של המשלוח בהתאם לזמינות מלאי הספק.</span></div>';
+};
 // GLOBAL SEO ACCORDION EXPAND TOGGLE
 window.toggleSeoExpand = function(id) {
     const el = document.getElementById('seo-content-' + id);
@@ -184,44 +233,36 @@ function renderProducts() {
     if (!grid || !countEl) return;
 
     let filtered = products.filter(p => {
-        if (state.selectedCategory !== 'all') {
-            const pCat = (p.category || '').toLowerCase();
-            const pName = (p.name || '').toLowerCase();
-            const pCatName = (p.category_name || '').toLowerCase();
+        if (state.selectedCategory && state.selectedCategory !== 'all') {
+            if (p.category !== state.selectedCategory) return false;
+        }
+        if (state.selectedSubcategory && state.selectedSubcategory !== 'all') {
+            if (p.subcategory !== state.selectedSubcategory) return false;
+        }
 
-            if (state.selectedCategory === 'stam') {
-                const isStam = pCat === 'stam' || pCat === 'tefillin' || pCat === 'all' || 
-                               pName.includes('תפילין') || pName.includes('סופר') || pName.includes('סת"ם') || pName.includes('סתם') || pName.includes('קלף');
-                if (!isStam) return false;
+        if (state.selectedCategory === 'tallitot-tzitzit') {
+            const pDesc = (p.short_description || '').toLowerCase();
+            const pN = (p.name || '').toLowerCase();
+
+            if (state.tallitFilterCert && state.tallitFilterCert !== 'all') {
+                const cert = state.tallitFilterCert.toLowerCase();
+                if (!pN.includes(cert) && !pDesc.includes(cert)) return false;
             }
-            else if (state.selectedCategory === 'wallets') {
-                const isWallet = (pCat === 'wallets' || pCatName.includes('ארנק') || pName.includes('ארנק')) && !pName.includes('תיק תפילין');
-                if (!isWallet) return false;
+            if (state.tallitFilterFabric && state.tallitFilterFabric !== 'all') {
+                const fab = state.tallitFilterFabric.toLowerCase();
+                if (!pN.includes(fab) && !pDesc.includes(fab)) return false;
             }
-            else if (state.selectedCategory === 'tefillin-bags') {
-                const isTefillinBag = pCat === 'tefillin-bags' || 
-                                      ((pName.includes('תיק') || pName.includes('נרתיק') || pName.includes('כיסוי')) && !pName.includes('ארנק'));
-                if (!isTefillinBag) return false;
+            if (state.tallitFilterModel && state.tallitFilterModel !== 'all') {
+                const mod = state.tallitFilterModel.toLowerCase();
+                if (!pN.includes(mod) && !pDesc.includes(mod)) return false;
             }
-            else if (state.selectedCategory === 'tallitot-tzitzit') {
-                const isTallit = pCat === 'tallitot-tzitzit' || pCatName.includes('טלית') || pCatName.includes('ציצית') || pName.includes('טלית') || pName.includes('ציצית');
-                if (!isTallit) return false;
+            if (state.tallitFilterStrings && state.tallitFilterStrings !== 'all') {
+                const str = state.tallitFilterStrings.toLowerCase();
+                if (!pN.includes(str) && !pDesc.includes(str)) return false;
             }
-            else if (state.selectedCategory === 'mezuzot' || state.selectedCategory.startsWith('mezuzot-')) {
-                const isMezuzah = pCat === 'mezuzot' || pCatName.includes('מזוזה') || pName.includes('מזוזה');
-                if (!isMezuzah) return false;
-                if (state.selectedCategory === 'mezuzot-epoxy' && !pName.includes('אפוקסי') && (!p.subcategory || !p.subcategory.includes('אפוקסי'))) return false;
-                if (state.selectedCategory === 'mezuzot-plastic' && !pName.includes('פלסטיק') && (!p.subcategory || !p.subcategory.includes('פלסטיק'))) return false;
-                if (state.selectedCategory === 'mezuzot-aluminum' && !pName.includes('אלומיניום') && (!p.subcategory || !p.subcategory.includes('אלומיניום'))) return false;
-                if (state.selectedCategory === 'mezuzot-wood' && !pName.includes('עץ') && !pName.includes('זית') && (!p.subcategory || !p.subcategory.includes('עץ'))) return false;
-            }
-            else if (state.selectedCategory === 'books') {
-                const isBook = pCat === 'books' || pCatName.includes('ספר') || pCatName.includes('סידור') || pName.includes('ספר') || pName.includes('סידור') || pName.includes('חומש') || pName.includes('תהילים');
-                if (!isBook) return false;
-            }
-            else if (state.selectedCategory === 'gifts') {
-                const isGift = pCat === 'gifts' || pCat === 'sets' || pCatName.includes('מתנה') || pCatName.includes('מארז') || pName.includes('מתנה') || pName.includes('מארז') || pName.includes('סט');
-                if (!isGift) return false;
+            if (state.tallitFilterSize && state.tallitFilterSize !== 'all') {
+                const sz = state.tallitFilterSize.toLowerCase();
+                if (!pN.includes(sz) && !pDesc.includes(sz)) return false;
             }
         }
 
@@ -274,7 +315,7 @@ function renderProducts() {
                         <div class="flex items-center justify-between mb-0.5 sm:mb-1">
                             <div class="text-[9px] sm:text-[10px] font-extrabold text-oz-primary uppercase truncate"></div>
                             <div class="flex items-center gap-0.5 text-amber-400 text-[10px]">
-                                <span>ג˜…ג˜…ג˜…ג˜…ג˜…</span>
+                                <span>★★★★★</span>
                                 <span class="text-slate-400 font-bold text-[9px] mr-0.5">(4.9)</span>
                             </div>
                         </div>
@@ -590,8 +631,57 @@ function closeArticleModal() {
     if (modal) modal.classList.add('hidden');
 }
 
+const LEGACY_CAT_MAP = {
+    'mezuzot-epoxy': { cat: 'stam', sub: 'בתי מזוזה מאפוקסי' },
+    'mezuzot-plastic': { cat: 'stam', sub: 'בתי מזוזה מפלסטיק' },
+    'mezuzot-aluminum': { cat: 'stam', sub: 'בתי מזוזה מאלומיניום' },
+    'wallets': { cat: 'gifts', sub: 'ארנקים לגבר' },
+    'mezuzot': { cat: 'stam', sub: 'מזוזות' },
+    'tzitzit': { cat: 'tallitot-tzitzit', sub: 'ציציות' },
+    'tallit': { cat: 'tallitot-tzitzit', sub: 'טליתות' }
+};
+
 function filterCategory(cat, btn) {
+    if (LEGACY_CAT_MAP[cat]) {
+        state.selectedCategory = LEGACY_CAT_MAP[cat].cat;
+        state.selectedSubcategory = LEGACY_CAT_MAP[cat].sub;
+    } else {
+        state.selectedCategory = cat;
+        state.selectedSubcategory = 'all';
+    }
+    
+    const isTallitCat = (state.selectedCategory === 'tallitot-tzitzit');
+    const tallitBar = document.getElementById('tallit-specialized-filter-bar');
+    if (tallitBar) {
+        if (isTallitCat) {
+            tallitBar.classList.remove('hidden');
+        } else {
+            tallitBar.classList.add('hidden');
+        }
+    }
+    if (typeof UserTracker !== 'undefined') UserTracker.trackCategory(state.selectedCategory, 2);
+    if (btn) {
+        document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('bg-slate-50', 'text-oz-primary', 'font-bold'));
+        btn.classList.add('bg-slate-50', 'text-oz-primary', 'font-bold');
+    }
+    closeProductPage();
+    closeAccountPage();
+    renderProducts();
+}
+
+function filterSubcategory(cat, subName, btn) {
     state.selectedCategory = cat;
+    state.selectedSubcategory = subName;
+    
+    const isTallitCat = (cat === 'tallitot-tzitzit');
+    const tallitBar = document.getElementById('tallit-specialized-filter-bar');
+    if (tallitBar) {
+        if (isTallitCat) {
+            tallitBar.classList.remove('hidden');
+        } else {
+            tallitBar.classList.add('hidden');
+        }
+    }
     if (typeof UserTracker !== 'undefined') UserTracker.trackCategory(cat, 2);
     if (btn) {
         document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('bg-slate-50', 'text-oz-primary', 'font-bold'));
@@ -618,7 +708,9 @@ function filterPrice(min, max, btn) {
 }
 
 function resetFilters() {
+    resetTallitSpecialFilters();
     state.selectedCategory = 'all';
+    state.selectedSubcategory = 'all';
     state.selectedPriceMin = 0;
     state.selectedPriceMax = 99999;
     state.inStockOnly = false;
@@ -739,7 +831,7 @@ function openQuickView(id) {
                     <span class="text-[10px] font-extrabold text-oz-primary uppercase tracking-widest bg-slate-50 px-2.5 py-1 rounded-md">${p.category_name || 'תשמישי קדושה'}</span>
                     <h3 class="text-xl font-black text-slate-900 mt-2 mb-1">${p.name}</h3>
                     <div class="text-2xl font-black text-oz-primary mb-3">₪${p.price}</div>
-                    <p class="text-xs text-slate-600 leading-relaxed">${p.short_description || p.description || ''}</p>
+                    <p class="text-xs text-slate-600 leading-relaxed">${p.short_description || p.description || ''}</p>${getExternalSupplierNoticeHTML(p)}
                 </div>
 
                 <div class="space-y-3 pt-3 border-t border-slate-100">
@@ -1270,20 +1362,41 @@ function updateCartUI() {
     const drawerDiff = document.getElementById('drawer-shipping-diff');
     const drawerProgress = document.getElementById('drawer-shipping-progress');
 
-    const shippingFee = total >= 399 ? 0 : 35;
+    const glassInfo = calculateGlassShippingInfo(state.cart);
+    let shippingFee = 0;
+    if (glassInfo.hasGlass) {
+        shippingFee = glassInfo.glassFee;
+    } else {
+        shippingFee = total >= 399 ? 0 : 35;
+    }
 
     if (drawerCount) drawerCount.textContent = `${itemCount} פריטים בסל`;
     if (drawerSubtotal) drawerSubtotal.textContent = `₪${total}`;
-    if (drawerShippingCost) drawerShippingCost.textContent = total >= 399 ? 'חינם 🎉' : (total === 0 ? '₪0' : '₪35');
+    if (drawerShippingCost) {
+        if (glassInfo.hasGlass) {
+            drawerShippingCost.textContent = `₪${glassInfo.glassFee}` + (glassInfo.isDiscounted ? ' (הנחת משלוח ₪15! 🎉)' : ' (ספק זכוכית)');
+        } else {
+            drawerShippingCost.textContent = total >= 399 ? 'חינם 🎉' : (total === 0 ? '₪0' : '₪35');
+        }
+    }
     if (drawerTotal) drawerTotal.textContent = `₪${total === 0 ? 0 : total + shippingFee}`;
 
     if (drawerDiff && drawerProgress) {
-        const pct = Math.min(100, Math.round((total / 399) * 100));
-        drawerProgress.style.width = pct + '%';
-        if (total >= 399) {
-            drawerDiff.textContent = 'זכאי למשלוח חינם! 🎉';
+        if (glassInfo.hasGlass) {
+            drawerProgress.style.width = '100%';
+            if (glassInfo.isDiscounted) {
+                drawerDiff.textContent = '🎉 קיבלת ₪15 הנחה! משלוח זכוכית הוזל ל-₪35!';
+            } else {
+                drawerDiff.textContent = '🖼️ משלוח זכוכית ₪50. הוסף מוצר נוסף מהחנות לקבלת הנחה ל-₪35!';
+            }
         } else {
-            drawerDiff.textContent = `נותרו עוד ₪${399 - total}`;
+            const pct = Math.min(100, Math.round((total / 399) * 100));
+            drawerProgress.style.width = pct + '%';
+            if (total >= 399) {
+                drawerDiff.textContent = 'זכאי למשלוח חינם! 🎉';
+            } else {
+                drawerDiff.textContent = `נותרו עוד ₪${399 - total}`;
+            }
         }
     }
 
@@ -1298,7 +1411,18 @@ function updateCartUI() {
                 </div>
             `;
         } else {
-            drawerItemsContainer.innerHTML = state.cart.map(item => `
+            const glassNoticeHTML = glassInfo.hasGlass ? `
+                <div class="p-2.5 bg-slate-50/90 border border-slate-200/80 rounded-xl text-[10.5px] text-slate-600 leading-tight mb-2">
+                    <div class="flex items-center justify-between font-bold text-slate-700">
+                        <span>ℹ️ דמי משלוח תמונות זכוכית: ₪${glassInfo.glassFee}</span>
+                        ${glassInfo.isDiscounted ? '<span class="text-[9.5px] text-emerald-700 font-extrabold bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">₪15 הנחת שילוב!</span>' : '<span class="text-[9.5px] text-slate-500 font-medium">* ספק חיצוני מוגן</span>'}
+                    </div>
+                    <p class="text-[10px] text-slate-500 mt-1 leading-snug font-normal">
+                        * דמי משלוח בסיסיים לתמונות זכוכית: ₪50 תמיד (אינם מתבטלים בהגעה ל-₪399 עקב עלות האריזה והשינוע המוגן של מוצרי זכוכית שבירים מספק חיצוני). ${glassInfo.isDiscounted ? 'עלות המשלוח הוזלה ל-₪35 עקב רכישת מוצר נוסף.' : 'טיפ: הוספת מוצר נוסף מהחנות מעניקה ₪15 הנחה למשלוח (₪35).'}
+                    </p>
+                </div>
+            ` : '';
+            drawerItemsContainer.innerHTML = glassNoticeHTML + state.cart.map(item => `
                 <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm relative group">
                     <img src="${item.image}" alt="${item.name}" class="w-14 h-14 object-cover rounded-xl shrink-0" loading="lazy" decoding="async" />
                     <div class="flex-grow min-w-0 text-right">
@@ -2233,18 +2357,26 @@ function showToast(msg) {
     toast.classList.remove('hidden');
     setTimeout(() => {
         toast.classList.add('hidden');
-    }, 3500);
+    }, 4000);
 }
 
 function startSocialProofToasts() {
-    const toastNames = ['נתנאל מירושלים', 'אליעזר מפתח תקווה', 'דוד מראש העין', 'יוסי מבני ברק', 'אברהם מאשדוד', 'משה מתל אביב'];
-    const toastItems = ['תפילין מהודרות ⚡', 'ארנק עור נאפה 💼', 'טלית צמר טהור 👕', 'מזוזה כשרה 📜', 'סידור עור יוקרתי 📖'];
+    const toastNames = ['נתנאל מירושלים', 'אליעזר מפתח תקווה', 'דוד מראש העין', 'יוסי מבני ברק', 'אברהם מאשדוד', 'משה מתל אביב', 'אלעד מחיפה', 'שמעון מרמת גן'];
+    const toastItems = ['תפילין מהודרות ⚡', 'ארנק עור נאפה 💼', 'טלית צמר טהור 👕', 'מזוזה כשרה 📜', 'סידור עור יוקרתי 📖', 'בתי מזוזה מעוצבים 🚪'];
     
-    setInterval(() => {
+    // First toast delayed by 60 seconds so it never disturbs immediate browsing
+    setTimeout(() => {
         const randName = toastNames[Math.floor(Math.random() * toastNames.length)];
         const randItem = toastItems[Math.floor(Math.random() * toastItems.length)];
         showToast(randName + ' • רכש כעת: ' + randItem);
-    }, 90000);
+
+        // Subsequent toasts trigger infrequently (every 75 seconds)
+        setInterval(() => {
+            const rName = toastNames[Math.floor(Math.random() * toastNames.length)];
+            const rItem = toastItems[Math.floor(Math.random() * toastItems.length)];
+            showToast(rName + ' • רכש כעת: ' + rItem);
+        }, 75000);
+    }, 60000);
 }
 
 function setupExitIntent() {
@@ -2555,4 +2687,36 @@ function selectPDPEngravingStyle(style) {
             btn.className = 'pdp-style-btn p-2 rounded-xl border border-slate-200 bg-slate-100 text-slate-800 transition-all flex items-center justify-center gap-1 cursor-pointer';
         }
     });
+}
+
+function filterTallitSpec(type, val) {
+    if (!state) return;
+    if (type === 'cert') state.tallitFilterCert = val;
+    if (type === 'fabric') state.tallitFilterFabric = val;
+    if (type === 'model') state.tallitFilterModel = val;
+    if (type === 'strings') state.tallitFilterStrings = val;
+    if (type === 'size') state.tallitFilterSize = val;
+    renderProducts();
+}
+
+function resetTallitSpecialFilters() {
+    if (!state) return;
+    state.tallitFilterCert = 'all';
+    state.tallitFilterFabric = 'all';
+    state.tallitFilterModel = 'all';
+    state.tallitFilterStrings = 'all';
+    state.tallitFilterSize = 'all';
+
+    const c = document.getElementById('tallit-cert-select');
+    const f = document.getElementById('tallit-fabric-select');
+    const m = document.getElementById('tallit-model-select');
+    const st = document.getElementById('tallit-strings-select');
+    const sz = document.getElementById('tallit-size-select');
+    if (c) c.value = 'all';
+    if (f) f.value = 'all';
+    if (m) m.value = 'all';
+    if (st) st.value = 'all';
+    if (sz) sz.value = 'all';
+
+    renderProducts();
 }
