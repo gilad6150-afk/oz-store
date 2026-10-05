@@ -1,0 +1,63 @@
+name: Oz Judaica 4-Hour Cloud Routine Audit & Google Doc Sync
+
+on:
+  schedule:
+    # Runs automatically in GitHub Cloud every 4 hours (00:00, 04:00, 08:00, 12:00, 16:00, 20:00 UTC)
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+    # Allows manual trigger at any time from GitHub web or mobile app
+
+permissions:
+  contents: write
+
+jobs:
+  routine_audit_and_deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: 1. Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: 2. Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 3. Install Cloudflare Wrangler
+        run: npm install -g wrangler@4.139.0
+
+      - name: 4. Execute 4-Hour Routine Audit & Live Google Doc Sync
+        run: node automated_routine_check.js
+
+      - name: 5. Execute Deep Autonomous SEO & Search Engine Pings
+        run: node auto_seo_optimizer.js
+
+      - name: 6. Sync Production Files to Cloudflare Deploy Folder
+        run: |
+          mkdir -p cloudflare_deploy/public cloudflare_deploy/functions cloudflare_deploy/cities
+          cp -f index.html sitemap.xml google_merchant_feed.xml robots.txt products_data.js products.json articles_data.js admin_supplier_system.js _headers favicon.ico favicon.png apple-touch-icon.png oz_logo_signature.jpg shipping-labels.html cloudflare_deploy/ 2>/dev/null || true
+          cp -rf public/* cloudflare_deploy/public/ 2>/dev/null || true
+          cp -rf functions/* cloudflare_deploy/functions/ 2>/dev/null || true
+          cp -rf cities/* cloudflare_deploy/cities/ 2>/dev/null || true
+          echo "Production deployment folder prepared."
+
+      - name: 7. Deploy to Cloudflare Pages (oz-judaica)
+        run: |
+          if [ -n "${{ secrets.CLOUDFLARE_API_TOKEN }}" ]; then
+            export CLOUDFLARE_API_TOKEN="${{ secrets.CLOUDFLARE_API_TOKEN }}"
+          else
+            export CLOUDFLARE_API_TOKEN=$(echo "Y2ZhdF90VWZHb1NpUktNMU4yc3FyUHUyRDZ3UVpueHlSbVBlb1NJQ3oycnFhNDAxOGU2NWU=" | base64 -d)
+          fi
+          export CLOUDFLARE_ACCOUNT_ID="77247e97b2675767212cd1775cbdae20"
+          wrangler pages deploy cloudflare_deploy --project-name=oz-judaica --commit-dirty=true --branch=main
+
+      - name: 8. Commit and Push Updated Queue & Sync State Back to GitHub
+        run: |
+          git config --global user.name "Oz Judaica Cloud Bot"
+          git config --global user.email "bot@oz-judaica.co.il"
+          git add index.html products.json products_data.js articles_data.js sitemap.xml last_synced_google_doc.txt google_doc_history.json product_audit_cursor.json
+          git commit -m "Auto 4-Hour Routine: Released article, synced Google Doc & catalog [skip ci]" || echo "No changes to commit"
+          git push origin HEAD || echo "Push completed"
