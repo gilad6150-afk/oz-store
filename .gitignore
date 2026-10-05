@@ -1,0 +1,21 @@
+# Dependencies and build artifacts
+node_modules/
+.wrangler/
+cloudflare_deploy/
+edge_user_data/
+
+# Temporary and dump files
+*.exe
+*.log
+*.bak*
+*.tmp
+edge_*
+dump*
+scratch/
+*.zip
+
+# Environment
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
