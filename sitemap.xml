@@ -2895,7 +2895,7 @@
     </image:image>
   </url>
 
-  <!-- Articles (19 published guides) -->
+  <!-- Articles (20 published guides) -->
   <url>
     <loc>https://oz-judaica.co.il/?article=1</loc>
     <lastmod>2026-10-05</lastmod>
@@ -3084,6 +3084,16 @@
     <image:image>
       <image:loc>https://oz-judaica.co.il/public/articles/rashi_rabbeinu_tam.jpg</image:loc>
       <image:title>נרתיקי תפילין קשיחים: חשיבות המגן הפנימי לשמירה על ריבוע הבתים</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/?article=20</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/articles/shabbat_silver_candlesticks.jpg</image:loc>
+      <image:title>מארז מתנה מהודר לחתן בר מצווה: תפילין, כיסויים, סידור וגביע קידוש</image:title>
     </image:image>
   </url>
 </urlset>
