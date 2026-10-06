@@ -2895,7 +2895,7 @@
     </image:image>
   </url>
 
-  <!-- Articles (20 published guides) -->
+  <!-- Articles (22 published guides) -->
   <url>
     <loc>https://oz-judaica.co.il/?article=1</loc>
     <lastmod>2026-10-06</lastmod>
@@ -3094,6 +3094,26 @@
     <image:image>
       <image:loc>https://oz-judaica.co.il/public/articles/shabbat_silver_candlesticks.jpg</image:loc>
       <image:title>מארז מתנה מהודר לחתן בר מצווה: תפילין, כיסויים, סידור וגביע קידוש</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/?article=21</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/articles/leather_wallet_nappa.jpg</image:loc>
+      <image:title>סידורים בכריכת עור אמיתי: איכות, עמידות ומתנה מרגשת לכל אירוע</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/?article=22</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/articles/siddur_leather_gold.jpg</image:loc>
+      <image:title>בחירת סידור תפילה: נוסח עדות המזרח, אשכנז, ספרד ותימן</image:title>
     </image:image>
   </url>
 </urlset>
