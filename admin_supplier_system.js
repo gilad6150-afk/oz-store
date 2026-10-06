@@ -192,32 +192,39 @@
         document.body.style.overflow = '';
     };
 
+        window.currentAdminTab = window.currentAdminTab || 'orders';
+
+    window.switchAdminTab = function(tabName) {
+        window.currentAdminTab = tabName;
+        openAdminDashboardModal();
+    };
+
     function renderAdminModalContent() {
         const authed = isAdminAuthenticated();
         
         if (!authed) {
             return `
-                <div class="bg-white rounded-3xl max-w-md w-full p-8 shadow-2xl border border-gold/30 text-right space-y-6 animate-fade-in dir-rtl">
+                <div class="bg-white rounded-3xl max-w-md w-full p-8 shadow-2xl border border-purple-200 text-right space-y-6 animate-fade-in dir-rtl">
                     <div class="text-center space-y-2">
-                        <div class="w-16 h-16 bg-navy/10 text-navy rounded-2xl flex items-center justify-center mx-auto text-3xl">🔐</div>
-                        <h2 class="text-2xl font-black text-navy">כניסת מנהל - עוז יודאיקה</h2>
-                        <p class="text-sm text-neutral-500">אנא הזן סיסמת ניהול כדי להמשיך ללוח הבקרה</p>
+                        <div class="w-16 h-16 bg-purple-100 text-purple-900 rounded-2xl flex items-center justify-center mx-auto text-3xl font-black">OZ</div>
+                        <h2 class="text-2xl font-black text-purple-950">כניסת מנהל - עוז יודאיקה</h2>
+                        <p class="text-sm text-slate-500">אנא הזן סיסמת ניהול כדי להמשיך ללוח הבקרה</p>
                     </div>
 
                     <form onsubmit="handleAdminAuth(event)" class="space-y-4">
                         <div>
-                            <label class="block text-xs font-bold text-navy mb-2">סיסמת מנהל</label>
+                            <label class="block text-xs font-bold text-slate-700 mb-2">סיסמת מנהל</label>
                             <input type="password" id="admin-pass-input" placeholder="הזן סיסמה..." required
-                                class="w-full text-center tracking-widest text-lg px-4 py-3 rounded-xl border border-neutral-300 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition">
+                                class="w-full text-center tracking-widest text-lg px-4 py-3 rounded-xl border border-slate-300 focus:border-purple-600 focus:ring-2 focus:ring-purple-200 outline-none transition">
                         </div>
                         <div id="admin-auth-error" class="hidden text-xs text-red-600 text-center font-bold">סיסמה שגויה, אנא נסה שוב.</div>
 
-                        <button type="submit" class="w-full py-3.5 bg-navy hover:bg-navy-dark text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition">
+                        <button type="submit" class="w-full py-3.5 bg-purple-900 hover:bg-purple-950 text-white font-bold rounded-xl shadow-lg transition cursor-pointer">
                             התחבר ללוח הבקרה ←
                         </button>
                     </form>
                     
-                    <button onclick="closeAdminDashboardModal()" class="w-full text-xs text-neutral-400 hover:text-neutral-600 text-center block pt-2">
+                    <button onclick="closeAdminDashboardModal()" class="w-full text-xs text-slate-400 hover:text-slate-600 text-center block pt-2 cursor-pointer">
                         סגור חלון
                     </button>
                 </div>
@@ -225,100 +232,262 @@
         }
 
         // Authenticated Dashboard View
+        const activeTab = window.currentAdminTab || 'orders';
         const suppliers = getSuppliers();
-        
+
+        // Get Real Customer Orders from localStorage
+        let realOrders = [];
+        try {
+            const raw = localStorage.getItem('oz_all_orders') || localStorage.getItem('oz_real_orders') || '[]';
+            realOrders = JSON.parse(raw);
+            if (!Array.isArray(realOrders)) realOrders = [];
+        } catch(e) {
+            realOrders = [];
+        }
+
+        const totalRevenue = realOrders.reduce((acc, o) => acc + (parseFloat(o.total || o.amount || 0) || 0), 0);
+
         return `
-            <div class="bg-white rounded-3xl max-w-5xl w-full p-6 md:p-8 shadow-2xl border border-gold/30 text-right space-y-6 max-h-[90vh] overflow-y-auto dir-rtl">
+            <div class="bg-white rounded-3xl max-w-5xl w-full p-4 sm:p-6 md:p-8 shadow-2xl border border-purple-200 text-right space-y-6 max-h-[92vh] overflow-y-auto dir-rtl">
                 <!-- Header -->
-                <div class="flex flex-wrap items-center justify-between gap-4 border-b pb-4">
+                <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-100 pb-4">
                     <div>
-                        <span class="inline-block px-3 py-1 bg-gold/10 text-gold-dark text-xs font-bold rounded-full mb-1">לוח ניהול מורשה</span>
-                        <h2 class="text-2xl font-black text-navy">לוח בקרה מנהל & ניהול ספקים 💼</h2>
+                        <span class="inline-block px-3 py-1 bg-purple-100 text-purple-900 text-xs font-black rounded-full mb-1">לוח ניהול ראשי מורשה</span>
+                        <h2 class="text-xl sm:text-2xl font-black text-slate-900">מרכז ניהול - עוז יודאיקה ראש העין</h2>
                     </div>
                     <div class="flex items-center gap-2">
-                        <button onclick="openEditPasswordPrompt()" class="px-3.5 py-2 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 text-xs font-bold rounded-xl transition">
-                            🔑 שינוי סיסמה
+                        <button onclick="openEditPasswordPrompt()" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold rounded-xl transition cursor-pointer">
+                            שינוי סיסמה
                         </button>
-                        <button onclick="logoutAdmin()" class="px-3.5 py-2 bg-red-50 hover:bg-red-100 text-red-600 text-xs font-bold rounded-xl transition">
-                            התנתק 🚪
+                        <button onclick="logoutAdmin()" class="px-3 py-1.5 bg-red-50 hover:bg-red-100 text-red-600 text-xs font-bold rounded-xl transition cursor-pointer">
+                            התנתק
                         </button>
-                        <button onclick="closeAdminDashboardModal()" class="w-9 h-9 bg-neutral-100 text-neutral-600 rounded-full flex items-center justify-center font-bold text-lg hover:bg-neutral-200">
+                        <button onclick="closeAdminDashboardModal()" class="w-8 h-8 bg-slate-100 text-slate-600 rounded-full flex items-center justify-center font-bold text-base hover:bg-slate-200 cursor-pointer">
                             ✕
                         </button>
                     </div>
                 </div>
 
-                <!-- Action Bar -->
-                <div class="flex flex-wrap items-center justify-between gap-4 bg-neutral-50 p-4 rounded-2xl border border-neutral-200">
-                    <div>
-                        <h3 class="font-bold text-navy text-sm">רשימת ספקים ואוטומציית שליחה</h3>
-                        <p class="text-xs text-neutral-500">כל ספק מוגדר עם איש קשר, מיקום איסוף/משלוח ואופן שליחת הזמנות ללא פרטי לקוח</p>
-                    </div>
-                    <button onclick="openEditSupplierModal()" class="px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-md transition flex items-center gap-2">
-                        <span>+ הוסף ספק חדש</span>
+                <!-- Navigation Tabs (Real Orders vs Suppliers) -->
+                <div class="flex items-center gap-2 border-b border-slate-200 pb-2">
+                    <button type="button" onclick="switchAdminTab('orders')" class="py-2.5 px-4 sm:px-6 rounded-xl font-black text-xs sm:text-sm transition-all cursor-pointer ${activeTab === 'orders' ? 'bg-purple-900 text-white shadow-md' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}">
+                        ניהול ומעקב הזמנות אמיתיות (${realOrders.length})
+                    </button>
+                    <button type="button" onclick="switchAdminTab('suppliers')" class="py-2.5 px-4 sm:px-6 rounded-xl font-black text-xs sm:text-sm transition-all cursor-pointer ${activeTab === 'suppliers' ? 'bg-purple-900 text-white shadow-md' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}">
+                        ניהול ספקים ושילוח (${suppliers.length})
                     </button>
                 </div>
 
-                <!-- Supplier Table -->
-                <div class="overflow-x-auto rounded-2xl border border-neutral-200 shadow-sm">
-                    <table class="w-full text-right text-xs">
-                        <thead class="bg-navy text-white font-bold">
-                            <tr>
-                                <th class="p-3">שם הספק</th>
-                                <th class="p-3">איש קשר</th>
-                                <th class="p-3">טלפון / דוא"ל</th>
-                                <th class="p-3">אופן הודעה</th>
-                                <th class="p-3">מיקום איסוף / משלוח</th>
-                                <th class="p-3">אתר אינטרנט</th>
-                                <th class="p-3">הערות / תנאים</th>
-                                <th class="p-3 text-center">פעולות</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-neutral-200">
+                ${activeTab === 'orders' ? `
+                    <!-- TAB 1: REAL ORDERS TRACKING & BILLING -->
+                    <div class="space-y-4">
+                        <!-- Stats Bar -->
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <div class="p-4 bg-purple-50/80 rounded-2xl border border-purple-200/80">
+                                <span class="text-xs font-bold text-purple-900 block mb-1">סה״כ הזמנות אמיתיות</span>
+                                <span class="text-2xl font-black text-purple-950">${realOrders.length}</span>
+                                <span class="text-[10px] text-slate-500 block mt-0.5">עסקאות שהושלמו בבדיקה ובמערכת</span>
+                            </div>
+                            <div class="p-4 bg-emerald-50/80 rounded-2xl border border-emerald-200/80">
+                                <span class="text-xs font-bold text-emerald-900 block mb-1">מחזור עסקאות מצטבר</span>
+                                <span class="text-2xl font-black text-emerald-950">₪${totalRevenue.toLocaleString()}</span>
+                                <span class="text-[10px] text-emerald-700 block mt-0.5">כולל מע״מ ודמי שילוח</span>
+                            </div>
+                            <div class="p-4 bg-blue-50/80 rounded-2xl border border-blue-200/80">
+                                <span class="text-xs font-bold text-blue-900 block mb-1">מוכנות סליקה ו-API</span>
+                                <span class="text-sm font-black text-blue-950 flex items-center gap-1.5 mt-1">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                                    <span>Invoice4U / Upay מוכן לפעולה</span>
+                                </span>
+                                <span class="text-[10px] text-blue-700 block mt-1">מסוף סליקה מאובטח PCI-DSS</span>
+                            </div>
+                        </div>
+
+                        ${realOrders.length === 0 ? `
+                            <!-- Empty State for Orders -->
+                            <div class="text-center py-12 px-4 bg-slate-50 rounded-2xl border border-slate-200">
+                                <div class="w-14 h-14 bg-purple-100 text-purple-900 rounded-2xl flex items-center justify-center mx-auto mb-3 font-black text-lg">OZ</div>
+                                <h4 class="font-black text-slate-800 text-base mb-1">אין עדיין הזמנות לקוח ממתינות</h4>
+                                <p class="text-xs text-slate-500 max-w-md mx-auto mb-5 leading-relaxed">
+                                    כל הזמנה שתבוצע בחנות (באשראי, סליקה או הזמנה טלפונית) תירשם כאן אוטומטית עם פרטי הלקוח המלאים, המוצרים וכתובת המשלוח.
+                                </p>
+                            </div>
+                        ` : `
+                            <!-- Orders Cards List -->
+                            <div class="space-y-3">
+                                ${realOrders.map((ord, idx) => {
+                                    const items = ord.items || [];
+                                    const customer = ord.customer || {};
+                                    return `
+                                        <div class="p-4 sm:p-5 bg-white rounded-2xl border border-slate-200 shadow-xs hover:shadow-sm transition-all space-y-3">
+                                            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-2.5">
+                                                <div class="flex items-center gap-2">
+                                                    <span class="px-2.5 py-0.5 rounded-full text-xs font-black bg-purple-100 text-purple-950">הזמנה #${ord.id || ord.orderId || (idx + 101)}</span>
+                                                    <span class="text-xs text-slate-500 font-bold">${ord.date || ord.createdAt || 'היום'}</span>
+                                                </div>
+                                                <span class="text-xs font-black text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                                                    ${ord.status || 'הושלמה בהצלחה'}
+                                                </span>
+                                            </div>
+
+                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                                                <div class="space-y-1 bg-slate-50/70 p-3 rounded-xl border border-slate-100">
+                                                    <span class="font-black text-slate-800 block text-[11px]">פרטי לקוח ויעד:</span>
+                                                    <div class="font-bold text-slate-700">שם: ${customer.name || ord.name || 'לקוח עוז'}</div>
+                                                    <div class="font-bold text-slate-700">טלפון: ${customer.phone || ord.phone || '-'}</div>
+                                                    <div class="font-bold text-slate-700">עיר וכתובת: ${ord.city || customer.city || ''} ${ord.address || customer.address || '-'}</div>
+                                                    ${ord.notes ? `<div class="text-[11px] text-slate-500">הערות: ${ord.notes}</div>` : ''}
+                                                </div>
+
+                                                <div class="space-y-1 bg-slate-50/70 p-3 rounded-xl border border-slate-100">
+                                                    <span class="font-black text-slate-800 block text-[11px]">פריטים שהוזמנו:</span>
+                                                    <div class="space-y-1 max-h-28 overflow-y-auto">
+                                                        ${items.map(it => `
+                                                            <div class="flex items-center justify-between text-[11px]">
+                                                                <span class="font-bold text-slate-700 truncate max-w-[200px]">${it.name || it.title} ${it.qty ? 'x' + it.qty : ''}</span>
+                                                                <span class="font-black text-oz-primary shrink-0">₪${it.price || 0}</span>
+                                                            </div>
+                                                        `).join('')}
+                                                    </div>
+                                                    <div class="pt-1.5 border-t border-slate-200 flex items-center justify-between font-black text-xs text-slate-900">
+                                                        <span>סה״כ לתשלום:</span>
+                                                        <span class="text-sm text-oz-primary">₪${ord.total || ord.amount || 0}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Order Actions -->
+                                            <div class="flex flex-wrap items-center justify-end gap-2 pt-1 border-t border-slate-100">
+                                                ${customer.phone || ord.phone ? `
+                                                    <a href="https://wa.me/972${String(customer.phone || ord.phone).replace(/[^0-9]/g, '').replace(/^0/, '')}?text=${encodeURIComponent('שלום ' + (customer.name || '') + ', מדברים מעוז יודאיקה בנוגע להזמנתך #' + (ord.id || ord.orderId) + '.')}" target="_blank" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-xs transition cursor-pointer">
+                                                        שליחת וואטסאפ ללקוח
+                                                    </a>
+                                                ` : ''}
+                                                <button onclick="testDispatchForSupplier('supp_mishkan')" class="px-3 py-1.5 bg-purple-900 hover:bg-purple-950 text-white font-bold text-xs rounded-xl shadow-xs transition cursor-pointer">
+                                                    העבר לספק (ללא פרטי לקוח)
+                                                </button>
+                                            </div>
+                                        </div>
+                                    `;
+                                }).join('')}
+                            </div>
+                        `}
+                    </div>
+                ` : `
+                    <!-- TAB 2: SUPPLIERS MANAGEMENT & ROUTING -->
+                    <div class="space-y-4">
+                        <!-- Action Bar -->
+                        <div class="flex flex-wrap items-center justify-between gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-200">
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-sm">רשימת ספקים ואוטומציית שליחה</h3>
+                                <p class="text-xs text-slate-500">הגדרת ספקים, מיקומי איסוף ושיטות שינוע ללא חשיפת פרטי לקוח</p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <a href="shipping-labels.html" target="_blank" class="px-3.5 py-2 bg-purple-900 hover:bg-purple-950 text-white font-bold text-xs rounded-xl shadow-sm transition flex items-center gap-1.5">
+                                    <span>הדפסת מדבקות משלוח</span>
+                                </a>
+                                <button onclick="openEditSupplierModal()" class="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-sm transition flex items-center gap-1.5 cursor-pointer">
+                                    <span>+ הוסף ספק חדש</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Cards View (< md) -->
+                        <div class="block md:hidden space-y-3">
                             ${suppliers.map(s => `
-                                <tr class="hover:bg-amber-50/50 transition">
-                                    <td class="p-3 font-black text-navy">${s.name}</td>
-                                    <td class="p-3 font-bold text-neutral-700">${s.contact || '-'}</td>
-                                    <td class="p-3 font-mono dir-ltr text-right">${s.phone || s.email || '-'}</td>
-                                    <td class="p-3">
-                                        <span class="inline-block px-2.5 py-1 rounded-md text-[11px] font-bold ${
+                                <div class="p-4 bg-white rounded-2xl border border-slate-200 shadow-xs space-y-2.5">
+                                    <div class="flex items-center justify-between">
+                                        <div class="font-black text-slate-900 text-sm">${s.name}</div>
+                                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold ${
                                             s.method === 'whatsapp' ? 'bg-emerald-100 text-emerald-800' :
                                             s.method === 'email' ? 'bg-blue-100 text-blue-800' : 'bg-purple-100 text-purple-800'
                                         }">
-                                            ${s.method === 'whatsapp' ? '💬 WhatsApp' : s.method === 'email' ? '✉️ Email' : '📱 SMS'}
+                                            ${s.method === 'whatsapp' ? 'WhatsApp' : s.method === 'email' ? 'Email' : 'SMS'}
                                         </span>
-                                    </td>
-                                    <td class="p-3 font-bold text-amber-900 bg-amber-50/40 rounded-lg">${s.location || '-'}</td>
-                                    <td class="p-3">
-                                        ${s.website ? `<a href="${s.website}" target="_blank" class="text-blue-600 hover:underline font-semibold">קישור לאתר 🔗</a>` : '-'}
-                                    </td>
-                                    <td class="p-3 text-neutral-600 max-w-[150px] truncate" title="${s.notes || ''}">${s.notes || '-'}</td>
-                                    <td class="p-3">
-                                        <div class="flex items-center justify-center gap-1.5">
-                                            <button onclick="testDispatchForSupplier('${s.id}')" class="px-2 py-1 bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold rounded-lg text-[11px] transition" title="בדיקת שליחת הזמנת דוגמה לספק">
-                                                🚀 שליחה
-                                            </button>
-                                            <button onclick="openEditSupplierModal('${s.id}')" class="px-2 py-1 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 font-bold rounded-lg text-[11px] transition">
-                                                ✏️ ערוך
-                                            </button>
-                                            <button onclick="confirmDeleteSupplier('${s.id}')" class="px-2 py-1 bg-red-100 hover:bg-red-200 text-red-700 font-bold rounded-lg text-[11px] transition">
-                                                🗑️
-                                            </button>
-                                        </div>
-                                    </td>
-                                </tr>
+                                    </div>
+                                    <div class="text-xs text-slate-600 space-y-1">
+                                        <div><strong class="text-slate-800">איש קשר:</strong> ${s.contact || '-'}</div>
+                                        <div><strong class="text-slate-800">יצירת קשר:</strong> <span class="dir-ltr inline-block">${s.phone || s.email || '-'}</span></div>
+                                        <div><strong class="text-slate-800">מיקום:</strong> ${s.location || '-'}</div>
+                                        ${s.notes ? `<div class="text-[11px] text-slate-500">${s.notes}</div>` : ''}
+                                    </div>
+                                    <div class="flex items-center justify-end gap-2 pt-2 border-t border-slate-100">
+                                        <button onclick="testDispatchForSupplier('${s.id}')" class="px-3 py-1.5 bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold rounded-xl text-xs transition cursor-pointer">
+                                            שליחה לדוגמה
+                                        </button>
+                                        <button onclick="openEditSupplierModal('${s.id}')" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs transition cursor-pointer">
+                                            עריכה
+                                        </button>
+                                        <button onclick="confirmDeleteSupplier('${s.id}')" class="px-3 py-1.5 bg-red-100 hover:bg-red-200 text-red-700 font-bold rounded-xl text-xs transition cursor-pointer">
+                                            מחיקה
+                                        </button>
+                                    </div>
+                                </div>
                             `).join('')}
-                        </tbody>
-                    </table>
-                </div>
+                        </div>
 
-                <!-- Simulation Info Box -->
-                <div class="p-4 bg-blue-50 border border-blue-200 rounded-2xl text-xs text-blue-900 space-y-1">
-                    <div class="font-bold flex items-center gap-2">
-                        <span>🔒 שמירת פרטיות הלקוחות (Strict Privacy Rule):</span>
+                        <!-- Desktop Table View (>= md) -->
+                        <div class="hidden md:block overflow-x-auto rounded-2xl border border-slate-200 shadow-xs">
+                            <table class="w-full text-right text-xs">
+                                <thead class="bg-purple-900 text-white font-bold">
+                                    <tr>
+                                        <th class="p-3">שם הספק</th>
+                                        <th class="p-3">איש קשר</th>
+                                        <th class="p-3">טלפון / דוא"ל</th>
+                                        <th class="p-3">אופן הודעה</th>
+                                        <th class="p-3">מיקום איסוף / משלוח</th>
+                                        <th class="p-3">אתר אינטרנט</th>
+                                        <th class="p-3">הערות / תנאים</th>
+                                        <th class="p-3 text-center">פעולות</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-200">
+                                    ${suppliers.map(s => `
+                                        <tr class="hover:bg-amber-50/50 transition">
+                                            <td class="p-3 font-black text-purple-950">${s.name}</td>
+                                            <td class="p-3 font-bold text-slate-700">${s.contact || '-'}</td>
+                                            <td class="p-3 font-mono dir-ltr text-right">${s.phone || s.email || '-'}</td>
+                                            <td class="p-3">
+                                                <span class="inline-block px-2.5 py-1 rounded-md text-[11px] font-bold ${
+                                                    s.method === 'whatsapp' ? 'bg-emerald-100 text-emerald-800' :
+                                                    s.method === 'email' ? 'bg-blue-100 text-blue-800' : 'bg-purple-100 text-purple-800'
+                                                }">
+                                                    ${s.method === 'whatsapp' ? 'WhatsApp' : s.method === 'email' ? 'Email' : 'SMS'}
+                                                </span>
+                                            </td>
+                                            <td class="p-3 font-bold text-amber-900 bg-amber-50/40 rounded-lg">${s.location || '-'}</td>
+                                            <td class="p-3">
+                                                ${s.website ? `<a href="${s.website}" target="_blank" class="text-blue-600 hover:underline font-semibold">קישור לאתר</a>` : '-'}
+                                            </td>
+                                            <td class="p-3 text-slate-600 max-w-[150px] truncate" title="${s.notes || ''}">${s.notes || '-'}</td>
+                                            <td class="p-3">
+                                                <div class="flex items-center justify-center gap-1.5">
+                                                    <button onclick="testDispatchForSupplier('${s.id}')" class="px-2 py-1 bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold rounded-lg text-[11px] transition cursor-pointer" title="בדיקת שליחת הזמנת דוגמה לספק">
+                                                        שליחה
+                                                    </button>
+                                                    <button onclick="openEditSupplierModal('${s.id}')" class="px-2 py-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-lg text-[11px] transition cursor-pointer">
+                                                        ערוך
+                                                    </button>
+                                                    <button onclick="confirmDeleteSupplier('${s.id}')" class="px-2 py-1 bg-red-100 hover:bg-red-200 text-red-700 font-bold rounded-lg text-[11px] transition cursor-pointer">
+                                                        מחק
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    `).join('')}
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Strict Privacy Notice -->
+                        <div class="p-4 bg-blue-50 border border-blue-200 rounded-2xl text-xs text-blue-900 space-y-1">
+                            <div class="font-bold flex items-center gap-1.5">
+                                <span>שמירת פרטיות הלקוחות (Strict Privacy Rule):</span>
+                            </div>
+                            <p>כאשר לקוח רוכש באתר, ההודעה שנוצרת עבור הספק מכילה אך ורק את פירוט המוצר (שם, מידה, כמות) וכתובת היעד למשלוח. פרטי הקשר האישיים של הלקוח אינם מועברים לספק כלל.</p>
+                        </div>
                     </div>
-                    <p>כאשר לקוח רוכש באתר, ההודעה שנוצרת עבור הספק מכילה **אך ורק** את פירוט המוצר (שם, מידה, כמות) וכתובת היעד למשלוח. מספר הטלפון ושמו של הלקוח אינם מועברים לספק כלל כדי לשמור על הלקוחות אצלך!</p>
-                </div>
+                `}
             </div>
         `;
     }

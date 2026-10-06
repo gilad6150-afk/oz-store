@@ -123,7 +123,7 @@ const customRules = [
             issues.forEach(iss => {
                 const p = context.products.find(x => x.id === iss.id);
                 if (p && !p.short_description.includes('משלוח ממוגן')) {
-                    p.short_description += `<p class='mb-2 text-purple-700 font-semibold'>🚚 משלוח ממוגן ייעודי עד הבית (₪50) לשמירה מלאה על הפריט.</p>`;
+                    p.short_description += `<p class='mb-2 text-purple-700 font-semibold'>משלוח ממוגן ייעודי עד הבית (₪50) לשמירה מלאה על הפריט.</p>`;
                     fixedCount++;
                 }
             });
@@ -358,6 +358,44 @@ const customRules = [
         },
         autoFix: function(context, issues) {
             return 0;
+        }
+    },
+
+    {
+        id: 'no_childish_emojis',
+        name: 'הסרת אימוג\'ים (מראה יוקרתי ונקי ללא אימוג\'ים ילדותיים)',
+        description: 'מוודא שבכותרות, בתיאורים ובכרטיסי המוצר אין שום אימוג\'ים (כגון 🚚, 🌟, ✨) שיוצרים מראה ילדותי',
+        check: function(context) {
+            const issues = [];
+            const emojiRegex = /[\u{1F300}-\u{1F6FF}\u{1F900}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu;
+            (context.products || []).forEach(p => {
+                const blob = [p.name || '', p.short_description || '', p.description || ''].join(' ');
+                if (emojiRegex.test(blob) || blob.includes('🚚')) {
+                    issues.push({
+                        type: 'product',
+                        id: p.id,
+                        name: p.name,
+                        message: `זוהו אימוג'ים במוצר #${p.id}`
+                    });
+                }
+            });
+            return issues;
+        },
+        autoFix: function(context, issues) {
+            let fixedCount = 0;
+            const emojiRegex = /[\u{1F300}-\u{1F6FF}\u{1F900}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu;
+            issues.forEach(iss => {
+                const p = (context.products || []).find(x => x.id === iss.id);
+                if (p) {
+                    ['name', 'short_description', 'description'].forEach(f => {
+                        if (p[f]) {
+                            p[f] = p[f].replace(emojiRegex, '').replace(/🚚\s*/g, '').replace(/\s{2,}/g, ' ').trim();
+                        }
+                    });
+                    fixedCount++;
+                }
+            });
+            return fixedCount;
         }
     }
 ];
