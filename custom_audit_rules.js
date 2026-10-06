@@ -397,6 +397,136 @@ const customRules = [
             });
             return fixedCount;
         }
+    },
+
+    {
+        id: 'code_syntax_and_product_render_integrity',
+        name: 'בדיקת תקינות תחביר קוד JavaScript ותצוגת מוצרים ב-DOM',
+        description: 'מוודא שאין שגיאות תחביר (SyntaxError), אין כפילויות משתנים (const/let), וכל מוצרי החנות ומדפי הבוטיק מתרנדרים תמיד בהצלחה',
+        check: function(context) {
+            const issues = [];
+            const fs = require('fs');
+            const vm = require('vm');
+            const path = require('path');
+            const { execSync } = require('child_process');
+
+            const htmlPath = path.resolve('index.html');
+            if (!fs.existsSync(htmlPath)) {
+                issues.push({ type: 'code', message: 'קובץ index.html לא נמצא!' });
+                return issues;
+            }
+
+            const html = fs.readFileSync(htmlPath, 'utf8');
+
+            // 1. בדיקת אלמנטי DOM חיוניים
+            const criticalElements = ['id="homepage-shelves-container"', 'id="products-grid"', 'id="product-count"'];
+            criticalElements.forEach(el => {
+                if (!html.includes(el)) {
+                    issues.push({ type: 'code', message: `אלמנט חיוני ${el} חסר ב-index.html!` });
+                }
+            });
+
+            // 2. בדיקת תחביר לכל תגי ה-script
+            const scriptRegex = /<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/script>/gi;
+            let match;
+            let scriptIdx = 0;
+            while ((match = scriptRegex.exec(html)) !== null) {
+                scriptIdx++;
+                const tag = match[0];
+                const code = match[1];
+                const openingTag = tag.substring(0, tag.indexOf('>') + 1);
+
+                if (openingTag.includes('application/ld+json')) {
+                    try {
+                        JSON.parse(code.trim());
+                    } catch (e) {
+                        issues.push({ type: 'code', message: `שגיאת JSON-LD בסקריפט #${scriptIdx}: ${e.message}` });
+                    }
+                    continue;
+                }
+
+                const tempFile = `temp_audit_check_${scriptIdx}.js`;
+                try {
+                    fs.writeFileSync(tempFile, code, 'utf8');
+                    execSync(`node --check ${tempFile}`, { stdio: 'pipe' });
+                } catch (e) {
+                    const errMsg = e.stderr ? e.stderr.toString('utf8').trim() : e.message;
+                    issues.push({ type: 'code', message: `שגיאת תחביר (SyntaxError/Duplicate variable) בסקריפט #${scriptIdx}: ${errMsg}` });
+                } finally {
+                    if (fs.existsSync(tempFile)) fs.unlinkSync(tempFile);
+                }
+            }
+
+            // 3. בדיקת רינדור מוצרים
+            try {
+                let shelvesHTML = '';
+                const mockDOM = {
+                    document: {
+                        getElementById: (id) => {
+                            if (id === 'homepage-shelves-container') return {
+                                id,
+                                classList: { add: () => {}, remove: () => {}, contains: () => false },
+                                set innerHTML(val) { shelvesHTML = val; },
+                                get innerHTML() { return shelvesHTML; },
+                                style: {}
+                            };
+                            return {
+                                id,
+                                classList: { add: () => {}, remove: () => {}, contains: () => false },
+                                textContent: '',
+                                innerHTML: '',
+                                style: {},
+                                setAttribute: () => {},
+                                getAttribute: () => '',
+                                scrollIntoView: () => {}
+                            };
+                        },
+                        querySelectorAll: () => [],
+                        querySelector: () => null,
+                        addEventListener: () => {},
+                        body: { style: {}, appendChild: () => {} }
+                    },
+                    window: {
+                        addEventListener: () => {},
+                        location: { search: '', hash: '', pathname: '/' },
+                        history: { pushState: () => {}, replaceState: () => {} }
+                    },
+                    localStorage: { getItem: () => null, setItem: () => {}, removeItem: () => {} },
+                    sessionStorage: { getItem: () => null, setItem: () => {}, removeItem: () => {} },
+                    console: { log: () => {}, error: () => {}, warn: () => {} },
+                    setTimeout: (fn) => fn(),
+                    setInterval: () => {},
+                    clearTimeout: () => {},
+                    clearInterval: () => {}
+                };
+                mockDOM.window.document = mockDOM.document;
+                mockDOM.window.window = mockDOM.window;
+
+                const inlineMatches = html.match(/<script(?![^>]*src=)[^>]*>([\s\S]*?)<\/script>/gi) || [];
+                const mainScriptTag = inlineMatches.find(t => t.includes('PRODUCTS_DATA') || t.includes('renderProducts'));
+                if (mainScriptTag) {
+                    const mainCode = mainScriptTag.replace(/<script[^>]*>/i, '').replace(/<\/script>/i, '');
+                    const contextVM = vm.createContext(mockDOM);
+                    const scriptVM = new vm.Script(mainCode);
+                    scriptVM.runInContext(contextVM);
+
+                    if (!contextVM.window.PRODUCTS_DATA || contextVM.window.PRODUCTS_DATA.length < 250) {
+                        issues.push({ type: 'code', message: `כמות המוצרים בקטלוג נמוכה מהצפוי (${(contextVM.window.PRODUCTS_DATA || []).length})` });
+                    }
+
+                    contextVM.state.selectedCategory = 'all';
+                    contextVM.renderProducts();
+                    const homeCards = (shelvesHTML.match(/itemtype="https:\/\/schema\.org\/Product"/g) || []).length;
+                    if (homeCards === 0) {
+                        issues.push({ type: 'code', message: 'שגיאת רינדור קריטית: 0 כרטיסי מוצר רונדרו בעמוד הבית!' });
+                    }
+                }
+            } catch (err) {
+                issues.push({ type: 'code', message: `כשל בהרצת רינדור מוצרים: ${err.message}` });
+            }
+
+            return issues;
+        }
     }
 ];
 

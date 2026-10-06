@@ -22077,7 +22077,7 @@ function renderSingleProductCard(p) {
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="${waPath}"/></svg>
           </a>`;
 
-    return `<div itemscope itemtype="https://schema.org/Product" class="h-full bg-white border border-slate-200/80 rounded-2xl sm:rounded-3xl overflow-hidden oz-shadow group flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:-translate-y-1 relative">
+    return `<div data-product-id="${p.id}" itemscope itemtype="https://schema.org/Product" class="product-card h-full bg-white border border-slate-200/80 rounded-2xl sm:rounded-3xl overflow-hidden oz-shadow group flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:-translate-y-1 relative">
             <meta itemprop="name" content="${(p.name || '').replace(/"/g, '&quot;')}" />
             <meta itemprop="image" content="${p.image || ''}" />
             <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="hidden">
@@ -23517,13 +23517,6 @@ function handleSearch(q) {
     if (clearBtn) {
         if ((q || '').trim().length > 0) clearBtn.classList.remove('hidden');
         else clearBtn.classList.add('hidden');
-    }
-    if (modal && modal.classList.contains('hidden')) {
-        modal.classList.remove('hidden');
-    }
-    const input = document.getElementById('search-input');
-    if (input && input.value !== (q || '')) {
-        input.value = q || '';
     }
 
     const resBox = document.getElementById('search-results');
@@ -26558,8 +26551,12 @@ window.SEORouter = {
         }
 
         function ensureRenderFallback() {
+            const shelvesContainer = document.getElementById('homepage-shelves-container');
+            const hasShelvesCards = shelvesContainer && shelvesContainer.querySelector('[data-product-id], .product-card, div[itemscope]');
             const prodGrid = document.getElementById('products-grid') || document.getElementById('catalog-grid');
-            if (prodGrid && (!prodGrid.querySelector('[data-product-id]') && !prodGrid.querySelector('.product-card') && !prodGrid.querySelector('div[itemscope]'))) {
+            const hasGridCards = prodGrid && prodGrid.querySelector('[data-product-id], .product-card, div[itemscope]');
+
+            if (!hasShelvesCards && !hasGridCards) {
                 console.warn('Fallback: no product cards found in DOM, resetting filters and rendering all products');
                 if (typeof resetFilters === 'function') resetFilters();
                 if (typeof renderProducts === 'function') renderProducts();
