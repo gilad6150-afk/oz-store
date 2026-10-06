@@ -2895,7 +2895,7 @@
     </image:image>
   </url>
 
-  <!-- Articles (22 published guides) -->
+  <!-- Articles (23 published guides) -->
   <url>
     <loc>https://oz-judaica.co.il/?article=1</loc>
     <lastmod>2026-10-06</lastmod>
@@ -3114,6 +3114,16 @@
     <image:image>
       <image:loc>https://oz-judaica.co.il/public/articles/siddur_leather_gold.jpg</image:loc>
       <image:title>בחירת סידור תפילה: נוסח עדות המזרח, אשכנז, ספרד ותימן</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/?article=23</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/articles/siddur_leather_gold.jpg</image:loc>
+      <image:title>ספר תהילים מחולק: סגולות, זמני קריאה ומהדורות יוקרתיות לכיס ולבית</image:title>
     </image:image>
   </url>
 </urlset>
