@@ -25,8 +25,8 @@ async function pingIndexNow() {
 
         const payload = JSON.stringify({
             host: 'oz-judaica.co.il',
-            key: 'ozjudaicasitemapkey2026',
-            keyLocation: 'https://oz-judaica.co.il/sitemap.xml',
+            key: 'c74690b311ac4c6702c1098c943caeb2',
+            keyLocation: 'https://oz-judaica.co.il/c74690b311ac4c6702c1098c943caeb2.txt',
             urlList: ['https://oz-judaica.co.il/', 'https://oz-judaica.co.il/sitemap.xml', ...catUrls, ...articleUrls]
         });
 
