@@ -745,9 +745,9 @@
 
                     <!-- ACTION BUTTONS -->
                     <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 max-w-md sm:max-w-none mx-auto lg:mx-0">
-                        <!-- Yellow Button: למוצרים המלא > -->
-                        <button type="button" onclick="resetFilters(); closeProductPage(); closeAccountPage(); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="w-full sm:w-auto py-3.5 px-8 bg-gradient-to-r from-[#FACC15] to-[#EAB308] hover:from-[#EAB308] hover:to-[#CA8A04] text-slate-950 font-black text-sm sm:text-base rounded-full shadow-xl shadow-amber-500/20 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer border border-amber-300 font-['Assistant','Heebo',sans-serif]">
-                            <span>למוצרים המלא</span>
+                        <!-- Yellow Button: לקטלוג המוצרים המלא > -->
+                        <button type="button" onclick="switchToAllCatalogView(); closeProductPage(); closeAccountPage(); document.getElementById('shop').scrollIntoView({behavior:'smooth'})" class="w-full sm:w-auto py-3.5 px-8 bg-gradient-to-r from-[#FACC15] to-[#EAB308] hover:from-[#EAB308] hover:to-[#CA8A04] text-slate-950 font-black text-sm sm:text-base rounded-full shadow-xl shadow-amber-500/20 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer border border-amber-300 font-['Assistant','Heebo',sans-serif]">
+                            <span>לקטלוג המוצרים המלא</span>
                             <span class="text-lg font-black">&rsaquo;</span>
                         </button>
 
@@ -22017,6 +22017,16 @@ var HOMEPAGE_SHELVES_CONFIG = window.HOMEPAGE_SHELVES_CONFIG = [
 function toggleCatalogShelvesView() {
     if (!state) return;
     state.viewAllCatalog = !state.viewAllCatalog;
+    if (state.viewAllCatalog) {
+        state.selectedCategory = 'all';
+        state.selectedSubcategory = 'all';
+        state.selectedPictureShape = 'all';
+        state.selectedPriceMin = 0;
+        state.selectedPriceMax = 99999;
+        state.inStockOnly = false;
+        state.sortBy = 'default';
+        document.querySelectorAll('.subcategory-bar').forEach(bar => bar.classList.add('hidden'));
+    }
     renderProducts();
     const shopEl = document.getElementById('shop');
     if (shopEl) shopEl.scrollIntoView({ behavior: 'smooth' });
@@ -22026,6 +22036,14 @@ window.toggleCatalogShelvesView = toggleCatalogShelvesView;
 function switchToAllCatalogView() {
     if (!state) return;
     state.viewAllCatalog = true;
+    state.selectedCategory = 'all';
+    state.selectedSubcategory = 'all';
+    state.selectedPictureShape = 'all';
+    state.selectedPriceMin = 0;
+    state.selectedPriceMax = 99999;
+    state.inStockOnly = false;
+    state.sortBy = 'default';
+    document.querySelectorAll('.subcategory-bar').forEach(bar => bar.classList.add('hidden'));
     renderProducts();
     const shopEl = document.getElementById('shop');
     if (shopEl) shopEl.scrollIntoView({ behavior: 'smooth' });
@@ -22772,7 +22790,7 @@ window.updateSubcategoryCardsUI = function(container, activeSubName, clickedCard
 
 window.selectMainCategory = function(catKey, cardEl) {
     if (!state) return;
-    if (catKey === 'all') state.viewAllCatalog = false;
+    state.viewAllCatalog = (catKey === 'all');
     state.selectedCategory = catKey;
     state.selectedSubcategory = 'all';
     state.selectedPictureShape = 'all';
@@ -22960,8 +22978,28 @@ window.updateMobileModalPillsUI = function() {
             btn.className = 'mob-price-pill py-2 px-2 rounded-xl text-xs font-bold transition-all text-center bg-slate-50 text-slate-700 border border-slate-200 hover:bg-purple-50';
         }
     });
+};
 
-    
+window.renderActiveFilterChips = function() {
+    const container = document.getElementById('active-filters-bar');
+    if (!container || !state) return;
+    const chips = [];
+
+    // Category Chip
+    if (state.selectedCategory && state.selectedCategory !== 'all') {
+        const catNames = {
+            'stam': 'תשמישי קדושה וסת"ם',
+            'mezuzot': 'בתי מזוזה מעוצבים',
+            'tefillin-bags': 'תיקים לטלית ותפילין',
+            'books': 'ספרי קודש',
+            'wallets': 'ארנקים לגבר',
+            'gifts': 'מתנות ויודאיקה'
+        };
+        chips.push({
+            label: `מחלקה: ${catNames[state.selectedCategory] || state.selectedCategory}`,
+            action: "window.selectMainCategory('all')"
+        });
+    }
 
     // Subcategory Chip
     if (state.selectedSubcategory && state.selectedSubcategory !== 'all') {
