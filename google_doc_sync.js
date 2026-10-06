@@ -79,6 +79,22 @@ async function syncGoogleDocInstructions() {
             console.log(`  ✓ מסמך ההנחיות סונכרן (תקין וללא שינויים חדשים מהסבב הקודם).`);
         }
 
+        // Trigger Google Apps Script to color completed tasks & append audit notes
+        let docConfig = {};
+        if (fs.existsSync('google_doc_config.json')) {
+            try { docConfig = JSON.parse(fs.readFileSync('google_doc_config.json', 'utf8')); } catch(e){}
+        }
+        const webappUrl = process.env.GOOGLE_DOC_WEBAPP_URL || docConfig.webappUrl;
+        if (webappUrl) {
+            console.log('  -> שולח פקודה לעדכון צביעה ירוקה והערות במסמך Google Docs...');
+            try {
+                await fetchWithRedirect(webappUrl);
+                console.log('  ✓ המסמך נצבע בירוק ועודכנה הערת ביקורת בהצלחה.');
+            } catch(we) {
+                console.warn('  ⚠️ הערת סנכרון Apps Script Webhook:', we.message);
+            }
+        }
+
         return {
             success: true,
             isUpdated,
