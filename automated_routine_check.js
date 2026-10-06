@@ -416,6 +416,15 @@ async function runRoutineAuditAndRepair(autoFix = true) {
         } catch(e) {
             console.warn('Sitemap update note:', e.message);
         }
+
+        // Push batch URLs to Search Engines via IndexNow API
+        try {
+            const { pingIndexNow } = require('./ping_google_and_indexnow.js');
+            await pingIndexNow();
+            console.log('📡 Search Engines notified via IndexNow API!');
+        } catch(e) {
+            console.warn('IndexNow ping note:', e.message);
+        }
     }
 
     console.log('\n================================================================');
