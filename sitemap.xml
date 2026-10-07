@@ -2895,7 +2895,7 @@
     </image:image>
   </url>
 
-  <!-- Articles (24 published guides) -->
+  <!-- Articles (25 published guides) -->
   <url>
     <loc>https://oz-judaica.co.il/?article=1</loc>
     <lastmod>2026-10-07</lastmod>
@@ -3134,6 +3134,16 @@
     <image:image>
       <image:loc>https://oz-judaica.co.il/public/articles/shabbat_silver_candlesticks.jpg</image:loc>
       <image:title>חמשה חומשי תורה ומקראות גדולות: כלי עזר חיוני ללימוד שבת מעמיק</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/?article=25</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/articles/passover_seder_plate.jpg</image:loc>
+      <image:title>הגדה של פסח מבוארת ומאוירת: חיבור המשפחה והילדים לשולחן הסדר</image:title>
     </image:image>
   </url>
 </urlset>
