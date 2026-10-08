@@ -240,7 +240,7 @@ const customRules = [
                         if (p.supplier === 'תמונות רבנים וצדיקים') return !low.includes('tmunotrabanim.com') && !low.includes('ozonlineshop.com');
                         if (p.supplier === 'שמעק') return !low.includes('wixstatic.com') && !low.includes('shmec') && !low.includes('ozonlineshop.com');
                         if (p.supplier === 'לבורסה') return !low.includes('laborsa') && !low.includes('ozonlineshop.com');
-                        if (p.supplier === 'סידור מבואר (נהרות)') return !low.includes('sidur-neharot') && !low.includes('ozonlineshop.com');
+                        if (p.supplier === 'סידור מבואר (נהרות)') return !low.includes('sidur-neharot') && !low.includes('ozonlineshop.com') && !low.includes('neharot') && !low.includes('tehillim_mevoar');
                         return false;
                     });
 
