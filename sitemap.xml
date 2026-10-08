@@ -2895,7 +2895,7 @@
     </image:image>
   </url>
 
-  <!-- Articles (26 published guides) -->
+  <!-- Articles (28 published guides) -->
   <url>
     <loc>https://oz-judaica.co.il/?article=1</loc>
     <lastmod>2026-10-08</lastmod>
@@ -3154,6 +3154,26 @@
     <image:image>
       <image:loc>https://oz-judaica.co.il/public/articles/siddur_leather_gold.jpg</image:loc>
       <image:title>מחזורים לראש השנה ויום כיפור: נוסח מדויק, כוונת הלב ופיוטים עתיקים</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/?article=27</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/articles/leather_wallet_nappa.jpg</image:loc>
+      <image:title>ארנקי עור נאפה לגבר עם הגנת RFID: בטיחות טכנולוגית, עמידות ויוקרה</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/?article=28</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/articles/leather_wallet_nappa.jpg</image:loc>
+      <image:title>ארנק עור דק (Slim Wallet) מול ארנק עור קלאסי: מה מתאים לך?</image:title>
     </image:image>
   </url>
 </urlset>
