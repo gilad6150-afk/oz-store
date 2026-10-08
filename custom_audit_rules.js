@@ -210,8 +210,8 @@ const customRules = [
 
     {
         id: 'three_images_and_inhouse_exact_atmosphere_rule',
-        name: 'בדיקת 3 תמונות אווירה: דגם מקורי בלבד למוצרי עוז יודאיקה (0 המצאות) ואיסור AI לספקים',
-        description: 'מוודא שלכל מוצר עוז יודאיקה (שאינו מספק חיצוני) יש 3 תמונות אווירה/לייפסטייל התואמות בדיוק של 100% לדגם שבתמונה הראשונה (ללא המצאות!). עבור מוצרי ספק: אוסר מוחלטת תמונות AI מומצאות ודורש מקור בלבד.',
+        name: 'בדיקת 3 תמונות אווירה: איסור מוחלט על משכן התכלת, היתר מלא לתמונות אווירה מספקים, ודגם מדויק לעוז יודאיקה',
+        description: 'מוודא אפס תמונות ממשכן התכלת! מתיר ומאשר שימוש מלא בתמונות אווירה וגלריה של הספקים המורשים (תמונות רבנים, שמעק, לבורסה, נהרות). למוצרי עוז יודאיקה מיישם 3 תמונות אווירה הנאמנות 100% לדגם שבתמונה הראשונה ללא המצאות.',
         check: function(context) {
             const issues = [];
             const fs = require('fs');
@@ -233,10 +233,26 @@ const customRules = [
                     p.supplier === 'סידור מבואר (נהרות)'
                 );
 
+                // א. בדיקת איסור מוחלט על משכן התכלת (בכל המוצרים!)
+                imgs.forEach(img => {
+                    const low = (img || '').toLowerCase();
+                    if (low.includes('mishkan') || low.includes('משכן')) {
+                        issues.push({
+                            type: 'forbidden_mishkan',
+                            id: p.id,
+                            name: p.name,
+                            badImg: img,
+                            message: `זוהתה תמונה אסורה של משכן התכלת במוצר #${p.id}: ${img}`
+                        });
+                    }
+                });
+
                 if (isSupplier) {
-                    // מוצר ספק: בדיקה קפדנית שאף תמונה לא "הומצאה" ב-AI או זוהמה
+                    // מוצר ספק: מותר ורצוי לקחת תמונות אווירה, גלריה ותקריב ישירות מהספק!
+                    // רק מוודאים שאין זליגה של תמונות שאינן שייכות לספק הזה ושאין משכן התכלת
                     const nonSupplierImgs = imgs.filter(img => {
                         const low = (img || '').toLowerCase();
+                        if (low.includes('mishkan') || low.includes('משכן')) return true; // יסולק
                         if (p.supplier === 'תמונות רבנים וצדיקים') return !low.includes('tmunotrabanim.com') && !low.includes('ozonlineshop.com');
                         if (p.supplier === 'שמעק') return !low.includes('wixstatic.com') && !low.includes('shmec') && !low.includes('ozonlineshop.com');
                         if (p.supplier === 'לבורסה') return !low.includes('laborsa') && !low.includes('ozonlineshop.com');
@@ -333,8 +349,15 @@ const customRules = [
                 const p = context.products.find(x => x.id === iss.id);
                 if (!p) return;
 
-                if (iss.type === 'supplier_contamination') {
-                    // סילוק מיידי של תמונות שהומצאו או שאינן מקוריות מהספק
+                if (iss.type === 'forbidden_mishkan') {
+                    // סילוק מוחלט ומיידי של כל תמונת משכן התכלת
+                    p.images = (p.images || []).filter(img => img !== iss.badImg && !img.toLowerCase().includes('mishkan') && !img.includes('משכן'));
+                    if (p.image && (p.image === iss.badImg || p.image.toLowerCase().includes('mishkan') || p.image.includes('משכן'))) {
+                        p.image = p.images[0] || '';
+                    }
+                    fixedCount++;
+                } else if (iss.type === 'supplier_contamination') {
+                    // סילוק מיידי של תמונות שאינן שייכות לספק המורשה
                     p.images = (p.images || []).filter(img => !iss.badImages.includes(img));
                     if (p.image && iss.badImages.includes(p.image)) {
                         p.image = p.images[0] || '';
