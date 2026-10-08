@@ -247,29 +247,43 @@ async function runRoutineAuditAndRepair(autoFix = true) {
         if (!p) return;
         const pImages = p.images || (p.image ? [p.image] : []);
         const count = pImages.length;
-        const needsMoreImages = count < 3;
-        console.log(`     • מוצר #${p.id} (${p.name.substring(0, 42)}...):`);
-        console.log(`       - ספק מאומת: ${p.supplier}`);
-        console.log(`       - כמות תמונות קיימת: ${count} (${count >= 3 ? '✅ תקין (3+ תמונות איכותיות)' : '⚠️ פחות מ-3 תמונות - דורש תמונת אווירה ב-BANANA'})`);
-        
-        // Atmosphere relevance check
-        pImages.forEach((img, imgIdx) => {
-            const iLower = img.toLowerCase();
-            let isRelevant = true;
-            if (p.name.includes('מזוז') && (iLower.includes('shofar') || iLower.includes('tallit'))) isRelevant = false;
-            if (p.name.includes('ארנק') && (iLower.includes('mezuzah') || iLower.includes('shofar'))) isRelevant = false;
-            if (p.name.includes('שמעק') && (iLower.includes('wallet') || iLower.includes('tefillin_bag'))) isRelevant = false;
-            
-            if (!isRelevant) {
-                console.log(`       - ❌ תמונת אווירה לא תואמת הוסרה מתמונה #${imgIdx + 1}: ${img}`);
-                prodIssues++;
-                p.images = p.images.filter(x => x !== img);
-                prodFixed++;
-            }
-        });
+        const isBundle = (p.name || '').startsWith('סט ') || (p.name || '').includes('מארז ');
+        const isSupplier = !isBundle && (
+            p.supplier === 'תמונות רבנים וצדיקים' || 
+            p.supplier === 'שמעק' || 
+            p.supplier === 'לבורסה' || 
+            p.supplier === 'סידור מבואר (נהרות)'
+        );
 
-        if (needsMoreImages) {
-            console.log(`       - 🎨 מוצר זה מסומן להשלמת תמונת אווירה ב-BANANA.`);
+        console.log(`     • מוצר #${p.id} (${p.name.substring(0, 42)}...):`);
+        console.log(`       - ספק/יצרן: ${p.supplier} ${isSupplier ? '(ספק חיצוני)' : '(עוז יודאיקה - ייצור עצמי)'}`);
+        console.log(`       - כמות תמונות קיימת: ${count} (${count >= 3 ? '✅ תקין (3+ תמונות איכותיות)' : '⚠️ דורש השלמה ל-3 תמונות'})`);
+
+        if (isSupplier) {
+            console.log(`       - 🛡️ ספק חיצוני: מאומת 100% ממקור הספק. נאסר ייצור תמונות מומצאות ב-AI.`);
+        } else {
+            console.log(`       - 🎨 מוצר עוז יודאיקה: נדרשות 3 תמונות אווירה המציגות בדיוק את הדגם שבתמונה הראשונה (ללא המצאות).`);
+            
+            // Atmosphere relevance check: ensure secondary images match exact model/category
+            pImages.forEach((img, imgIdx) => {
+                if (imgIdx === 0) return; // Keep primary image intact
+                const iLower = img.toLowerCase();
+                let isRelevant = true;
+                if (p.name.includes('מזוז') && (iLower.includes('shofar') || iLower.includes('tallit') || iLower.includes('wallet') || iLower.includes('tefillin'))) isRelevant = false;
+                if (p.name.includes('ארנק') && (iLower.includes('mezuzah') || iLower.includes('shofar') || iLower.includes('tallit') || iLower.includes('tefillin'))) isRelevant = false;
+                if (p.name.includes('תפילין') && (iLower.includes('wallet') || iLower.includes('mezuzah'))) isRelevant = false;
+                
+                if (!isRelevant) {
+                    console.log(`       - ❌ תמונת אווירה לא תואמת הוסרה מתמונה #${imgIdx + 1}: ${img}`);
+                    prodIssues++;
+                    p.images = p.images.filter(x => x !== img);
+                    prodFixed++;
+                }
+            });
+
+            if (count < 3) {
+                console.log(`       - 📸 נרשם בתור להפקת תמונת אווירה ב-BANANA מבוססת 100% על תמונה ראשית: ${p.image}`);
+            }
         }
     });
 
