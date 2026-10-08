@@ -209,9 +209,9 @@ const customRules = [
     },
 
     {
-        id: 'three_images_and_supplier_integrity',
-        name: 'בדיקת 3 תמונות למוצר: ספקים (מקור בלבד ללא המצאה) ועוז יודאיקה (תמונות אווירה ב-BANANA)',
-        description: 'מוודא שלכל מוצר יש 3 תמונות. למוצרי ספק: לוקח אך ורק תמונות מקוריות מהספק ואוסר המצאת תמונות! למוצרי עוז יודאיקה: משלב תמונות אווירה ולייפסטייל מ-BANANA',
+        id: 'three_images_and_inhouse_exact_atmosphere_rule',
+        name: 'בדיקת 3 תמונות אווירה: דגם מקורי בלבד למוצרי עוז יודאיקה (0 המצאות) ואיסור AI לספקים',
+        description: 'מוודא שלכל מוצר עוז יודאיקה (שאינו מספק חיצוני) יש 3 תמונות אווירה/לייפסטייל התואמות בדיוק של 100% לדגם שבתמונה הראשונה (ללא המצאות!). עבור מוצרי ספק: אוסר מוחלטת תמונות AI מומצאות ודורש מקור בלבד.',
         check: function(context) {
             const issues = [];
             const fs = require('fs');
@@ -234,7 +234,7 @@ const customRules = [
                 );
 
                 if (isSupplier) {
-                    // בדיקה קפדנית שאף תמונה לא "הומצאה" או זוהמה
+                    // מוצר ספק: בדיקה קפדנית שאף תמונה לא "הומצאה" ב-AI או זוהמה
                     const nonSupplierImgs = imgs.filter(img => {
                         const low = (img || '').toLowerCase();
                         if (p.supplier === 'תמונות רבנים וצדיקים') return !low.includes('tmunotrabanim.com') && !low.includes('ozonlineshop.com');
@@ -251,7 +251,7 @@ const customRules = [
                             name: p.name,
                             supplier: p.supplier,
                             badImages: nonSupplierImgs,
-                            message: `מוצר ספק #${p.id} (${p.supplier}) מכיל תמונה שאינה מהספק: ${nonSupplierImgs.join(', ')}`
+                            message: `מוצר ספק #${p.id} (${p.supplier}) מכיל תמונה לא מקורית/מומצאת: ${nonSupplierImgs.join(', ')}`
                         });
                     }
 
@@ -262,18 +262,55 @@ const customRules = [
                             name: p.name,
                             supplier: p.supplier,
                             currentCount: count,
-                            message: `מוצר ספק #${p.id} (${p.supplier}) עם ${count}/3 תמונות – משיכת תמונות מקור נוספות מהספק בלבד (ללא המצאה)`
+                            message: `מוצר ספק #${p.id} (${p.supplier}) עם ${count}/3 תמונות – משיכת תמונות מקור נוספות מהספק בלבד (ללא המצאות)`
                         });
                     }
                 } else {
                     // מוצר עוז יודאיקה (ייצור עצמי, סת"ם, מזוזות, סטים ומארזים)
+                    // בדיקה 1: מניעת תמונות אווירה גנריות/שגויות שלא שייכות לדגם המדויק
+                    const badAtmosphere = [];
+                    imgs.forEach((img, idx) => {
+                        if (idx === 0) return; // תמונה ראשית נשמרת תמיד כמקור
+                        const low = (img || '').toLowerCase();
+                        const pName = (p.name || '').toLowerCase();
+                        
+                        // פסילת תמונות אווירה מומצאות/לא תואמות לקטגוריה או דגם
+                        if (pName.includes('מזוז') && !low.includes('mezuz') && !low.includes('מיזם-חדש')) {
+                            if (low.includes('wallet') || low.includes('tefillin') || low.includes('shofar') || low.includes('tallit')) {
+                                badAtmosphere.push(img);
+                            }
+                        }
+                        if (pName.includes('ארנק') && !low.includes('wallet') && !low.includes('ארנק')) {
+                            if (low.includes('mezuz') || low.includes('tefillin') || low.includes('shofar') || low.includes('tallit')) {
+                                badAtmosphere.push(img);
+                            }
+                        }
+                        if (pName.includes('תפילין') && !low.includes('tefillin')) {
+                            if (low.includes('wallet') || low.includes('mezuz')) {
+                                badAtmosphere.push(img);
+                            }
+                        }
+                    });
+
+                    if (badAtmosphere.length > 0) {
+                        issues.push({
+                            type: 'inhouse_mismatched_atmosphere',
+                            id: p.id,
+                            name: p.name,
+                            badImages: badAtmosphere,
+                            message: `מוצר עוז יודאיקה #${p.id} מכיל תמונת אווירה שלא תואמת את הדגם המקורי: ${badAtmosphere.join(', ')}`
+                        });
+                    }
+
+                    // בדיקה 2: דרישת 3 תמונות אווירה מדויקות לדגם המקורי מתמונה 1
                     if (count < 3) {
                         issues.push({
-                            type: 'inhouse_needs_banana',
+                            type: 'inhouse_needs_exact_model_atmosphere',
                             id: p.id,
                             name: p.name,
                             currentCount: count,
-                            message: `מוצר עוז יודאיקה #${p.id} כולל ${count}/3 תמונות – דורש שילוב תמונת אווירה/לייפסטייל מ-BANANA`
+                            primaryImage: p.image,
+                            message: `מוצר עוז יודאיקה #${p.id} כולל ${count}/3 תמונות – נדרשות תמונות אווירה מדויקות המציגות בדיוק את הדגם שבתמונה הראשונה (ללא המצאות)`
                         });
                     }
                 }
@@ -290,6 +327,8 @@ const customRules = [
                 }
             } catch(e) {}
 
+            const exactAtmosphereQueue = [];
+
             issues.forEach(iss => {
                 const p = context.products.find(x => x.id === iss.id);
                 if (!p) return;
@@ -300,6 +339,10 @@ const customRules = [
                     if (p.image && iss.badImages.includes(p.image)) {
                         p.image = p.images[0] || '';
                     }
+                    fixedCount++;
+                } else if (iss.type === 'inhouse_mismatched_atmosphere') {
+                    // הסרת תמונות אווירה שלא תואמות בדיוק את הדגם המקורי
+                    p.images = (p.images || []).filter(img => !iss.badImages.includes(img));
                     fixedCount++;
                 } else if (iss.type === 'supplier_needs_photos' && p.supplier === 'תמונות רבנים וצדיקים') {
                     // משיכת תמונות מקוריות בלבד מגלריית הספק
@@ -314,26 +357,38 @@ const customRules = [
                         });
                         p.images = existing;
                     }
-                } else if (iss.type === 'inhouse_needs_banana') {
-                    // שילוב תמונות אווירה קיימות שהופקו ב-BANANA למוצרי עוז יודאיקה
-                    const pImages = p.images || (p.image ? [p.image] : []);
-                    const name = p.name || '';
-                    
-                    if (name.includes('מזוז') && !pImages.includes('public/lifestyle_epoxy_mezuzah.jpg') && pImages.length < 3) {
-                        pImages.push('public/lifestyle_epoxy_mezuzah.jpg');
+                } else if (iss.type === 'inhouse_needs_exact_model_atmosphere') {
+                    // רישום מפרט AI מחמיר ליצירת תמונת אווירה המבוססת בדיוק של 100% על התמונה הראשונה!
+                    const primary = p.image || (p.images && p.images[0]) || '';
+                    if (primary) {
+                        exactAtmosphereQueue.push({
+                            id: p.id,
+                            name: p.name,
+                            category: p.category,
+                            primaryImage: primary,
+                            existingCount: (p.images || []).length,
+                            neededCount: 3 - (p.images || []).length,
+                            strictDirective: "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+                            promptStudio: `Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [${primary}]. The item is an authentic Judaica piece: ${p.name}. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.`,
+                            promptMacro: `High-end macro close-up of the EXACT same ${p.name} from reference image [${primary}]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography.`
+                        });
                         fixedCount++;
                     }
-                    if (name.includes('ארנק') && !pImages.includes('public/products/leather_wallet_lifestyle.jpg') && pImages.length < 3) {
-                        pImages.push('public/products/leather_wallet_lifestyle.jpg');
-                        fixedCount++;
-                    }
-                    if (name.includes('תפילין') && !pImages.includes('public/products/tefillin_bar_mitzvah_mehudar.jpg') && pImages.length < 3) {
-                        pImages.push('public/products/tefillin_bar_mitzvah_mehudar.jpg');
-                        fixedCount++;
-                    }
-                    p.images = pImages;
                 }
             });
+
+            // שמירת תור תמונות האווירה המדויקות
+            if (exactAtmosphereQueue.length > 0) {
+                try {
+                    fs.writeFileSync('inhouse_exact_lifestyle_queue.json', JSON.stringify({
+                        updatedAt: new Date().toISOString(),
+                        description: "תור תמונות אווירה מדויקות למוצרי עוז יודאיקה - 100% נאמנות לדגם המקורי מתמונה 1",
+                        totalQueue: exactAtmosphereQueue.length,
+                        queue: exactAtmosphereQueue
+                    }, null, 2), 'utf8');
+                } catch(e) {}
+            }
+
             return fixedCount;
         }
     },
