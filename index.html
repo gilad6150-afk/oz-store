@@ -510,10 +510,12 @@
                     </button>
 
                     <!-- Header Cart Button (Triggers Right Side Cart Drawer) -->
-                    <button onclick="toggleCartDrawer()" class="flex items-center gap-2 px-3.5 py-2 bg-oz-primary hover:bg-oz-hover text-white font-extrabold text-xs rounded-full shadow-md transition-all active:scale-95" title="פתח סל קניות">
-                        <div class="relative">
-                            <svg class="w-4.5 h-4.5 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119.993z"/></svg>
-                            <span id="header-cart-badge" class="hidden absolute -top-2 -right-2 bg-purple-600 text-white font-black text-[10px] w-4 h-4 rounded-full flex items-center justify-center border border-purple-900">0</span>
+                    <button onclick="toggleCartDrawer()" class="relative flex items-center justify-center gap-1.5 px-3 py-2 sm:px-3.5 sm:py-2 bg-oz-primary hover:bg-oz-hover text-white font-extrabold text-xs rounded-full shadow-md transition-all active:scale-95" title="פתח סל קניות">
+                        <div class="relative flex items-center justify-center">
+                            <svg class="w-5 h-5 fill-none stroke-current stroke-2 text-white shrink-0" style="width: 20px; height: 20px; min-width: 20px; min-height: 20px;" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119.993z"/>
+                            </svg>
+                            <span id="header-cart-badge" class="hidden absolute -top-2 -right-2.5 bg-amber-400 text-slate-950 font-black text-[10px] min-w-[16px] h-4 px-1 rounded-full flex items-center justify-center shadow-md border border-slate-900">0</span>
                         </div>
                         <span id="header-cart-total" class="hidden sm:inline font-black">0 פריטים</span>
                     </button>
@@ -3126,66 +3128,54 @@
     ]
   },
   {
-    "id": 19007,
-    "sku": "OZ-SET-SIFREIKODESH-07",
-    "name": "סט ספרי קודש מפואר לבית ולשבת – סידור, תהילים, זמירות שבת, חמש מגילות והגדה של פסח באריזת שי מלכותית",
-    "price": 270,
-    "regular_price": 290,
-    "inStock": true,
-    "image": "public/products/holy_books_gift_set_luxury.jpg",
-    "images": [
-      "public/products/holy_books_gift_set_luxury.jpg",
-      "public/products/holy_books_set_shelf.jpg",
-      "public/products/siddur_leather_gold.jpg"
-    ],
-    "short_description": "<p class='mb-3'><strong>סט ספרי קודש מפואר לבית ולשבת</strong> מאגד תחת קורת גג אחת את חמשת ספרי היסוד והתפילה החשובים והשימושיים ביותר בבית היהודי. מתנה יוקרתית, מרגשת וערכית לחתן, שבת חתן, בר מצווה, חנוכת בית, חגים או לרגל כל מאורע משמח.</p><p class='mb-3'><strong>תכולת המארז המלכותי (5 ספרי קודש תואמים בכריכת עור יוקרתית עם הטבעות זהב):</strong></p><ul class='list-disc list-inside space-y-1.5 mb-3 text-xs font-medium text-slate-700'><li><strong>סידור תפילה מבואר ומפואר:</strong> כולל תפילות חול, שבת, ראשי חודשים, בקשות ופיוטים באותיות מאירות עיניים.</li><li><strong>ספר תהילים המבואר:</strong> מחולק לימי השבוע והחודש עם פירוש בהיר ופסוקי דוד המלך.</li><li><strong>סדר זמירות שבת:</strong> פיוטי ושירי שבת קודש, ברכת המזון, הבדלה וסדר מוצאי שבת.</li><li><strong>חמש מגילות:</strong> שיר השירים, רות, איכה, קהלת ואסתר עם ביאורים מדויקים.</li><li><strong>הגדה של פסח חגיגית:</strong> נוסח שלם ומבואר בליווי הלכות וכוונות לליל הסדר.</li></ul><p class='mb-3'><strong>אריזת שי מלכותית:</strong> הספרים מוגשים במארז קשיח מרופד סאטן יוקרתי עם סרט מוזהב חגיגי וכרטיס ברכה, מוכנים כמתנה מושלמת שתלווה את מקבלה לשנים רבות של ברכה ותפילה.</p><p class='mb-3'><strong>אחריות ומשלוח:</strong> אחריות מלאה מבית עוז יודאיקה ראש העין. אספקה מהירה עד פתח הבית.</p>",
-    "description": "<p class='mb-3'><strong>סט ספרי קודש מפואר לבית ולשבת</strong> מאגד תחת קורת גג אחת את חמשת ספרי היסוד והתפילה החשובים והשימושיים ביותר בבית היהודי. מתנה יוקרתית, מרגשת וערכית לחתן, שבת חתן, בר מצווה, חנוכת בית, חגים או לרגל כל מאורע משמח.</p><p class='mb-3'><strong>תכולת המארז המלכותי (5 ספרי קודש תואמים בכריכת עור יוקרתית עם הטבעות זהב):</strong></p><ul class='list-disc list-inside space-y-1.5 mb-3 text-xs font-medium text-slate-700'><li><strong>סידור תפילה מבואר ומפואר:</strong> כולל תפילות חול, שבת, ראשי חודשים, בקשות ופיוטים באותיות מאירות עיניים.</li><li><strong>ספר תהילים המבואר:</strong> מחולק לימי השבוע והחודש עם פירוש בהיר ופסוקי דוד המלך.</li><li><strong>סדר זמירות שבת:</strong> פיוטי ושירי שבת קודש, ברכת המזון, הבדלה וסדר מוצאי שבת.</li><li><strong>חמש מגילות:</strong> שיר השירים, רות, איכה, קהלת ואסתר עם ביאורים מדויקים.</li><li><strong>הגדה של פסח חגיגית:</strong> נוסח שלם ומבואר בליווי הלכות וכוונות לליל הסדר.</li></ul><p class='mb-3'><strong>אריזת שי מלכותית:</strong> הספרים מוגשים במארז קשיח מרופד סאטן יוקרתי עם סרט מוזהב חגיגי וכרטיס ברכה, מוכנים כמתנה מושלמת שתלווה את מקבלה לשנים רבות של ברכה ותפילה.</p><p class='mb-3'><strong>אחריות ומשלוח:</strong> אחריות מלאה מבית עוז יודאיקה ראש העין. אספקה מהירה עד פתח הבית.</p>",
-    "category": "gifts",
-    "category_name": "מתנות ומארזים",
-    "subcategory": "סטים ומארזי מתנה",
-    "options": [],
-    "faq": [
-      {
-        "q": "האם כל חמשת הספרים מנוקדים ומבוארים?",
-        "a": "כן, כל ספרי הקודש במארז מודפסים באותיות מאירות עיניים עם ניקוד מדויק וביאור שווה לכל נפש."
-      }
-    ],
-    "alt": "סט ספרי קודש מפואר לבית ולשבת סידור תהילים זמירות שבת חמש מגילות והגדה של פסח באריזת שי מלכותית – עוז יודאיקה",
-    "supplier": "עוז יודאיקה (מארז משולב)",
-    "discount_percent": 7,
-    "set_items": [
-      {
-        "id": "19007-1",
-        "name": "סידור מבואר נהרות",
-        "price": 65,
-        "included": true
-      },
-      {
-        "id": "19007-2",
-        "name": "ספר תהילים מבואר",
-        "price": 60,
-        "included": true
-      },
-      {
-        "id": "19007-3",
-        "name": "סדר זמירות שבת ופיוטים",
-        "price": 55,
-        "included": true
-      },
-      {
-        "id": "19007-4",
-        "name": "ספר חמש מגילות מבואר",
-        "price": 55,
-        "included": true
-      },
-      {
-        "id": "19007-5",
-        "name": "הגדה של פסח מבוארת מהודרת",
-        "price": 55,
-        "included": true
-      }
-    ]
-  },
+  "id": 19007,
+  "sku": "OZ-SET-SIFREIKODESH-07",
+  "name": "מארז ספרי קודש מבוארים מהודר – סידור, תהילים וחמש מגילות (ספרי יסוד בהוצאת נהרות)",
+  "price": 116,
+  "regular_price": 125,
+  "inStock": true,
+  "image": "public/products/holy_books_gift_set_luxury.jpg",
+  "images": [
+    "public/products/holy_books_gift_set_luxury.jpg",
+    "public/products/holy_books_set_shelf.jpg",
+    "public/products/siddur_leather_gold.jpg"
+  ],
+  "short_description": "<p class='mb-3'><strong>מארז ספרי קודש מבוארים מהודר לבית ולשבת</strong> מאגד תחת קורת גג אחת את שלושת ספרי היסוד והתפילה החשובים ביותר בבית היהודי: סידור תפילה מבואר, ספר תהילים מבואר, וחמש מגילות מבוארות מבית הוצאת נהרות המפוארת.</p><p class='mb-3'><strong>תכולת המארז (מוצרים קיימים בחנות):</strong></p><ul class='list-disc list-inside space-y-1.5 mb-3 text-xs font-medium text-slate-700'><li><strong>הסידור המבואר (נהרות):</strong> כולל תפילות חול, שבת, ראשי חודשים ופיוטים (₪45).</li><li><strong>ספר תהילים המבואר (נהרות):</strong> מחולק לימי השבוע והחודש עם פירוש משולב (₪45).</li><li><strong>חמש מגילות מבוארות (נהרות):</strong> שיר השירים, רות, איכה, קהלת ואסתר עם ביאור משולב (₪35).</li></ul><p class='mb-3'><strong>הערה:</strong> הספרים מסופקים במהדורה המקורית המהודרת. אין שירותי חריטה או הטבעה אישית כרגע.</p>",
+  "description": "<p class='mb-3'><strong>מארז ספרי קודש מבוארים מהודר לבית ולשבת</strong> מאגד תחת קורת גג אחת את שלושת ספרי היסוד והתפילה החשובים ביותר בבית היהודי: סידור תפילה מבואר, ספר תהילים מבואר, וחמש מגילות מבוארות מבית הוצאת נהרות המפוארת.</p><p class='mb-3'><strong>תכולת המארז (מוצרים קיימים בחנות):</strong></p><ul class='list-disc list-inside space-y-1.5 mb-3 text-xs font-medium text-slate-700'><li><strong>הסידור המבואר (נהרות):</strong> כולל תפילות חול, שבת, ראשי חודשים ופיוטים (₪45).</li><li><strong>ספר תהילים המבואר (נהרות):</strong> מחולק לימי השבוע והחודש עם פירוש משולב (₪45).</li><li><strong>חמש מגילות מבוארות (נהרות):</strong> שיר השירים, רות, איכה, קהלת ואסתר עם ביאור משולב (₪35).</li></ul><p class='mb-3'><strong>הערה:</strong> הספרים מסופקים במהדורה המקורית המהודרת. אין שירותי חריטה או הטבעה אישית כרגע.</p>",
+  "category": "gifts",
+  "category_name": "מתנות ומארזים",
+  "subcategory": "סטים ומארזי מתנה",
+  "options": [],
+  "faq": [
+    {
+      "q": "האם כל חמשת הספרים מנוקדים ומבוארים?",
+      "a": "כן, כל ספרי הקודש במארז מודפסים באותיות מאירות עיניים עם ניקוד מדויק וביאור שווה לכל נפש."
+    }
+  ],
+  "alt": "מארז ספרי קודש מבוארים מהודר – סידור, תהילים וחמש מגילות – עוז יודאיקה",
+  "supplier": "עוז יודאיקה (מארז משולב)",
+  "discount_percent": 7,
+  "set_items": [
+    {
+      "id": "19007-1",
+      "name": "הסידור המבואר – תפילת ימות השבוע ושבת קודש (נהרות)",
+      "price": 45,
+      "included": true
+    },
+    {
+      "id": "19007-2",
+      "name": "ספר תהילים המבואר – פירוש משולב לפסוקי דוד המלך (נהרות)",
+      "price": 45,
+      "included": true
+    },
+    {
+      "id": "19007-3",
+      "name": "חמש מגילות מבוארות – עם ביאור משולב (נהרות)",
+      "price": 35,
+      "included": true
+    }
+  ]
+},
   {
     "id": 19008,
     "sku": "OZ-SET-MEZUZOT-08",
@@ -17759,7 +17749,53 @@ var articlesDB = window.ARTICLES_DATA;
         return sessionStorage.getItem('oz_admin_authed') === 'true';
     };
 
-    window.authenticateAdmin = function(passInput) {
+    
+// ==========================================
+// ADMIN PRODUCT PRIVATE NOTES SYSTEM
+// ==========================================
+window.getProductAdminNote = function(productId) {
+    try {
+        const notes = JSON.parse(localStorage.getItem('oz_product_admin_notes') || '{}');
+        return notes[productId] || '';
+    } catch(e) {
+        return '';
+    }
+};
+
+window.saveProductAdminNote = function(productId, noteText) {
+    try {
+        const notes = JSON.parse(localStorage.getItem('oz_product_admin_notes') || '{}');
+        if (noteText && noteText.trim()) {
+            notes[productId] = noteText.trim();
+        } else {
+            delete notes[productId];
+        }
+        localStorage.setItem('oz_product_admin_notes', JSON.stringify(notes));
+        if (typeof showNotification === 'function') {
+            showNotification('הערת מנהל נשמרה בהצלחה עבור המוצר!');
+        }
+        if (typeof openProductPage === 'function') {
+            openProductPage(productId);
+        }
+    } catch(e) {}
+};
+
+window.promptAdminLoginForNote = function(productId) {
+    const pass = prompt('הכנס סיסמת מנהל להוספת / עריכת הערה פנימית:');
+    if (!pass) return;
+    if (window.authenticateAdmin(pass)) {
+        if (typeof showNotification === 'function') {
+            showNotification('התחברת בהצלחה כמנהל!');
+        }
+        if (typeof openProductPage === 'function') {
+            openProductPage(productId);
+        }
+    } else {
+        alert('סיסמת מנהל שגויה!');
+    }
+};
+
+window.authenticateAdmin = function(passInput) {
         const p = (passInput || '').trim();
         const savedPass = getAdminPassword();
         if (p === savedPass || p === 'oz2026' || p === 'oz6150' || p === '6150') {
@@ -18431,8 +18467,9 @@ var articlesDB = window.ARTICLES_DATA;
 
         window.switchCheckoutStep = function(targetStep) {
             targetStep = Number(targetStep) || 1;
+            if (targetStep > 2) targetStep = 2;
             
-            // Validate step 1 before proceeding to step 2 or 3
+            // Validate step 1 before proceeding to step 2
             if (targetStep > 1) {
                 const nameInput = document.getElementById('checkout-name');
                 const phoneInput = document.getElementById('checkout-phone');
@@ -18456,17 +18493,17 @@ var articlesDB = window.ARTICLES_DATA;
 
             state.checkoutStep = targetStep;
 
-            // Panes visibility
+            // Panes visibility (Step 1 and Step 2)
             const pane1 = document.getElementById('checkout-step-1');
             const pane2 = document.getElementById('checkout-step-2');
             const pane3 = document.getElementById('checkout-step-3');
 
             if (pane1) pane1.classList.toggle('hidden', targetStep !== 1);
             if (pane2) pane2.classList.toggle('hidden', targetStep !== 2);
-            if (pane3) pane3.classList.toggle('hidden', targetStep !== 3);
+            if (pane3) pane3.classList.add('hidden');
 
-            // Progress bar and step indicators
-            [1, 2, 3].forEach(s => {
+            // Progress bar and step indicators (2-step streamlined flow)
+            [1, 2].forEach(s => {
                 const bar = document.getElementById('step-bar-' + s);
                 const txt = document.getElementById('step-txt-' + s);
                 const badge = document.getElementById('step-badge-' + s);
@@ -18493,7 +18530,7 @@ var articlesDB = window.ARTICLES_DATA;
 
                 if (badge) {
                     if (s < targetStep) {
-                        badge.textContent = '';
+                        badge.textContent = '✓';
                         badge.className = 'w-4 h-4 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-black flex items-center justify-center shrink-0';
                     } else if (s === targetStep) {
                         badge.textContent = s;
@@ -18508,9 +18545,8 @@ var articlesDB = window.ARTICLES_DATA;
             // Update step header label
             const labelEl = document.getElementById('checkout-step-title');
             if (labelEl) {
-                if (targetStep === 1) labelEl.textContent = 'שלב 1 מתוך 3: פרטי מקבל המשלוח';
-                else if (targetStep === 2) labelEl.textContent = 'שלב 2 מתוך 3: בחירת אופן המשלוח';
-                else if (targetStep === 3) labelEl.textContent = 'שלב 3 מתוך 3: סליקה מאובטחת ואחריות';
+                if (targetStep === 1) labelEl.textContent = 'שלב 1 מתוך 2: פרטי מקבל המשלוח';
+                else if (targetStep === 2) labelEl.textContent = 'שלב 2 מתוך 2: אופן המשלוח ותשלום מאובטח';
             }
 
             // Scroll container to top
@@ -18958,11 +18994,11 @@ var articlesDB = window.ARTICLES_DATA;
                 </div>
                 `}
 
-                <!-- INTEGRATED 3-STEP PROGRESS STEPPER -->
+                <!-- INTEGRATED 2-STEP PROGRESS STEPPER -->
                 <div class="bg-slate-50 p-3 sm:p-4 rounded-2xl border border-slate-200/80 mb-5 dir-rtl">
                     <div class="flex items-center justify-between text-xs font-black mb-2">
                         <span id="checkout-step-title" class="text-slate-900 font-black">
-                            ${currentStep === 1 ? 'שלב 1 מתוך 3: פרטי מקבל המשלוח' : (currentStep === 2 ? 'שלב 2 מתוך 3: בחירת אופן המשלוח' : 'שלב 3 מתוך 3: סליקה מאובטחת ואחריות')}
+                            ${currentStep === 1 ? 'שלב 1 מתוך 2: פרטי מקבל המשלוח' : 'שלב 2 מתוך 2: אופן המשלוח ותשלום מאובטח'}
                         </span>
                         <span class="text-oz-primary text-[10px] font-black bg-white px-2.5 py-0.5 rounded-full border border-purple-200 shadow-sm">
                             שילוח לכל הארץ
@@ -18972,23 +19008,18 @@ var articlesDB = window.ARTICLES_DATA;
                     <!-- Progress Bar Track -->
                     <div class="flex items-center gap-1.5 sm:gap-2">
                         <div id="step-bar-1" class="flex-1 h-2 rounded-full ${currentStep >= 1 ? (currentStep > 1 ? 'bg-emerald-500' : 'bg-purple-900') : 'bg-slate-200'} transition-all duration-300"></div>
-                        <div id="step-bar-2" class="flex-1 h-2 rounded-full ${currentStep >= 2 ? (currentStep > 2 ? 'bg-emerald-500' : 'bg-purple-900') : 'bg-slate-200'} transition-all duration-300"></div>
-                        <div id="step-bar-3" class="flex-1 h-2 rounded-full ${currentStep === 3 ? 'bg-purple-900' : 'bg-slate-200'} transition-all duration-300"></div>
+                        <div id="step-bar-2" class="flex-1 h-2 rounded-full ${currentStep === 2 ? 'bg-purple-900' : 'bg-slate-200'} transition-all duration-300"></div>
                     </div>
 
                     <!-- Clickable Step Badges -->
-                    <div class="grid grid-cols-3 gap-1 sm:gap-2 text-[10.5px] sm:text-xs font-bold text-center mt-2">
-                        <button type="button" onclick="switchCheckoutStep(1)" class="flex items-center justify-center gap-1 py-1 hover:text-oz-primary transition-colors cursor-pointer">
-                            <span id="step-badge-1" class="w-4 h-4 rounded-full ${currentStep > 1 ? 'bg-emerald-100 text-emerald-800' : 'bg-purple-900 text-white'} text-[10px] font-black flex items-center justify-center shrink-0">${currentStep > 1 ? '' : '1'}</span>
-                            <span id="step-txt-1" class="${currentStep === 1 ? 'text-purple-950 font-black' : (currentStep > 1 ? 'text-emerald-700 font-bold' : 'text-slate-400')}">1. פרטים</span>
+                    <div class="grid grid-cols-2 gap-2 text-[11px] sm:text-xs font-bold text-center mt-2">
+                        <button type="button" onclick="switchCheckoutStep(1)" class="flex items-center justify-center gap-1.5 py-1 hover:text-oz-primary transition-colors cursor-pointer">
+                            <span id="step-badge-1" class="w-4 h-4 rounded-full ${currentStep > 1 ? 'bg-emerald-100 text-emerald-800' : 'bg-purple-900 text-white'} text-[10px] font-black flex items-center justify-center shrink-0">${currentStep > 1 ? '✓' : '1'}</span>
+                            <span id="step-txt-1" class="${currentStep === 1 ? 'text-purple-950 font-black' : (currentStep > 1 ? 'text-emerald-700 font-bold' : 'text-slate-400')}">1. פרטי משלוח</span>
                         </button>
-                        <button type="button" onclick="switchCheckoutStep(2)" class="flex items-center justify-center gap-1 py-1 hover:text-oz-primary transition-colors cursor-pointer">
-                            <span id="step-badge-2" class="w-4 h-4 rounded-full ${currentStep > 2 ? 'bg-emerald-100 text-emerald-800' : (currentStep === 2 ? 'bg-purple-900 text-white' : 'bg-slate-200 text-slate-600')} text-[10px] font-black flex items-center justify-center shrink-0">${currentStep > 2 ? '' : '2'}</span>
-                            <span id="step-txt-2" class="${currentStep === 2 ? 'text-purple-950 font-black' : (currentStep > 2 ? 'text-emerald-700 font-bold' : 'text-slate-400')}">2. משלוח</span>
-                        </button>
-                        <button type="button" onclick="switchCheckoutStep(3)" class="flex items-center justify-center gap-1 py-1 hover:text-oz-primary transition-colors cursor-pointer">
-                            <span id="step-badge-3" class="w-4 h-4 rounded-full ${currentStep === 3 ? 'bg-purple-900 text-white' : 'bg-slate-200 text-slate-600'} text-[10px] font-black flex items-center justify-center shrink-0">3</span>
-                            <span id="step-txt-3" class="${currentStep === 3 ? 'text-purple-950 font-black' : 'text-slate-400'}">3. תשלום וביטחון</span>
+                        <button type="button" onclick="switchCheckoutStep(2)" class="flex items-center justify-center gap-1.5 py-1 hover:text-oz-primary transition-colors cursor-pointer">
+                            <span id="step-badge-2" class="w-4 h-4 rounded-full ${currentStep === 2 ? 'bg-purple-900 text-white' : 'bg-slate-200 text-slate-600'} text-[10px] font-black flex items-center justify-center shrink-0">2</span>
+                            <span id="step-txt-2" class="${currentStep === 2 ? 'text-purple-950 font-black' : 'text-slate-400'}">2. משלוח ותשלום מאובטח</span>
                         </button>
                     </div>
                 </div>
@@ -19061,7 +19092,7 @@ var articlesDB = window.ARTICLES_DATA;
                                 </div>
 
                                 <button type="button" onclick="switchCheckoutStep(2)" class="w-full py-4 bg-gradient-to-r from-purple-950 via-purple-900 to-indigo-950 hover:from-purple-900 hover:to-indigo-900 text-white font-black text-xs sm:text-sm rounded-2xl shadow-xl shadow-purple-950/20 transition-all flex items-center justify-center gap-2 active:scale-95 cursor-pointer">
-                                    <span>המשך לבחירת אופן המשלוח (שלב 2)</span>
+                                    <span>המשך לבחירת משלוח ותשלום (שלב 2)</span>
                                     <span>←</span>
                                 </button>
                             </div>
@@ -19267,126 +19298,48 @@ var articlesDB = window.ARTICLES_DATA;
                                 </div>
                                 ` : ''}
 
-                                <div class="flex items-center gap-2">
-                                    <button type="button" onclick="switchCheckoutStep(1)" class="py-3.5 px-5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs rounded-2xl transition-colors cursor-pointer shrink-0">
-                                        → חזור לשלב 1
-                                    </button>
-                                    <button type="button" onclick="switchCheckoutStep(3)" class="flex-grow py-3.5 bg-gradient-to-r from-purple-950 via-purple-900 to-indigo-950 hover:from-purple-900 hover:to-indigo-900 text-white font-black text-xs sm:text-sm rounded-2xl shadow-xl shadow-purple-950/20 transition-all flex items-center justify-center gap-2 active:scale-95 cursor-pointer">
-                                        <span>המשך לתשלום מאובטח (שלב 3)</span>
-                                        <span>←</span>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- ============================================== -->
-                            <!-- STEP 3: PAYMENT & FINAL ORDER CONFIRMATION -->
-                            <!-- ============================================== -->
-                            <div id="checkout-step-3" class="${currentStep === 3 ? '' : 'hidden'} space-y-4">
-                                
-                                <!-- LUXURY TRUST GUARANTEE CARD -->
-                                <div class="p-4 bg-gradient-to-r from-purple-950 via-[#1E1435] to-purple-950 text-white rounded-2xl border border-amber-400/50 shadow-md space-y-2.5">
-                                    <div class="flex items-center justify-between border-b border-purple-800/60 pb-2">
-                                        <span class="text-xs font-black text-amber-300 flex items-center gap-1.5">
-                                            התחייבות איכות ואחריות עוז יודאיקה
-                                        </span>
-                                        <span class="text-[9.5px] bg-amber-400/20 text-amber-200 px-2 py-0.5 rounded font-bold border border-amber-400/30">100% רשמי</span>
-                                    </div>
-                                    <ul class="text-[11px] text-slate-200 space-y-1.5 font-medium">
-                                        <li class="flex items-center gap-1.5"><span></span> <span>כשרות למהדרין מן המהדרין עם תעודת הגהה מוסמכת</span></li>
-                                        <li class="flex items-center gap-1.5"><span></span> <span>אחריות מלאה על טיב המוצר וחומרי הגלם</span></li>
-                                        <li class="flex items-center gap-1.5"><span></span> <span>מוקד שירות ומענה אנושי זמין בראש העין: <strong>052-686-7192</strong></span></li>
-                                    </ul>
-                                </div>
-
-                                <!-- PAYMENT METHOD SELECTOR -->
+                                <!-- PAYMENT METHOD SELECTOR DIRECTLY IN STEP 2 -->
                                 <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm space-y-4">
                                     <h4 class="font-black text-sm text-slate-900 border-b border-slate-100 pb-2 flex items-center justify-between">
-                                        <span>בחר אמצעי תשלום מועדף:</span>
-                                        <span class="text-[10px] text-purple-900 font-bold bg-purple-50 px-2 py-0.5 rounded-full border border-purple-200"> סליקה מאובטחת</span>
+                                        <span>בחר אמצעי תשלום:</span>
+                                        <span class="text-[10px] text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">סליקה מאובטחת</span>
                                     </h4>
 
                                     <div class="grid grid-cols-2 gap-2 text-xs font-bold">
-                                        <label class="p-3 border-2 border-purple-900 bg-purple-50/80 rounded-2xl flex flex-col items-center justify-center gap-1.5 cursor-pointer text-center transition-all">
-                                            <input type="radio" name="payment-method" value="invoice4u_credit" checked class="text-oz-primary hidden" />
-                                            <span class="text-xl"></span>
-                                            <span class="font-black text-slate-900">כרטיס אשראי / Bit</span>
-                                            <span class="text-[10px] text-emerald-700 font-bold">תשלום מהיר ומאובטח</span>
+                                        <label id="pay-opt-online" class="p-3.5 border-2 border-purple-900 bg-purple-50/80 rounded-2xl flex flex-col items-center justify-center gap-1.5 cursor-pointer text-center transition-all shadow-xs">
+                                            <input type="radio" name="payment-method" id="pay-method-grow" value="grow_credit" checked onchange="window.togglePaymentMethodFields('grow_credit')" class="text-oz-primary hidden" />
+                                            <span class="text-2xl">💳</span>
+                                            <span class="font-black text-slate-900">תשלום מאובטח</span>
+                                            <span class="text-[10px] text-emerald-700 font-bold">אשראי / Bit / Apple Pay</span>
                                         </label>
 
-                                        <label class="p-3 border border-slate-200 hover:border-purple-300 rounded-2xl flex flex-col items-center justify-center gap-1.5 cursor-pointer text-center transition-all opacity-80 hover:opacity-100">
-                                            <input type="radio" name="payment-method" value="phone_order" class="text-oz-primary hidden" />
-                                            <span class="text-xl"></span>
-                                            <div class="font-black text-slate-900 flex items-center gap-1">
-                                                <span>הזמנה טלפונית</span>
-                                            </div>
+                                        <label id="pay-opt-phone" class="p-3.5 border border-slate-200 hover:border-purple-300 rounded-2xl flex flex-col items-center justify-center gap-1.5 cursor-pointer text-center transition-all opacity-80 hover:opacity-100">
+                                            <input type="radio" name="payment-method" id="pay-method-phone" value="phone_order" onchange="window.togglePaymentMethodFields('phone_order')" class="text-oz-primary hidden" />
+                                            <span class="text-2xl">📞</span>
+                                            <div class="font-black text-slate-900">הזמנה טלפונית</div>
                                             <span class="text-[10px] text-slate-500">נציג יחזור אליך</span>
                                         </label>
                                     </div>
 
-                                    <!-- CREDIT CARD INPUTS -->
-                                    <div id="invoice4u-card-fields" class="p-4 bg-purple-50/80 rounded-2xl border border-purple-200 space-y-3 dir-rtl">
-                                        <div class="flex items-center justify-between">
-                                            <span class="text-xs font-black text-oz-primary flex items-center gap-1.5">
-                                                <span></span> הזנת פרטי אשראי מאובטחים (תקן PCI-DSS)
-                                            </span>
-                                            <span class="text-[10px] text-emerald-700 font-bold bg-emerald-100 px-2 py-0.5 rounded-full">סליקה מיידית</span>
-                                        </div>
-
-                                        <div>
-                                            <label class="block text-[11px] font-bold text-slate-700 mb-1">מספר כרטיס אשראי (16 ספרות תקניות)</label>
-                                            <input type="text" id="cc-number" dir="ltr" autocomplete="cc-number" inputmode="numeric" placeholder="4580 •••• •••• ••••" maxlength="19" oninput="formatCardNumber(this); state.checkoutFormData = state.checkoutFormData || {}; state.checkoutFormData.ccNumber = this.value;" style="direction: ltr !important; text-align: left !important; unicode-bidi: isolate !important;" class="w-full p-2.5 bg-white border border-purple-200 rounded-xl text-sm font-mono font-bold text-slate-800 outline-none focus:border-oz-primary tracking-widest shadow-inner" value="${initialCcNum}" />
-                                        </div>
-
-                                        <div class="grid grid-cols-2 gap-2">
+                                    <!-- SECURE GROW BADGE -->
+                                    <div id="invoice4u-card-fields" class="p-3.5 bg-gradient-to-r from-purple-50/90 to-purple-50/50 rounded-2xl border border-purple-200/90 flex items-center justify-between text-xs dir-rtl">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-lg">🔒</span>
                                             <div>
-                                                <label class="block text-[11px] font-bold text-slate-700 mb-1">תוקף (חודש/שנה)</label>
-                                                <input type="text" id="cc-exp" dir="ltr" autocomplete="cc-exp" inputmode="numeric" placeholder="MM/YY" maxlength="5" oninput="formatCardExpiry(this); state.checkoutFormData = state.checkoutFormData || {}; state.checkoutFormData.ccExp = this.value;" onkeydown="handleCardExpiryKeyDown(event, this)" style="direction: ltr !important; text-align: center !important; unicode-bidi: isolate !important;" class="w-full p-2.5 bg-white border border-purple-200 rounded-xl text-sm font-mono font-bold text-center text-slate-800 outline-none focus:border-oz-primary tracking-widest shadow-inner" value="${initialCcExp}" />
-                                            </div>
-                                            <div>
-                                                <label class="block text-[11px] font-bold text-slate-700 mb-1">CVV (3 ספרות בגב)</label>
-                                                <input type="text" id="cc-cvv" dir="ltr" autocomplete="cc-csc" inputmode="numeric" placeholder="000" maxlength="4" oninput="this.value = this.value.replace(/\D/g, '').substring(0, 4); state.checkoutFormData = state.checkoutFormData || {}; state.checkoutFormData.ccCvv = this.value;" style="direction: ltr !important; text-align: center !important; unicode-bidi: isolate !important;" class="w-full p-2.5 bg-white border border-purple-200 rounded-xl text-sm font-mono font-bold text-center text-slate-800 outline-none focus:border-oz-primary tracking-widest shadow-inner" value="${initialCcCvv}" />
+                                                <div class="font-black text-purple-950 text-xs">סליקה רשמית ומאובטחת ב-GROW (משולם)</div>
+                                                <div class="text-[10.5px] text-slate-600 font-medium">תמיכה בכל כרטיסי האשראי, Bit, Apple Pay ו-Google Pay</div>
                                             </div>
                                         </div>
-
-                                        <div>
-                                            <label class="block text-[11px] font-bold text-slate-700 mb-1">מספר תעודת זהות של בעל הכרטיס (9 ספרות)</label>
-                                            <input type="text" id="cc-id" dir="ltr" autocomplete="off" inputmode="numeric" placeholder="000000000" maxlength="9" oninput="this.value = this.value.replace(/\D/g, '').substring(0, 9); state.checkoutFormData = state.checkoutFormData || {}; state.checkoutFormData.ccId = this.value;" style="direction: ltr !important; text-align: left !important; unicode-bidi: isolate !important;" class="w-full p-2.5 bg-white border border-purple-200 rounded-xl text-sm font-mono font-bold text-slate-800 outline-none focus:border-oz-primary tracking-wider shadow-inner" value="${initialCcId}" />
-                                        </div>
+                                        <span class="text-[10px] font-black text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-full border border-emerald-200 shrink-0">PCI-DSS L1</span>
                                     </div>
                                 </div>
 
-                                <!-- HIGH-CONVERTING ORDER BUMP (STEP 3 LAST-CHANCE UPSELL) -->
-                                ${recommendations.length > 0 ? (() => {
-                                    const featured = recommendations[0];
-                                    const isAdded = state.cart.some(ci => Number(ci.id) === featured.id);
-                                    return `
-                                    <div class="p-4 bg-gradient-to-r from-amber-400/20 via-yellow-50 to-amber-400/15 border-2 border-dashed ${isAdded ? 'border-emerald-500 bg-emerald-50/40' : 'border-amber-400'} rounded-2xl shadow-sm dir-rtl transition-all">
-                                        <div class="flex items-start gap-3">
-                                            <input type="checkbox" id="order-bump-checkbox" ${isAdded ? 'checked' : ''} onchange="window.addCheckoutSpecialOffer(${featured.id}, ${featured.specialPrice})" class="mt-1 w-5 h-5 rounded-lg accent-oz-primary text-oz-primary cursor-pointer shrink-0" />
-                                            <label for="order-bump-checkbox" class="flex-grow min-w-0 cursor-pointer">
-                                                <div class="flex items-center gap-1.5 flex-wrap mb-1">
-                                                    <span class="text-[10px] font-black bg-amber-400 text-purple-950 px-2 py-0.5 rounded-full uppercase tracking-wider animate-pulse"> שדרוג בלעדי לקופה</span>
-                                                    <span class="text-[10px] font-black text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full border border-emerald-200">${featured.discountTag}</span>
-                                                </div>
-                                                <div class="text-xs font-black text-slate-900 leading-snug">
-                                                    כן! הוסיפו לי גם את <strong class="text-oz-primary">${featured.name}</strong> במחיר קופה בלעדי של <span class="text-emerald-700 text-sm font-black underline decoration-emerald-500">₪${featured.specialPrice}</span> בלבד! <span class="text-slate-400 line-through text-xs font-normal">(במקום ₪${featured.product.price})</span>
-                                                </div>
-                                                <p class="text-[11px] text-slate-600 mt-1 leading-relaxed font-medium">
-                                                    ${featured.reason}
-                                                </p>
-                                            </label>
-                                            <img src="${featured.product.image}" alt="${featured.name}" class="w-14 h-14 object-cover rounded-xl border border-amber-300 shadow-sm shrink-0 hidden sm:block" />
-                                        </div>
-                                    </div>
-                                    `;
-                                })() : ''}
-
-                                <div class="flex items-center gap-2">
-                                    <button type="button" onclick="switchCheckoutStep(2)" class="py-4 px-5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs rounded-2xl transition-colors cursor-pointer shrink-0">
-                                        → חזור למשלוח
+                                <div class="flex items-center gap-2 pt-1">
+                                    <button type="button" onclick="switchCheckoutStep(1)" class="py-4 px-5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs rounded-2xl transition-colors cursor-pointer shrink-0">
+                                        → חזור לפרטים
                                     </button>
                                     <button type="submit" id="checkout-submit-btn" class="flex-grow py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs sm:text-sm rounded-2xl shadow-xl shadow-emerald-600/30 transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer">
-                                        <span>אישור רכישה ותשלום מאובטח </span>
+                                        <span>המשך לתשלום מאובטח ב-GROW ➔</span>
                                         <span>•</span>
                                         <span id="checkout-final-btn-val">₪${finalTotal}</span>
                                     </button>
@@ -19394,7 +19347,7 @@ var articlesDB = window.ARTICLES_DATA;
 
                                 <div class="pt-2 text-center space-y-1 text-[10.5px] text-slate-500 font-bold">
                                     <div class="flex items-center justify-center gap-2.5 text-purple-950 flex-wrap">
-                                        <span> אחריות כשרות מלאה</span>
+                                        <span> כשרות למהדרין</span>
                                         <span>•</span>
                                         <span> משלוח מבוטח</span>
                                         <span>•</span>
@@ -19470,6 +19423,7 @@ var articlesDB = window.ARTICLES_DATA;
                             <div class="flex justify-between text-base font-black text-oz-primary pt-2 border-t border-purple-200">
                                 <span>סה"כ סופי לתשלום:</span>
                                 <span id="checkout-final-total-val">₪${finalTotal}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -19536,79 +19490,9 @@ var articlesDB = window.ARTICLES_DATA;
         }
 
         async function handleCompleteOrder(e) {
-            if (e) e.preventDefault();
-            
-            const submitBtn = document.getElementById('checkout-submit-btn');
-            const paymentMethod = document.querySelector('input[name="payment-method"]:checked')?.value || 'invoice4u_credit';
-            const name = (document.getElementById('checkout-name')?.value || 'לקוח יקר').trim();
-            const phone = (document.getElementById('checkout-phone')?.value || '').trim();
-            const city = (document.getElementById('checkout-city')?.value || '').trim();
-            const street = (document.getElementById('checkout-street')?.value || '').trim();
-            const email = (document.getElementById('checkout-email')?.value || '').trim();
-
-            if (!name || !phone || !city || !street) {
-                alert(' אנא מלאו את כל שדות החובה המסומנים בכוכבית (*)');
-                window.switchCheckoutStep(1);
-                return;
+            if (typeof window.handleCompleteOrder === 'function') {
+                return window.handleCompleteOrder(e);
             }
-
-            if (paymentMethod === 'phone_order') {
-                alert(' תודה ' + name + '! הזמנתך התקבלה בהצלחה בעוז יודאיקה. נציג אישי מטעמנו יצור איתך קשר בהקדם בטלפון ' + phone + ' להשלמת ההזמנה.');
-                state.cart = [];
-                if (typeof updateCartUI === 'function') updateCartUI();
-                if (typeof window.closeCheckoutModal === 'function') window.closeCheckoutModal();
-                return;
-            }
-
-            // Invoice4U Credit / Bit clearing
-            try {
-                if (submitBtn) {
-                    submitBtn.disabled = true;
-                    submitBtn.innerHTML = '<span>מעביר לסליקה מאובטחת בתקן PCI...</span> <span class="animate-spin"></span>';
-                }
-
-                const subtotal = state.cart.reduce((acc, i) => acc + (i.price * i.qty), 0);
-                const discount5Percent = Math.round(subtotal * 0.05);
-                const couponDiscount = Math.round(subtotal * ((state.couponPercent || 0) / 100));
-                const subtotalAfterDiscount = Math.max(0, subtotal - (discount5Percent + couponDiscount));
-                const selectedShippingFee = typeof state.selectedShippingFee !== 'undefined' ? state.selectedShippingFee : 35;
-                const finalTotal = subtotalAfterDiscount + selectedShippingFee;
-
-                const res = await fetch('/api/create-payment', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        amount: finalTotal,
-                        name: name,
-                        phone: phone,
-                        city: city,
-                        address: street,
-                        email: email,
-                        description: 'הזמנת יודאיקה - ' + name
-                    })
-                });
-
-                if (res.ok) {
-                    const data = await res.json();
-                    if (data.success && data.redirectUrl) {
-                        // Open in-page seamless payment modal instead of full page redirect
-                        if (typeof window.openPaymentLightbox === 'function') {
-                            window.openPaymentLightbox(data.redirectUrl);
-                            return;
-                        } else {
-                            window.location.href = data.redirectUrl;
-                            return;
-                        }
-                    }
-                }
-            } catch(err) {
-                console.warn('API payment proxy error, falling back to instant confirmation:', err);
-            }
-
-            alert(' תודה ' + name + '! ההזמנה נקלטה בהצלחה במערכת עוז יודאיקה בראש העין. אישור הזמנה וחשבונית נשלחו.');
-            state.cart = [];
-            if (typeof updateCartUI === 'function') updateCartUI();
-            if (typeof window.closeCheckoutModal === 'function') window.closeCheckoutModal();
         }
 
         let quizSelection = { target: '', budget: '' };
@@ -20077,7 +19961,9 @@ var articlesDB = window.ARTICLES_DATA;
 
             const subtotal = state.cart.reduce((acc, i) => acc + (i.price * i.qty), 0);
             const discount5Percent = Math.round(subtotal * 0.05);
-            const subtotalAfterDiscount = subtotal - discount5Percent;
+            const couponPercent = state.couponPercent || 0;
+            const couponDiscount = Math.round(subtotal * (couponPercent / 100));
+            const subtotalAfterDiscount = Math.max(0, subtotal - (discount5Percent + couponDiscount));
             const finalTotal = subtotalAfterDiscount + fee;
 
             const costVal = document.getElementById('checkout-shipping-cost-val');
@@ -20269,7 +20155,7 @@ var articlesDB = window.ARTICLES_DATA;
             let couponPercent = state.couponPercent || 0;
             let couponDiscount = Math.round(subtotal * (couponPercent / 100));
             let totalDiscount = discount5 + couponDiscount;
-            let shippingFee = state.selectedShippingFee || 35;
+            let shippingFee = (typeof state.selectedShippingFee === 'number') ? state.selectedShippingFee : 35;
             let finalTotal = Math.max(0, subtotal - totalDiscount) + shippingFee;
 
             const submitBtn = document.getElementById('checkout-submit-btn');
@@ -20293,34 +20179,73 @@ var articlesDB = window.ARTICLES_DATA;
                 orderDate: new Date().toLocaleString('he-IL')
             };
 
-            // CASE 1: SECURE ONLINE CLEARING VIA INVOICE4U / UPAY (BIT / CREDIT CARD)
-            if (payMethod === 'invoice4u_credit') {
+            // CASE 1: SECURE CLEARING VIA GROW (MESHULAM VIA MAKE - 100% FREE PATH)
+            if (payMethod === 'grow_credit' || payMethod === 'invoice4u_credit') {
                 if (submitBtn) {
                     submitBtn.disabled = true;
-                    submitBtn.innerHTML = '<span> מתחבר לדף סליקה מאובטח ב-Invoice4U...</span>';
+                    submitBtn.innerHTML = '<span>מתחבר לקופת סליקה מאובטחת ב-GROW...</span> <span class="animate-spin inline-block">🔄</span>';
                 }
 
                 try {
-                    // Save pending order so when customer returns from payment, it completes automatically
+                    // Save pending order so when customer completes payment, it finalizes automatically
                     try {
                         localStorage.setItem('oz_pending_order', JSON.stringify(orderInfo));
                     } catch(e) {}
 
-                    const session = await Invoice4UService.createPaymentSession(orderInfo);
-                    if (session && session.redirectUrl) {
-                        // Redirect customer directly to official Upay/Invoice4U clearing page
-                        window.location.href = session.redirectUrl;
+                    const session = await window.GrowService.createPaymentSession(orderInfo);
+
+                    if (session && (session.paymentUrl || session.redirectUrl)) {
+                        const pUrl = session.paymentUrl || session.redirectUrl;
+                        if (submitBtn) {
+                            submitBtn.innerHTML = '<span>מעביר לדף תשלום מאובטח ב-GROW...</span> <span class="animate-spin inline-block">🔄</span>';
+                        }
+                        // DIRECT REDIRECT TO GROW OFFICIAL PAYMENT PAGE (PCI-DSS L1)
+                        window.location.href = pUrl;
+                        return;
+                    } else if (session && session.accepted) {
+                        // Make received the order successfully!
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = `<span>אישור רכישה ותשלום מאובטח • <span id="checkout-final-btn-val">₪${finalTotal}</span></span>`;
+                        }
+                        orderInfo.paymentMethod = 'GROW / משולם (סליקה מאובטחת)';
+                        orderInfo.paymentStatus = 'נקלט בהצלחה במערכת GROW';
+                        orderInfo.approvalNum = 'GROW-' + Date.now().toString().slice(-6);
+                        orderInfo.invoiceResult = {
+                            approvalNum: orderInfo.approvalNum,
+                            invoiceNumber: orderInfo.approvalNum,
+                            provider: 'GROW (משולם)'
+                        };
+                        localStorage.setItem('oz_last_order', JSON.stringify(orderInfo));
+                        let allOrders = JSON.parse(localStorage.getItem('oz_all_orders') || '[]');
+                        allOrders.unshift(orderInfo);
+                        localStorage.setItem('oz_all_orders', JSON.stringify(allOrders.slice(0, 100)));
+                        localStorage.setItem('oz_completed_orders_count', allOrders.length.toString());
+                        localStorage.removeItem('oz_pending_order');
+                        state.cart = [];
+                        if (typeof updateCartUI === 'function') updateCartUI();
+                        if (typeof window.closeCheckoutModal === 'function') window.closeCheckoutModal();
+                        if (typeof renderOrderSuccessModal === 'function') {
+                            renderOrderSuccessModal(orderInfo);
+                        }
+                        return;
+                    } else if (session && session.needsConfiguration) {
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = `<span>אישור רכישה ותשלום מאובטח • <span id="checkout-final-btn-val">₪${finalTotal}</span></span>`;
+                        }
+                        window.handleGrowSetupPrompt(orderInfo);
                         return;
                     } else {
-                        throw new Error(session?.error || 'לא התקבל קישור לדף סליקה');
+                        throw new Error(session?.error || 'לא התקבל קישור לדף סליקה מ-Grow');
                     }
                 } catch(err) {
-                    console.error('Clearing session creation error:', err);
-                    alert(' שגיאה בחיבור למערכת הסליקה: ' + err.message + '\n\nבאפשרותך לבחור "הזמנה טלפונית" ונציג יחזור אליך טלפונית.');
+                    console.warn('Grow session creation notice:', err);
                     if (submitBtn) {
                         submitBtn.disabled = false;
-                        submitBtn.innerHTML = `<span>מעבר לתשלום מאובטח ב-Bit / אשראי  (<span id="checkout-final-btn-val">₪${finalTotal}</span>)</span>`;
+                        submitBtn.innerHTML = `<span>אישור רכישה ותשלום מאובטח • <span id="checkout-final-btn-val">₪${finalTotal}</span></span>`;
                     }
+                    window.handleGrowSetupPrompt(orderInfo, err.message);
                     return;
                 }
             }
@@ -20586,44 +20511,42 @@ var articlesDB = window.ARTICLES_DATA;
 
             let html = `
                 
-                <!-- INVOICE4U API SETTINGS PANEL FOR STORE MANAGER -->
-                <div class="bg-gradient-to-r from-purple-900 via-slate-900 to-purple-950 text-white p-5 rounded-2xl mb-6 shadow-xl border border-purple-700 dir-rtl">
+                <!-- GROW (MESHULAM) VIA MAKE.COM SETTINGS PANEL (FREE - 0 NIS/MO) -->
+                <div class="bg-gradient-to-r from-purple-950 via-[#1E1435] to-slate-950 text-white p-5 rounded-2xl mb-6 shadow-xl border-2 border-amber-400/50 dir-rtl">
                     <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
                         <div class="flex items-center gap-2.5">
-                            <span class="text-2xl"></span>
+                            <span class="w-10 h-10 rounded-xl bg-amber-400 text-purple-950 flex items-center justify-center text-xl font-black shrink-0">💳</span>
                             <div>
-                                <h4 class="font-black text-sm text-purple-300 flex items-center gap-2">
-                                    <span>חיבור סליקה וחשבוניות Invoice4U</span>
-                                    <span class="bg-purple-600 text-white text-[10px] font-black px-2 py-0.5 rounded-full">פעיל </span>
+                                <h4 class="font-black text-sm text-amber-300 flex items-center gap-2">
+                                    <span>סליקת GROW (משולם) • המסלול החינמי דרך Make</span>
+                                    <span class="bg-emerald-600 text-white text-[10px] font-black px-2 py-0.5 rounded-full">0 ₪ לחודש (חיסכון 500 ₪)</span>
                                 </h4>
-                                <p class="text-[11px] text-slate-300 font-medium">הכנס מפתחות API מתוך חשבון Invoice4U לסליקת אשראי בלייב והפקת חשבוניות מס-קבלה אוטומטיות</p>
+                                <p class="text-[11px] text-slate-300 font-medium">סליקה פנימית מאובטחת ישירות באתר (כרטיסי אשראי, Bit, Apple Pay, Google Pay) </p>
                             </div>
                         </div>
                         <div class="flex items-center gap-2">
                             <button onclick="changeCRMAdminPassword()" class="py-2 px-3 bg-slate-800 hover:bg-slate-700 text-purple-200 font-bold text-xs rounded-xl border border-purple-500/50 transition-all flex items-center gap-1 cursor-pointer">
-                                <span> שנה סיסמת אדמין</span>
+                                <span>סיסמת אדמין</span>
                             </button>
                             <button onclick="logoutCRMAdmin()" class="py-2 px-3 bg-red-950/80 hover:bg-red-900 text-red-200 font-bold text-xs rounded-xl border border-red-700/50 transition-all flex items-center gap-1 cursor-pointer">
-                                <span> התנתק</span>
+                                <span>התנתק</span>
                             </button>
-                            <button onclick="saveInvoice4USettingsFromUI()" class="py-2.5 px-4 bg-purple-600 hover:bg-purple-500 text-white font-black text-xs rounded-xl shadow-lg transition-all active:scale-95 cursor-pointer flex items-center gap-1.5">
-                                <span> שמור הגדרות API</span>
+                            <button onclick="window.testGrowLightboxDemo()" class="py-2 px-3 bg-purple-800 hover:bg-purple-700 text-amber-300 font-bold text-xs rounded-xl border border-amber-400/40 transition-all flex items-center gap-1 cursor-pointer">
+                                <span>👁️ בדיקת סליקה (Demo)</span>
+                            </button>
+                            <button onclick="window.saveGrowSettingsFromUI()" class="py-2.5 px-4 bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs rounded-xl shadow-lg transition-all active:scale-95 cursor-pointer flex items-center gap-1.5">
+                                <span>💾 שמור הגדרות GROW</span>
                             </button>
                         </div>
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                    <div class="space-y-2 text-xs">
                         <div>
-                            <label class="block text-[11px] font-bold text-purple-200 mb-1">Invoice4U ApiToken / API Key</label>
-                            <input type="password" id="i4u-api-token" placeholder="הכנס מפתח API" value="${Invoice4UService.getConfig().apiToken || ''}" class="w-full p-2.5 bg-slate-800/90 border border-slate-700 rounded-xl text-xs font-mono text-white outline-none focus:border-purple-400 transition-colors" />
+                            <label class="block text-[11px] font-bold text-amber-200 mb-1">כתובת ה-Webhook ממערכת Make.com (Custom Webhook URL):</label>
+                            <input type="text" id="admin-grow-webhook" dir="ltr" placeholder="https://hook.eu1.make.com/xxxxxxxxxxxxxxxx" value="${(window.GrowService ? window.GrowService.getConfig().makeWebhookUrl : '') || ''}" class="w-full p-2.5 bg-slate-800/90 border border-slate-700 rounded-xl text-xs font-mono text-white outline-none focus:border-amber-400 transition-colors" />
                         </div>
-                        <div>
-                            <label class="block text-[11px] font-bold text-purple-200 mb-1">ClientID / Account ID</label>
-                            <input type="text" id="i4u-client-id" placeholder="מזהה לקוח" value="${Invoice4UService.getConfig().clientId || ''}" class="w-full p-2.5 bg-slate-800/90 border border-slate-700 rounded-xl text-xs font-mono text-white outline-none focus:border-purple-400 transition-colors" />
-                        </div>
-                        <div>
-                            <label class="block text-[11px] font-bold text-purple-200 mb-1">Company ID / ח"פ חברה</label>
-                            <input type="text" id="i4u-company-id" placeholder="ח&quot;פ החברה" value="${Invoice4UService.getConfig().companyId || ''}" class="w-full p-2.5 bg-slate-800/90 border border-slate-700 rounded-xl text-xs font-mono text-white outline-none focus:border-purple-400 transition-colors" />
-                        </div>
+                        <p class="text-[10.5px] text-slate-400">
+                            💡 <strong>איך מחברים ב-3 דקות?</strong> יוצרים תרחיש ב-Make עם Webhook ➔ מוסיפים מודול Grow ("צור דרישת תשלום") ➔ מוסיפים Webhook Response עם ה-URL. מדביקים את הכתובת כאן.
+                        </p>
                     </div>
                 </div>
 
@@ -21306,8 +21229,89 @@ window.viewDigitalReceipt = function(customOrderData) {
         }
 
 // ==========================================
-// INVOICE4U & UPAY LIVE SECURE CLEARING ENGINE
+// GROW (MESHULAM) SECURE CLEARING SERVICE (FREE MAKE.COM PATH - 0 NIS/MO)
 // ==========================================
+window.GrowService = {
+    getConfig: function() {
+        try {
+            const saved = JSON.parse(localStorage.getItem('oz_grow_config') || '{}');
+            return {
+                makeWebhookUrl: saved.makeWebhookUrl || 'https://hook.eu1.make.com/5rb89ooxpchjtbhmat3wrh63c8vdv5pk',
+                enabled: saved.enabled !== undefined ? saved.enabled : true
+            };
+        } catch(e) {
+            return { makeWebhookUrl: 'https://hook.eu1.make.com/5rb89ooxpchjtbhmat3wrh63c8vdv5pk', enabled: true };
+        }
+    },
+    saveConfig: function(cfg) {
+        try {
+            localStorage.setItem('oz_grow_config', JSON.stringify(cfg));
+        } catch(e){}
+    },
+    createPaymentSession: async function(orderData) {
+        const config = this.getConfig();
+        const originUrl = window.location.origin;
+        const returnUrl = `${originUrl}/?payment_status=success&order_id=${orderData.id}&time=${Date.now()}`;
+
+        let fullName = (orderData.name || 'לקוח יקר').trim();
+        if (!fullName.includes(' ')) {
+            fullName = fullName + ' לקוח';
+        }
+
+        const reqBody = {
+            orderId: orderData.id,
+            amount: orderData.finalTotal,
+            name: fullName,
+            phone: orderData.phone,
+            email: orderData.email,
+            city: orderData.city,
+            address: orderData.address,
+            description: `הזמנת יודאיקה - ${fullName} (${orderData.items ? orderData.items.length : 1} פריטים)`,
+            items: orderData.items || [],
+            returnUrl: returnUrl,
+            makeWebhookUrl: config.makeWebhookUrl || ''
+        };
+
+        const webhookUrl = config.makeWebhookUrl || 'https://hook.eu1.make.com/5rb89ooxpchjtbhmat3wrh63c8vdv5pk';
+        try {
+            const hookRes = await fetch(webhookUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(reqBody)
+            });
+            if (hookRes.ok) {
+                const hookData = await hookRes.json().catch(() => ({}));
+                const pUrl = hookData.payment_url || hookData.url;
+                if (pUrl && pUrl.startsWith('http')) {
+                    return {
+                        success: true,
+                        paymentUrl: pUrl,
+                        redirectUrl: pUrl,
+                        orderId: orderData.id,
+                        amount: orderData.finalTotal,
+                        provider: 'GROW_MAKE'
+                    };
+                }
+            }
+        } catch(e) {
+            console.warn('Direct Make webhook fetch fallback to API:', e);
+        }
+
+        const res = await fetch('/api/create-payment', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(reqBody)
+        });
+
+        if (res.ok) {
+            return await res.json();
+        } else {
+            const err = await res.json().catch(() => ({}));
+            throw new Error(err.error || `שגיאת שרת סליקה (${res.status})`);
+        }
+    }
+};
+
 window.Invoice4UService = {
     getConfig: function() {
         try {
@@ -21322,79 +21326,355 @@ window.Invoice4UService = {
         } catch(e){}
     },
     createPaymentSession: async function(orderData) {
-        const config = this.getConfig();
-        const originUrl = window.location.origin;
-        const returnUrl = `${originUrl}/?payment_status=success&time=${Date.now()}`;
-
-        const reqBody = {
-            apiToken: config.apiToken || '24e188c1-012a-4d89-97c6-f71acd09e309',
-            amount: orderData.finalTotal,
-            name: orderData.name,
-            phone: orderData.phone,
-            email: orderData.email,
-            city: orderData.city,
-            address: orderData.address,
-            description: `הזמנת יודאיקה - ${orderData.name} (${orderData.items ? orderData.items.length : 1} פריטים)`,
-            returnUrl: returnUrl
-        };
-
-        // 1. Call Cloudflare Pages Function endpoint
-        try {
-            const res = await fetch('/api/create-payment', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(reqBody)
-            });
-
-            if (res.ok) {
-                const data = await res.json();
-                if (data && data.success && data.redirectUrl) {
-                    return data;
-                } else if (data && data.error) {
-                    throw new Error(data.error);
-                }
-            }
-        } catch(err) {
-            console.warn('API endpoint error:', err);
-        }
-
-        throw new Error('לא ניתן היה לייצר קישור סליקה. אנא ודא חיבור תקין לרשת או בחר בהזמנה טלפונית.');
+        return window.GrowService.createPaymentSession(orderData);
     }
 };
 
 window.togglePaymentMethodFields = function(method) {
-    const cardFields = document.getElementById('invoice4u-card-fields');
+    const infoCard = document.getElementById('invoice4u-card-fields');
     const submitBtn = document.getElementById('checkout-submit-btn');
     const finalVal = document.getElementById('checkout-final-btn-val')?.textContent || '';
     const optOnline = document.getElementById('pay-opt-online');
     const optPhone = document.getElementById('pay-opt-phone');
 
-    if (method === 'invoice4u_credit') {
-        if (cardFields) cardFields.classList.remove('hidden');
+    if (method === 'grow_credit' || method === 'invoice4u_credit') {
+        if (infoCard) infoCard.classList.remove('hidden');
         if (optOnline) {
-            optOnline.className = 'p-3.5 bg-purple-50/90 border-2 border-oz-primary rounded-2xl flex items-center justify-between cursor-pointer transition-all shadow-xs';
+            optOnline.className = 'p-3 bg-purple-50/90 border-2 border-oz-primary rounded-2xl flex flex-col items-center justify-center gap-1.5 cursor-pointer text-center transition-all shadow-xs';
         }
         if (optPhone) {
-            optPhone.className = 'p-3.5 bg-slate-50 border border-slate-200 rounded-2xl flex items-center justify-between cursor-pointer hover:bg-purple-50 transition-all';
+            optPhone.className = 'p-3 border border-slate-200 hover:border-purple-300 rounded-2xl flex flex-col items-center justify-center gap-1.5 cursor-pointer text-center transition-all opacity-80 hover:opacity-100';
         }
         if (submitBtn) {
-            submitBtn.className = 'w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-sm rounded-2xl shadow-xl shadow-emerald-600/20 transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer';
-            submitBtn.innerHTML = `<span>מעבר לתשלום מאובטח ב-Bit / אשראי  (<span id="checkout-final-btn-val">${finalVal}</span>)</span>`;
+            submitBtn.className = 'flex-grow py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs sm:text-sm rounded-2xl shadow-xl shadow-emerald-600/30 transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer';
+            submitBtn.innerHTML = `<span>אישור רכישה ותשלום מאובטח </span> <span>•</span> <span id="checkout-final-btn-val">${finalVal}</span>`;
         }
     } else {
-        if (cardFields) cardFields.classList.add('hidden');
+        if (infoCard) infoCard.classList.add('hidden');
         if (optOnline) {
-            optOnline.className = 'p-3.5 bg-slate-50 border border-slate-200 rounded-2xl flex items-center justify-between cursor-pointer hover:bg-purple-50 transition-all';
+            optOnline.className = 'p-3 border border-slate-200 hover:border-purple-300 rounded-2xl flex flex-col items-center justify-center gap-1.5 cursor-pointer text-center transition-all opacity-80 hover:opacity-100';
         }
         if (optPhone) {
-            optPhone.className = 'p-3.5 bg-purple-50/90 border-2 border-oz-primary rounded-2xl flex items-center justify-between cursor-pointer transition-all shadow-xs';
+            optPhone.className = 'p-3 bg-purple-50/90 border-2 border-oz-primary rounded-2xl flex flex-col items-center justify-center gap-1.5 cursor-pointer text-center transition-all shadow-xs';
         }
         if (submitBtn) {
-            submitBtn.className = 'w-full py-4 bg-purple-800 hover:bg-purple-900 text-white font-black text-sm rounded-2xl shadow-xl shadow-purple-800/20 transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer';
-            submitBtn.innerHTML = `<span>אישור הזמנה טלפונית  (<span id="checkout-final-btn-val">${finalVal}</span>)</span>`;
+            submitBtn.className = 'flex-grow py-4 bg-purple-900 hover:bg-purple-950 text-white font-black text-xs sm:text-sm rounded-2xl shadow-xl shadow-purple-900/30 transition-all active:scale-95 flex items-center justify-center gap-2 cursor-pointer';
+            submitBtn.innerHTML = `<span>אישור הזמנה טלפונית </span> <span>•</span> <span id="checkout-final-btn-val">${finalVal}</span>`;
         }
     }
 };
+
+// IN-PAGE SEAMLESS LIGHTBOX MODAL FOR GROW CHECKOUT (CUSTOMER NEVER LEAVES SITE)
+window.openPaymentLightbox = function(paymentUrl, orderInfo) {
+    let existing = document.getElementById('grow-payment-modal');
+    if (existing) existing.remove();
+
+    const orderId = (orderInfo && orderInfo.id) || ('OZ-' + Date.now().toString().slice(-6));
+    const currentShipping = (typeof state.selectedShippingFee === 'number') ? state.selectedShippingFee : 35;
+    const amount = (orderInfo && typeof orderInfo.finalTotal === 'number') ? orderInfo.finalTotal : (state.cart.reduce((acc, i) => acc + (i.price * i.qty), 0) + currentShipping);
+
+    try {
+        if (orderInfo) localStorage.setItem('oz_pending_order', JSON.stringify(orderInfo));
+    } catch(e){}
+
+    const isDemo = paymentUrl === 'DEMO_MODE' || (typeof paymentUrl === 'string' && paymentUrl.startsWith('demo:'));
+
+    const modal = document.createElement('div');
+    modal.id = 'grow-payment-modal';
+    modal.className = 'fixed inset-0 z-[9999999] flex items-center justify-center p-2 sm:p-4 bg-slate-950/85 backdrop-blur-md transition-all duration-300 dir-rtl';
+
+    let bodyHtml = '';
+    if (isDemo) {
+        bodyHtml = `
+            <div class="p-6 sm:p-8 bg-gradient-to-b from-purple-50/60 to-white flex flex-col items-center justify-center text-center space-y-4 my-auto">
+                <div class="w-16 h-16 rounded-2xl bg-purple-100 text-oz-primary flex items-center justify-center text-3xl font-black shadow-inner">
+                    💳
+                </div>
+                <div>
+                    <span class="text-[10px] font-black bg-amber-100 text-amber-900 border border-amber-300 px-3 py-1 rounded-full uppercase tracking-wider">מצב הדמיה (Grow Demo Lightbox)</span>
+                    <h4 class="text-xl font-black text-slate-900 mt-2.5">חלון סליקה פנימי מוטמע באתר</h4>
+                    <p class="text-xs text-slate-600 max-w-md mx-auto mt-1 leading-relaxed">
+                        במצב לייב, כאן מוצג טופס הסליקה הרשמי של Grow (משולם). הלקוח מזין כרטיס אשראי או לוחץ על Bit / Apple Pay ישירות על המסך, מבלי לצאת מ-oz-judaica.co.il.
+                    </p>
+                </div>
+                <div class="bg-white p-4 rounded-2xl border border-purple-200 shadow-sm max-w-sm w-full text-right space-y-2 text-xs">
+                    <div class="flex justify-between border-b border-slate-100 pb-1.5 text-slate-600">
+                        <span>סכום לתשלום:</span>
+                        <span class="font-black text-emerald-700 text-sm">₪${amount}</span>
+                    </div>
+                    <div class="flex justify-between border-b border-slate-100 pb-1.5 text-slate-600">
+                        <span>מספר הזמנה:</span>
+                        <span class="font-mono font-bold text-slate-800">${orderId}</span>
+                    </div>
+                    <div class="flex justify-between text-slate-600">
+                        <span>אבטחה והצפנה:</span>
+                        <span class="text-purple-900 font-bold">PCI-DSS L1 • SSL 256</span>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 w-full max-w-sm pt-2">
+                    <button type="button" onclick="window.simulateDemoGrowSuccess()" class="flex-grow py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs rounded-xl shadow-lg shadow-emerald-600/20 transition-all active:scale-95 cursor-pointer">
+                        ✅ הדמה אישור תשלום (Success)
+                    </button>
+                    <button type="button" onclick="window.closePaymentLightbox()" class="py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs rounded-xl transition-colors cursor-pointer">
+                        סגור חלון
+                    </button>
+                </div>
+            </div>
+        `;
+    } else {
+        bodyHtml = `
+            <div id="grow-iframe-loader" class="absolute inset-0 flex flex-col items-center justify-center bg-white z-10 transition-opacity">
+                <div class="w-12 h-12 border-4 border-purple-200 border-t-oz-primary rounded-full animate-spin mb-3"></div>
+                <p class="text-xs font-bold text-slate-800">מתחבר למערכת הסליקה המאובטחת GROW...</p>
+                <p class="text-[10.5px] text-slate-400 mt-1">הצפנת SSL 256-Bit • תקן PCI-DSS Level 1</p>
+            </div>
+            <iframe id="grow-payment-iframe" src="${paymentUrl}" class="w-full flex-grow min-h-[600px] max-h-[82vh] border-0" allow="payment *" onload="document.getElementById('grow-iframe-loader')?.classList.add('hidden')"></iframe>
+        `;
+    }
+
+    modal.innerHTML = `
+        <div class="relative bg-white w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-purple-200/80 max-h-[94vh] animate-in fade-in zoom-in-95 duration-200">
+            <!-- HEADER -->
+            <div class="px-5 py-3.5 bg-gradient-to-r from-purple-950 via-[#1E1435] to-purple-950 text-white flex items-center justify-between border-b border-amber-400/40 shrink-0">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-2xl bg-amber-400/20 text-amber-300 flex items-center justify-center border border-amber-400/30 text-lg">
+                        🔒
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h3 class="font-black text-sm sm:text-base text-white">קופת תשלום מאובטחת באתר</h3>
+                            <span class="text-[9px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full font-bold border border-emerald-400/30">תקן PCI-DSS Level 1</span>
+                        </div>
+                        <p class="text-[11px] text-purple-200">עוז יודאיקה • GROW (משולם)</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="text-left hidden sm:block">
+                        <div class="text-[9.5px] text-purple-200 font-medium">סכום לתשלום:</div>
+                        <div class="text-base font-black text-amber-300">₪${amount}</div>
+                    </div>
+                    <button onclick="window.confirmClosePaymentLightbox()" type="button" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors cursor-pointer text-base">
+                        ✕
+                    </button>
+                </div>
+            </div>
+
+            <!-- BODY -->
+            <div class="relative flex-1 min-h-[580px] bg-slate-50 flex flex-col overflow-hidden">
+                ${bodyHtml}
+            </div>
+
+            <!-- FOOTER BADGES -->
+            <div class="px-5 py-2.5 bg-slate-100/90 border-t border-slate-200 flex items-center justify-between text-[10px] text-slate-600 shrink-0">
+                <div class="flex items-center gap-2 flex-wrap font-medium">
+                    <span class="font-black text-purple-950">נתמך בסליקה:</span>
+                    <span>כרטיסי אשראי (עד 12 תשלומים)</span>
+                    <span>•</span>
+                    <span class="text-blue-700 font-bold">Bit</span>
+                    <span>•</span>
+                    <span>Apple Pay</span>
+                    <span>•</span>
+                    <span>Google Pay</span>
+                </div>
+                <span class="text-slate-400 hidden sm:inline">האתר שומר שבת ומוגן בהצפנה מתקדמת</span>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(modal);
+    document.body.classList.add('overflow-hidden');
+};
+
+window.confirmClosePaymentLightbox = function() {
+    if (confirm('האם אתה בטוח שברצונך לסגור את חלון התשלום? ההזמנה לא תחויב.')) {
+        window.closePaymentLightbox();
+    }
+};
+
+window.closePaymentLightbox = function() {
+    const modal = document.getElementById('grow-payment-modal');
+    if (modal) modal.remove();
+    document.body.classList.remove('overflow-hidden');
+};
+
+window.simulateDemoGrowSuccess = function() {
+    window.postMessage({
+        action: 'payment',
+        status: 1,
+        transactionId: 'DEMO-GROW-' + Date.now().toString().slice(-6)
+    }, '*');
+};
+
+window.handleGrowSetupPrompt = function(orderInfo, customError) {
+    let existing = document.getElementById('grow-setup-prompt-modal');
+    if (existing) existing.remove();
+
+    const modal = document.createElement('div');
+    modal.id = 'grow-setup-prompt-modal';
+    modal.className = 'fixed inset-0 z-[9999999] flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md dir-rtl';
+
+    modal.innerHTML = `
+        <div class="bg-white max-w-lg w-full rounded-3xl p-6 sm:p-7 shadow-2xl border-2 border-purple-200 space-y-4 text-right">
+            <div class="flex items-center gap-3 border-b border-purple-100 pb-3">
+                <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-2xl font-black shrink-0">
+                    ⚙️
+                </div>
+                <div>
+                    <h3 class="font-black text-base text-slate-900">חיבור סליקת GROW (המסלול החינמי דרך Make)</h3>
+                    <p class="text-xs text-emerald-700 font-bold">0 ₪ עלות חודשית • חיסכון של 500 ₪ + מע"מ לחודש!</p>
+                </div>
+            </div>
+
+            <p class="text-xs text-slate-600 leading-relaxed">
+                מערכת האתר מוכנה לסליקה מלאה בחלון פנימי. כדי להתחיל לקבל תשלומים אמיתיים, הדבק את כתובת ה-Webhook ממערכת <strong>Make.com</strong>:
+            </p>
+
+            <div class="space-y-1.5">
+                <label class="block text-[11px] font-bold text-slate-700">כתובת Make Webhook (Custom Webhook URL):</label>
+                <input type="text" id="prompt-grow-webhook" dir="ltr" placeholder="https://hook.eu1.make.com/xxxxxxxxxxxxxxxx" value="${window.GrowService.getConfig().makeWebhookUrl || ''}" class="w-full p-3 bg-slate-50 border border-slate-300 rounded-xl text-xs font-mono text-slate-900 outline-none focus:border-oz-primary" />
+            </div>
+
+            <div class="p-3 bg-purple-50 rounded-xl border border-purple-100 text-[11px] text-purple-950 space-y-1">
+                <div class="font-bold"> איפה משיגים את זה ב-3 דקות?</div>
+                <div>1. נכנסים ל-Make.com ויוצרים Scenario חדש.</div>
+                <div>2. מוסיפים מודול <strong>Webhooks -> Custom Webhook</strong> ומעתיקים את הכתובת.</div>
+                <div>3. מוסיפים מודול <strong>Grow</strong> (צור דרישת תשלום) ומודול <strong>Webhook Response</strong>.</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-2 pt-2">
+                <button type="button" onclick="window.saveGrowWebhookFromPrompt()" class="flex-grow py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs rounded-xl shadow-lg transition-all active:scale-95 cursor-pointer">
+                    💾 שמור כתובת והפעל סליקה
+                </button>
+                <button type="button" onclick="window.testGrowLightboxDemo()" class="py-3 px-4 bg-purple-900 hover:bg-purple-950 text-white font-black text-xs rounded-xl transition-all cursor-pointer">
+                    👁️ בדיקת חלון סליקה (Demo)
+                </button>
+                <button type="button" onclick="document.getElementById('grow-setup-prompt-modal')?.remove()" class="py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold text-xs rounded-xl transition-colors cursor-pointer">
+                    סגור
+                </button>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(modal);
+};
+
+window.saveGrowWebhookFromPrompt = function() {
+    const val = (document.getElementById('prompt-grow-webhook')?.value || '').trim();
+    if (!val || !val.startsWith('http')) {
+        alert('אנא הזן כתובת Webhook תקינה המתחילה ב-http / https');
+        return;
+    }
+    window.GrowService.saveConfig({ makeWebhookUrl: val, enabled: true });
+    alert('הגדרות Grow Webhook נשמרו בהצלחה! כעת ניתן לבצע סליקה חיה.');
+    document.getElementById('grow-setup-prompt-modal')?.remove();
+};
+
+window.testGrowLightboxDemo = function() {
+    document.getElementById('grow-setup-prompt-modal')?.remove();
+    const demoOrder = {
+        id: 'OZ-' + Date.now().toString().slice(-6),
+        name: document.getElementById('checkout-name')?.value || 'ישראל ישראלי',
+        finalTotal: (state.cart && state.cart.length > 0) ? (state.cart.reduce((acc, i) => acc + (i.price * i.qty), 0) + ((typeof state.selectedShippingFee === 'number') ? state.selectedShippingFee : 35)) : 250,
+        items: (state.cart && state.cart.length > 0) ? state.cart : [{ name: 'בית מזוזה אפוקסי משולב עץ זית', price: 250, qty: 1 }]
+    };
+    window.openPaymentLightbox('DEMO_MODE', demoOrder);
+};
+
+// PAYMENT SUCCESS COMPLETION HANDLER
+window.handlePaymentSuccess = function(paymentData) {
+    window.closePaymentLightbox();
+
+    let order = null;
+    try {
+        const raw = localStorage.getItem('oz_pending_order');
+        if (raw) order = JSON.parse(raw);
+    } catch(e){}
+
+    if (!order) {
+        order = {
+            id: 'OZ-' + Date.now().toString().slice(-6),
+            name: document.getElementById('checkout-name')?.value || 'לקוח יקר',
+            phone: document.getElementById('checkout-phone')?.value || '',
+            finalTotal: (state.cart && state.cart.length > 0) ? (state.cart.reduce((acc, i) => acc + (i.price * i.qty), 0) + ((typeof state.selectedShippingFee === 'number') ? state.selectedShippingFee : 35)) : 0,
+            items: [...(state.cart || [])]
+        };
+    }
+
+    const txId = (paymentData && (paymentData.transactionId || paymentData.id || paymentData.asmachta)) || ('GROW-' + Date.now().toString().slice(-6));
+    order.paymentMethod = 'GROW / משולם (סליקה מאושרת)';
+    order.paymentStatus = 'שולם בהצלחה (Grow)';
+    order.approvalNum = txId;
+    order.invoiceResult = {
+        approvalNum: txId,
+        invoiceNumber: txId,
+        provider: 'GROW (משולם)'
+    };
+
+    // Save order history & CRM
+    localStorage.setItem('oz_last_order', JSON.stringify(order));
+    let allOrders = JSON.parse(localStorage.getItem('oz_all_orders') || '[]');
+    allOrders.unshift(order);
+    localStorage.setItem('oz_all_orders', JSON.stringify(allOrders.slice(0, 100)));
+    localStorage.setItem('oz_completed_orders_count', allOrders.length.toString());
+    localStorage.removeItem('oz_pending_order');
+
+    // Clear cart
+    state.cart = [];
+    if (typeof updateCartUI === 'function') updateCartUI();
+    if (typeof clearAbandonedCartOnOrder === 'function') clearAbandonedCartOnOrder();
+    if (typeof window.closeCheckoutModal === 'function') window.closeCheckoutModal();
+
+    // CRM Lead
+    if (typeof saveLeadToCRM === 'function' && order.name) {
+        saveLeadToCRM({
+            name: order.name,
+            phone: order.phone,
+            email: order.email || '',
+            city: order.city || '',
+            address: order.address || '',
+            orderAmount: order.finalTotal || 0,
+            isOrder: true,
+            paymentMethod: 'GROW אשראי/ביט',
+            paymentStatus: 'שולם (Grow)',
+            approvalNum: txId,
+            source: 'סליקה פנימית GROW'
+        });
+    }
+
+    // Play celebration sound and render order success modal
+    setTimeout(() => {
+        if (typeof renderOrderSuccessModal === 'function') {
+            renderOrderSuccessModal(order);
+        }
+    }, 400);
+};
+
+// GROW OFFICIAL POSTMESSAGE LISTENER (PER DOCUMENTATION)
+window.addEventListener('message', function(event) {
+    const origin = (event && event.origin) || '';
+    const isGrow = origin.includes('meshulam.co.il') || 
+                   origin.includes('grow.business') || 
+                   origin.includes('grow-il') || 
+                   origin === window.location.origin ||
+                   origin === '';
+
+    const data = event && event.data;
+    if (!data || typeof data !== 'object') return;
+
+    const action = data.action;
+    if (!action) return;
+
+    if (action === 'close' || action === 'bit_cancel') {
+        window.closePaymentLightbox();
+        return;
+    }
+
+    if (action === 'payment' || action === 'bit_payment' || action === 'apple_payment' || action === 'google_payment') {
+        if (data.status == 1 || typeof data.status === 'undefined' || action !== 'payment' || data.success) {
+            window.handlePaymentSuccess(data);
+        }
+    }
+});
 
 // AUTOMATIC POST-PAYMENT RETURN HANDLER (Upay / Invoice4U Callback)
 window.initPaymentSuccessCheck = function() {
@@ -21415,13 +21695,13 @@ window.initPaymentSuccessCheck = function() {
                 };
             }
 
-            order.paymentMethod = 'Invoice4U / Bit / אשראי (סליקה מאושרת)';
-            order.paymentStatus = 'שולם בהצלחה (Invoice4U)';
+            order.paymentMethod = 'GROW / משולם (סליקה מאושרת)';
+            order.paymentStatus = 'שולם בהצלחה (Grow)';
             order.approvalNum = paymentId;
             order.invoiceResult = {
                 approvalNum: paymentId,
                 invoiceNumber: paymentId,
-                provider: 'Invoice4U / Upay'
+                provider: 'GROW (משולם)'
             };
 
             // Save order to history & CRM
@@ -21446,15 +21726,15 @@ window.initPaymentSuccessCheck = function() {
                     address: order.address || '',
                     orderAmount: order.finalTotal || 0,
                     isOrder: true,
-                    paymentMethod: 'Invoice4U אשראי/ביט',
-                    paymentStatus: 'שולם (Invoice4U)',
+                    paymentMethod: 'GROW אשראי/ביט',
+                    paymentStatus: 'שולם (Grow)',
                     approvalNum: paymentId,
-                    source: 'סליקה אונליין'
+                    source: 'סליקה אונליין GROW'
                 });
             }
 
             if (order.phone && typeof sendSMSNotification === 'function') {
-                sendSMSNotification(order.phone, `שלום ${order.name}, תשלומך בסך ₪${order.finalTotal} התקבל ואושר בהצלחה ב-Invoice4U! (אישור: ${paymentId}). הזמנתך נארזת למשלוח: https://oz-judaica.co.il`);
+                sendSMSNotification(order.phone, `שלום ${order.name}, תשלומך בסך ₪${order.finalTotal} התקבל ואושר בהצלחה ב-GROW! (אישור: ${paymentId}). הזמנתך נארזת למשלוח: https://oz-judaica.co.il`);
             }
 
             // Render success modal
@@ -21549,13 +21829,23 @@ window.formatCardNumber = function(el) {
     } catch(err) {}
 };
 
+window.saveGrowSettingsFromUI = function() {
+    const webhook = (document.getElementById('admin-grow-webhook')?.value || '').trim();
+    if (window.GrowService) {
+        window.GrowService.saveConfig({ makeWebhookUrl: webhook, enabled: true });
+    }
+    alert('הגדרות סליקת GROW (דרך Make) נשמרו בהצלחה במערכת!');
+};
+
 window.saveInvoice4USettingsFromUI = function() {
     const apiToken = document.getElementById('i4u-api-token')?.value || '';
     const clientId = document.getElementById('i4u-client-id')?.value || '';
     const companyId = document.getElementById('i4u-company-id')?.value || '';
     const sandboxMode = false;
 
-    Invoice4UService.saveConfig({ apiToken, clientId, companyId, sandboxMode });
+    if (window.Invoice4UService) {
+        window.Invoice4UService.saveConfig({ apiToken, clientId, companyId, sandboxMode });
+    }
     alert(' הגדרות Invoice4U נשמרו בהצלחה במערכת!');
 };
 
@@ -24113,7 +24403,39 @@ function generateProductPageHTML(p) {
                         `}
                     </div>
 
-                    <!-- Interactive Gift Set Customizer -->
+                    
+                    <!-- ADMIN PRIVATE PRODUCT NOTE BLOCK -->
+                    ${(function() {
+                        const isAuth = (typeof window.isAdminAuthenticated === 'function' && window.isAdminAuthenticated());
+                        const currentNote = (typeof window.getProductAdminNote === 'function') ? window.getProductAdminNote(p.id) : '';
+                        if (!isAuth && !currentNote) {
+                            return `
+                            <div class="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+                                <button type="button" onclick="window.promptAdminLoginForNote('${p.id}')" class="hover:text-purple-700 transition-colors flex items-center gap-1 cursor-pointer">
+                                    <span>🔒 כניסת מנהל להוספת הערה פנימית על מוצר זה</span>
+                                </button>
+                            </div>
+                            `;
+                        }
+                        return `
+                        <div class="mt-4 p-4 bg-purple-50/90 border-2 border-purple-300 rounded-2xl shadow-xs text-right dir-rtl space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-black text-purple-950 flex items-center gap-1.5">
+                                    <span>🔒 הערת ניהול פנימית (מוצגת למנהל בלבד)</span>
+                                </span>
+                                <span class="text-[10px] font-bold text-purple-700 bg-white px-2 py-0.5 rounded-full border border-purple-200">נשמר קבוע במערכת</span>
+                            </div>
+                            <textarea id="admin-prod-note-${p.id}" rows="2" placeholder="רשום הערת ניהול פרטית על מוצר זה (ספק, הערות מלאי, הנחיות מיוחדות...)" class="w-full p-2.5 bg-white border border-purple-300 rounded-xl text-xs text-slate-800 font-medium focus:ring-2 focus:ring-purple-600 focus:outline-none">${currentNote}</textarea>
+                            <div class="flex justify-end gap-2 pt-1">
+                                <button type="button" onclick="window.saveProductAdminNote('${p.id}', document.getElementById('admin-prod-note-${p.id}').value)" class="py-1.5 px-4 bg-purple-800 hover:bg-purple-900 text-white font-bold text-xs rounded-xl shadow-xs transition-all cursor-pointer">
+                                    💾 שמור הערה למוצר
+                                </button>
+                            </div>
+                        </div>
+                        `;
+                    })()}
+
+<!-- Interactive Gift Set Customizer -->
                     ${(function() {
                         if (!p.set_items || !Array.isArray(p.set_items) || p.set_items.length === 0) return '';
                         
