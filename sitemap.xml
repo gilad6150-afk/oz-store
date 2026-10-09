@@ -2895,7 +2895,7 @@
     </image:image>
   </url>
 
-  <!-- Articles (34 published guides) -->
+  <!-- Articles (36 published guides) -->
   <url>
     <loc>https://oz-judaica.co.il/?article=1</loc>
     <lastmod>2026-10-09</lastmod>
@@ -3234,6 +3234,26 @@
     <image:image>
       <image:loc>https://oz-judaica.co.il/public/articles/havdalah_spice_set.jpg</image:loc>
       <image:title>ערכות הבדלה ובשמים: ניחוחות קודש ומנהגים ליציאת השבת</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/?article=35</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/judaica_gifts_category.jpg</image:loc>
+      <image:title>תמונות זכוכית HD לבית היהודי: ברכת הבית, מזמור לתודה ואשת חיל</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/?article=36</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/judaica_gifts_category.jpg</image:loc>
+      <image:title>מתנות לחנוכת בית חדש: רעיונות ליודאיקה שמכניסה ברכה, שמחה והגנה</image:title>
     </image:image>
   </url>
 </urlset>
