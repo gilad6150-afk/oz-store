@@ -2895,7 +2895,7 @@
     </image:image>
   </url>
 
-  <!-- Articles (32 published guides) -->
+  <!-- Articles (34 published guides) -->
   <url>
     <loc>https://oz-judaica.co.il/?article=1</loc>
     <lastmod>2026-10-09</lastmod>
@@ -3214,6 +3214,26 @@
     <image:image>
       <image:loc>https://oz-judaica.co.il/public/articles/shabbat_silver_candlesticks.jpg</image:loc>
       <image:title>פמוטי שבת מעוצבים: שילוב כסף, קריסטל ועיצוב מודרני להארת הבית</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/?article=33</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/articles/shabbat_silver_candlesticks.jpg</image:loc>
+      <image:title>גביעי קידוש מהודרים: מכסף טהור, ציפוי זהב וזכוכית מעוטרת</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/?article=34</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/articles/havdalah_spice_set.jpg</image:loc>
+      <image:title>ערכות הבדלה ובשמים: ניחוחות קודש ומנהגים ליציאת השבת</image:title>
     </image:image>
   </url>
 </urlset>
