@@ -2895,7 +2895,7 @@
     </image:image>
   </url>
 
-  <!-- Articles (40 published guides) -->
+  <!-- Articles (41 published guides) -->
   <url>
     <loc>https://oz-judaica.co.il/?article=1</loc>
     <lastmod>2026-10-10</lastmod>
@@ -3294,6 +3294,16 @@
     <image:image>
       <image:loc>https://oz-judaica.co.il/public/articles/sukkot_four_species.jpg</image:loc>
       <image:title>בניית סוכה כשרה: מידות, סכך כשר, דפנות ודיני ארבעת המינים</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/?article=41</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/articles/chanukah_menorah_oil.jpg</image:loc>
+      <image:title>הדלקת נרות חנוכה: זמנים, שמן זית זך מול נרות, סדר הברכות ומקום ההנחה</image:title>
     </image:image>
   </url>
 </urlset>
