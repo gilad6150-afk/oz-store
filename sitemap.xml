@@ -2895,7 +2895,7 @@
     </image:image>
   </url>
 
-  <!-- Articles (38 published guides) -->
+  <!-- Articles (40 published guides) -->
   <url>
     <loc>https://oz-judaica.co.il/?article=1</loc>
     <lastmod>2026-10-10</lastmod>
@@ -3274,6 +3274,26 @@
     <image:image>
       <image:loc>https://oz-judaica.co.il/public/articles/passover_seder_plate.jpg</image:loc>
       <image:title>הכנות לחג הפסח: מדריך הלכתי לבדיקת חמץ, ביעור חמץ ומכירת חמץ</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/?article=39</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/articles/purim_megillah_scroll.jpg</image:loc>
+      <image:title>הלכות יום הכיפורים: חמשת העינויים, סעודה מפסקת ותפילת נעילה</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/?article=40</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/articles/sukkot_four_species.jpg</image:loc>
+      <image:title>בניית סוכה כשרה: מידות, סכך כשר, דפנות ודיני ארבעת המינים</image:title>
     </image:image>
   </url>
 </urlset>
