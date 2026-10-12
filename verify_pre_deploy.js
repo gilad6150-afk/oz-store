@@ -254,6 +254,75 @@ function runAudit() {
     context.window.resetFilters();
     console.log('  ✓ resetFilters() איפס את המצב בהצלחה.');
 
+    // -------------------------------------------------------------
+    // בדיקה 5: אימות תקינות מארזים ועסקאות מיוחדות (מוצרים 19004 ו-19007)
+    // -------------------------------------------------------------
+    console.log('\n🔍 שלב 5: אימות שלמות מארזי מתנה (19004, 19007) ועסקאות קופה...');
+    const prodsList = context.window.PRODUCTS_DATA || [];
+    const p19004 = prodsList.find(p => p.id == 19004);
+    const p19007 = prodsList.find(p => p.id == 19007);
+
+    if (!p19004 || !p19007) {
+        console.error('❌ שגיאה: מוצרים 19004 או 19007 לא נמצאו בקטלוג הנתונים!');
+        process.exit(1);
+    }
+
+    if (p19004.name.includes('חנוכ') || p19004.alt.includes('חנוכ')) {
+        console.error('❌ שגיאה: מוצר 19004 עדיין מכיל אזכור חנוכייה במקום פמוטים!');
+        process.exit(1);
+    }
+    if (!p19004.name.includes('פמוטי קריסטל')) {
+        console.error('❌ שגיאה: מוצר 19004 אינו כולל פמוטי קריסטל בכותרת!');
+        process.exit(1);
+    }
+
+    if (!p19007.name.includes('נהרות') || !p19007.name.includes('סידור, תהילים וחמש מגילות')) {
+        console.error('❌ שגיאה: מוצר 19007 אינו מוגדר כמארז 3 ספרי נהרות המבוארים!');
+        process.exit(1);
+    }
+
+    // אימות תמונות מקומיות
+    const localImages = [
+        ...p19004.images.filter(img => !img.startsWith('http')),
+        ...p19007.images.filter(img => !img.startsWith('http'))
+    ];
+    for (const img of localImages) {
+        if (!fs.existsSync(img)) {
+            console.error(`❌ שגיאה: קובץ תמונה מקומי חסר ב-root: ${img}`);
+            process.exit(1);
+        }
+        if (!fs.existsSync(path.join('cloudflare_deploy', img))) {
+            console.error(`❌ שגיאה: קובץ תמונה מקומי חסר ב-cloudflare_deploy: ${img}`);
+            process.exit(1);
+        }
+    }
+    console.log('  ✓ מארז 19004 (פמוטי קריסטל לשבת) ומארז 19007 (ספרי נהרות) תקינים ושלמים.');
+    console.log('  ✓ כל קובצי התמונות אומתו פיזית בדיסק ב-root וב-cloudflare_deploy.');
+
+    // בדיקת אימות שכיסויי ארון חשמל לא זולגים לתיקי תפילין
+    const elecCovers = prodsList.filter(p => p.name.includes('חשמל') || p.id == 18147 || p.id == 18148 || p.id == 18149);
+    if (elecCovers.length < 3) {
+        console.error('❌ שגיאה: פחות מ-3 מוצרי כיסוי לארון חשמל בקטלוג!');
+        process.exit(1);
+    }
+    elecCovers.forEach(p => {
+        if (p.category !== 'gifts') {
+            console.error(`❌ שגיאה: מוצר ארון חשמל ${p.id} אינו מוגדר בקטגוריית gifts!`);
+            process.exit(1);
+        }
+    });
+
+    // בדיקת סימולציה שכיסויי ארון חשמל אינם מופיעים ב-tefillin-bags
+    gridHTML = '';
+    shelvesHTML = '';
+    context.window.selectMainCategory('tefillin-bags');
+    if (gridHTML.includes('חשמל') || shelvesHTML.includes('חשמל')) {
+        console.error('❌ שגיאה קריטית: כיסויי ארון חשמל עדיין מוצגים תחת תיקים לטלית ותפילין!');
+        process.exit(1);
+    }
+    console.log('  ✓ אומת: 0 מוצרי חיפוי ארון חשמל זולגים לתיקי טלית ותפילין.');
+    console.log('  ✓ אומת: כל 3 כיסויי ארון החשמל (18147, 18148, 18149) משויכים בלעדית לתמונות זכוכית ומתנות.');
+
     console.log('\n================================================================');
     console.log(' 🎉 הביקורת העצמית עברה בהצלחה מלאה! האתר תקין ב-100% לפריסה.   ');
     console.log('================================================================\n');

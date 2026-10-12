@@ -14,20 +14,23 @@ async function pingGoogle() {
 
 async function pingIndexNow() {
     return new Promise((resolve) => {
-        const articleUrls = Array.from({ length: 42 }, (_, i) => `https://oz-judaica.co.il/?article=${i + 1}`);
-        const catUrls = [
-            'https://oz-judaica.co.il/?category=stam',
-            'https://oz-judaica.co.il/?category=tallitot-tzitzit',
-            'https://oz-judaica.co.il/?category=tefillin-bags',
-            'https://oz-judaica.co.il/?category=gifts',
-            'https://oz-judaica.co.il/?category=books'
-        ];
+        const fs = require('fs');
+        let allUrls = ['https://oz-judaica.co.il/', 'https://oz-judaica.co.il/sitemap.xml'];
+        try {
+            const xml = fs.readFileSync('sitemap.xml', 'utf8');
+            const matches = Array.from(xml.matchAll(/<loc>([^<]+)<\/loc>/g)).map(m => m[1].trim());
+            if (matches.length > 0) allUrls = Array.from(new Set([...allUrls, ...matches]));
+        } catch (e) {
+            console.log('Warning reading sitemap.xml:', e.message);
+        }
+
+        console.log(`📤 Submitting ${allUrls.length} total URLs to IndexNow API...`);
 
         const payload = JSON.stringify({
             host: 'oz-judaica.co.il',
             key: 'c74690b311ac4c6702c1098c943caeb2',
             keyLocation: 'https://oz-judaica.co.il/c74690b311ac4c6702c1098c943caeb2.txt',
-            urlList: ['https://oz-judaica.co.il/', 'https://oz-judaica.co.il/sitemap.xml', ...catUrls, ...articleUrls]
+            urlList: allUrls
         });
 
         const req = https.request({

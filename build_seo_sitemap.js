@@ -78,6 +78,38 @@ let xml = `<?xml version="1.0" encoding="UTF-8"?>
     <priority>0.9</priority>
   </url>
 
+  <!-- High-Intent SEO Pillar Landing Guides -->
+  <url>
+    <loc>https://oz-judaica.co.il/tefillin-bar-mitzvah.html</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/articles/tefillin_bar_mitzvah.jpg</image:loc>
+      <image:title>תפילין לבר מצווה: מחירון ומדריך מהודר</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/matana-le-gever.html</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/gentleman_gift_set_lifestyle.jpg</image:loc>
+      <image:title>מתנה לגבר: ארנקי עור ומארזים יוקרתיים</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/klaf-mezuzah-kasher.html</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/lifestyle_epoxy_mezuzah.jpg</image:loc>
+      <image:title>קלף מזוזה כשר למהדרין ובתי מזוזה מעוצבים</image:title>
+    </image:image>
+  </url>
+
   <!-- Google Merchant Feed -->
   <url>
     <loc>https://oz-judaica.co.il/google_merchant_feed.xml</loc>
@@ -86,6 +118,22 @@ let xml = `<?xml version="1.0" encoding="UTF-8"?>
     <priority>0.7</priority>
   </url>
 `;
+
+// City Landing Pages (Local SEO)
+if (fs.existsSync('cities')) {
+    const cityDirs = fs.readdirSync('cities').filter(d => fs.statSync(`cities/${d}`).isDirectory());
+    xml += '\n  <!-- Local City Landing Pages -->\n';
+    for (const city of cityDirs) {
+        const priority = city === 'rosh-haayin' ? '1.0' : '0.85';
+        xml += `  <url>
+    <loc>https://oz-judaica.co.il/cities/${city}/</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>${priority}</priority>
+  </url>\n`;
+    }
+}
+
 
 // Products
 xml += '\n  <!-- Products (405 items) -->\n';

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>עוז יודאיקה • 3 סגנונות פרסומת וידאו פרימיום</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0c13;
+            --card-bg: #121622;
+            --gold: #D4AF37;
+            --gold-light: #F9E79F;
+            --text-main: #FFFFFF;
+            --text-muted: #9CA3AF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: radial-gradient(circle at 50% 20%, #171d2d 0%, #080a0f 100%);
+            color: var(--text-main);
+            font-family: 'Assistant', sans-serif;
+            min-height: 100vh;
+            padding: 30px 20px 80px;
+        }
+
+        .header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 40px;
+        }
+
+        .header h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFF 0%, var(--gold-light) 50%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+
+        .header p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .badge-bar {
+            display: inline-flex;
+            gap: 15px;
+            margin-top: 15px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 8px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            color: var(--gold-light);
+            font-size: 0.95rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1250px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold);
+        }
+
+        .card-header {
+            padding: 22px 20px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+
+        .tag-opt1 { background: rgba(212, 175, 55, 0.2); color: #F9E79F; border: 1px solid #D4AF37; }
+        .tag-opt2 { background: rgba(96, 165, 250, 0.2); color: #93C5FD; border: 1px solid #3B82F6; }
+        .tag-opt3 { background: rgba(245, 158, 11, 0.2); color: #FCD34D; border: 1px solid #F59E0B; }
+
+        .card-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .video-box {
+            position: relative;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        video {
+            width: 100%;
+            max-width: 290px;
+            aspect-ratio: 9 / 16;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            background: #000;
+        }
+
+        .card-details {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .features-list li {
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #E5E7EB;
+        }
+
+        .features-list li span {
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .btn-download {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 13px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: #0B0E14;
+            background: linear-gradient(135deg, #F9E79F 0%, #D4AF37 100%);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .btn-download:hover {
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+            filter: brightness(1.08);
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1.05rem;
+            color: var(--text-muted);
+        }
+
+        .footer-note strong {
+            color: var(--gold-light);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>עוז יודאיקה • מעבדת סרטוני הפרסומת</h1>
+        <p>3 סגנונות פרסומת ויראליים בפורמט Reels / Shorts (יחס 9:16) עם <strong>קריינות עברית צלולה של גוגל</strong> ו<strong>מוזיקת אולפן אמיתית</strong>.</p>
+        <div class="badge-bar">
+            <span>🎙️ קריינות AI בעברית</span>
+            <span>🎵 מוזיקת רקע מסחרית</span>
+            <span>✨ עיצוב שכבות וצל 3D</span>
+            <span>📱 מותאם לנייד, טיקטוק ויוטיוב</span>
+        </div>
+    </div>
+
+    <div class="grid">
+
+        <!-- סרטון הדגל: פרסומת וידאו אמיתית מהשטח - בית מזוזה בטון האש שלי -->
+        <div class="card" style="border: 2px solid var(--gold); box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);">
+            <div class="card-header" style="background: rgba(212, 175, 55, 0.08);">
+                <span class="card-tag tag-opt1">🔥 פרסומת וידאו חיה מהשטח • מוצר חדש</span>
+                <h2 class="card-title">בית מזוזה בטון – "האש שלי" (12 ס"מ)</h2>
+                <p class="card-desc">צילום וידאו אמיתי בידיים, קריינות גוגל מקצועית, מוזיקת אולפן ומיתוג יוקרתי!</p>
+            </div>
+            <div class="video-box">
+                <video controls playsinline preload="metadata" poster="public/products/mezuzah_concrete_haesh_sheli_lifestyle.jpg">
+                    <source src="demos/commercial_concrete_mezuzah_haesh_sheli.mp4" type="video/mp4">
+                    הדפדפן שלך אינו תומך בניגון וידאו.
+                </video>
+            </div>
+            <div class="card-details">
+                <ul class="features-list">
+                    <li><span>✦</span> צילום וידאו: שוט אמיתי של המוצר מוחזק ביד</li>
+                    <li><span>✦</span> פסקול: Heartwarming (גיטרות אקוסטיות) + קריינות רדיו</li>
+                    <li><span>✦</span> תכונות: בטון אדריכלי, עמיד 100% לשמש, שומר על הקלף</li>
+                    <li><span>✦</span> כפתור הנעה לפעולה: להזמנה ישירה באתר או בווטסאפ</li>
+                </ul>
+                <a href="demos/commercial_concrete_mezuzah_haesh_sheli.mp4" download class="btn-download">
+                    ⬇️ הורד סרטון פרסומת MP4 לפרסום בסטטוס / טיקטוק / רילס
+                </a>
+            </div>
+        </div>
+
+        <!-- אופציה 1: היוקרה המלכותית -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-tag tag-opt1">אופציה 1 • היוקרה המלכותית</span>
+                <h2 class="card-title">תמונת זכוכית הבן איש חי</h2>
+                <p class="card-desc">סגנון יוקרתי ועוצמתי: שחור-זהב, תלת-ממד וסאונד מלכותי.</p>
+            </div>
+            <div class="video-box">
+                <video controls playsinline preload="metadata" poster="public/products/tmunot/glass_ben_ish_chai_mockup.jpg">
+                    <source src="demos/option1_luxury_glass_art.mp4" type="video/mp4">
+                    הדפדפן שלך אינו תומך בניגון וידאו.
+                </video>
+            </div>
+            <div class="card-details">
+                <ul class="features-list">
+                    <li><span>✦</span> פסקול: Sovereign (תזמורת מלכותית)</li>
+                    <li><span>✦</span> קול: גוגל עברית רהוטה וצלולה</li>
+                    <li><span>✦</span> עיצוב: מסגרת זהב, צל צף ופינות מעוגלות</li>
+                    <li><span>✦</span> תגיות: זכוכית מחוסמת 4 מ"מ, עמידות לשריטות</li>
+                </ul>
+                <a href="demos/option1_luxury_glass_art.mp4" download class="btn-download">
+                    ⬇️ הורד סרטון MP4 למחשב / ווטסאפ
+                </a>
+            </div>
+        </div>
+
+        <!-- אופציה 2: החגיגי והמרגש -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-tag tag-opt2">אופציה 2 • החגיגי והמרגש</span>
+                <h2 class="card-title">סט חתן מלכותי פרימיום VIP</h2>
+                <p class="card-desc">סגנון חגיגי ומרגש: כחול רויאל, גיטרות אקוסטיות ומארז מתנה מושלם.</p>
+            </div>
+            <div class="video-box">
+                <video controls playsinline preload="metadata" poster="public/products/set_groom_vip_19001.jpg">
+                    <source src="demos/option2_royal_groom_set.mp4" type="video/mp4">
+                    הדפדפן שלך אינו תומך בניגון וידאו.
+                </video>
+            </div>
+            <div class="card-details">
+                <ul class="features-list">
+                    <li><span>✦</span> פסקול: Heartwarming (גיטרות אקוסטיות חמות)</li>
+                    <li><span>✦</span> קול: פנייה רגשית להורים, כלות וחתנים</li>
+                    <li><span>✦</span> עיצוב: הדגשת מארז המתנה והפריטים המהודרים</li>
+                    <li><span>✦</span> תגיות: תפילין מהודרות, תפידנית מוגנת, עור נאפה</li>
+                </ul>
+                <a href="demos/option2_royal_groom_set.mp4" download class="btn-download">
+                    ⬇️ הורד סרטון MP4 למחשב / ווטסאפ
+                </a>
+            </div>
+        </div>
+
+        <!-- אופציה 3: הקצבי והממיר -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-tag tag-opt3">אופציה 3 • הקצבי והממיר</span>
+                <h2 class="card-title">ספרי הוצאת נהרות המבוארים</h2>
+                <p class="card-desc">סגנון מכירתי ממוקד: בעיה-פתרון ("להבין כל מילה"), קצב מהיר ומחיר ₪45.</p>
+            </div>
+            <div class="video-box">
+                <video controls playsinline preload="metadata" poster="public/products/set_books_neharot_trio_19007.jpg">
+                    <source src="demos/option3_neharot_holy_books.mp4" type="video/mp4">
+                    הדפדפן שלך אינו תומך בניגון וידאו.
+                </video>
+            </div>
+            <div class="card-details">
+                <ul class="features-list">
+                    <li><span>✦</span> פסקול: Clean Soul (ביט מודרני מניע לפעולה)</li>
+                    <li><span>✦</span> קול: מסר שיווקי חזק ומהיר תוך 18 שניות</li>
+                    <li><span>✦</span> עיצוב: גווני קלף וזהב עם תג מחיר "החל מ-₪45"</li>
+                    <li><span>✦</span> תגיות: אותיות מאירות, ביאור משולב, המלצות רבנים</li>
+                </ul>
+                <a href="demos/option3_neharot_holy_books.mp4" download class="btn-download">
+                    ⬇️ הורד סרטון MP4 למחשב / ווטסאפ
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-note">
+        איזה סגנון הכי אהבת? <strong>היוקרתי (1), המרגש (2) או הקצבי-מכירתי (3)?</strong><br>
+        ברגע שתבחר, נוכל להריץ את אותו הסגנון על כל המוצרים בקטלוג אוטומטית!
+    </div>
+
+</body>
+</html>

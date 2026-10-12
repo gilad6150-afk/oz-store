@@ -3,8 +3,44 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
 
+# Static media assets - aggressive immutable caching (1 year)
+/public/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.ico
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+# JavaScript and Data files (cached with stale-while-revalidate)
+/*.js
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/*.json
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/*.xml
+  Cache-Control: public, max-age=86400, stale-while-revalidate=86400
+
+# HTML documents - revalidate with ETag for instant 304 if unchanged
 /*.html
-  Cache-Control: no-cache, no-store, must-revalidate, max-age=0
+  Cache-Control: public, max-age=0, must-revalidate
 
 /
-  Cache-Control: no-cache, no-store, must-revalidate, max-age=0
+  Cache-Control: public, max-age=0, must-revalidate
