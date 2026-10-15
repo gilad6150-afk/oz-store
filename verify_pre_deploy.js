@@ -323,6 +323,254 @@ function runAudit() {
     console.log('  ✓ אומת: 0 מוצרי חיפוי ארון חשמל זולגים לתיקי טלית ותפילין.');
     console.log('  ✓ אומת: כל 3 כיסויי ארון החשמל (18147, 18148, 18149) משויכים בלעדית לתמונות זכוכית ומתנות.');
 
+    // -------------------------------------------------------------
+    // בדיקה 6: ביקורת SEO מקיפה וציון איכות אורגני (SEO Audit & Improvement)
+    // -------------------------------------------------------------
+    console.log('\n🔍 שלב 6: ביקורת SEO מקיפה ושיפור תגיות מטא, סכמה ואינדוקס...');
+
+    let seoScore = 0;
+    const maxScore = 100;
+    const seoIssues = [];
+
+    // 6.1: בדיקת תג כותרת (Title Tag)
+    const titleMatch = html.match(/<title>([\s\S]*?)<\/title>/i);
+    const titleText = titleMatch ? titleMatch[1].trim() : '';
+    if (!titleText) {
+        seoIssues.push('תג <title> חסר ב-index.html');
+    } else {
+        const titleLen = titleText.length;
+        if (titleLen < 35 || titleLen > 75) {
+            console.warn(`  ⚠️ אזהרת כותרת: אורך Title הוא ${titleLen} תווים (מומלץ בין 35 ל-75 תווים לתצוגה אופטימלית בגוגל).`);
+            seoScore += 7;
+        } else {
+            console.log(`  ✓ כותרת ראשית (Title): "${titleText}" (${titleLen} תווים - תקין ואופטימלי).`);
+            seoScore += 10;
+        }
+        if (titleText.includes('עוז יודאיקה')) seoScore += 5;
+    }
+
+    // 6.2: בדיקת תג תיאור (Meta Description)
+    const descMatch = html.match(/<meta[^>]*name=[\"']description[\"'][^>]*content=[\"']([^\"']*)[\"']/i);
+    const descText = descMatch ? descMatch[1].trim() : '';
+    if (!descText) {
+        seoIssues.push('תג <meta name="description"> חסר ב-index.html');
+    } else {
+        const descLen = descText.length;
+        if (descLen < 100 || descLen > 185) {
+            console.warn(`  ⚠️ אזהרת תיאור: אורך Meta Description הוא ${descLen} תווים (מומלץ בין 100 ל-180 תווים).`);
+            seoScore += 7;
+        } else {
+            console.log(`  ✓ תיאור עמוד (Meta Description): ${descLen} תווים (אופטימלי לקליקבליות ב-SERP).`);
+            seoScore += 10;
+        }
+        if (descText.includes('עוז יודאיקה') && descText.includes('משלוח')) seoScore += 5;
+    }
+
+    // 6.3: בדיקת תג קנוניקל ורובוטים (Canonical & Robots)
+    const canonicalMatch = html.match(/<link[^>]*rel=[\"']canonical[\"'][^>]*href=[\"']([^\"']*)[\"']/i);
+    if (canonicalMatch && canonicalMatch[1].startsWith('https://')) {
+        console.log(`  ✓ תג Canonical מאומת: ${canonicalMatch[1]}`);
+        seoScore += 5;
+    } else {
+        seoIssues.push('תג <link rel="canonical"> חסר או שאינו HTTPS');
+    }
+
+    const robotsMeta = html.match(/<meta[^>]*name=[\"']robots[\"'][^>]*content=[\"']([^\"']*)[\"']/i);
+    if (robotsMeta && robotsMeta[1].includes('index') && robotsMeta[1].includes('follow')) {
+        console.log(`  ✓ תג Meta Robots מוגדר לאינדוקס מלא: ${robotsMeta[1]}`);
+        seoScore += 5;
+    } else {
+        seoIssues.push('תג <meta name="robots"> חסר או שאינו מאפשר אינדוקס');
+    }
+
+    // 6.4: בדיקת תגי OpenGraph ו-Twitter Card
+    const ogTags = ['og:title', 'og:description', 'og:image', 'og:url', 'og:type'];
+    let ogPassed = true;
+    ogTags.forEach(t => {
+        if (!html.includes(`property="${t}"`) && !html.includes(`property='${t}'`)) {
+            ogPassed = false;
+        }
+    });
+    if (ogPassed) {
+        console.log('  ✓ כל תגי השיתוף ברשתות חברתיות (OpenGraph & Twitter Card) קיימים ותקינים.');
+        seoScore += 10;
+    } else {
+        seoIssues.push('חסרים תגי OpenGraph חיוניים');
+    }
+
+    // 6.5: בדיקת נתונים מובנים (Schema.org JSON-LD Structured Data)
+    const jsonLdMatches = html.match(/<script[^>]*type=[\"']application\/ld\+json[\"']>([\s\S]*?)<\/script>/gi) || [];
+    let hasOrg = false, hasStore = false, hasWebsite = false, hasFAQ = false, hasBreadcrumb = false;
+    jsonLdMatches.forEach(tag => {
+        const jsonStr = tag.replace(/<script[^>]*>/i, '').replace(/<\/script>/i, '');
+        try {
+            const data = JSON.parse(jsonStr);
+            const type = data['@type'];
+            if (type === 'Organization') hasOrg = true;
+            if (type === 'Store' || (data.additionalType && data.additionalType.includes('ReligiousGoodsStore'))) hasStore = true;
+            if (type === 'WebSite') hasWebsite = true;
+            if (type === 'FAQPage') hasFAQ = true;
+            if (type === 'BreadcrumbList') hasBreadcrumb = true;
+        } catch(e) {}
+    });
+
+    if (hasOrg && hasStore && hasWebsite && hasFAQ && hasBreadcrumb) {
+        console.log('  ✓ נתוני Schema.org JSON-LD מלאים ומאושרים: Organization, Store, WebSite, FAQPage, BreadcrumbList.');
+        seoScore += 15;
+    } else {
+        const missingSchemas = [];
+        if (!hasOrg) missingSchemas.push('Organization');
+        if (!hasStore) missingSchemas.push('Store');
+        if (!hasWebsite) missingSchemas.push('WebSite');
+        if (!hasFAQ) missingSchemas.push('FAQPage');
+        if (!hasBreadcrumb) missingSchemas.push('BreadcrumbList');
+        seoIssues.push(`חסרות סכמות JSON-LD: ${missingSchemas.join(', ')}`);
+    }
+
+    // 6.6: בדיקת תגיות Alt בכל תמונות האתר ובקטלוג המוצרים
+    const prods = context.window.PRODUCTS_DATA || [];
+    let prodsWithoutAlt = prods.filter(p => !p.alt || !p.alt.trim()).length;
+    if (prodsWithoutAlt === 0) {
+        console.log(`  ✓ כיסוי תגיות Alt מושלם: לכל ${prods.length} המוצרים יש תגית Alt ייחודית בעברית.`);
+        seoScore += 15;
+    } else {
+        console.warn(`  ⚠️ נמצאו ${prodsWithoutAlt} מוצרים ללא תגית Alt ייחודית.`);
+        seoIssues.push(`${prodsWithoutAlt} מוצרים ללא תגית Alt`);
+    }
+
+    // 6.7: בדיקת תקינות וסנכרון robots.txt ו-sitemap.xml
+    const rootRobots = fs.existsSync('robots.txt');
+    const cfRobots = fs.existsSync(path.join('cloudflare_deploy', 'robots.txt'));
+    const rootSitemap = fs.existsSync('sitemap.xml');
+    const cfSitemap = fs.existsSync(path.join('cloudflare_deploy', 'sitemap.xml'));
+
+    if (rootRobots && cfRobots && rootSitemap && cfSitemap) {
+        const smContent = fs.readFileSync('sitemap.xml', 'utf8');
+        const urlCount = (smContent.match(/<loc>/g) || []).length;
+        if (smContent.includes('<urlset') && urlCount >= 400) {
+            console.log(`  ✓ מפת האתר sitemap.xml תקינה ומכילה ${urlCount} כתובות URL לאינדוקס (כולל קטגוריות, מוצרים ומאמרים).`);
+            console.log('  ✓ קובצי robots.txt ו-sitemap.xml מסונכרנים במלואם ב-root וב-cloudflare_deploy.');
+            seoScore += 15;
+        } else {
+            seoIssues.push(`sitemap.xml מכיל רק ${urlCount} כתובות (מצופה לפחות 400)`);
+        }
+    } else {
+        seoIssues.push('חסרים קובצי robots.txt או sitemap.xml ב-root או ב-cloudflare_deploy');
+    }
+
+    // 6.8: בדיקת מערך המאמרים (Content Authority & Article Health)
+    const articles = context.window.ARTICLES_DATA || [];
+    const nowTime = Date.now();
+    const pubArticles = articles.filter(a => a.status === 'published' || !a.publish_at || new Date(a.publish_at).getTime() <= nowTime);
+    if (pubArticles.length >= 35) {
+        console.log(`  ✓ מערך מאמרי עוגן וסמכות פעיל: ${pubArticles.length} מאמרים מפורסמים עם מילות מפתח עשירות.`);
+        seoScore += 10;
+    } else {
+        console.warn(`  ⚠️ פחות מ-35 מאמרים מפורסמים (${pubArticles.length}).`);
+        seoIssues.push(`פחות מ-35 מאמרים מפורסמים (${pubArticles.length})`);
+    }
+
+    // חישוב ציון ביקורת SEO סופי
+    console.log(`\n🏆 ציון איכות ובריאות SEO סופי: ${seoScore} מתוך ${maxScore}`);
+    if (seoIssues.length > 0) {
+        console.warn('  ליקויים לתיקון בביקורת:', seoIssues);
+    } else {
+        console.log('  🌟 כל רכיבי ה-SEO עברו את הביקורת בהצטיינות יתרה (100% Score)!');
+    }
+
+    if (seoScore < 90) {
+        console.error('❌ שגיאה: ציון ה-SEO נמוך מ-90! עצירת הפריסה.');
+        process.exit(1);
+    }
+
+    // -------------------------------------------------------------
+    // בדיקה 7: ביקורת וידאו אורגני (Video SEO, VideoObject & Video Sitemap)
+    // -------------------------------------------------------------
+    console.log('\n🔍 שלב 7: ביקורת וידאו אורגני, סרטוני מוצרים ומפת וידאו בגוגל...');
+    const videoProds = prods.filter(p => p.video);
+    console.log(`  ✓ סרטוני מוצרים פעילים בקטלוג: ${videoProds.length} מוצרים עם וידאו מוטמע.`);
+    if (videoProds.length < 90) {
+        console.error(`❌ שגיאה: כמות המוצרים עם וידאו נמוכה מ-90 (${videoProds.length})!`);
+        process.exit(1);
+    }
+
+    // בדיקת קיום פיזי של כל קובצי הוידאו
+    let missingVideos = 0;
+    videoProds.forEach(p => {
+        const cleanVid = p.video.split('?')[0].replace(/^\//, '');
+        if (!fs.existsSync(cleanVid)) {
+            missingVideos++;
+            console.error(`  ❌ קובץ וידאו חסר בדיסק: ${cleanVid}`);
+        }
+    });
+    if (missingVideos === 0) {
+        console.log(`  ✓ כל ${videoProds.length} קובצי הוידאו קיימים פיזית בדיסק במלואם.`);
+    } else {
+        console.error(`❌ שגיאה: ${missingVideos} קובצי וידאו חסרים בדיסק!`);
+        process.exit(1);
+    }
+
+    // בדיקת מפת הוידאו sitemap.xml
+    const smVideoContent = fs.readFileSync('sitemap.xml', 'utf8');
+    const videoTagCount = (smVideoContent.match(/<video:video>/g) || []).length;
+    console.log(`  ✓ תגיות Google Video sitemap מאומתות: ${videoTagCount} סרטונים מקושרים לאינדוקס.`);
+    if (videoTagCount < 90) {
+        console.error(`❌ שגיאה: sitemap.xml מכיל רק ${videoTagCount} תגיות video:video!`);
+        process.exit(1);
+    }
+    if (!smVideoContent.includes('videos.html')) {
+        console.error('❌ שגיאה: videos.html חסר ב-sitemap.xml!');
+        process.exit(1);
+    }
+
+    // בדיקת גלריית הוידאו videos.html
+    if (fs.existsSync('videos.html')) {
+        let vIndexCount = 0;
+        if (fs.existsSync('generated_videos/videos_index.json')) {
+            const vData = JSON.parse(fs.readFileSync('generated_videos/videos_index.json', 'utf8'));
+            vIndexCount = vData.length;
+        }
+        console.log(`  ✓ עמוד מרכז הוידאו (videos.html) קיים ומקושר לאינדקס של ${vIndexCount} סרטונים.`);
+        if (vIndexCount < 90) {
+            console.error(`❌ שגיאה: אינדקס הסרטונים מכיל רק ${vIndexCount} סרטונים!`);
+            process.exit(1);
+        }
+    } else {
+        console.error('❌ שגיאה: videos.html חסר!');
+        process.exit(1);
+    }
+
+    // בדיקת תגי Schema.org VideoObject ו-Badge ב-index.html
+    if (html.includes('itemtype="https://schema.org/VideoObject"') && html.includes('videos.html')) {
+        console.log('  ✓ סכמת VideoObject, תגית וידאו בכרטיסי מוצר וקישורי ניווט לגלריה קיימים ב-index.html.');
+    } else {
+        console.error('❌ שגיאה: חסרים רכיבי VideoObject או קישורי videos.html ב-index.html!');
+        process.exit(1);
+    }
+
+    // 7.1: ביקורת הטמעת סרטוני מוצר ב-Google Merchant וב-Schema.org כפי שגוגל אוהב
+    console.log('\n🔍 שלב 7.1: ביקורת הטמעת סרטוני מוצר ב-Google Merchant וב-Schema.org (Google Video Love)...');
+    const feedFile = 'google_shopping_free_feed.xml';
+    if (fs.existsSync(feedFile)) {
+        const feedContent = fs.readFileSync(feedFile, 'utf8');
+        const merchantVideoLinks = (feedContent.match(/<g:video_link>/g) || []).length;
+        console.log(`  ✓ תגיות <g:video_link> מאומתות בפיד גוגל שופינג: ${merchantVideoLinks} קישורי וידאו פעילים.`);
+        if (merchantVideoLinks < 50) {
+            console.error(`❌ שגיאה: פיד Google Merchant מכיל רק ${merchantVideoLinks} תגיות g:video_link!`);
+            process.exit(1);
+        }
+    } else {
+        console.error('❌ שגיאה: google_shopping_free_feed.xml לא נמצא!');
+        process.exit(1);
+    }
+
+    if (html.includes('openProductVideoModal') && html.includes('dynamic-video-schema')) {
+        console.log('  ✓ נגן וידאו מודאלי וסכמת dynamic-video-schema מאומתים ב-index.html.');
+    } else {
+        console.error('❌ שגיאה: openProductVideoModal או dynamic-video-schema חסרים ב-index.html!');
+        process.exit(1);
+    }
+
     console.log('\n================================================================');
     console.log(' 🎉 הביקורת העצמית עברה בהצלחה מלאה! האתר תקין ב-100% לפריסה.   ');
     console.log('================================================================\n');

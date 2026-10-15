@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-12T07:50:15.295Z",
+  "updatedAt": "2026-10-12T14:33:25.854Z",
   "description": "תור תמונות אווירה מדויקות למוצרי עוז יודאיקה - 100% נאמנות לדגם המקורי מתמונה 1",
-  "totalQueue": 105,
+  "totalQueue": 130,
   "queue": [
     {
       "id": 21010,
@@ -79,6 +79,17 @@
       "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
       "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [public/products/set_barmitzvah_vip_19010.jpg]. The item is an authentic Judaica piece: סט בר מצווה יוקרתי אקסקלוסיבי – תפילין מהודרות א.א, תפידנית מוגנת, סידור, תהילים וארנק עור נאפה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
       "promptMacro": "High-end macro close-up of the EXACT same סט בר מצווה יוקרתי אקסקלוסיבי – תפילין מהודרות א.א, תפידנית מוגנת, סידור, תהילים וארנק עור נאפה from reference image [public/products/set_barmitzvah_vip_19010.jpg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7941,
+      "name": "ארנק עור נאפה ענק אפור LB98229 איכותי לגבר – עוז יודאיקה",
+      "category": "gifts",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-16-at-12.05.26-1024x1024-2.jpeg",
+      "existingCount": 1,
+      "neededCount": 2,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-16-at-12.05.26-1024x1024-2.jpeg]. The item is an authentic Judaica piece: ארנק עור נאפה ענק אפור LB98229 איכותי לגבר – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same ארנק עור נאפה ענק אפור LB98229 איכותי לגבר – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-16-at-12.05.26-1024x1024-2.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
     },
     {
       "id": 7935,
@@ -235,6 +246,17 @@
       "promptMacro": "High-end macro close-up of the EXACT same ארנק כרטיסים מעור לגבר מגנט שחור LB80471 איכותי לגבר – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-13-at-12.09.18-1024x1024-1.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
     },
     {
+      "id": 7851,
+      "name": "ארנק עור נאפה אפור ענק LB98229 איכותי לגבר – עוז יודאיקה",
+      "category": "gifts",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-16-at-12.05.26-1024x1024-1.jpeg",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-16-at-12.05.26-1024x1024-1.jpeg]. The item is an authentic Judaica piece: ארנק עור נאפה אפור ענק LB98229 איכותי לגבר – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same ארנק עור נאפה אפור ענק LB98229 איכותי לגבר – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-16-at-12.05.26-1024x1024-1.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
       "id": 7845,
       "name": "ארנק עור נאפה אפור LB91758 איכותי לגבר – עוז יודאיקה",
       "category": "gifts",
@@ -266,6 +288,17 @@
       "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
       "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-16-at-12.02.42-1024x1024-1.jpeg]. The item is an authentic Judaica piece: ארנק עור ברידג' חום LB83598 איכותי לגבר – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
       "promptMacro": "High-end macro close-up of the EXACT same ארנק עור ברידג' חום LB83598 איכותי לגבר – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-16-at-12.02.42-1024x1024-1.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7827,
+      "name": "ארנק עור נאפה ענק שחור LB98229 איכותי לגבר – עוז יודאיקה",
+      "category": "gifts",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-15-at-11.04.01-1-1024x1024-1.jpeg",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-15-at-11.04.01-1-1024x1024-1.jpeg]. The item is an authentic Judaica piece: ארנק עור נאפה ענק שחור LB98229 איכותי לגבר – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same ארנק עור נאפה ענק שחור LB98229 איכותי לגבר – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-15-at-11.04.01-1-1024x1024-1.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
     },
     {
       "id": 7821,
@@ -398,6 +431,248 @@
       "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
       "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2024-01-31-at-10.55.55-5.webp]. The item is an authentic Judaica piece: ארנק עור לכרטיסים נשלפים  חום LB3301 איכותי לגבר – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
       "promptMacro": "High-end macro close-up of the EXACT same ארנק עור לכרטיסים נשלפים  חום LB3301 איכותי לגבר – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2024-01-31-at-10.55.55-5.webp]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7745,
+      "name": "ארנק כרטיסי אשראי LB3302 שחור איכותי לגבר – עוז יודאיקה",
+      "category": "gifts",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2024-01-31-at-10.55.55-9.jpeg",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2024-01-31-at-10.55.55-9.jpeg]. The item is an authentic Judaica piece: ארנק כרטיסי אשראי LB3302 שחור איכותי לגבר – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same ארנק כרטיסי אשראי LB3302 שחור איכותי לגבר – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2024-01-31-at-10.55.55-9.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7733,
+      "name": "ארנק כרטיסי אשראי LB3302 חום איכותי לגבר – עוז יודאיקה",
+      "category": "gifts",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2024-01-31-at-10.55.55-7.jpeg",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2024-01-31-at-10.55.55-7.jpeg]. The item is an authentic Judaica piece: ארנק כרטיסי אשראי LB3302 חום איכותי לגבר – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same ארנק כרטיסי אשראי LB3302 חום איכותי לגבר – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2024-01-31-at-10.55.55-7.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7724,
+      "name": "תיק תפילין דק גדול LB2053 – עוז יודאיקה",
+      "category": "tefillin-bags",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.25-1024x1024-2.jpeg",
+      "existingCount": 1,
+      "neededCount": 2,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.25-1024x1024-2.jpeg]. The item is an authentic Judaica piece: תיק תפילין דק גדול LB2053 – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same תיק תפילין דק גדול LB2053 – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.25-1024x1024-2.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7718,
+      "name": "תיק תפילין דק קטן LB2054 – עוז יודאיקה",
+      "category": "tefillin-bags",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-26-at-14.54.52-4-1024x1024-2.jpeg",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-26-at-14.54.52-4-1024x1024-2.jpeg]. The item is an authentic Judaica piece: תיק תפילין דק קטן LB2054 – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same תיק תפילין דק קטן LB2054 – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-26-at-14.54.52-4-1024x1024-2.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7711,
+      "name": "תיק לתפילין קטן LB2003 – עוז יודאיקה",
+      "category": "tefillin-bags",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-26-at-14.52.02-1-1024x1024-2.jpeg",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-26-at-14.52.02-1-1024x1024-2.jpeg]. The item is an authentic Judaica piece: תיק לתפילין קטן LB2003 – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same תיק לתפילין קטן LB2003 – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-26-at-14.52.02-1-1024x1024-2.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7705,
+      "name": "תיק מזוודה לתפילין גדול LB2002 – עוז יודאיקה",
+      "category": "tefillin-bags",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-26-at-14.52.32-1-1024x1024.jpeg-1.webp",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-26-at-14.52.32-1-1024x1024.jpeg-1.webp]. The item is an authentic Judaica piece: תיק מזוודה לתפילין גדול LB2002 – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same תיק מזוודה לתפילין גדול LB2002 – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-26-at-14.52.32-1-1024x1024.jpeg-1.webp]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7693,
+      "name": "תיק תפילין גדול LB2011 – עוז יודאיקה",
+      "category": "tefillin-bags",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-22-at-11.36.22-1-1024x1024-2.jpeg",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-22-at-11.36.22-1-1024x1024-2.jpeg]. The item is an authentic Judaica piece: תיק תפילין גדול LB2011 – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same תיק תפילין גדול LB2011 – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-22-at-11.36.22-1-1024x1024-2.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7667,
+      "name": "תיק לתפילין ענק LB2013 – עוז יודאיקה",
+      "category": "tefillin-bags",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2024-01-31-at-14.30.37-1.webp",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2024-01-31-at-14.30.37-1.webp]. The item is an authentic Judaica piece: תיק לתפילין ענק LB2013 – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same תיק לתפילין ענק LB2013 – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2024-01-31-at-14.30.37-1.webp]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7661,
+      "name": "תיק לתפילין שקוף בחזית LB2066 – עוז יודאיקה",
+      "category": "tefillin-bags",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2025-09-17-at-13.01.54-1024x1024-2.jpeg",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2025-09-17-at-13.01.54-1024x1024-2.jpeg]. The item is an authentic Judaica piece: תיק לתפילין שקוף בחזית LB2066 – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same תיק לתפילין שקוף בחזית LB2066 – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2025-09-17-at-13.01.54-1024x1024-2.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7624,
+      "name": "תיק לתפילין LB2008 – עוז יודאיקה",
+      "category": "tefillin-bags",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-22-at-11.36.22-1024x1024-1.jpeg",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-22-at-11.36.22-1024x1024-1.jpeg]. The item is an authentic Judaica piece: תיק לתפילין LB2008 – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same תיק לתפילין LB2008 – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-22-at-11.36.22-1024x1024-1.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7618,
+      "name": "תיק תפילין קטן LB2007 – עוז יודאיקה",
+      "category": "tefillin-bags",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-20-at-13.46.35-1024x1024-1.jpeg",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-20-at-13.46.35-1024x1024-1.jpeg]. The item is an authentic Judaica piece: תיק תפילין קטן LB2007 – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same תיק תפילין קטן LB2007 – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-20-at-13.46.35-1024x1024-1.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7612,
+      "name": "תיק תפילין שני רוכסנים קטן LB2052 – עוז יודאיקה",
+      "category": "tefillin-bags",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.24-5-1024x1024-1.jpeg",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.24-5-1024x1024-1.jpeg]. The item is an authentic Judaica piece: תיק תפילין שני רוכסנים קטן LB2052 – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same תיק תפילין שני רוכסנים קטן LB2052 – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.24-5-1024x1024-1.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7606,
+      "name": "תיק תפילין שני רוכסנים גדול LB2051 – עוז יודאיקה",
+      "category": "tefillin-bags",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.24-1024x1024-1.jpeg",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.24-1024x1024-1.jpeg]. The item is an authentic Judaica piece: תיק תפילין שני רוכסנים גדול LB2051 – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same תיק תפילין שני רוכסנים גדול LB2051 – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.24-1024x1024-1.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7600,
+      "name": "תיק תפילין איכותי LB2071 DU GUN – עוז יודאיקה",
+      "category": "tefillin-bags",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2022-01-30-at-13.09.45-1-1024x1024-1.jpeg",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2022-01-30-at-13.09.45-1-1024x1024-1.jpeg]. The item is an authentic Judaica piece: תיק תפילין איכותי LB2071 DU GUN – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same תיק תפילין איכותי LB2071 DU GUN – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2022-01-30-at-13.09.45-1-1024x1024-1.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7497,
+      "name": "תיק לתפילין LB2005 – עוז יודאיקה",
+      "category": "tefillin-bags",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.24-2-1024x1024-1.jpeg",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.24-2-1024x1024-1.jpeg]. The item is an authentic Judaica piece: תיק לתפילין LB2005 – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same תיק לתפילין LB2005 – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.24-2-1024x1024-1.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7483,
+      "name": "תיק תפילין דק גדול LB2053 – עוז יודאיקה",
+      "category": "tefillin-bags",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.25-1024x1024-1.jpeg",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.25-1024x1024-1.jpeg]. The item is an authentic Judaica piece: תיק תפילין דק גדול LB2053 – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same תיק תפילין דק גדול LB2053 – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.25-1024x1024-1.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7477,
+      "name": "תיק תפילין דק קטן LB2054 – עוז יודאיקה",
+      "category": "tefillin-bags",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-26-at-14.54.52-4-1024x1024-1.jpeg",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-26-at-14.54.52-4-1024x1024-1.jpeg]. The item is an authentic Judaica piece: תיק תפילין דק קטן LB2054 – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same תיק תפילין דק קטן LB2054 – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-26-at-14.54.52-4-1024x1024-1.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7470,
+      "name": "תיק לתפילין קטן LB2003 – עוז יודאיקה",
+      "category": "tefillin-bags",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-26-at-14.52.02-1-1024x1024-1.jpeg",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-26-at-14.52.02-1-1024x1024-1.jpeg]. The item is an authentic Judaica piece: תיק לתפילין קטן LB2003 – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same תיק לתפילין קטן LB2003 – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-26-at-14.52.02-1-1024x1024-1.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7464,
+      "name": "תיק מזוודה לתפילין גדול LB2002 – עוז יודאיקה",
+      "category": "tefillin-bags",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-26-at-14.52.32-1-1024x1024.jpeg.webp",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-26-at-14.52.32-1-1024x1024.jpeg.webp]. The item is an authentic Judaica piece: תיק מזוודה לתפילין גדול LB2002 – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same תיק מזוודה לתפילין גדול LB2002 – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-26-at-14.52.32-1-1024x1024.jpeg.webp]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7452,
+      "name": "תיק תפילין גדול LB2011 – עוז יודאיקה",
+      "category": "tefillin-bags",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-22-at-11.36.22-1-1024x1024-1.jpeg",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-22-at-11.36.22-1-1024x1024-1.jpeg]. The item is an authentic Judaica piece: תיק תפילין גדול LB2011 – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same תיק תפילין גדול LB2011 – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-22-at-11.36.22-1-1024x1024-1.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7426,
+      "name": "תיק לתפילין ענק LB2013 – עוז יודאיקה",
+      "category": "tefillin-bags",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2024-01-31-at-14.30.37.webp",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2024-01-31-at-14.30.37.webp]. The item is an authentic Judaica piece: תיק לתפילין ענק LB2013 – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same תיק לתפילין ענק LB2013 – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2024-01-31-at-14.30.37.webp]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
+    },
+    {
+      "id": 7420,
+      "name": "תיק לתפילין שקוף בחזית LB2066 – עוז יודאיקה",
+      "category": "tefillin-bags",
+      "primaryImage": "https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2025-09-17-at-13.01.54-1024x1024-1.jpeg",
+      "existingCount": 2,
+      "neededCount": 1,
+      "strictDirective": "MUST MATCH EXACT MODEL IN PRIMARY IMAGE (NO INVENTED DESIGNS)",
+      "promptStudio": "Photorealistic 8K lifestyle atmosphere photograph featuring the EXACT same product model from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2025-09-17-at-13.01.54-1024x1024-1.jpeg]. The item is an authentic Judaica piece: תיק לתפילין שקוף בחזית LB2066 – עוז יודאיקה. Maintain 100% fidelity to the shape, colors, materials, embroidery and textures of the primary image. Displayed on a luxurious wooden table in an elegant Jewish home / Shabbat atmosphere with soft warm lighting. Do not invent a different model.",
+      "promptMacro": "High-end macro close-up of the EXACT same תיק לתפילין שקוף בחזית LB2066 – עוז יודאיקה from reference image [https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2025-09-17-at-13.01.54-1024x1024-1.jpeg]. Showcasing the authentic stitching, fine finish, and genuine materials of this specific model. 8K studio photography."
     },
     {
       "id": 5446,

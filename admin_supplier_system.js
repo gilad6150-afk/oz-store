@@ -753,7 +753,7 @@
                                             ${l.email ? `<div class="text-[10px] text-slate-400 font-normal dir-ltr text-right">${l.email}</div>` : ''}
                                         </td>
                                         <td class="p-3 font-mono dir-ltr text-right">
-                                            <a href="tel:${l.phone}" class="text-purple-900 hover:underline font-bold">${formatIsraeliPhone(l.phone)}</a>
+                                            <a href="https://wa.me/972${l.phone ? l.phone.replace(/^0/, '').replace(/\D/g, '') : ''}" target="_blank" class="text-emerald-700 hover:underline font-bold">💬 ${formatIsraeliPhone(l.phone)}</a>
                                         </td>
                                         <td class="p-3 font-medium text-slate-700">
                                             ${l.city || 'ראש העין'} ${l.address ? '• ' + l.address : ''}

@@ -288,6 +288,48 @@ async function runRoutineAuditAndRepair(autoFix = true) {
     });
 
     // -------------------------------------------------------------
+    // 1C. PRODUCT VIDEO INTEGRATION & GOOGLE SCHEMA AUDIT (WHAT GOOGLE LOVES)
+    // -------------------------------------------------------------
+    console.log('\n[SECTION 1C: PRODUCT VIDEO INTEGRATION & GOOGLE SCHEMA AUDIT]');
+    let videoAuditedCount = 0;
+    let missingVideoFiles = 0;
+
+    products.forEach(p => {
+        if (p.video) {
+            videoAuditedCount++;
+            const cleanVid = p.video.split('?')[0].replace(/^\//, '');
+            if (!fs.existsSync(cleanVid)) {
+                missingVideoFiles++;
+                console.warn(`  ⚠️ וידאו מוצר [${p.id}] לא נמצא בדיסק: ${cleanVid}`);
+            }
+        }
+    });
+
+    console.log(`  -> סך כל מוצרי החנות המקושרים לסרטוני וידאו: ${videoAuditedCount}`);
+    if (missingVideoFiles === 0) {
+        console.log(`  -> תקינות קבצים: 100% מקובצי הווידאו קיימים ונגישים.`);
+    }
+
+    // בדיקת תקינות Google Merchant Feed
+    const merchantFeedPath = 'google_shopping_free_feed.xml';
+    if (fs.existsSync(merchantFeedPath)) {
+        const feedText = fs.readFileSync(merchantFeedPath, 'utf8');
+        const merchantVideoLinks = (feedText.match(/<g:video_link>/g) || []).length;
+        console.log(`  -> Google Shopping Feed (<g:video_link>): ${merchantVideoLinks} מוצרים משויכים בהצלחה לפיד החינמי.`);
+    }
+
+    // בדיקת הטמעה ב-index.html
+    if (fs.existsSync('index.html')) {
+        const indexHtml = fs.readFileSync('index.html', 'utf8');
+        const hasVideoObject = indexHtml.includes('https://schema.org/VideoObject');
+        const hasVideoModal = indexHtml.includes('openProductVideoModal');
+        const hasDynamicVideoSchema = indexHtml.includes('dynamic-video-schema');
+        console.log(`  -> תאימות Schema.org VideoObject: ${hasVideoObject ? '✅ קיים ומאושר' : '❌ חסר'}`);
+        console.log(`  -> נגן מודאלי אינטראקטיבי: ${hasVideoModal ? '✅ מוטמע ומופעל' : '❌ חסר'}`);
+        console.log(`  -> סכמת Dynamic VideoObject (גוגל): ${hasDynamicVideoSchema ? '✅ מוטמעת' : '❌ חסר'}`);
+    }
+
+    // -------------------------------------------------------------
     // 2. AUDIT & REPAIR ARTICLES & DRIP SCHEDULE
     // -------------------------------------------------------------
     console.log('\n[SECTION 2: ARTICLES AUDIT & 4-HOUR DRIP QUEUE]');

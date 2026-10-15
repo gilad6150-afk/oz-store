@@ -33,7 +33,8 @@ const today = new Date().toISOString().split('T')[0];
 
 let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <!-- Homepage -->
   <url>
     <loc>https://oz-judaica.co.il/</loc>
@@ -117,6 +118,18 @@ let xml = `<?xml version="1.0" encoding="UTF-8"?>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Dedicated Video Gallery Hub -->
+  <url>
+    <loc>https://oz-judaica.co.il/videos.html</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/hero_banner_groom.jpg</image:loc>
+      <image:title>גלריית סרטוני וידאו והדגמות מוצרים - עוז יודאיקה</image:title>
+    </image:image>
+  </url>
 `;
 
 // City Landing Pages (Local SEO)
@@ -136,7 +149,7 @@ if (fs.existsSync('cities')) {
 
 
 // Products
-xml += '\n  <!-- Products (405 items) -->\n';
+xml += `\n  <!-- Products (${products.length} items) -->\n`;
 for (const p of products) {
     const pUrl = `https://oz-judaica.co.il/?product=${p.id}`;
     let imgUrl = p.image || '';
@@ -156,6 +169,25 @@ for (const p of products) {
       <image:loc>${escapeXml(imgUrl)}</image:loc>
       <image:title>${escapeXml(p.name)}</image:title>
     </image:image>`;
+    }
+
+    if (p.video) {
+        let vidUrl = p.video;
+        if (!vidUrl.startsWith('http')) {
+            vidUrl = 'https://oz-judaica.co.il/' + vidUrl.replace(/^\//, '');
+        }
+        const thumbUrl = imgUrl || 'https://oz-judaica.co.il/public/hero_banner_groom.jpg';
+        const vidTitle = `סרטון הדגמה מהשטח: ${p.name}`;
+        const vidDesc = p.short_description || p.description || `${p.name} - צפו בהדגמת וידאו מלאה מבית עוז יודאיקה`;
+        xml += `
+    <video:video>
+      <video:thumbnail_loc>${escapeXml(thumbUrl)}</video:thumbnail_loc>
+      <video:title>${escapeXml(vidTitle)}</video:title>
+      <video:description>${escapeXml(vidDesc)}</video:description>
+      <video:content_loc>${escapeXml(vidUrl)}</video:content_loc>
+      <video:publication_date>${today}</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>`;
     }
 
     xml += `\n  </url>\n`;
@@ -179,8 +211,28 @@ for (const a of publishedArticles) {
     <image:image>
       <image:loc>${escapeXml(imgUrl)}</image:loc>
       <image:title>${escapeXml(a.title)}</image:title>
-    </image:image>
-  </url>\n`;
+    </image:image>`;
+
+    if (a.video) {
+        let vidUrl = a.video;
+        if (!vidUrl.startsWith('http')) {
+            vidUrl = 'https://oz-judaica.co.il/' + vidUrl.replace(/^\//, '');
+        }
+        const thumbUrl = imgUrl || 'https://oz-judaica.co.il/public/hero_banner_groom.jpg';
+        const vidTitle = `סקירת וידאו מקצועית: ${a.title}`;
+        const vidDesc = a.summary || a.title;
+        xml += `
+    <video:video>
+      <video:thumbnail_loc>${escapeXml(thumbUrl)}</video:thumbnail_loc>
+      <video:title>${escapeXml(vidTitle)}</video:title>
+      <video:description>${escapeXml(vidDesc)}</video:description>
+      <video:content_loc>${escapeXml(vidUrl)}</video:content_loc>
+      <video:publication_date>${a.publishDate || today}</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>`;
+    }
+
+    xml += `\n  </url>\n`;
 }
 
 xml += `</urlset>\n`;
