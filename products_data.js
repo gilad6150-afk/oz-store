@@ -7687,8 +7687,8 @@ window.productsData = [
     "id": 7220,
     "sku": "OZ-BK-7221",
     "name": "הסידור המבואר – תפילת ימות השבוע ושבת קודש – עוז יודאיקה",
-    "price": 35,
-    "regular_price": 35,
+    "price": 45,
+    "regular_price": 65,
     "inStock": true,
     "image": "https://www.sidur-neharot.co.il/up/gallery/112917_WhatsApp-Image-2026-06-07-at-150828.jpeg",
     "images": [
@@ -7702,17 +7702,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "סוג כריכה וגודל",
-        "type": "select",
-        "values": [
-          "כריכה קשה מרופדת קלאסית (כלול)",
-          "כריכת דמוי עור פרימיום לבנה / חומה (+₪30)",
-          "כריכת עור איטלקית אמיתית יוקרתית (+₪75)"
-        ]
-      }
-    ],
+    "options": [],
     "faq": [
       {
         "q": "מה ההבדל בין ספר זה לסידורים רגילים?",
@@ -7746,17 +7736,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "סוג כריכה וגודל",
-        "type": "select",
-        "values": [
-          "כריכה קשה מרופדת קלאסית (כלול)",
-          "כריכת דמוי עור פרימיום לבנה / חומה (+₪30)",
-          "כריכת עור איטלקית אמיתית יוקרתית (+₪75)"
-        ]
-      }
-    ],
+    "options": [],
     "faq": [
       {
         "q": "מה ההבדל בין ספר זה לסידורים רגילים?",
@@ -7790,17 +7770,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "סוג כריכה וגודל",
-        "type": "select",
-        "values": [
-          "כריכה קשה מרופדת קלאסית (כלול)",
-          "כריכת דמוי עור פרימיום לבנה / חומה (+₪30)",
-          "כריכת עור איטלקית אמיתית יוקרתית (+₪75)"
-        ]
-      }
-    ],
+    "options": [],
     "faq": [
       {
         "q": "מה ההבדל בין ספר זה לסידורים רגילים?",
@@ -79351,25 +79321,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      },
-      {
-        "name": "גודל וכריכה",
-        "type": "select",
-        "values": [
-          "כריכת עור בינוני (12x18 cm)",
-          "כריכת עור גדול (15x22 cm)"
-        ]
-      }
-    ],
+    "options": [],
     "faq": [
       {
         "q": "מהם זמני המשלוח עבור מוצר זה?",
@@ -79525,17 +79477,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      }
-    ],
+    "options": [],
     "supplier": "סידור מבואר (נהרות)",
     "alt": "סידור \"כתר התפילה\" כריכה מהודרת דמוי עור צבע חום מהודר – ספרי קודש ומארזים מהודרים | עוז יודאיקה",
     "video": "generated_videos/viral_ad_5164.mp4"
@@ -79559,17 +79501,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      }
-    ],
+    "options": [],
     "supplier": "סידור מבואר (נהרות)",
     "alt": "סידור \"כתר התפילה\" כריכה מהודרת דמוי עור צבע לבן משולב – ספרי קודש ומארזים מהודרים | עוז יודאיקה",
     "video": "generated_videos/viral_ad_5161.mp4"
@@ -79593,17 +79525,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      }
-    ],
+    "options": [],
     "supplier": "סידור מבואר (נהרות)",
     "alt": "סידור \"כתר התפילה\" כריכה מהודרת דמוי עור צבע חום בהיר דגם אבן – ספרי קודש ומארזים מהודרים | עוז יודאיקה",
     "video": "generated_videos/viral_ad_5158.mp4"
@@ -79627,17 +79549,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      }
-    ],
+    "options": [],
     "supplier": "סידור מבואר (נהרות)",
     "alt": "סידור \"כתר התפילה\" כריכה מהודרת דמוי עור צבע שחור דגם אבן ירושלמי – ספרי קודש ומארזים מהודרים | עוז יודאיקה",
     "video": "generated_videos/viral_ad_5146.mp4"
@@ -79661,17 +79573,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      }
-    ],
+    "options": [],
     "supplier": "סידור מבואר (נהרות)",
     "alt": "סידור \"כתר התפילה\" כריכה מהודרת דמוי עור צבע חום דגם אבן ירושלמי – ספרי קודש ומארזים מהודרים | עוז יודאיקה",
     "video": "generated_videos/viral_ad_5139.mp4"
@@ -79695,17 +79597,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      }
-    ],
+    "options": [],
     "supplier": "סידור מבואר (נהרות)",
     "alt": "סידור \"כתר התפילה\" כריכה מהודרת דמוי עור 17.5x12 ס\"מ צבע חום בהיר – ספרי קודש ומארזים מהודרים | עוז יודאיקה",
     "video": "generated_videos/viral_ad_5136.mp4"
@@ -79729,17 +79621,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      }
-    ],
+    "options": [],
     "supplier": "סידור מבואר (נהרות)",
     "alt": "סידור \"כתר התפילה\" כריכה מהודרת דמוי עור 17.5x12 ס\"מ – ספרי קודש ומארזים מהודרים | עוז יודאיקה",
     "video": "generated_videos/viral_ad_4380.mp4"
@@ -79763,25 +79645,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      },
-      {
-        "name": "גודל וכריכה",
-        "type": "select",
-        "values": [
-          "כריכת עור בינוני (12x18 cm)",
-          "כריכת עור גדול (15x22 cm)"
-        ]
-      }
-    ],
+    "options": [],
     "faq": [
       {
         "q": "מהם זמני המשלוח עבור מוצר זה?",
@@ -79819,25 +79683,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      },
-      {
-        "name": "גודל וכריכה",
-        "type": "select",
-        "values": [
-          "כריכת עור בינוני (12x18 cm)",
-          "כריכת עור גדול (15x22 cm)"
-        ]
-      }
-    ],
+    "options": [],
     "faq": [
       {
         "q": "מהם זמני המשלוח עבור מוצר זה?",
@@ -79877,7 +79723,8 @@ window.productsData = [
     "subcategory": "ספרי קודש וסידורים",
     "supplier": "עוז יודאיקה (ייצור עצמי וסת\"ם)",
     "alt": "ברכות השחר פיו ע\"מ 12*17 – ספרי קודש ומארזים מהודרים | עוז יודאיקה",
-    "video": "generated_videos/viral_ad_627.mp4"
+    "video": "generated_videos/viral_ad_627.mp4",
+    "options": []
   },
   {
     "id": 624,
@@ -79898,25 +79745,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      },
-      {
-        "name": "גודל וכריכה",
-        "type": "select",
-        "values": [
-          "כריכת עור בינוני (12x18 cm)",
-          "כריכת עור גדול (15x22 cm)"
-        ]
-      }
-    ],
+    "options": [],
     "faq": [
       {
         "q": "מהם זמני המשלוח עבור מוצר זה?",
@@ -79954,25 +79783,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      },
-      {
-        "name": "גודל וכריכה",
-        "type": "select",
-        "values": [
-          "כריכת עור בינוני (12x18 cm)",
-          "כריכת עור גדול (15x22 cm)"
-        ]
-      }
-    ],
+    "options": [],
     "faq": [
       {
         "q": "מהם זמני המשלוח עבור מוצר זה?",
@@ -80010,25 +79821,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      },
-      {
-        "name": "גודל וכריכה",
-        "type": "select",
-        "values": [
-          "כריכת עור בינוני (12x18 cm)",
-          "כריכת עור גדול (15x22 cm)"
-        ]
-      }
-    ],
+    "options": [],
     "faq": [
       {
         "q": "מהם זמני המשלוח עבור מוצר זה?",
@@ -80066,25 +79859,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      },
-      {
-        "name": "גודל וכריכה",
-        "type": "select",
-        "values": [
-          "כריכת עור בינוני (12x18 cm)",
-          "כריכת עור גדול (15x22 cm)"
-        ]
-      }
-    ],
+    "options": [],
     "faq": [
       {
         "q": "מהם זמני המשלוח עבור מוצר זה?",
@@ -80122,25 +79897,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      },
-      {
-        "name": "גודל וכריכה",
-        "type": "select",
-        "values": [
-          "כריכת עור בינוני (12x18 cm)",
-          "כריכת עור גדול (15x22 cm)"
-        ]
-      }
-    ],
+    "options": [],
     "faq": [
       {
         "q": "מהם זמני המשלוח עבור מוצר זה?",
@@ -80178,25 +79935,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      },
-      {
-        "name": "גודל וכריכה",
-        "type": "select",
-        "values": [
-          "כריכת עור בינוני (12x18 cm)",
-          "כריכת עור גדול (15x22 cm)"
-        ]
-      }
-    ],
+    "options": [],
     "faq": [
       {
         "q": "מהם זמני המשלוח עבור מוצר זה?",
@@ -80234,25 +79973,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      },
-      {
-        "name": "גודל וכריכה",
-        "type": "select",
-        "values": [
-          "כריכת עור בינוני (12x18 cm)",
-          "כריכת עור גדול (15x22 cm)"
-        ]
-      }
-    ],
+    "options": [],
     "faq": [
       {
         "q": "מהם זמני המשלוח עבור מוצר זה?",
@@ -80292,7 +80013,8 @@ window.productsData = [
     "subcategory": "ספרי קודש וסידורים",
     "supplier": "עוז יודאיקה (ייצור עצמי וסת\"ם)",
     "alt": "ברכת המזון כוונת הלב ע\"מ גדול 17*24 – ספרי קודש ומארזים מהודרים | עוז יודאיקה",
-    "video": "generated_videos/viral_ad_598.mp4"
+    "video": "generated_videos/viral_ad_598.mp4",
+    "options": []
   },
   {
     "id": 596,
@@ -80313,25 +80035,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      },
-      {
-        "name": "גודל וכריכה",
-        "type": "select",
-        "values": [
-          "כריכת עור בינוני (12x18 cm)",
-          "כריכת עור גדול (15x22 cm)"
-        ]
-      }
-    ],
+    "options": [],
     "faq": [
       {
         "q": "מהם זמני המשלוח עבור מוצר זה?",
@@ -80369,25 +80073,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      },
-      {
-        "name": "גודל וכריכה",
-        "type": "select",
-        "values": [
-          "כריכת עור בינוני (12x18 cm)",
-          "כריכת עור גדול (15x22 cm)"
-        ]
-      }
-    ],
+    "options": [],
     "faq": [
       {
         "q": "מהם זמני המשלוח עבור מוצר זה?",
@@ -80425,25 +80111,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      },
-      {
-        "name": "גודל וכריכה",
-        "type": "select",
-        "values": [
-          "כריכת עור בינוני (12x18 cm)",
-          "כריכת עור גדול (15x22 cm)"
-        ]
-      }
-    ],
+    "options": [],
     "faq": [
       {
         "q": "מהם זמני המשלוח עבור מוצר זה?",
@@ -80481,25 +80149,7 @@ window.productsData = [
     "category": "books",
     "category_name": "ספרי קודש",
     "subcategory": "ספרי קודש וסידורים",
-    "options": [
-      {
-        "name": "נוסח הסידור",
-        "type": "select",
-        "values": [
-          "נוסח עדות המזרח",
-          "נוסח ספרד",
-          "נוסח אשכנז"
-        ]
-      },
-      {
-        "name": "גודל וכריכה",
-        "type": "select",
-        "values": [
-          "כריכת עור בינוני (12x18 cm)",
-          "כריכת עור גדול (15x22 cm)"
-        ]
-      }
-    ],
+    "options": [],
     "faq": [
       {
         "q": "מהם זמני המשלוח עבור מוצר זה?",
@@ -80519,3 +80169,4 @@ window.productsData = [
     "video": "generated_videos/viral_ad_586.mp4"
   }
 ];
+if (typeof window !== "undefined") window.products = window.productsData;
