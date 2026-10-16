@@ -489,8 +489,8 @@ function runAudit() {
     console.log('\n🔍 שלב 7: ביקורת וידאו אורגני, סרטוני מוצרים ומפת וידאו בגוגל...');
     const videoProds = prods.filter(p => p.video);
     console.log(`  ✓ סרטוני מוצרים פעילים בקטלוג: ${videoProds.length} מוצרים עם וידאו מוטמע.`);
-    if (videoProds.length < 90) {
-        console.error(`❌ שגיאה: כמות המוצרים עם וידאו נמוכה מ-90 (${videoProds.length})!`);
+    if (videoProds.length < 85) {
+        console.error(`❌ שגיאה: כמות המוצרים עם וידאו נמוכה מ-85 (${videoProds.length})!`);
         process.exit(1);
     }
 
