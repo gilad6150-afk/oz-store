@@ -424,7 +424,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://oz-judaica.co.il/public/products/set_shabbat_royal_19004.jpg</image:loc>
-      <image:title>סט שבת קודש מלכותי – פמוטי קריסטל לשבת, סכין חלה מהודרת, עצי בשמים וספר תהילים</image:title>
+      <image:title>סט שבת קודש מהודר – תמונת זכוכית סדר הדלקת נרות שבת, סכין חלה וסידור מבואר</image:title>
     </image:image>
   </url>
   <url>
@@ -498,12 +498,12 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://oz-judaica.co.il/public/products/set_executive_gentleman_19009.jpg</image:loc>
-      <image:title>מארז הוקרה אלגנטי לגבר – ארנק עור ברידג&apos;, תיק תפילין שני רוכסנים, סידור מבואר ומיני בשמים</image:title>
+      <image:title>מארז הוקרה אלגנטי לגבר – ארנק עור ברידג&apos;, תיק תפילין שני רוכסנים, סידור ותהילים מבוארים</image:title>
     </image:image>
     <video:video>
       <video:thumbnail_loc>https://oz-judaica.co.il/public/products/set_executive_gentleman_19009.jpg</video:thumbnail_loc>
-      <video:title>סרטון הדגמה מהשטח: מארז הוקרה אלגנטי לגבר – ארנק עור ברידג&apos;, תיק תפילין שני רוכסנים, סידור מבואר ומיני בשמים</video:title>
-      <video:description>&lt;p class=&apos;mb-3&apos;&gt;&lt;strong&gt;מארז הוקרה אלגנטי לגבר&lt;/strong&gt; משלב בין עור משובח בניחוח קלאסי לבין פריטי קודש וריח מרומם. מתנה מושלמת לאבא, בעל, מנהל או חתן, המביעה הערכה עמוקה וטעם משובח.&lt;/p&gt;&lt;p class=&apos;mb-3&apos;&gt;&lt;strong&gt;תכולת המארז:&lt;/strong&gt; ארנק עור ברידג&apos; חום יוקרתי LB83218 עם חלוקה מרווחת והגנת RFID; תיק תפילין שני רוכסנים גדול LB2051 מעוצב ועמיד; הסידור המבואר באותיות ברורות; ובקבוקון מיני בשמים לשולחן היהודי עם ניחוח מרומם להבדלה ולימות השבוע.&lt;/p&gt;&lt;p class=&apos;mb-3&apos;&gt;&lt;strong&gt;אריזת מתנה יוקרתית:&lt;/strong&gt; המארז מגיע בקופסה קשיחה מעוצבת בריפוד נייר משי שחור, עטופה בסרט סאטן יוקרתי וכרטיס הוקרה אישי.&lt;/p&gt;&lt;p class=&apos;mb-3&apos;&gt;&lt;strong&gt;אחריות ומשלוח:&lt;/strong&gt; אחריות מלאה מבית עוז יודאיקה (שלום מנצורה 48, ראש העין). אספקה מהירה עד פתח הבית.&lt;/p&gt;</video:description>
+      <video:title>סרטון הדגמה מהשטח: מארז הוקרה אלגנטי לגבר – ארנק עור ברידג&apos;, תיק תפילין שני רוכסנים, סידור ותהילים מבוארים</video:title>
+      <video:description>&lt;p class=&apos;mb-3&apos;&gt;&lt;strong&gt;מארז הוקרה אלגנטי לגבר&lt;/strong&gt; משלב בין עור משובח בניחוח קלאסי לבין פריטי קודש מרוממים. כולל ארנק עור ברידג&apos; יוקרתי, תיק תפילין שני רוכסנים גדול, הסידור המבואר וספר תהילים המבואר מבית עוז יודאיקה.&lt;/p&gt;</video:description>
       <video:content_loc>https://oz-judaica.co.il/generated_videos/viral_ad_19009.mp4</video:content_loc>
       <video:publication_date>2026-10-17</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
@@ -2420,864 +2420,1440 @@
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_ben_ish_chai_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – תמונות של הבן איש חי בהוד מלכותו וספרי הקבלה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20002</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_ben_ish_chai_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – תמונות של הבן איש חי בעיטור זהב עתיק וברכות</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20003</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_ben_ish_chai_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – תמונות של הבן איש חי במעגל אורות קבליים</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20004</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_baba_sali_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית יוקרתית – תמונות של הבבא סאלי במבט קדוש ומאיר פנים</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20005</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_baba_sali_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – תמונות של הבבא סאלי בעיטור זהב מלכותי וברכת כהנים</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20006</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_baba_sali_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – תמונות של הבבא סאלי בהילה שמימית של קדושה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20007</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_baba_sali_panoramic.jpg</image:loc>
+      <image:title>תמונת זכוכית פנורמית – תמונות של הבבא סאלי ושושלת צדיקי אבוחצירא</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20008</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_abir_yaakov_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – תמונות של אביר יעקב רבי יעקב אבוחצירא בעל פיתוחי חותם</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20009</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_abir_yaakov_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – תמונות של אביר יעקב בשיש שחור וקליגרפיה מוזהבת</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20010</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_abir_yaakov_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – תמונות של אביר יעקב בהילת ספרי הקבלה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20011</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_lubavitch_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – תמונות של הרבי מלובביץ מלך המשיח בחיוך מאיר פנים</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20012</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_lubavitch_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – תמונות של הרבי מלובביץ עם ברכת העסק והצלחה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20013</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_lubavitch_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – תמונות של הרבי מלובביץ בהילת שמחה ואמונה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20014</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_lubavitch_panoramic.jpg</image:loc>
+      <image:title>תמונת זכוכית פנורמית – תמונות של הרבי מלובביץ מעודד את ישראל ומברך</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20015</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_rav_ovadia_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – תמונות של הרב עובדיה יוסף שוקד על התורה בהתמדה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20016</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_rav_ovadia_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – תמונות של הרב עובדיה יוסף מברך באהבת ישראל ושמחה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20017</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_rav_ovadia_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – תמונות של הרב עובדיה יוסף בהילת כתר תורה ויראת שמים</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20018</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_rav_ovadia_panoramic.jpg</image:loc>
+      <image:title>תמונת זכוכית פנורמית – תמונות של הרב עובדיה יוסף ומורשת ספרי יביע אומר</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20019</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_rav_yoram_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – תמונות של הרב יורם אברג&apos;ל המאיר פנים לכל יהודי באהבה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20020</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_rav_yoram_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – תמונות של הרב יורם אברג&apos;ל בעיטור אהבת ישראל וברכת הבנים</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20021</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_rav_yoram_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – תמונות של הרב יורם אברג&apos;ל בהילת חסד ורחמים</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20022</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_rav_eliyahu_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – תמונות של הרב מרדכי אליהו אביהם של ישראל עטור בטלית</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20023</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_rav_eliyahu_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – תמונות של הרב מרדכי אליהו בברכת שמים וקדושה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20024</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_rav_eliyahu_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – תמונות של הרב מרדכי אליהו בהילת צדקות וענווה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20025</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_chida_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – תמונות של הרב החיד&quot;א איש האשכולות וגדול המקובלים</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20026</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_chida_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – תמונות של הרב החיד&quot;א בעיטור ספרי קבלה וזהב טהור</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20027</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_chida_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – תמונות של הרב החיד&quot;א בהילת חוכמת התורה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20028</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_rav_kaduri_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – תמונות של הרב יצחק כדורי עטור בטלית ומשקפי זהב בתפילה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20029</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_rav_kaduri_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – תמונות של הרב יצחק כדורי בעיטור כוונות האר&quot;י והגנה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20030</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_rav_kaduri_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – תמונות של הרב יצחק כדורי בהילה רוחנית לשמירה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20031</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_pinto_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – תמונות של הרב פינטו הצדיק ממוגאדור בעל הנסים והמופתים</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20032</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_pinto_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – תמונות של הרב פינטו בשיש שחור וברכת הצדיק</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20033</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_pinto_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – תמונות של הרב פינטו בהילת ישועות ורפואה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20034</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_rashbi_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – תמונות של רבי שמעון בר יוחאי ואור הזוהר הקדוש</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20035</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_rashbi_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – תמונות של רבי שמעון בר יוחאי באש התורה וזהב</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20036</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_rashbi_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – תמונות של רבי שמעון בר יוחאי במעגל שבעת הרקיעים</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20037</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_rashbi_panoramic.jpg</image:loc>
+      <image:title>תמונת זכוכית פנורמית – תמונות של ציון הרשב&quot;י במירון באורות ל&quot;ג בעומר</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20038</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_meir_baal_hanes_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – תמונות של רבי מאיר בעל הנס סגולת הישועה &quot;אלהא דמאיר ענני&quot;</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20039</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_meir_baal_hanes_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – תמונות של רבי מאיר בעל הנס בשיש איטלקי וברכת הישועה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20040</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_meir_baal_hanes_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – תמונות של רבי מאיר בעל הנס במעגל האור והתפילה בטבריה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20041</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kerestir_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – תמונות של רבי ישעיה מקרסטיר סגולת הפרנסה והשמירה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20042</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kerestir_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – תמונות של רבי ישעיה מקרסטיר ברקע שיש שחור וזהב</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20043</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kerestir_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – תמונות של רבי ישעיה מקרסטיר לברכת הבית והפרנסה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20044</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kerestir_panoramic.jpg</image:loc>
+      <image:title>תמונת זכוכית פנורמית – תמונות של רבי ישעיה מקרסטיר עם ברכת המזון והשובע</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20045</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_nachman_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – תמונות של רבנו נחמן מברסלב &quot;אשרינו שיש לנו רבי כזה&quot;</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20046</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_nachman_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – תמונות של רבנו נחמן מברסלב &quot;אין ייאוש בעולם כלל&quot;</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20047</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_nachman_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – תמונות של רבנו נחמן מברסלב נ נח נחמ נחמן מאומן</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20048</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_yanuka_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – תמונות של הינוקא הגאון הרב שלמה יהודה בארי בתפילה ונגינה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20049</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_yanuka_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – תמונות של הינוקא בעיטור אורות וכינור דוד</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20050</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_yanuka_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – תמונות של הינוקא בהילת עילוי הדור</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20051</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kanievsky_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – תמונות של שר התורה מרן הרב חיים קנייבסקי שוקד על הגמרא</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20052</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kanievsky_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – תמונות של הרב חיים קנייבסקי בברכת &quot;בו&quot;ה&quot; (ברכה והצלחה)</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20053</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_baba_meir_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – תמונות של הבבא מאיר רבי מאיר אבוחצירא בקדושתו ופרישותו</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20054</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_baba_meir_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – תמונות של הבבא מאיר בעיטור זהב 24K</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20055</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_baba_chaki_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – תמונות של הבבא חאקי רבי יצחק אבוחצירא רבה של רמלה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20056</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_esh_sheli_mockup.jpg</image:loc>
+      <image:title>תמונת זכוכית יוקרתית – &quot;האש שלי תוקד עד ביאת המשיח&quot; אותיות זהב ולהבות קודש</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20057</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_esh_sheli_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – &quot;האש שלי תוקד עד ביאת המשיח&quot; שיש שחור ואפוקסי אש</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20058</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_esh_sheli_round.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – מעגל האש הקוסמי &quot;האש שלי תוקד עד ביאת המשיח&quot;</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20059</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_esh_sheli_panoramic.jpg</image:loc>
+      <image:title>תמונת זכוכית פנורמית ענקית – &quot;האש שלי תוקד עד ביאת המשיח&quot; לסלון רחב</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20060</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_esh_sheli_mockup.jpg</image:loc>
+      <image:title>תמונת זכוכית – &quot;ניצחתי ואנצח&quot; באותיות אש וניצחון האמונה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20061</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_esh_sheli_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – &quot;ניצחתי ואנצח&quot; בעיטור להבות זהב 24K</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20062</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_esh_sheli_mockup.jpg</image:loc>
+      <image:title>תמונת זכוכית – &quot;אין ייאוש בעולם כלל&quot; באש התקווה והזהב</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20063</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_esh_sheli_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – &quot;אין ייאוש בעולם כלל&quot; שיש שחור ואש חיה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20064</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_esh_sheli_mockup.jpg</image:loc>
+      <image:title>תמונת זכוכית – נ נח נחמ נחמן מאומן אותיות אש פלאיות</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20065</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_esh_sheli_round.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – נ נח נחמ נחמן מאומן בגלגל אש שמימי</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20066</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_esh_sheli_mockup.jpg</image:loc>
+      <image:title>תמונת זכוכית – &quot;אש תמיד תוקד על המזבח לא תכבה&quot;</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20067</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_esh_sheli_panoramic.jpg</image:loc>
+      <image:title>תמונת זכוכית פנורמית – ציון רבי נחמן באומן באור להבות וכיסופים</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20068</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_esh_sheli_mockup.jpg</image:loc>
+      <image:title>תמונת זכוכית – &quot;דע לך שכל רועה ורועה יש לו ניגון מיוחד&quot; (שירת העשבים)</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20069</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_esh_sheli_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – &quot;אם אתה מאמין שיכולים לקלקל תאמין שיכולים לתקן&quot;</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20070</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_esh_sheli_mockup.jpg</image:loc>
+      <image:title>תמונת זכוכית – &quot;כל העולם כולו גשר צר מאוד והעיקר לא להתפחד כלל&quot;</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20071</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_esh_sheli_mockup.jpg</image:loc>
+      <image:title>תמונת זכוכית – תיקון הכללי עשרת מזמורי התהילים בלהבות זהב</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20072</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_esh_sheli_panoramic.jpg</image:loc>
+      <image:title>תמונת זכוכית פנורמית – תיקון הכללי מורחב באותיות מוארות</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20073</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_esh_sheli_mockup.jpg</image:loc>
+      <image:title>תמונת זכוכית – &quot;בוערת בי אש&quot; – נר ה&apos; נשמת אדם</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20074</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_esh_sheli_round.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – מנורת אש התמיד וברכת הבית של ברסלב</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20075</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_esh_sheli_panoramic.jpg</image:loc>
+      <image:title>תמונת זכוכית פנורמית – &quot;האש שלי תוקד&quot; בשילוב שיר השירים ופסוקי גאולה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20076</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_poteach_et_yadecha_mockup.jpg</image:loc>
+      <image:title>תמונת זכוכית – פותח את ידך ומשביע לכל חי רצון אותיות זהב ושיש שחור יוקרתי</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20077</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_poteach_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – פותח את ידך ומשביע לכל חי רצון בעיטור שיבולי זהב ואפוקסי</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20078</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_poteach_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – פותח את ידך במעגל השפע והפרנסה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20079</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_poteach_panoramic.jpg</image:loc>
+      <image:title>תמונת זכוכית פנורמית – פותח את ידך ומשביע לכל חי רצון פנורמה רחבה לפינת אוכל</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20080</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_mizmor_letoda_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – מזמור לתודה אותיות זהב על שיש שחור יוקרתי</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20081</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_mizmor_letoda_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – מזמור לתודה על שיש לבן קרארה ואפוקסי זהב</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20082</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_mizmor_letoda_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – מזמור לתודה בעיטור גיאומטרי מוזהב</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20083</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_mizmor_letoda_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – מזמור לתודה בהילה קריסטלית</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20084</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_mizmor_letoda_panoramic.jpg</image:loc>
+      <image:title>תמונת זכוכית פנורמית – מזמור לתודה פנורמה רחבה לסלון</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20085</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_birkat_habayit_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – ברכת הבית &quot;בזה השער לא יבוא צער&quot; עיצוב מלכותי</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20086</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_birkat_habayit_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – ברכת הבית מודרנית שיש שחור ואפוקסי</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20087</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_birkat_habayit_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – ברכת הבית במעגל השלום והברכה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20088</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_birkat_haeisek_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – ברכת העסק להצלחה, פרנסה ושפע</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20089</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_birkat_haeisek_panoramic.jpg</image:loc>
+      <image:title>תמונת זכוכית פנורמית – ברכת העסק מורחבת עם פרשת המן</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20090</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_pitum_haketoret_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – פיטום הקטורת המלא סגולה לעשירות ולשמירה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20091</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_pitum_haketoret_panoramic.jpg</image:loc>
+      <image:title>תמונת זכוכית פנורמית – פיטום הקטורת בצורת לוחות הברית</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20092</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_ana_bekoach_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – תפילת &quot;אנא בכח&quot; המקובלת בשבעה קולות</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20093</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_ana_bekoach_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – אנא בכח בגרפיקה קבלית מודרנית</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20094</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_eshet_chayil_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – אשת חיל מי ימצא מתנה מרגשת לאישה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20095</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_eshet_chayil_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – אשת חיל בעיטור עלי כותרת וזהב</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20096</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_shema_yisrael_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – שמע ישראל ה&apos; אלוקינו ה&apos; אחד</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20097</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_shema_yisrael_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – שמע ישראל במעגל המאורות</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20098</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_shiviti_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – למנצח בנגינות מזמור שיר בצורת המנורה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20099</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_mizmor_letoda_square.jpg</image:loc>
+      <image:title>תמונת זכוכית – למנצח בצורת המנורה על שיש שחור וזהב</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20100</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_shiviti_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – שיוויתי ה&apos; לנגדי תמיד בעיטור כתר תורה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20101</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_shir_lamaalot_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – שיר למעלות אשא עיני אל ההרים (תהילים קכ&quot;א)</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20102</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_shir_lamaalot_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – שיר למעלות עם ברכת הילדים</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20103</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_birkat_kohanim_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – ברכת כהנים &quot;יברכך ה&apos; וישמרך&quot; באותיות קודש</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20104</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_parashat_haman_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – פרשת המן סגולה בדוקה לפרנסה ברווח</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20105</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_birkat_haeisek_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – תפילת הדרך לבית ולמשרדי נסיעות</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20106</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_asher_yatzar_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – ברכת אשר יצר להודיה על בריאות הגוף</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20107</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_eshet_chayil_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – סדר הדלקת נרות שבת קודש</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20108</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_birkat_habayit_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – שלום עליכם מלאכי השרת</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20109</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_birkat_habayit_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – סדר קידוש ליל שבת מוגדל וברור</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20110</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_birkat_habayit_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – סדר הבדלה לשבוע טוב ומבורך</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20111</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_birkat_habayit_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – ברכת האורח והודיה למארחים</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20112</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_vertical_majestic.jpg</image:loc>
+      <image:title>תמונת זכוכית – &quot;אם אשכחך ירושלים תשכח ימיני&quot;</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20113</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_mizmor_letoda_panoramic.jpg</image:loc>
+      <image:title>תמונת זכוכית פנורמית – שיר השירים אשר לשלמה פסוקי אהבה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20114</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_mizmor_letoda_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – מודים אנחנו לך שאתה הוא ה&apos; אלוקינו</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20115</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_stones_authentic.jpg</image:loc>
+      <image:title>תמונת זכוכית – אבני הכותל המערבי והוד קדומים (צילום קריסטלי)</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20116</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_panorama_clear.jpg</image:loc>
+      <image:title>תמונת זכוכית פנורמית ענקית – פנורמת הכותל ורחבת התפילה באור צלול</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20117</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_kvitel_authentic.jpg</image:loc>
+      <image:title>תמונת זכוכית – פתקי תפילה באבני הכותל (תקריב אותנטי קדוש)</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20118</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_circle_stones.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – אבני הכותל המערבי (עיגול קוטר יוקרתי)</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20119</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_prayer_authentic.jpg</image:loc>
+      <image:title>תמונת זכוכית – תפילת שחרית עטופים בטליתות מול הכותל</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20120</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_birkat_kohanim.jpg</image:loc>
+      <image:title>תמונת זכוכית – ברכת כהנים ההמונית בכותל המערבי ברבבות טליתות</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20121</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_vertical_majestic.jpg</image:loc>
+      <image:title>תמונת זכוכית – הכותל המערבי בשלג ירושלמי לבן וטהור</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20122</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_mockup.jpg</image:loc>
+      <image:title>תמונת זכוכית – ירושלים של זהב פנורמת העיר העתיקה מהר הזיתים</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20123</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_stones_authentic.jpg</image:loc>
+      <image:title>תמונת זכוכית – מגדל דוד וחומות ירושלים בלילה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20124</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_kvitel_authentic.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – סמטאות ירושלים העתיקה באור שקיעה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20125</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_circle_stones.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – פנורמת שערי ירושלים והר הבית</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20126</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_prayer_authentic.jpg</image:loc>
+      <image:title>תמונת זכוכית – ציור שמן ירושלים הבנויה בצבעי זהב וטורקיז</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20127</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_panorama_clear.jpg</image:loc>
+      <image:title>תמונת זכוכית פנורמית – שער יפו ושוק העיר העתיקה באור יקרות</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20128</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_vertical_majestic.jpg</image:loc>
+      <image:title>תמונת זכוכית – קבר רחל אמנו בבית לחם &quot;ושבו בנים לגבולם&quot;</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20129</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_stones_authentic.jpg</image:loc>
+      <image:title>תמונת זכוכית – מערת המכפלה בחברון עיר האבות</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20130</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_vertical_majestic.jpg</image:loc>
+      <image:title>תמונת זכוכית – קבר דוד המלך בהר ציון</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20131</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_stones_authentic.jpg</image:loc>
+      <image:title>תמונת זכוכית – קבר יוסף הצדיק בשכם</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20132</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_vertical_majestic.jpg</image:loc>
+      <image:title>תמונת זכוכית – קבר שמואל הנביא בצפון ירושלים</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20133</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_stones_authentic.jpg</image:loc>
+      <image:title>תמונת זכוכית – שער האריות והחומות המזרחיות של ירושלים</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20134</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_panorama_clear.jpg</image:loc>
+      <image:title>תמונת זכוכית פנורמית – ירושלים הרים סביב לה וה&apos; סביב לעמו</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20135</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_kotel_prayer_authentic.jpg</image:loc>
+      <image:title>תמונת זכוכית – תפילת הלב ודבקות באבני הכותל</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20136</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_mizmor_letoda_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – רימון השפע וגרגרי הברכה באפוקסי אדום</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20137</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_birkat_habayit_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – יונת השלום עם ענף זית בזהב</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20138</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_ana_bekoach_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – כ&quot;ב אותיות הקודש האלף-בית העברי בזהב</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20139</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_shiviti_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – אריות יהודה שומרי ארון הברית והלוחות</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20140</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_pitum_haketoret_panoramic.jpg</image:loc>
+      <image:title>תמונת זכוכית – כלי המקדש והמזבח באור נבואי</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20141</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_ana_bekoach_square.jpg</image:loc>
+      <image:title>תמונת זכוכית ריבועית – מגן דוד קריסטלי וספירות הקבלה</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20142</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_pitum_haketoret_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – חושן האפוד עם שתים עשרה אבני השבטים</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20143</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_shir_lamaalot_circle.jpg</image:loc>
+      <image:title>תמונת זכוכית עגולה – עץ החיים שורשים וענפים בזהב טהור</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=20144</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_birkat_kohanim_rectangle.jpg</image:loc>
+      <image:title>תמונת זכוכית – שופר הגאולה וענני כבוד</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=18147</loc>
