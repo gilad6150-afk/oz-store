@@ -98,6 +98,188 @@
     </image:image>
   </url>
 
+  <!-- Local City Landing Pages -->
+  <url>
+    <loc>https://oz-judaica.co.il/cities/ashdod/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/ashkelon/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/bat-yam/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/beer-sheva/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/beit-shemesh/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/bnei-brak/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/elad/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/givat-shmuel/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/givatayim/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/hadera/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/haifa/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/herzliya/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/hod-hasharon/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/holon/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/jerusalem/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/kfar-saba/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/kiryat-ono/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/lod/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/modiin/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/nes-tziona/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/netanya/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/petah-tikva/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/raanana/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/ramat-gan/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/ramla/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/rehovot/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/rishon-lezion/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/rosh-haayin/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/shoham/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/tel-aviv/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
   <!-- Products (362 items) -->
   <url>
     <loc>https://oz-judaica.co.il/?product=21010</loc>
@@ -3103,11 +3285,11 @@
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://tmunotrabanim.com/wp-content/uploads/2026/03/הרב-יורם-אברגל-שחור-זהב-RABI-503.jpg</image:loc>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_rav_yoram_rectangle.jpg</image:loc>
       <image:title>כיסוי תמונת זכוכית נפתחת לארון חשמל | הרב יורם אברגל (RABI-503)</image:title>
     </image:image>
     <video:video>
-      <video:thumbnail_loc>https://tmunotrabanim.com/wp-content/uploads/2026/03/הרב-יורם-אברגל-שחור-זהב-RABI-503.jpg</video:thumbnail_loc>
+      <video:thumbnail_loc>https://oz-judaica.co.il/public/products/tmunot/glass_rav_yoram_rectangle.jpg</video:thumbnail_loc>
       <video:title>סרטון הדגמה מהשטח: כיסוי תמונת זכוכית נפתחת לארון חשמל | הרב יורם אברגל (RABI-503)</video:title>
       <video:description>&lt;p class=&apos;mb-3&apos;&gt;&lt;strong&gt;כיסוי תמונת זכוכית נפתחת לארון חשמל | RABI-503&lt;/strong&gt; – יצירת אמנות יהודית מרהיבה המשלבת קדושה, יופי אצילי וטכנולוגיית הדפסה מתקדמת על גבי זכוכית מחוסמת פרימיום בעובי 6 מ&quot;מ Extra Clear, עם מנגנון פתיחה דמוי-דלת וצירים נסתרים לגישה נוחה ללוח החשמל.&lt;/p&gt;</video:description>
       <video:content_loc>https://oz-judaica.co.il/generated_videos/viral_ad_18147.mp4</video:content_loc>
@@ -3121,7 +3303,7 @@
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://tmunotrabanim.com/wp-content/uploads/2026/03/r-04.jpeg</image:loc>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_baba_sali_rectangle.jpg</image:loc>
       <image:title>כיסוי תמונת זכוכית נפתחת לארון חשמל | סדנא הבבא סאלי (r-04)</image:title>
     </image:image>
   </url>
@@ -3131,7 +3313,7 @@
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://tmunotrabanim.com/wp-content/uploads/2026/03/r-03.jpeg</image:loc>
+      <image:loc>https://oz-judaica.co.il/public/products/tmunot/glass_rav_ovadia_rectangle.jpg</image:loc>
       <image:title>כיסוי תמונת זכוכית נפתחת לארון חשמל | מרן הרב עובדיה יוסף (r-03)</image:title>
     </image:image>
   </url>

@@ -211,7 +211,7 @@ function runAudit() {
     // בדיקה 4: סימולציית לחיצה על כל הקטגוריות ותתי-הקטגוריות (אימות סננים ושבבים)
     // -------------------------------------------------------------
     console.log('\n🔍 שלב 4: בדיקת לחיצה על כל הקטגוריות, תתי-קטגוריות ושבבי סינון...');
-    const allTestCategories = ['all', 'stam', 'mezuzot', 'tefillin-bags', 'books', 'wallets', 'gifts'];
+    const allTestCategories = ['all', 'stam', 'mezuzot', 'tefillin-bags', 'books', 'wallets', 'gifts', 'pictures'];
     
     allTestCategories.forEach(cat => {
         gridHTML = '';
@@ -306,8 +306,8 @@ function runAudit() {
         process.exit(1);
     }
     elecCovers.forEach(p => {
-        if (p.category !== 'gifts') {
-            console.error(`❌ שגיאה: מוצר ארון חשמל ${p.id} אינו מוגדר בקטגוריית gifts!`);
+        if (p.category !== 'gifts' && p.category !== 'pictures') {
+            console.error(`❌ שגיאה: מוצר ארון חשמל ${p.id} אינו מוגדר בקטגוריית gifts או pictures!`);
             process.exit(1);
         }
     });
