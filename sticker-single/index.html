@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>שוק באשה ערווה - מדבקה יוקרתית 105×70 מ"מ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@700;800;900&family=Frank+Ruhl+Libre:wght@800;900&family=Heebo:wght@800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            width: 1240px;
+            height: 827px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Assistant', sans-serif;
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        .sticker-container {
+            width: 1240px;
+            height: 827px;
+            padding: 24px;
+            background: #ffffff;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .outer-frame {
+            width: 100%;
+            height: 100%;
+            border: 6px solid #b45309;
+            outline: 2px solid #fde68a;
+            outline-offset: -10px;
+            border-radius: 14px;
+            padding: 16px 20px 10px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+            box-shadow: inset 0 0 0 16px #ffffff, inset 0 0 0 19px #7e22ce;
+        }
+        /* Corners */
+        .corner {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            border-color: #b45309;
+            border-style: solid;
+        }
+        .c-tl { top: 22px; right: 22px; border-width: 4px 4px 0 0; }
+        .c-tr { top: 22px; left: 22px; border-width: 4px 0 0 4px; }
+        .c-bl { bottom: 22px; right: 22px; border-width: 0 4px 4px 0; }
+        .c-br { bottom: 22px; left: 22px; border-width: 0 0 4px 4px; }
+
+        .title-wrapper {
+            margin-top: 6px;
+            text-align: center;
+        }
+        .main-title {
+            font-family: 'Frank Ruhl Libre', serif;
+            font-size: 90px;
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 18px;
+        }
+        .word-shok {
+            color: #6b21a8;
+            font-size: 90px;
+            text-shadow: 0 2px 4px rgba(107, 33, 168, 0.15);
+        }
+        .word-beisha {
+            color: #1e293b;
+            font-size: 80px;
+        }
+        .word-erva {
+            color: #dc2626;
+            font-size: 98px;
+            text-shadow: 0 3px 6px rgba(220, 38, 38, 0.2);
+        }
+        .divider-line {
+            width: 600px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #b45309, #fde68a, #b45309, transparent);
+            margin: 8px auto 0;
+            position: relative;
+        }
+        .divider-line::after {
+            content: "❖";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 0 8px;
+            color: #b45309;
+            font-size: 14px;
+        }
+
+        .diagram-container {
+            width: 100%;
+            height: 580px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            overflow: hidden;
+        }
+        .diagram-container img {
+            width: 98%;
+            max-height: 570px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="sticker-container">
+        <div class="outer-frame">
+            <span class="corner c-tl"></span>
+            <span class="corner c-tr"></span>
+            <span class="corner c-bl"></span>
+            <span class="corner c-br"></span>
+
+            <div class="title-wrapper">
+                <div class="main-title">
+                    <span class="word-shok">שׁוֹק</span>
+                    <span class="word-beisha">בְּאִשָּׁה</span>
+                    <span class="word-erva">עֶרְוָה!</span>
+                </div>
+                <div class="divider-line"></div>
+            </div>
+
+            <div class="diagram-container">
+                <img src="skirt_diagram_clean.png" alt="דיאגרמת שוק באשה ערווה">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

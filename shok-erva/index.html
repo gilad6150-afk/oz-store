@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>שוק באשה ערווה - הנפשה אינטראקטיבית</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800;900&family=Frank+Ruhl+Libre:wght@700;800;900&family=Heebo:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #161f30;
+            --purple-primary: #7e22ce;
+            --purple-light: #a855f7;
+            --gold-primary: #f59e0b;
+            --gold-light: #fef3c7;
+            --red-alert: #ef4444;
+            --green-valid: #10b981;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            font-family: 'Assistant', sans-serif;
+            background: linear-gradient(145deg, #070a12 0%, #0f172a 45%, #19102b 100%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 16px 10px 50px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* -------------------------------------------------------------------------
+           TOP BAR & HEADER
+           ------------------------------------------------------------------------- */
+        .header-wrapper {
+            text-align: center;
+            margin-bottom: 20px;
+            width: 100%;
+            position: relative;
+        }
+
+        .gold-crown-icon {
+            display: inline-block;
+            font-size: 24px;
+            color: var(--gold-primary);
+            margin-bottom: 2px;
+            filter: drop-shadow(0 2px 8px rgba(245, 158, 11, 0.4));
+            animation: crownShimmer 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes crownShimmer {
+            0% { transform: translateY(0) scale(1); filter: drop-shadow(0 2px 8px rgba(245, 158, 11, 0.3)); }
+            100% { transform: translateY(-3px) scale(1.08); filter: drop-shadow(0 4px 15px rgba(245, 158, 11, 0.7)); }
+        }
+
+        .main-title {
+            font-family: 'Frank Ruhl Libre', serif;
+            font-size: clamp(32px, 6.5vw, 58px);
+            font-weight: 900;
+            line-height: 1.15;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .word-shok {
+            background: linear-gradient(135deg, #c084fc, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .word-beisha {
+            color: #f8fafc;
+        }
+
+        .word-erva {
+            background: linear-gradient(135deg, #f87171, #ef4444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 25px rgba(239, 68, 68, 0.4);
+        }
+
+        .divider-ornament {
+            width: min(380px, 85%);
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #b45309, #fde68a, #b45309, transparent);
+            margin: 12px auto 0;
+            position: relative;
+        }
+
+        .divider-ornament::after {
+            content: "❖";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #0f172a;
+            padding: 0 10px;
+            color: #f59e0b;
+            font-size: 13px;
+        }
+
+        /* -------------------------------------------------------------------------
+           VIEW SWITCHER TABS (FULLY MOBILE RESPONSIVE)
+           ------------------------------------------------------------------------- */
+        .tabs-nav {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4px;
+            background: rgba(22, 31, 48, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 4px;
+            border-radius: 35px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 22px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 480px;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 9px 8px;
+            font-size: 13px;
+            font-weight: 700;
+            font-family: inherit;
+            border-radius: 28px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            text-align: center;
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, #7e22ce, #9333ea);
+            color: #fff;
+            box-shadow: 0 3px 12px rgba(126, 34, 206, 0.45);
+        }
+
+        /* -------------------------------------------------------------------------
+           SECTION 1: THE 4 ANIMATED FIGURES GRID (ההנפשות)
+           ------------------------------------------------------------------------- */
+        .animation-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            width: 100%;
+            margin-bottom: 26px;
+        }
+
+        @media (max-width: 768px) {
+            .animation-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .animation-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .figure-card {
+            background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
+            border-radius: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            padding: 16px 10px 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+            position: relative;
+        }
+
+        .figure-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .figure-card.valid-card {
+            border-color: rgba(16, 185, 129, 0.45);
+            background: radial-gradient(circle at top, rgba(16, 185, 129, 0.1) 0%, #0f172a 100%);
+        }
+
+        .figure-card.valid-card:hover {
+            border-color: #10b981;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.25);
+        }
+
+        .figure-card.invalid-card {
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+
+        .figure-card.invalid-card:hover {
+            border-color: #ef4444;
+            box-shadow: 0 10px 25px rgba(239, 68, 68, 0.2);
+        }
+
+        .badge-status {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            width: fit-content;
+        }
+
+        .badge-valid {
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+        }
+
+        .badge-invalid {
+            background: rgba(239, 68, 68, 0.15);
+            color: #f87171;
+            border: 1px solid rgba(239, 68, 68, 0.4);
+        }
+
+        .badge-icon {
+            font-size: 14px;
+            margin-left: 5px;
+        }
+
+        /* SVG Vector Animation Stage */
+        .svg-stage {
+            width: 100%;
+            height: 270px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 4px 0 10px;
+        }
+
+        .svg-stage svg {
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+
+        .figure-caption {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-top: 2px;
+            line-height: 1.25;
+        }
+
+        .figure-subcaption {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-top: 3px;
+        }
+
+        /* -------------------------------------------------------------------------
+           ANIMATION EFFECTS
+           ------------------------------------------------------------------------- */
+        @keyframes subtlePleatWave {
+            0% { transform: scaleX(1); }
+            50% { transform: scaleX(1.02); }
+            100% { transform: scaleX(1); }
+        }
+
+        .animated-pleats {
+            transform-origin: top center;
+            animation: subtlePleatWave 3.5s ease-in-out infinite;
+        }
+
+        @keyframes pulseAlertIcon {
+            0% { transform: scale(1); filter: drop-shadow(0 0 3px rgba(239, 68, 68, 0.4)); }
+            50% { transform: scale(1.15); filter: drop-shadow(0 0 9px rgba(239, 68, 68, 0.85)); }
+            100% { transform: scale(1); filter: drop-shadow(0 0 3px rgba(239, 68, 68, 0.4)); }
+        }
+
+        .icon-cross-pulse {
+            transform-origin: center;
+            animation: pulseAlertIcon 2s ease-in-out infinite;
+        }
+
+        @keyframes glowCheckIcon {
+            0% { transform: scale(1); filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.5)); }
+            50% { transform: scale(1.18); filter: drop-shadow(0 0 12px rgba(16, 185, 129, 0.95)); }
+            100% { transform: scale(1); filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.5)); }
+        }
+
+        .icon-check-glow {
+            transform-origin: center;
+            animation: glowCheckIcon 2.2s ease-in-out infinite;
+        }
+
+        /* -------------------------------------------------------------------------
+           SECTION 2: INTERACTIVE LIVE SIMULATOR
+           ------------------------------------------------------------------------- */
+        .simulator-box {
+            background: radial-gradient(circle at center, #1a2333 0%, #0d131f 100%);
+            border-radius: 22px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            padding: 24px 18px;
+            width: 100%;
+            max-width: 680px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .sim-title {
+            font-size: 19px;
+            font-weight: 800;
+            color: var(--gold-light);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-align: center;
+        }
+
+        .sim-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 18px;
+            text-align: center;
+        }
+
+        .sim-stage-container {
+            width: 250px;
+            height: 330px;
+            position: relative;
+            background: #080c14;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 4px 18px rgba(0,0,0,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+            overflow: hidden;
+        }
+
+        .sim-stage-container svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Controls */
+        .controls-wrapper {
+            width: 100%;
+            max-width: 440px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .slider-row {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            direction: rtl;
+        }
+
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-muted);
+            direction: rtl;
+        }
+
+        .custom-range {
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            background: #334155;
+            outline: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+            direction: rtl;
+        }
+
+        .custom-range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: #f59e0b;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.6);
+            border: 2px solid #fff;
+            transition: transform 0.15s ease;
+        }
+
+        .custom-range::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+        }
+
+        .buttons-group {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
+            width: 100%;
+        }
+
+        @media (max-width: 420px) {
+            .buttons-group {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .preset-btn {
+            background: #1e293b;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: var(--text-main);
+            padding: 8px 4px;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .preset-btn.active {
+            background: var(--purple-primary);
+            border-color: var(--purple-light);
+            color: #fff;
+            box-shadow: 0 3px 10px rgba(126, 34, 206, 0.4);
+        }
+
+        .preset-btn.btn-valid.active {
+            background: #059669;
+            border-color: #34d399;
+            box-shadow: 0 3px 10px rgba(16, 185, 129, 0.4);
+        }
+
+        /* Live Indicator Banner */
+        .live-indicator {
+            width: 100%;
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 800;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+        }
+
+        .live-indicator.is-valid {
+            background: rgba(16, 185, 129, 0.2);
+            border: 2px solid #10b981;
+            color: #34d399;
+            box-shadow: 0 0 16px rgba(16, 185, 129, 0.3);
+        }
+
+        .live-indicator.is-invalid {
+            background: rgba(239, 68, 68, 0.2);
+            border: 2px solid #ef4444;
+            color: #f87171;
+            box-shadow: 0 0 16px rgba(239, 68, 68, 0.3);
+        }
+
+        /* -------------------------------------------------------------------------
+           STICKER PREVIEW EMBED
+           ------------------------------------------------------------------------- */
+        .sticker-section {
+            display: none;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .sticker-preview-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            max-width: 540px;
+            width: 100%;
+        }
+
+        .sticker-preview-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            display: block;
+        }
+
+        /* -------------------------------------------------------------------------
+           BOTTOM ACTIONS & SHARE BAR
+           ------------------------------------------------------------------------- */
+        .action-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.5);
+        }
+
+        .btn-action.btn-whatsapp {
+            background: linear-gradient(135deg, #10b981, #059669);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+        }
+
+        .btn-action.btn-print {
+            background: linear-gradient(135deg, #7e22ce, #6b21a8);
+            box-shadow: 0 4px 12px rgba(126, 34, 206, 0.35);
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(120px);
+            opacity: 0;
+            background: #1e293b;
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            transition: all 0.3s ease;
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- HEADER -->
+        <header class="header-wrapper">
+            <span class="gold-crown-icon">👑</span>
+            <h1 class="main-title">
+                <span class="word-shok">שׁוֹק</span>
+                <span class="word-beisha">בְּאִשָּׁה</span>
+                <span class="word-erva">עֶרְוָה!</span>
+            </h1>
+            <div class="divider-ornament"></div>
+        </header>
+
+        <!-- VIEW SWITCHER TABS -->
+        <nav class="tabs-nav">
+            <button class="tab-btn active" onclick="switchView('interactive', event)">
+                <span>✨</span> סימולטור מונפש
+            </button>
+            <button class="tab-btn" onclick="switchView('grid', event)">
+                <span>📐</span> 4 מצבי אורך
+            </button>
+            <button class="tab-btn" onclick="switchView('sticker', event)">
+                <span>🏷️</span> מדבקה להדפסה
+            </button>
+        </nav>
+
+        <!-- VIEW 1: INTERACTIVE LIVE SIMULATOR -->
+        <div id="view-interactive" class="simulator-box">
+            <div class="sim-title">
+                <span>🎮</span> סימולטור אורך חצאית מונפש בזמן אמת
+            </div>
+            <p class="sim-desc">הזיזו את הסמן כדי לראות את גובה החצאית וההגדרה המדויקת</p>
+
+            <!-- Interactive Stage -->
+            <div class="sim-stage-container">
+                <svg viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <!-- Pleated fabric shading -->
+                        <linearGradient id="simPleatGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#18181b" />
+                            <stop offset="15%" stop-color="#3f3f46" />
+                            <stop offset="30%" stop-color="#18181b" />
+                            <stop offset="45%" stop-color="#52525b" />
+                            <stop offset="60%" stop-color="#18181b" />
+                            <stop offset="75%" stop-color="#3f3f46" />
+                            <stop offset="90%" stop-color="#18181b" />
+                            <stop offset="100%" stop-color="#27272a" />
+                        </linearGradient>
+
+                        <!-- Shoe gradient -->
+                        <linearGradient id="shoeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#27272a" />
+                            <stop offset="100%" stop-color="#09090b" />
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Guide Lines -->
+                    <!-- Knee line (y=155) -->
+                    <line x1="20" y1="155" x2="180" y2="155" stroke="#f59e0b" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.65" />
+                    <text x="183" y="158" fill="#f59e0b" font-size="9" font-family="Assistant" font-weight="700" text-anchor="end">ברך</text>
+
+                    <!-- Shok line (y=210) -->
+                    <line x1="20" y1="210" x2="180" y2="210" stroke="#a855f7" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.65" />
+                    <text x="183" y="213" fill="#a855f7" font-size="9" font-family="Assistant" font-weight="700" text-anchor="end">שוק</text>
+
+                    <!-- Ankle line (y=265) -->
+                    <line x1="20" y1="265" x2="180" y2="265" stroke="#10b981" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.65" />
+                    <text x="183" y="268" fill="#10b981" font-size="9" font-family="Assistant" font-weight="700" text-anchor="end">קרסול</text>
+
+                    <!-- Modest Dashed Leg Guide Lines (connecting from skirt hem to shoes) -->
+                    <line id="sim-leg-left" x1="88" y1="265" x2="88" y2="270" stroke="#94a3b8" stroke-width="1.8" stroke-dasharray="4,3" />
+                    <line id="sim-leg-right" x1="112" y1="265" x2="112" y2="270" stroke="#94a3b8" stroke-width="1.8" stroke-dasharray="4,3" />
+
+                    <!-- Modest Black Shoes (Matching original flyer design) -->
+                    <g transform="translate(68, 270)">
+                        <!-- Right profile shoe -->
+                        <path d="M 0 10 C 2 3, 14 0, 22 4 C 28 8, 35 11, 46 11 C 52 11, 55 14, 53 18 C 50 20, 42 20, 20 20 C 14 20, 0 19, 0 15 Z" fill="url(#shoeGrad)" stroke="#52525b" stroke-width="1" />
+                        <rect x="3" y="16" width="10" height="5" rx="1" fill="#18181b" />
+                    </g>
+
+                    <!-- Dynamic Animated Pleated Skirt (Controlled by JS) -->
+                    <g id="interactive-skirt-group">
+                        <path id="interactive-skirt-path" d="M 72 45 Q 100 44 128 45 L 148 268 Q 100 274 52 268 Z" fill="url(#simPleatGrad)" stroke="#52525b" stroke-width="1" />
+                        <!-- Skirt Flutes / Pleats -->
+                        <g id="skirt-pleat-lines" stroke="#18181b" stroke-width="1.6" opacity="0.8">
+                            <line id="s-fold1" x1="80" y1="45" x2="68" y2="268" />
+                            <line id="s-fold2" x1="90" y1="44" x2="84" y2="270" />
+                            <line id="s-fold3" x1="100" y1="44" x2="100" y2="271" />
+                            <line id="s-fold4" x1="110" y1="44" x2="116" y2="270" />
+                            <line id="s-fold5" x1="120" y1="45" x2="132" y2="268" />
+                        </g>
+                    </g>
+
+                    <!-- Waist Band -->
+                    <rect x="70" y="42" width="60" height="6" rx="2" fill="#d97706" />
+
+                    <!-- Floating Status Indicator in Stage -->
+                    <g id="sim-status-icon" transform="translate(100, 145)">
+                        <circle id="sim-circle" cx="0" cy="0" r="16" fill="#10b981" />
+                        <text id="sim-icon-text" x="0" y="6" text-anchor="middle" fill="#fff" font-size="18" font-weight="900">✔</text>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls-wrapper">
+                <!-- Live Feedback Banner -->
+                <div id="live-banner" class="live-indicator is-valid">
+                    <span id="banner-icon">✔</span>
+                    <span id="banner-text">כל השוק מכוסה</span>
+                </div>
+
+                <!-- Range Slider -->
+                <div class="slider-row">
+                    <div class="slider-labels">
+                        <span>קצר (שוק מגולה)</span>
+                        <span>באורך הברך</span>
+                        <span>רוב השוק</span>
+                        <span>מלא (עד הנעל)</span>
+                    </div>
+                    <input type="range" id="skirt-slider" class="custom-range" min="1" max="4" value="4" step="1" oninput="handleSliderChange(this.value)">
+                </div>
+
+                <!-- Quick Preset Buttons -->
+                <div class="buttons-group">
+                    <button class="preset-btn" id="btn-p1" onclick="setPreset(1)">שוק מגולה</button>
+                    <button class="preset-btn" id="btn-p2" onclick="setPreset(2)">רוב השוק מגולה</button>
+                    <button class="preset-btn" id="btn-p3" onclick="setPreset(3)">רוב השוק מכוסה</button>
+                    <button class="preset-btn btn-valid active" id="btn-p4" onclick="setPreset(4)">כל השוק מכוסה ✔</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW 2: 4 ANIMATED FIGURES GRID (ההנפשות בפריסה) -->
+        <div id="view-grid" class="animation-grid" style="display: none;">
+            
+            <!-- FIGURE 1: כל השוק מכוסה ✔ -->
+            <div class="figure-card valid-card">
+                <div class="badge-status badge-valid">
+                    <span>כל השוק מכוסה</span>
+                    <span class="badge-icon">✔</span>
+                </div>
+                <div class="svg-stage">
+                    <svg viewBox="0 0 160 270" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Shoe -->
+                        <g transform="translate(52, 236)">
+                            <path d="M 0 8 C 2 2, 12 0, 18 3 C 24 6, 30 9, 39 9 C 44 9, 47 11, 45 15 C 42 16, 36 16, 17 16 C 12 16, 0 15, 0 12 Z" fill="#18181b" stroke="#52525b" stroke-width="1" />
+                            <rect x="2" y="13" width="8" height="4" rx="1" fill="#09090b" />
+                        </g>
+                        <!-- Skirt: all the way down to shoe line y=236 -->
+                        <g class="animated-pleats">
+                            <path d="M 56 35 Q 80 34 104 35 L 126 236 Q 80 241 34 236 Z" fill="url(#simPleatGrad)" stroke="#52525b" stroke-width="1" />
+                            <line x1="65" y1="35" x2="52" y2="236" stroke="#18181b" stroke-width="1.6" opacity="0.8" />
+                            <line x1="75" y1="34" x2="71" y2="238" stroke="#18181b" stroke-width="1.6" opacity="0.8" />
+                            <line x1="85" y1="34" x2="89" y2="238" stroke="#18181b" stroke-width="1.6" opacity="0.8" />
+                            <line x1="95" y1="35" x2="108" y2="236" stroke="#18181b" stroke-width="1.6" opacity="0.8" />
+                        </g>
+                        <rect x="54" y="32" width="52" height="5" rx="2" fill="#d97706" />
+                        <!-- Green Check Icon -->
+                        <g class="icon-check-glow" transform="translate(80, 140)">
+                            <circle cx="0" cy="0" r="20" fill="#10b981" />
+                            <path d="M -7 1 L -2 6 L 8 -4" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                    </svg>
+                </div>
+                <div class="figure-caption" style="color: #34d399;">כל השוק מכוסה ✔</div>
+                <div class="figure-subcaption">מכוסה לחלוטין עד הנעל</div>
+            </div>
+
+            <!-- FIGURE 2: רוב השוק מכוסה ✖ -->
+            <div class="figure-card invalid-card">
+                <div class="badge-status badge-invalid">
+                    <span>רוב השוק מכוסה</span>
+                    <span class="badge-icon">✖</span>
+                </div>
+                <div class="svg-stage">
+                    <svg viewBox="0 0 160 270" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Dashed leg lines from y=180 to y=236 -->
+                        <line x1="70" y1="180" x2="70" y2="236" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3,3" />
+                        <line x1="90" y1="180" x2="90" y2="236" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3,3" />
+                        <!-- Shoe -->
+                        <g transform="translate(52, 236)">
+                            <path d="M 0 8 C 2 2, 12 0, 18 3 C 24 6, 30 9, 39 9 C 44 9, 47 11, 45 15 C 42 16, 36 16, 17 16 C 12 16, 0 15, 0 12 Z" fill="#18181b" stroke="#52525b" stroke-width="1" />
+                            <rect x="2" y="13" width="8" height="4" rx="1" fill="#09090b" />
+                        </g>
+                        <!-- Skirt: ends at y=180 -->
+                        <g class="animated-pleats">
+                            <path d="M 56 35 Q 80 34 104 35 L 118 180 Q 80 185 42 180 Z" fill="url(#simPleatGrad)" stroke="#52525b" stroke-width="1" />
+                            <line x1="65" y1="35" x2="57" y2="180" stroke="#18181b" stroke-width="1.6" opacity="0.8" />
+                            <line x1="75" y1="34" x2="73" y2="182" stroke="#18181b" stroke-width="1.6" opacity="0.8" />
+                            <line x1="85" y1="34" x2="87" y2="182" stroke="#18181b" stroke-width="1.6" opacity="0.8" />
+                            <line x1="95" y1="35" x2="103" y2="180" stroke="#18181b" stroke-width="1.6" opacity="0.8" />
+                        </g>
+                        <rect x="54" y="32" width="52" height="5" rx="2" fill="#d97706" />
+                        <!-- Red Cross Icon -->
+                        <g class="icon-cross-pulse" transform="translate(80, 208)">
+                            <circle cx="0" cy="0" r="16" fill="#ef4444" />
+                            <line x1="-6" y1="-6" x2="6" y2="6" stroke="#fff" stroke-width="2.8" stroke-linecap="round" />
+                            <line x1="6" y1="-6" x2="-6" y2="6" stroke="#fff" stroke-width="2.8" stroke-linecap="round" />
+                        </g>
+                    </svg>
+                </div>
+                <div class="figure-caption" style="color: #f87171;">רוב השוק מכוסה ✖</div>
+                <div class="figure-subcaption">חלק מהשוק גלוי</div>
+            </div>
+
+            <!-- FIGURE 3: רוב השוק מגולה ✖ -->
+            <div class="figure-card invalid-card">
+                <div class="badge-status badge-invalid">
+                    <span>רוב השוק מגולה</span>
+                    <span class="badge-icon">✖</span>
+                </div>
+                <div class="svg-stage">
+                    <svg viewBox="0 0 160 270" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Dashed leg lines from y=138 to y=236 -->
+                        <line x1="70" y1="138" x2="70" y2="236" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3,3" />
+                        <line x1="90" y1="138" x2="90" y2="236" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3,3" />
+                        <!-- Shoe -->
+                        <g transform="translate(52, 236)">
+                            <path d="M 0 8 C 2 2, 12 0, 18 3 C 24 6, 30 9, 39 9 C 44 9, 47 11, 45 15 C 42 16, 36 16, 17 16 C 12 16, 0 15, 0 12 Z" fill="#18181b" stroke="#52525b" stroke-width="1" />
+                            <rect x="2" y="13" width="8" height="4" rx="1" fill="#09090b" />
+                        </g>
+                        <!-- Skirt: ends at knee y=138 -->
+                        <g class="animated-pleats">
+                            <path d="M 56 35 Q 80 34 104 35 L 115 138 Q 80 143 45 138 Z" fill="url(#simPleatGrad)" stroke="#52525b" stroke-width="1" />
+                            <line x1="65" y1="35" x2="60" y2="138" stroke="#18181b" stroke-width="1.6" opacity="0.8" />
+                            <line x1="75" y1="34" x2="74" y2="140" stroke="#18181b" stroke-width="1.6" opacity="0.8" />
+                            <line x1="85" y1="34" x2="86" y2="140" stroke="#18181b" stroke-width="1.6" opacity="0.8" />
+                            <line x1="95" y1="35" x2="100" y2="138" stroke="#18181b" stroke-width="1.6" opacity="0.8" />
+                        </g>
+                        <rect x="54" y="32" width="52" height="5" rx="2" fill="#d97706" />
+                        <!-- Red Cross Icon -->
+                        <g class="icon-cross-pulse" transform="translate(80, 186)">
+                            <circle cx="0" cy="0" r="16" fill="#ef4444" />
+                            <line x1="-6" y1="-6" x2="6" y2="6" stroke="#fff" stroke-width="2.8" stroke-linecap="round" />
+                            <line x1="6" y1="-6" x2="-6" y2="6" stroke="#fff" stroke-width="2.8" stroke-linecap="round" />
+                        </g>
+                    </svg>
+                </div>
+                <div class="figure-caption" style="color: #f87171;">רוב השוק מגולה ✖</div>
+                <div class="figure-subcaption">השוק גלוי ברובו</div>
+            </div>
+
+            <!-- FIGURE 4: שוק מגולה ✖ -->
+            <div class="figure-card invalid-card">
+                <div class="badge-status badge-invalid">
+                    <span>שוק מגולה</span>
+                    <span class="badge-icon">✖</span>
+                </div>
+                <div class="svg-stage">
+                    <svg viewBox="0 0 160 270" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Dashed leg lines from above knee y=95 to y=236 -->
+                        <line x1="70" y1="95" x2="70" y2="236" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3,3" />
+                        <line x1="90" y1="95" x2="90" y2="236" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3,3" />
+                        <!-- Shoe -->
+                        <g transform="translate(52, 236)">
+                            <path d="M 0 8 C 2 2, 12 0, 18 3 C 24 6, 30 9, 39 9 C 44 9, 47 11, 45 15 C 42 16, 36 16, 17 16 C 12 16, 0 15, 0 12 Z" fill="#18181b" stroke="#52525b" stroke-width="1" />
+                            <rect x="2" y="13" width="8" height="4" rx="1" fill="#09090b" />
+                        </g>
+                        <!-- Skirt: ends above knee y=95 -->
+                        <g class="animated-pleats">
+                            <path d="M 56 35 Q 80 34 104 35 L 112 95 Q 80 99 48 95 Z" fill="url(#simPleatGrad)" stroke="#52525b" stroke-width="1" />
+                            <line x1="65" y1="35" x2="62" y2="95" stroke="#18181b" stroke-width="1.6" opacity="0.8" />
+                            <line x1="75" y1="34" x2="74" y2="97" stroke="#18181b" stroke-width="1.6" opacity="0.8" />
+                            <line x1="85" y1="34" x2="86" y2="97" stroke="#18181b" stroke-width="1.6" opacity="0.8" />
+                            <line x1="95" y1="35" x2="98" y2="95" stroke="#18181b" stroke-width="1.6" opacity="0.8" />
+                        </g>
+                        <rect x="54" y="32" width="52" height="5" rx="2" fill="#d97706" />
+                        <!-- Red Cross Icon -->
+                        <g class="icon-cross-pulse" transform="translate(80, 160)">
+                            <circle cx="0" cy="0" r="16" fill="#ef4444" />
+                            <line x1="-6" y1="-6" x2="6" y2="6" stroke="#fff" stroke-width="2.8" stroke-linecap="round" />
+                            <line x1="6" y1="-6" x2="-6" y2="6" stroke="#fff" stroke-width="2.8" stroke-linecap="round" />
+                        </g>
+                    </svg>
+                </div>
+                <div class="figure-caption" style="color: #f87171;">שוק מגולה ✖</div>
+                <div class="figure-subcaption">הברך והשוק גלויים</div>
+            </div>
+
+        </div>
+
+        <!-- VIEW 3: PRINTABLE STICKER VIEW -->
+        <div id="view-sticker" class="sticker-section">
+            <div class="sticker-preview-card" style="text-align:center;">
+                <img src="stickers_sheet_opt1.png" alt="מדבקות שוק באשה ערווה - 8 בעמוד" style="box-shadow:0 4px 15px rgba(0,0,0,0.15); border-radius:8px;">
+                <p style="color:#475569; font-size:13px; font-weight:700; margin-top:8px;">דף מדבקות A4 מלא (8 מדבקות 105×70 מ"מ) באיור וקטורי חד להדפסה ישירה</p>
+            </div>
+            <a href="sticker-design.html" class="btn-action btn-print" style="font-size:16px; padding:12px 28px;">
+                <span>🖨️</span> פתח עמוד הדפסה מלא (כולל 4 אופציות הדפסה)
+            </a>
+        </div>
+
+        <!-- ACTION BAR -->
+        <div class="action-bar">
+            <button class="btn-action btn-whatsapp" onclick="shareOnWhatsApp()">
+                <span>💬</span> שיתוף בוואטסאפ
+            </button>
+            <button class="btn-action" onclick="copyPageLink()">
+                <span>📋</span> העתקת קישור לאתר
+            </button>
+        </div>
+
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="toast">הקישור הועתק בהצלחה!</div>
+
+    <script>
+        // Data for presets
+        const presets = {
+            1: {
+                name: 'שוק מגולה',
+                sub: 'הברך והשוק גלויים',
+                skirtBottomY: 100,
+                skirtWidthDiff: 14,
+                isValid: false,
+                iconY: 175
+            },
+            2: {
+                name: 'רוב השוק מגולה',
+                sub: 'השוק גלוי ברובו',
+                skirtBottomY: 155,
+                skirtWidthDiff: 28,
+                isValid: false,
+                iconY: 205
+            },
+            3: {
+                name: 'רוב השוק מכוסה',
+                sub: 'חלק מהשוק גלוי',
+                skirtBottomY: 205,
+                skirtWidthDiff: 40,
+                isValid: false,
+                iconY: 240
+            },
+            4: {
+                name: 'כל השוק מכוסה',
+                sub: 'מכוסה לחלוטין עד הנעל',
+                skirtBottomY: 268,
+                skirtWidthDiff: 48,
+                isValid: true,
+                iconY: 145
+            }
+        };
+
+        function updateSimulator(step) {
+            const data = presets[step];
+            if (!data) return;
+
+            const y = data.skirtBottomY;
+            const w = data.skirtWidthDiff;
+
+            // Update skirt SVG path
+            const pathEl = document.getElementById('interactive-skirt-path');
+            const d = `M 72 45 Q 100 44 128 45 L ${100 + w} ${y} Q 100 ${y + 6} ${100 - w} ${y} Z`;
+            pathEl.setAttribute('d', d);
+
+            // Update fold lines
+            document.getElementById('s-fold1').setAttribute('x2', (100 - w + (w * 0.35)));
+            document.getElementById('s-fold1').setAttribute('y2', y);
+            document.getElementById('s-fold2').setAttribute('x2', 88);
+            document.getElementById('s-fold2').setAttribute('y2', y + 2);
+            document.getElementById('s-fold3').setAttribute('x2', 100);
+            document.getElementById('s-fold3').setAttribute('y2', y + 3);
+            document.getElementById('s-fold4').setAttribute('x2', 112);
+            document.getElementById('s-fold4').setAttribute('y2', y + 2);
+            document.getElementById('s-fold5').setAttribute('x2', (100 + w - (w * 0.35)));
+            document.getElementById('s-fold5').setAttribute('y2', y);
+
+            // Update dashed leg lines (they show only below the skirt)
+            const legLeft = document.getElementById('sim-leg-left');
+            const legRight = document.getElementById('sim-leg-right');
+            legLeft.setAttribute('y1', y);
+            legRight.setAttribute('y1', y);
+            legLeft.style.display = (y >= 265) ? 'none' : 'block';
+            legRight.style.display = (y >= 265) ? 'none' : 'block';
+
+            // Update banner & floating icon
+            const banner = document.getElementById('live-banner');
+            const bannerIcon = document.getElementById('banner-icon');
+            const bannerText = document.getElementById('banner-text');
+
+            const statusGroup = document.getElementById('sim-status-icon');
+            const simCircle = document.getElementById('sim-circle');
+            const simIconText = document.getElementById('sim-icon-text');
+
+            statusGroup.setAttribute('transform', `translate(100, ${data.iconY})`);
+
+            if (data.isValid) {
+                banner.className = 'live-indicator is-valid';
+                bannerIcon.textContent = '✔';
+                bannerText.textContent = data.name;
+                simCircle.setAttribute('fill', '#10b981');
+                simIconText.textContent = '✔';
+            } else {
+                banner.className = 'live-indicator is-invalid';
+                bannerIcon.textContent = '✖';
+                bannerText.textContent = data.name + ' - שוק באשה ערווה';
+                simCircle.setAttribute('fill', '#ef4444');
+                simIconText.textContent = '✖';
+            }
+
+            // Sync slider and preset buttons
+            document.getElementById('skirt-slider').value = step;
+            document.querySelectorAll('.preset-btn').forEach((b, idx) => {
+                b.classList.remove('active');
+                if (idx + 1 == step) b.classList.add('active');
+            });
+        }
+
+        function handleSliderChange(val) {
+            updateSimulator(parseInt(val, 10));
+        }
+
+        function setPreset(step) {
+            updateSimulator(step);
+        }
+
+        function switchView(viewName, evt) {
+            document.getElementById('view-interactive').style.display = viewName === 'interactive' ? 'flex' : 'none';
+            document.getElementById('view-grid').style.display = viewName === 'grid' ? 'grid' : 'none';
+            document.getElementById('view-sticker').style.display = viewName === 'sticker' ? 'flex' : 'none';
+
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            if (evt && evt.currentTarget) {
+                evt.currentTarget.classList.add('active');
+            } else {
+                const map = { interactive: 0, grid: 1, sticker: 2 };
+                const buttons = document.querySelectorAll('.tab-btn');
+                if (buttons[map[viewName]]) buttons[map[viewName]].classList.add('active');
+            }
+        }
+
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            t.textContent = msg;
+            t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 2500);
+        }
+
+        function copyPageLink() {
+            const url = window.location.href;
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => showToast('הקישור הועתק בהצלחה! 📋'));
+            } else {
+                showToast('הקישור: ' + url);
+            }
+        }
+
+        function shareOnWhatsApp() {
+            const url = window.location.href;
+            const text = encodeURIComponent('שוק באשה ערווה - הנפשה ואיור אורך חצאית:\n' + url);
+            window.open('https://api.whatsapp.com/send?text=' + text, '_blank');
+        }
+
+        // Initialize at valid state
+        window.addEventListener('DOMContentLoaded', () => {
+            updateSimulator(4);
+        });
+    </script>
+</body>
+</html>

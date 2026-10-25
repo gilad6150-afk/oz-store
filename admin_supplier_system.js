@@ -236,14 +236,24 @@
         const suppName = supplier.contact ? `${supplier.contact} (${supplier.name})` : supplier.name;
         let msg = `שלום ${suppName},\n`;
         msg += `התקבלה הזמנה חדשה מעוז יודאיקה 📜\n\n`;
-        msg += `📦 **המוצרים להספקה**:\n`;
+        msg += `📦 **המוצרים להספקה / הדפסה**:\n`;
 
         if (order.items && order.items.length > 0) {
             order.items.forEach(it => {
                 const title = it.name || it.title || 'מוצר יודאיקה';
-                const size = it.size || it.variation || 'סטנדרט';
+                const size = it.size || it.variation || it.selected_option || 'סטנדרט';
                 const qty = it.qty || it.quantity || 1;
                 msg += `- ${title} | מידה/דגם: ${size} | כמות: ${qty}\n`;
+
+                const isPrintItem = (title.includes('זכוכית') || title.includes('תמונה') || title.includes('מדבקה') || supplier.id === 'supp_rabbis_pics' || (supplier.name && supplier.name.includes('תמונות')));
+                if (isPrintItem) {
+                    const isTransparent = title.includes('שקוף') || size.includes('שקוף');
+                    const format = isTransparent ? 'PDF לשקוף (וקטור/שקיפות)' : 'JPEG לרגיל (הדפסה אטומה)';
+                    let cleanImg = it.print_file || (it.image || '').replace(/_(?:mockup|fullbleed)\.jpg$/i, '_rectangle.jpg');
+                    let fileUrl = cleanImg ? (cleanImg.startsWith('http') ? cleanImg : 'https://oz-judaica.co.il/' + cleanImg.replace(/^\/+/, '')) : '';
+                    msg += `  🖨️ קובץ להדפסה [${format}]: ${fileUrl || 'קובץ מקור'}\n`;
+                    msg += `  ⚠️ שים לב: קובץ מוכן לדפוס בלבד (ללא הדמיית אווירה)\n`;
+                }
             });
         } else if (order.productName) {
             msg += `- ${order.productName} | כמות: 1\n`;
@@ -259,6 +269,57 @@
 
         msg += `\n*הערה חשובה: המשלוח מבוצע עבור לקוח עוז יודאיקה. תודה רבה!*\n`;
         return msg;
+    };
+
+    window.copyOrderPrinterDispatch = function(order) {
+        if (!order) return;
+        let text = 'שלום, הזמנת הדפסה מעוז יודאיקה (עסקה #' + (order.id || order.orderId || Date.now()) + '):\n';
+        text += '===============================================\n';
+        text += '🖨️ פקודת עבודה למדפיס - קובצי מקור נקיים לדפוס בלבד\n';
+        text += '===============================================\n';
+        
+        const items = order.items || (order.productName ? [{ name: order.productName, qty: 1, price: order.total || order.amount }] : []);
+        items.forEach((item, idx) => {
+            const title = item.name || item.title || 'מוצר דפוס';
+            const size = item.size || item.variation || item.selected_option || 'סטנדרט';
+            const qty = item.qty || item.quantity || 1;
+            text += (idx + 1) + '. ' + title + '\n';
+            text += '   • מידה/מפרט: ' + size + '\n';
+            text += '   • כמות: ' + qty + ' יחידות\n';
+
+            const isTransparent = title.includes('שקוף') || size.includes('שקוף');
+            const formatType = isTransparent ? 'PDF לשקוף (וקטור/שקיפות)' : 'JPEG לרגיל (הדפסה אטומה)';
+            let cleanImg = item.print_file || (item.image || '').replace(/_(?:mockup|fullbleed)\.jpg$/i, '_rectangle.jpg');
+            let fileUrl = cleanImg ? (cleanImg.startsWith('http') ? cleanImg : 'https://oz-judaica.co.il/' + cleanImg.replace(/^\/+/, '')) : '';
+
+            text += '   • פורמט נדרש למדפיס: ' + formatType + '\n';
+            if (fileUrl) {
+                text += '   • קישור ישיר לקובץ להדפסה: ' + fileUrl + '\n';
+            }
+            text += '   ⚠️ שים לב: זהו קובץ המקור בלבד (ללא תמונת אווירה/הדמיה)\n';
+            text += '-----------------------------------------------\n';
+        });
+
+        text += 'מפרט טכני לדפוס: זכוכית מחוסמת אקסטרה-קליר 4 מ"מ, הדפסת UV ישירה איכותית בגב הזכוכית, פינות מלוטשות, 4 חורים וספייסרים נירוסטה לתלייה.\n';
+        text += '-----------------------------------------------\n';
+        text += 'פרטי משלוח לקוח:\n';
+        text += 'שם: ' + (order.customer?.name || order.name || '') + '\n';
+        text += 'טלפון: ' + (order.customer?.phone || order.phone || '') + '\n';
+        text += 'כתובת: ' + (order.city || order.customer?.city || '') + ', ' + (order.address || order.customer?.address || '') + '\n';
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('✓ פקודת ההדפסה למדפיס (JPEG לרגיל / PDF לשקוף) הועתקה ללוח בהצלחה!');
+            });
+        } else {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            ta.remove();
+            alert('✓ פקודת ההדפסה למדפיס הועתקה ללוח!');
+        }
     };
 
     window.dispatchOrderToSupplier = function(order, supplierId) {
@@ -915,6 +976,10 @@
                                         </button>
                                         <button onclick="testDispatchForSupplier('supp_mishkan')" class="px-3 py-1.5 bg-purple-900 hover:bg-purple-950 text-white font-bold text-xs rounded-xl shadow-xs transition cursor-pointer">
                                             העבר לספק (ללא פרטי לקוח)
+                                        </button>
+                                        <button onclick="copyOrderPrinterDispatch(${JSON.stringify(ord).replace(/"/g, '&quot;')})" class="px-3 py-1.5 bg-blue-700 hover:bg-blue-800 text-white font-bold text-xs rounded-xl shadow-xs transition cursor-pointer flex items-center gap-1">
+                                            <span>🖨️</span>
+                                            <span>העתק למדפיס (JPEG / PDF נקי)</span>
                                         </button>
                                     </div>
                                 </div>
@@ -1827,7 +1892,9 @@
     function checkAdminHash() {
         const hash = window.location.hash;
         if (hash === '#admin') {
-            openAdminDashboardModal('terminal');
+            openAdminDashboardModal('orders');
+        } else if (hash === '#orders') {
+            openAdminDashboardModal('orders');
         } else if (hash === '#terminal') {
             openAdminDashboardModal('terminal');
         } else if (hash === '#customers') {

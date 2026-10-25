@@ -37,11 +37,14 @@ jobs:
 
       - name: 6. Sync Production Files to Cloudflare Deploy Folder
         run: |
-          mkdir -p cloudflare_deploy/public cloudflare_deploy/functions cloudflare_deploy/cities
-          cp -f index.html sitemap.xml google_merchant_feed.xml robots.txt products_data.js products.json articles_data.js admin_supplier_system.js _headers favicon.ico favicon.png apple-touch-icon.png oz_logo_signature.jpg shipping-labels.html cloudflare_deploy/ 2>/dev/null || true
+          mkdir -p cloudflare_deploy/public cloudflare_deploy/functions cloudflare_deploy/cities cloudflare_deploy/sticker-design cloudflare_deploy/sticker-single cloudflare_deploy/shok-erva
+          cp -f index.html sitemap.xml google_merchant_feed.xml robots.txt products_data.js products.json articles_data.js admin_supplier_system.js _headers _redirects favicon.ico favicon.png apple-touch-icon.png oz_logo_signature.jpg shipping-labels.html shok-erva.html sticker-design.html sticker-single.html stickers_sheet_opt1.png stickers_sheet_opt2.png shok_erva_diagram_sticker_official.png skirt_diagram_clean.png cloudflare_deploy/ 2>/dev/null || true
           cp -rf public/* cloudflare_deploy/public/ 2>/dev/null || true
           cp -rf functions/* cloudflare_deploy/functions/ 2>/dev/null || true
           cp -rf cities/* cloudflare_deploy/cities/ 2>/dev/null || true
+          cp -rf sticker-design/* cloudflare_deploy/sticker-design/ 2>/dev/null || true
+          cp -rf sticker-single/* cloudflare_deploy/sticker-single/ 2>/dev/null || true
+          cp -rf shok-erva/* cloudflare_deploy/shok-erva/ 2>/dev/null || true
           echo "Production deployment folder prepared."
 
       - name: 7. Deploy to Cloudflare Pages (oz-judaica)
