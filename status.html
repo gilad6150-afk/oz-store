@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>עוז יודאיקה — מודעות שיווק מעוצבות לוואטסאפ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800;900&family=Frank+Ruhl+Libre:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --purple-dark: #0f172a;
+            --purple-card: #1e293b;
+            --gold: #f59e0b;
+            --gold-light: #fbbf24;
+            --wa-green: #25D366;
+            --wa-dark: #128C7E;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: #090d16;
+            font-family: 'Assistant', sans-serif;
+            color: #f1f5f9;
+            padding-bottom: 80px;
+            direction: rtl;
+        }
+
+        .header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 2px solid var(--gold);
+            padding: 18px 16px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        .header h1 {
+            font-family: 'Frank Ruhl Libre', serif;
+            font-size: 24px;
+            color: var(--gold-light);
+            margin-bottom: 6px;
+        }
+
+        .header p {
+            font-size: 13.5px;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 24px auto 0 auto;
+            padding: 0 16px;
+        }
+
+        .notice-banner {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(16, 185, 129, 0.15));
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            border-radius: 16px;
+            padding: 14px 18px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 13.5px;
+            color: #e2e8f0;
+            line-height: 1.5;
+        }
+
+        .notice-banner span {
+            font-size: 26px;
+            flex-shrink: 0;
+        }
+
+        .flyer-gallery-grid {
+            display: grid !important;
+            grid-template-columns: 1fr !important;
+            gap: 32px !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
+        @media (min-width: 768px) {
+            .flyer-gallery-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+
+        .flyer-showcase-card {
+            background: var(--purple-card) !important;
+            border: 1.5px solid rgba(255, 255, 255, 0.1) !important;
+            border-radius: 20px !important;
+            overflow: hidden !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+            display: flex !important;
+            flex-direction: column !important;
+            transition: transform 0.2s, border-color 0.2s;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
+        .flyer-showcase-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--gold) !important;
+        }
+
+        .img-preview-box {
+            position: relative;
+            width: 100%;
+            background: #000;
+            overflow: hidden;
+            aspect-ratio: 3 / 4;
+            cursor: pointer;
+        }
+
+        .img-preview-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .img-preview-box:hover img {
+            transform: scale(1.02);
+        }
+
+        .badge-overlay {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid var(--gold);
+            color: var(--gold-light);
+            font-size: 12px;
+            font-weight: 800;
+            padding: 5px 12px;
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+        }
+
+        .card-details {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+            gap: 14px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .card-price {
+            font-size: 16px;
+            font-weight: 900;
+            color: #34d399;
+        }
+
+        .actions-box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn-wa-share {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: #ffffff;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 900;
+            padding: 14px 18px;
+            border-radius: 14px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.2s;
+        }
+
+        .btn-wa-share:hover {
+            filter: brightness(1.1);
+            transform: translateY(-2px);
+        }
+
+        .btn-wa-share:active {
+            transform: scale(0.98);
+        }
+
+        .secondary-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .btn-sub {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #cbd5e1;
+            padding: 10px 8px;
+            border-radius: 10px;
+            font-size: 12.5px;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .btn-sub:hover {
+            background: rgba(255, 255, 255, 0.16);
+            color: #ffffff;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1e293b;
+            color: var(--gold-light);
+            border: 1.5px solid var(--gold);
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 14px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+            z-index: 99999;
+        }
+
+        .toast.show { opacity: 1; }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>עוז יודאיקה — מודעות שיווק מעוצבות לוואטסאפ</h1>
+        <p>תמונות בפורמט מלא עם כל המילים והמחיר בתוך התמונה • בלחיצה אחת: שיתוף ישיר לוואטסאפ (סטטוס או שיחה)!</p>
+    </header>
+
+    <div class="container">
+        <div class="notice-banner">
+            <span>📲</span>
+            <div>
+                <strong>איך משתפים בשנייה אחת?</strong><br>
+                לחץ על הכפתור הירוק <strong>"שתף תמונה זו לוואטסאפ"</strong>. בנייד ייפתח ישירות הוואטסאפ עם התמונה מוכנה להעלאה לסטטוס או לשליחה לאנשי קשר. במחשב התמונה תרד מיד ותיפתח שיחת הוואטסאפ!
+            </div>
+        </div>
+
+        <div class="flyer-gallery-grid" style="display: grid !important; opacity: 1 !important; visibility: visible !important;">
+
+        <!-- Card 1: בית מזוזה יוקרתי מבטון אדריכלי – "האש שלי" (12 ס"מ) -->
+        <div class="flyer-showcase-card" style="display: flex !important; opacity: 1 !important; visibility: visible !important;">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_21001.jpg')">
+                <img src="/public/marketing/creative_banana_21001.jpg" alt="בית מזוזה יוקרתי מבטון אדריכלי – "האש שלי" (12 ס"מ)" loading="eager">
+                <div class="badge-overlay">🔥 דגם הדגל הבלעדי</div>
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="card-title">בית מזוזה יוקרתי מבטון אדריכלי – "האש שלי" (12 ס"מ)</div>
+                    <div class="card-price">מחיר: ₪99 בלבד</div>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_21001.jpg', 'בית מזוזה יוקרתי מבטון אדריכלי – "האש שלי" (12 ס"מ)', '✨ בית מזוזה יוקרתי מבטון אדריכלי – "האש שלי" (12 ס"מ)\n🏷️ מחיר: ₪99 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=21001')">
+                        <span>🟢</span>
+                        <span>שתף תמונה זו לוואטסאפ</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_21001.jpg" download="21001_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד תמונה בלבד
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ בית מזוזה יוקרתי מבטון אדריכלי – "האש שלי" (12 ס"מ)\n🏷️ מחיר: ₪99 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=21001')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <!-- Card 2: בית מזוזה אפוקסי משולב עם עץ זית לבן שמנת עבודת יד – דגם יחיד (לבחירה 12 או 15 ס״מ) -->
+        <div class="flyer-showcase-card" style="display: flex !important; opacity: 1 !important; visibility: visible !important;">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_556.jpg')">
+                <img src="/public/marketing/creative_banana_556.jpg" alt="בית מזוזה אפוקסי משולב עם עץ זית לבן שמנת עבודת יד – דגם יחיד (לבחירה 12 או 15 ס״מ)" loading="eager">
+                <div class="badge-overlay">✨ עבודת יד בלעדית</div>
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="card-title">בית מזוזה אפוקסי משולב עם עץ זית לבן שמנת עבודת יד – דגם יחיד (לבחירה 12 או 15 ס״מ)</div>
+                    <div class="card-price">מחיר: ₪189 בלבד</div>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_556.jpg', 'בית מזוזה אפוקסי משולב עם עץ זית לבן שמנת עבודת יד – דגם יחיד (לבחירה 12 או 15 ס״מ)', '✨ בית מזוזה אפוקסי משולב עם עץ זית לבן שמנת עבודת יד – דגם יחיד (לבחירה 12 או 15 ס״מ)\n🏷️ מחיר: ₪189 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=556')">
+                        <span>🟢</span>
+                        <span>שתף תמונה זו לוואטסאפ</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_556.jpg" download="556_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד תמונה בלבד
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ בית מזוזה אפוקסי משולב עם עץ זית לבן שמנת עבודת יד – דגם יחיד (לבחירה 12 או 15 ס״מ)\n🏷️ מחיר: ₪189 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=556')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <!-- Card 3: תפילין בהמה גסה חרוצות מהודרות במיוחד – עוז יודאיקה -->
+        <div class="flyer-showcase-card" style="display: flex !important; opacity: 1 !important; visibility: visible !important;">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_20151.jpg')">
+                <img src="/public/marketing/creative_banana_20151.jpg" alt="תפילין בהמה גסה חרוצות מהודרות במיוחד – עוז יודאיקה" loading="eager">
+                <div class="badge-overlay">👑 כשרות מהודרת למהדרין</div>
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="card-title">תפילין בהמה גסה חרוצות מהודרות במיוחד – עוז יודאיקה</div>
+                    <div class="card-price">מחיר: ₪4,500 בלבד</div>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_20151.jpg', 'תפילין בהמה גסה חרוצות מהודרות במיוחד – עוז יודאיקה', '✨ תפילין בהמה גסה חרוצות מהודרות במיוחד – עוז יודאיקה\n🏷️ מחיר: ₪4,500 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=20151')">
+                        <span>🟢</span>
+                        <span>שתף תמונה זו לוואטסאפ</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_20151.jpg" download="20151_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד תמונה בלבד
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ תפילין בהמה גסה חרוצות מהודרות במיוחד – עוז יודאיקה\n🏷️ מחיר: ₪4,500 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=20151')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <!-- Card 4: תמונת זכוכית – אבני הכותל המערבי הוד קדומים (תקריב קריסטלי מאקרו) -->
+        <div class="flyer-showcase-card" style="display: flex !important; opacity: 1 !important; visibility: visible !important;">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_20115.jpg')">
+                <img src="/public/marketing/creative_banana_20115.jpg" alt="תמונת זכוכית – אבני הכותל המערבי הוד קדומים (תקריב קריסטלי מאקרו)" loading="eager">
+                <div class="badge-overlay">🕊️ הדפסה קריסטלית עמידה</div>
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="card-title">תמונת זכוכית – אבני הכותל המערבי הוד קדומים (תקריב קריסטלי מאקרו)</div>
+                    <div class="card-price">מחיר: ₪220 בלבד</div>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_20115.jpg', 'תמונת זכוכית – אבני הכותל המערבי הוד קדומים (תקריב קריסטלי מאקרו)', '✨ תמונת זכוכית – אבני הכותל המערבי הוד קדומים (תקריב קריסטלי מאקרו)\n🏷️ מחיר: ₪220 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=20115')">
+                        <span>🟢</span>
+                        <span>שתף תמונה זו לוואטסאפ</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_20115.jpg" download="20115_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד תמונה בלבד
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ תמונת זכוכית – אבני הכותל המערבי הוד קדומים (תקריב קריסטלי מאקרו)\n🏷️ מחיר: ₪220 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=20115')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <!-- Card 5: ארנק עור נאפה מעוצב לגבר עם תא שטרות מורחב – שחור אלגנטי -->
+        <div class="flyer-showcase-card" style="display: flex !important; opacity: 1 !important; visibility: visible !important;">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_7821.jpg')">
+                <img src="/public/marketing/creative_banana_7821.jpg" alt="ארנק עור נאפה מעוצב לגבר עם תא שטרות מורחב – שחור אלגנטי" loading="eager">
+                <div class="badge-overlay">💼 100% עור איטלקי מובחר</div>
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="card-title">ארנק עור נאפה מעוצב לגבר עם תא שטרות מורחב – שחור אלגנטי</div>
+                    <div class="card-price">מחיר: ₪129 בלבד</div>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_7821.jpg', 'ארנק עור נאפה מעוצב לגבר עם תא שטרות מורחב – שחור אלגנטי', '✨ ארנק עור נאפה מעוצב לגבר עם תא שטרות מורחב – שחור אלגנטי\n🏷️ מחיר: ₪129 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=7821')">
+                        <span>🟢</span>
+                        <span>שתף תמונה זו לוואטסאפ</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_7821.jpg" download="7821_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד תמונה בלבד
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ ארנק עור נאפה מעוצב לגבר עם תא שטרות מורחב – שחור אלגנטי\n🏷️ מחיר: ₪129 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=7821')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        </div>
+    </div>
+
+    <div id="toast" class="toast">הטקסט הועתק בהצלחה!</div>
+
+    <script>
+        async function shareFlyer(imgUrl, title, text) {
+            try {
+                showToast('מכין את התמונה לשיתוף...');
+                const res = await fetch(imgUrl);
+                const blob = await res.blob();
+                const file = new File([blob], title.replace(/[^\u0590-\u05FFa-zA-Z0-9]/g, '_') + '.jpg', { type: 'image/jpeg' });
+
+                if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                    await navigator.share({ files: [file], title: title, text: text });
+                    showToast('התמונה נשלחה לשיתוף!');
+                    return;
+                }
+            } catch (err) {
+                console.log('Share fallback:', err);
+            }
+
+            const a = document.createElement('a');
+            a.href = imgUrl;
+            a.download = title.replace(/[^\u0590-\u05FFa-zA-Z0-9]/g, '_') + '.jpg';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+
+            if (navigator.clipboard) navigator.clipboard.writeText(text).catch(() => {});
+
+            const waUrl = 'https://web.whatsapp.com/send?text=' + encodeURIComponent(text);
+            showToast('התמונה ירדה למחשב! פותח את WhatsApp Web...');
+            setTimeout(() => window.open(waUrl, '_blank'), 800);
+        }
+
+        function copyCaption(text) {
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(text).then(() => showToast('הטקסט הועתק ללוח!'));
+            }
+        }
+
+        function previewImage(src) { window.open(src, '_blank'); }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2500);
+        }
+    </script>
+</body>
+</html>
