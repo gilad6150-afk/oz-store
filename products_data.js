@@ -1,4 +1,4 @@
-window.products = [
+window.PRODUCTS_DATA = [
   {
     "id": 21010,
     "sku": "OZ-KLAF-MEZUZAH-KASHER",
@@ -7371,7 +7371,9 @@ window.products = [
     "inStock": true,
     "image": "https://www.sidur-neharot.co.il/up/gallery/112917_WhatsApp-Image-2026-06-07-at-150828.jpeg",
     "images": [
-      "https://www.sidur-neharot.co.il/up/gallery/112917_WhatsApp-Image-2026-06-07-at-150828.jpeg"
+      "https://www.sidur-neharot.co.il/up/gallery/112917_WhatsApp-Image-2026-06-07-at-150828.jpeg",
+      "public/products/siddur_7220_open_stender.jpg",
+      "public/products/siddur_7220_lifestyle_shabbat.jpg"
     ],
     "short_description": "<p class='mb-3'><strong>הסידור המבואר – תפילת ימות השבוע ושבת קודש</strong> – הסידור המבואר – תפילת ימות השבוע ושבת קודש הוא חיבור מופת המאיר את אותיות התורה והתפילה בבהירות נפלאה ובלשון שווה לכל נפש.</p>",
     "description": "<p class='mb-3'><strong>הסידור המבואר – תפילת ימות השבוע ושבת קודש</strong> הוא חיבור מופת המאיר את אותיות התורה והתפילה בבהירות נפלאה ובלשון שווה לכל נפש. הספר כולל ביאור משולב רציף המוטמע בצמוד לטקסט המקורי, המאפשר להתפלל ולקרוא מתוך הבנה מעמיקה של כל מילה ומילה, ללא צורך בהפסקות מרובות או חיפוש בהערות שוליים מורכבות.</p><p class='mb-3'><strong>עריכה מדויקת והסכמות גדולי הדור:</strong> הסידור המבואר עם ביאור משולב קצר וברור ושווה לכל נפש מדברי חז\"ל ומפרשי התפילה. מאפשר להתפלל מתוך הבנה עמוקה, חיבור רוחני והתרוממות הנפש. הביאור נערך על פי דברי חז\"ל, מפרשי התפילה הראשונים והאחרונים וגדולי הפוסקים, וזכה להסכמות נלהבות של גדולי ישראל ששיבחו את התועלת העצומה שהספר מביא לכל מתפלל ולומד.</p><p class='mb-3'><strong>איכות כריכה והדפסה יוקרתית:</strong> הספר מודפס על נייר נטול עץ איכותי המונע השתקפות ומאיר עיניים, בכריכה קשה מרופדת ועמידה לשנים ארוכות של שימוש מתמיד. ניתן להזמין בכריכת עור איטלקית מהודרת. מתנה רוחנית מושלמת לעצמך, לבני משפחה, לשבתות ולמועדים.</p>",
@@ -7402,7 +7404,8 @@ window.products = [
     "inStock": true,
     "image": "https://www.sidur-neharot.co.il/up/gallery/112917_WhatsApp-Image-2026-06-01-at-135701.jpeg",
     "images": [
-      "https://www.sidur-neharot.co.il/up/gallery/112917_WhatsApp-Image-2026-06-01-at-135701.jpeg"
+      "https://www.sidur-neharot.co.il/up/gallery/112917_WhatsApp-Image-2026-06-01-at-135701.jpeg",
+      "public/products/megillot_7221_lifestyle_table.jpg"
     ],
     "short_description": "<p class='mb-3'><strong>חמש מגילות מבוארות – עם ביאור משולב</strong> – חמש מגילות מבוארות – עם ביאור משולב הוא חיבור מופת המאיר את אותיות התורה והתפילה בבהירות נפלאה ובלשון שווה לכל נפש.</p>",
     "description": "<p class='mb-3'><strong>חמש מגילות מבוארות – עם ביאור משולב</strong> הוא חיבור מופת המאיר את אותיות התורה והתפילה בבהירות נפלאה ובלשון שווה לכל נפש. הספר כולל ביאור משולב רציף המוטמע בצמוד לטקסט המקורי, המאפשר להתפלל ולקרוא מתוך הבנה מעמיקה של כל מילה ומילה, ללא צורך בהפסקות מרובות או חיפוש בהערות שוליים מורכבות.</p><p class='mb-3'><strong>עריכה מדויקת והסכמות גדולי הדור:</strong> חמש מגילות: מגילת אסתר, שיר השירים שני פירושים, רות, איכה וקהלת עם ביאור משולב קצר וברור השווה לכל נפש. אותיות גדולות ומאירות עיניים. הביאור נערך על פי דברי חז\"ל, מפרשי התפילה הראשונים והאחרונים וגדולי הפוסקים, וזכה להסכמות נלהבות של גדולי ישראל ששיבחו את התועלת העצומה שהספר מביא לכל מתפלל ולומד.</p><p class='mb-3'><strong>איכות כריכה והדפסה יוקרתית:</strong> הספר מודפס על נייר נטול עץ איכותי המונע השתקפות ומאיר עיניים, בכריכה קשה מרופדת ועמידה לשנים ארוכות של שימוש מתמיד. ניתן להזמין בכריכת עור איטלקית מהודרת. מתנה רוחנית מושלמת לעצמך, לבני משפחה, לשבתות ולמועדים.</p>",
@@ -7711,8 +7714,13 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית – תמונות של הבן איש חי בהוד מלכותו וספרי הקבלה, דיוקן הוד מלכותי של רבנו יוסף חיים מבגדאד בעל הבן איש חי בלבוש מסורתי מהודר, מוקף באורות קבליים וספריו הקדושים., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_ben_ish_chai_fullbleed.jpg",
+    "images": [
+      "public/products/tmunot/glass_ben_ish_chai_fullbleed.jpg",
+      "public/products/tmunot/glass_ben_ish_chai_silver_fullbleed.jpg",
+      "public/products/tmunot/glass_ben_ish_chai_square.jpg",
+      "public/products/tmunot/glass_ben_ish_chai_circle.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הבן איש חי בהוד מלכותו וספרי הקבלה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הבן איש חי בהוד מלכותו וספרי הקבלה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -7905,10 +7913,12 @@ window.products = [
     "alt": "תמונת זכוכית – תמונות של הבן איש חי בהוד מלכותו וספרי הקבלה – מתנות יודאיקה מעוצבות | עוז יודאיקה",
     "youtube_id": "ZbVQjmqXRzk",
     "youtube_url": "https://youtube.com/shorts/ZbVQjmqXRzk",
-    "print_file": "public/products/tmunot/glass_ben_ish_chai_rectangle.jpg",
+    "print_file": "public/print_ready/print_ben_ish_chai_rectangle_gold.jpg",
     "categoryName": "תמונות זכוכית וקנבס",
     "is_offline": false,
-    "status": "active"
+    "status": "active",
+    "has_silver_variant": true,
+    "print_file_silver": "public/print_ready/print_ben_ish_chai_rectangle_silver.jpg"
   },
   {
     "id": 20002,
@@ -8166,8 +8176,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית ריבועית – תמונות של הבן איש חי בעיטור זהב עתיק וברכות, פורמט ריבועי אלגנטי של הבן איש חי על רקע שיש שחור איטלקי, שזירת עלי זהב וברכת הצדיק לחלל הבית., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_ben_ish_chai_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_ben_ish_chai_square.jpg",
+      "public/products/tmunot/glass_ben_ish_chai_silver_square.jpg",
+      "public/products/tmunot/glass_ben_ish_chai_fullbleed.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הבן איש חי בעיטור זהב עתיק וברכות</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הבן איש חי בעיטור זהב עתיק וברכות</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -8368,7 +8382,10 @@ window.products = [
     "youtube_url": "https://youtube.com/shorts/kO8gAAvczlU",
     "categoryName": "תמונות זכוכית וקנבס",
     "is_offline": false,
-    "status": "active"
+    "status": "active",
+    "has_silver_variant": true,
+    "print_file": "public/print_ready/print_ben_ish_chai_square_gold.jpg",
+    "print_file_silver": "public/print_ready/print_ben_ish_chai_square_silver.jpg"
   },
   {
     "id": 20003,
@@ -8626,8 +8643,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית עגולה – תמונות של הבן איש חי במעגל אורות קבליים, תמונת זכוכית עגולה ייחודית עם הילת קדושה מוזהבת סביב רבנו יוסף חיים, משרה שלווה והגנה שמימית., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_ben_ish_chai_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_ben_ish_chai_circle.jpg",
+      "public/products/tmunot/glass_ben_ish_chai_silver_circle.jpg",
+      "public/products/tmunot/glass_ben_ish_chai_fullbleed.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של הבן איש חי במעגל אורות קבליים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של הבן איש חי במעגל אורות קבליים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -8816,7 +8837,10 @@ window.products = [
     "youtube_url": "https://youtube.com/shorts/gMDMJG67rb0",
     "categoryName": "תמונות זכוכית וקנבס",
     "is_offline": false,
-    "status": "active"
+    "status": "active",
+    "has_silver_variant": true,
+    "print_file": "public/print_ready/print_ben_ish_chai_circle_gold.png",
+    "print_file_silver": "public/print_ready/print_ben_ish_chai_circle_silver.png"
   },
   {
     "id": 20004,
@@ -9074,8 +9098,13 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית יוקרתית – תמונות של הבבא סאלי במבט קדוש ומאיר פנים, דיוקנו הקדוש של סידנא בבא סאלי רבי ישראל אבוחצירא זיע\"א עטוף בגלימה ובמצנפת הקדושה במבט חודר ומאיר., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_baba_sali_fullbleed.jpg",
+    "images": [
+      "public/products/tmunot/glass_baba_sali_fullbleed.jpg",
+      "public/products/tmunot/glass_baba_sali_silver_fullbleed.jpg",
+      "public/products/tmunot/glass_baba_sali_square.jpg",
+      "public/products/tmunot/glass_baba_sali_circle.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית יוקרתית – תמונות של הבבא סאלי במבט קדוש ומאיר פנים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית יוקרתית – תמונות של הבבא סאלי במבט קדוש ומאיר פנים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -9268,10 +9297,12 @@ window.products = [
     "alt": "תמונת זכוכית יוקרתית – תמונות של הבבא סאלי במבט קדוש ומאיר פנים – מתנות יודאיקה מעוצבות | עוז יודאיקה",
     "youtube_id": "_wC-5KF4TtA",
     "youtube_url": "https://youtube.com/shorts/_wC-5KF4TtA",
-    "print_file": "public/products/tmunot/glass_baba_sali_rectangle.jpg",
+    "print_file": "public/print_ready/print_baba_sali_rectangle_gold.jpg",
     "categoryName": "תמונות זכוכית וקנבס",
     "is_offline": false,
-    "status": "active"
+    "status": "active",
+    "has_silver_variant": true,
+    "print_file_silver": "public/print_ready/print_baba_sali_rectangle_silver.jpg"
   },
   {
     "id": 20005,
@@ -9529,8 +9560,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית ריבועית – תמונות של הבבא סאלי בעיטור זהב מלכותי וברכת כהנים, עיצוב ריבועי מלכותי עם עיטורי זהב 24K, ברכת הצדיק והפסוק \"יברכך ה' וישמרך\" לסלון ולכניסת הבית., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_baba_sali_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_baba_sali_square.jpg",
+      "public/products/tmunot/glass_baba_sali_silver_square.jpg",
+      "public/products/tmunot/glass_baba_sali_fullbleed.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הבבא סאלי בעיטור זהב מלכותי וברכת כהנים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הבבא סאלי בעיטור זהב מלכותי וברכת כהנים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -9729,7 +9764,10 @@ window.products = [
     "alt": "תמונת זכוכית ריבועית – תמונות של הבבא סאלי בעיטור זהב מלכותי וברכת כהנים – מתנות יודאיקה מעוצבות | עוז יודאיקה",
     "categoryName": "תמונות זכוכית וקנבס",
     "is_offline": false,
-    "status": "active"
+    "status": "active",
+    "has_silver_variant": true,
+    "print_file": "public/print_ready/print_baba_sali_square_gold.jpg",
+    "print_file_silver": "public/print_ready/print_baba_sali_square_silver.jpg"
   },
   {
     "id": 20006,
@@ -9987,8 +10025,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית עגולה – תמונות של הבבא סאלי בהילה שמימית של קדושה, תמונת זכוכית עגולה מרהיבה עם סגולת הישועה וההגנה של גדול המקובלים ומחולל המופתים., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_baba_sali_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_baba_sali_circle.jpg",
+      "public/products/tmunot/glass_baba_sali_silver_circle.jpg",
+      "public/products/tmunot/glass_baba_sali_fullbleed.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של הבבא סאלי בהילה שמימית של קדושה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של הבבא סאלי בהילה שמימית של קדושה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -10175,7 +10217,10 @@ window.products = [
     "alt": "תמונת זכוכית עגולה – תמונות של הבבא סאלי בהילה שמימית של קדושה – מתנות יודאיקה מעוצבות | עוז יודאיקה",
     "categoryName": "תמונות זכוכית וקנבס",
     "is_offline": false,
-    "status": "active"
+    "status": "active",
+    "has_silver_variant": true,
+    "print_file": "public/print_ready/print_baba_sali_circle_gold.png",
+    "print_file_silver": "public/print_ready/print_baba_sali_circle_silver.png"
   },
   {
     "id": 20007,
@@ -10432,8 +10477,10 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית פנורמית – תמונות של הבבא סאלי ושושלת צדיקי אבוחצירא, פנורמת ענק מרהיבה המשלבת את סידנא בבא סאלי עם אבות השושלת הקדושה בעיטור זהב טהור., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 2:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_panoramic_masterpiece_clean.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_panoramic_masterpiece_clean.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – הכותל המערבי שריד בית מקדשנו</strong></p><p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם שקיפות קריסטלית מרבית. עיצוב פנורמי רחב מרהיב לסלון, פינת אוכל ומשרד.</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – הכותל המערבי שריד בית מקדשנו</strong></p><p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם שקיפות קריסטלית מרבית. עיצוב פנורמי רחב מרהיב לסלון, פינת אוכל ומשרד.</p>",
     "options": [
@@ -10492,7 +10539,7 @@ window.products = [
         "text": "80/240 ס\"מ (משקל 23 ק\"ג) - ₪1850"
       }
     ],
-    "supplier": "תמונות רבנים וצדיקים",
+    "supplier": "תמונות פנורמיות",
     "in_house": true,
     "picture_shape": "panoramic",
     "picture_type": "kotel",
@@ -10895,8 +10942,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית – תמונות של אביר יעקב רבי יעקב אבוחצירא בעל פיתוחי חותם, דמות הוד קדומה של מייסד שושלת אבוחצירא בעל \"פיתוחי חותם\" ו\"מחשוף הלבן\", סגולה להגנה ורוממות רוח., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_abir_yaakov_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_abir_yaakov_rectangle.jpg",
+      "public/products/tmunot/glass_abir_yaakov_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של אביר יעקב רבי יעקב אבוחצירא בעל פיתוחי חותם</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של אביר יעקב רבי יעקב אבוחצירא בעל פיתוחי חותם</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -11347,8 +11397,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית ריבועית – תמונות של אביר יעקב בשיש שחור וקליגרפיה מוזהבת, עיצוב מודרני עשיר על גבי זכוכית מחוסמת 4 מ\"מ עם הדפס שמן של האביר יעקב זיע\"א., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_abir_yaakov_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_abir_yaakov_square.jpg",
+      "public/products/tmunot/glass_abir_yaakov_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של אביר יעקב בשיש שחור וקליגרפיה מוזהבת</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של אביר יעקב בשיש שחור וקליגרפיה מוזהבת</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -11805,8 +11858,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית עגולה – תמונות של אביר יעקב בהילת ספרי הקבלה, תמונה עגולה יוקרתית עם הילת קדושה זהובה סביב האביר יעקב זיע\"א., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_abir_yaakov_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_abir_yaakov_circle.jpg",
+      "public/products/tmunot/glass_abir_yaakov_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של אביר יעקב בהילת ספרי הקבלה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של אביר יעקב בהילת ספרי הקבלה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -12251,8 +12307,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית – תמונות של הרבי מלובביץ מלך המשיח בחיוך מאיר פנים, דיוקנו המאיר של כ\"ק אדמו\"ר מליובאוויטש רבי מנחם מענדל שניאורסאהן עם מבט האהבה והעידוד האינסופי., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_lubavitch_fullbleed.jpg",
+    "images": [
+      "public/products/tmunot/glass_lubavitch_fullbleed.jpg",
+      "public/products/tmunot/glass_lubavitch_square.jpg",
+      "public/products/tmunot/glass_lubavitch_circle.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הרבי מלובביץ מלך המשיח בחיוך מאיר פנים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הרבי מלובביץ מלך המשיח בחיוך מאיר פנים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -12704,8 +12764,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית ריבועית – תמונות של הרבי מלובביץ עם ברכת העסק והצלחה, שילוב מרהיב של דמות הרבי עם ברכת העסק, סגולת שפע ופרנסה ברווח למשרדים ולבתי עסק., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_lubavitch_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_lubavitch_square.jpg",
+      "public/products/tmunot/glass_lubavitch_fullbleed.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הרבי מלובביץ עם ברכת העסק והצלחה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הרבי מלובביץ עם ברכת העסק והצלחה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -13162,8 +13225,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית עגולה – תמונות של הרבי מלובביץ בהילת שמחה ואמונה, תמונת זכוכית עגולה קריסטלית עם הילה שמימית כחולה-מוזהבת סביב הרבי, מקרינה שמחה וביטחון., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_lubavitch_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_lubavitch_circle.jpg",
+      "public/products/tmunot/glass_lubavitch_fullbleed.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של הרבי מלובביץ בהילת שמחה ואמונה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של הרבי מלובביץ בהילת שמחה ואמונה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -13608,8 +13674,13 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית – תמונות של הרב עובדיה יוסף שוקד על התורה בהתמדה, תמונת מופת של פוסק הדור מרן הרב עובדיה יוסף זצוק\"ל עטוף בגלימת הראשון לציון, שקוע כולו בספרי ההלכה., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_rav_ovadia_fullbleed.jpg",
+    "images": [
+      "public/products/tmunot/glass_rav_ovadia_fullbleed.jpg",
+      "public/products/tmunot/glass_rav_ovadia_silver_fullbleed.jpg",
+      "public/products/tmunot/glass_rav_ovadia_square.jpg",
+      "public/products/tmunot/glass_rav_ovadia_circle.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הרב עובדיה יוסף שוקד על התורה בהתמדה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הרב עובדיה יוסף שוקד על התורה בהתמדה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -13802,10 +13873,12 @@ window.products = [
     "alt": "תמונת זכוכית – תמונות של הרב עובדיה יוסף שוקד על התורה בהתמדה – מתנות יודאיקה מעוצבות | עוז יודאיקה",
     "youtube_id": "a8_Yu6tpjTs",
     "youtube_url": "https://youtube.com/shorts/a8_Yu6tpjTs",
-    "print_file": "public/products/tmunot/glass_rav_ovadia_rectangle.jpg",
+    "print_file": "public/print_ready/print_rav_ovadia_rectangle_gold.jpg",
     "categoryName": "תמונות זכוכית וקנבס",
     "is_offline": false,
-    "status": "active"
+    "status": "active",
+    "has_silver_variant": true,
+    "print_file_silver": "public/print_ready/print_rav_ovadia_rectangle_silver.jpg"
   },
   {
     "id": 20016,
@@ -14063,8 +14136,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית ריבועית – תמונות של הרב עובדיה יוסף מברך באהבת ישראל ושמחה, תמונה ריבועית מלאת חום, אהבת ישראל וחיבה עמוקה של מרן זצוק\"ל מברך ומחייך., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_rav_ovadia_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_rav_ovadia_square.jpg",
+      "public/products/tmunot/glass_rav_ovadia_silver_square.jpg",
+      "public/products/tmunot/glass_rav_ovadia_fullbleed.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הרב עובדיה יוסף מברך באהבת ישראל ושמחה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הרב עובדיה יוסף מברך באהבת ישראל ושמחה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -14265,7 +14342,10 @@ window.products = [
     "youtube_url": "https://youtube.com/shorts/UScdVvRGHs4",
     "categoryName": "תמונות זכוכית וקנבס",
     "is_offline": false,
-    "status": "active"
+    "status": "active",
+    "has_silver_variant": true,
+    "print_file": "public/print_ready/print_rav_ovadia_square_gold.jpg",
+    "print_file_silver": "public/print_ready/print_rav_ovadia_square_silver.jpg"
   },
   {
     "id": 20017,
@@ -14523,8 +14603,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית עגולה – תמונות של הרב עובדיה יוסף בהילת כתר תורה ויראת שמים, תמונת זכוכית עגולה מפוארת עם כתר תורה מוזהב והילת קדושה סביב אביהם של רבבות ישראל., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_rav_ovadia_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_rav_ovadia_circle.jpg",
+      "public/products/tmunot/glass_rav_ovadia_silver_circle.jpg",
+      "public/products/tmunot/glass_rav_ovadia_fullbleed.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של הרב עובדיה יוסף בהילת כתר תורה ויראת שמים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של הרב עובדיה יוסף בהילת כתר תורה ויראת שמים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -14713,7 +14797,10 @@ window.products = [
     "youtube_url": "https://youtube.com/shorts/iAI-zjutXrU",
     "categoryName": "תמונות זכוכית וקנבס",
     "is_offline": false,
-    "status": "active"
+    "status": "active",
+    "has_silver_variant": true,
+    "print_file": "public/print_ready/print_rav_ovadia_circle_gold.png",
+    "print_file_silver": "public/print_ready/print_rav_ovadia_circle_silver.png"
   },
   {
     "id": 20019,
@@ -14971,8 +15058,13 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית – תמונות של הרב יורם אברג'ל המאיר פנים לכל יהודי באהבה, דמותו המאירה של מורנו הרב יורם מיכאל אברג'ל זיע\"א בעל \"אמרי נועם\", שהרעיף אהבת חינם וחסד על אלפי לבבות., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_rav_yoram_fullbleed.jpg",
+    "images": [
+      "public/products/tmunot/glass_rav_yoram_fullbleed.jpg",
+      "public/products/tmunot/glass_rav_yoram_silver_fullbleed.jpg",
+      "public/products/tmunot/glass_rav_yoram_square.jpg",
+      "public/products/tmunot/glass_rav_yoram_circle.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הרב יורם אברג'ל המאיר פנים לכל יהודי באהבה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הרב יורם אברג'ל המאיר פנים לכל יהודי באהבה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -15163,11 +15255,12 @@ window.products = [
       ]
     },
     "alt": "תמונת זכוכית – תמונות של הרב יורם אברג'ל המאיר פנים לכל יהודי באהבה – מתנות יודאיקה מעוצבות | עוז יודאיקה",
-    "print_file": "public/products/tmunot/glass_rav_yoram_rectangle.jpg",
+    "print_file": "public/print_ready/print_rav_yoram_rectangle_gold.jpg",
     "categoryName": "תמונות זכוכית וקנבס",
     "is_offline": false,
     "status": "active",
-    "has_silver_variant": true
+    "has_silver_variant": true,
+    "print_file_silver": "public/print_ready/print_rav_yoram_rectangle_silver.jpg"
   },
   {
     "id": 20020,
@@ -15425,8 +15518,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית ריבועית – תמונות של הרב יורם אברג'ל בעיטור אהבת ישראל וברכת הבנים, עיצוב ריבועי חם ומרגש עם ברכת הבנים והמשפחה לצד דמות הצדיק., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_rav_yoram_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_rav_yoram_square.jpg",
+      "public/products/tmunot/glass_rav_yoram_silver_square.jpg",
+      "public/products/tmunot/glass_rav_yoram_fullbleed.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הרב יורם אברג'ל בעיטור אהבת ישראל וברכת הבנים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הרב יורם אברג'ל בעיטור אהבת ישראל וברכת הבנים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -15626,7 +15723,9 @@ window.products = [
     "categoryName": "תמונות זכוכית וקנבס",
     "is_offline": false,
     "status": "active",
-    "has_silver_variant": true
+    "has_silver_variant": true,
+    "print_file": "public/print_ready/print_rav_yoram_square_gold.jpg",
+    "print_file_silver": "public/print_ready/print_rav_yoram_square_silver.jpg"
   },
   {
     "id": 20021,
@@ -15884,8 +15983,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית עגולה – תמונות של הרב יורם אברג'ל בהילת חסד ורחמים, תמונה עגולה מרהיבה עם סגולת השלום, הפרנסה ואהבת השם., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_rav_yoram_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_rav_yoram_circle.jpg",
+      "public/products/tmunot/glass_rav_yoram_silver_circle.jpg",
+      "public/products/tmunot/glass_rav_yoram_fullbleed.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של הרב יורם אברג'ל בהילת חסד ורחמים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של הרב יורם אברג'ל בהילת חסד ורחמים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -16073,7 +16176,9 @@ window.products = [
     "categoryName": "תמונות זכוכית וקנבס",
     "is_offline": false,
     "status": "active",
-    "has_silver_variant": true
+    "has_silver_variant": true,
+    "print_file": "public/print_ready/print_rav_yoram_circle_gold.png",
+    "print_file_silver": "public/print_ready/print_rav_yoram_circle_silver.png"
   },
   {
     "id": 20022,
@@ -16331,8 +16436,13 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית – תמונות של הרב מרדכי אליהו אביהם של ישראל עטור בטלית, דיוקן הוד של הראשון לציון הרב מרדכי אליהו זצוק\"ל עטוף בטליתו הקדושה, מנהיג אהוב ומחולל ישועות., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_rav_eliyahu_fullbleed.jpg",
+    "images": [
+      "public/products/tmunot/glass_rav_eliyahu_fullbleed.jpg",
+      "public/products/tmunot/glass_rav_eliyahu_silver_fullbleed.jpg",
+      "public/products/tmunot/glass_rav_eliyahu_square.jpg",
+      "public/products/tmunot/glass_rav_eliyahu_circle.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הרב מרדכי אליהו אביהם של ישראל עטור בטלית</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הרב מרדכי אליהו אביהם של ישראל עטור בטלית</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -16523,10 +16633,12 @@ window.products = [
       ]
     },
     "alt": "תמונת זכוכית – תמונות של הרב מרדכי אליהו אביהם של ישראל עטור בטלית – מתנות יודאיקה מעוצבות | עוז יודאיקה",
-    "print_file": "public/products/tmunot/glass_rav_eliyahu_rectangle.jpg",
+    "print_file": "public/print_ready/print_rav_eliyahu_rectangle_gold.jpg",
     "categoryName": "תמונות זכוכית וקנבס",
     "is_offline": false,
-    "status": "active"
+    "status": "active",
+    "has_silver_variant": true,
+    "print_file_silver": "public/print_ready/print_rav_eliyahu_rectangle_silver.jpg"
   },
   {
     "id": 20023,
@@ -16784,8 +16896,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית ריבועית – תמונות של הרב מרדכי אליהו בברכת שמים וקדושה, גרסה ריבועית אלגנטית לסלון, המשלבת את תמונת מרן עם פסוקי שמירה וברכה למשפחה., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_rav_eliyahu_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_rav_eliyahu_square.jpg",
+      "public/products/tmunot/glass_rav_eliyahu_silver_square.jpg",
+      "public/products/tmunot/glass_rav_eliyahu_fullbleed.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הרב מרדכי אליהו בברכת שמים וקדושה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הרב מרדכי אליהו בברכת שמים וקדושה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -16984,7 +17100,10 @@ window.products = [
     "alt": "תמונת זכוכית ריבועית – תמונות של הרב מרדכי אליהו בברכת שמים וקדושה – מתנות יודאיקה מעוצבות | עוז יודאיקה",
     "categoryName": "תמונות זכוכית וקנבס",
     "is_offline": false,
-    "status": "active"
+    "status": "active",
+    "has_silver_variant": true,
+    "print_file": "public/print_ready/print_rav_eliyahu_square_gold.jpg",
+    "print_file_silver": "public/print_ready/print_rav_eliyahu_square_silver.jpg"
   },
   {
     "id": 20024,
@@ -17242,8 +17361,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית עגולה – תמונות של הרב מרדכי אליהו בהילת צדקות וענווה, תמונה עגולה מרהיבה המקרינה יראת שמים, צדקות וברכה שמימית., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_rav_eliyahu_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_rav_eliyahu_circle.jpg",
+      "public/products/tmunot/glass_rav_eliyahu_silver_circle.jpg",
+      "public/products/tmunot/glass_rav_eliyahu_fullbleed.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של הרב מרדכי אליהו בהילת צדקות וענווה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של הרב מרדכי אליהו בהילת צדקות וענווה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -17430,7 +17553,10 @@ window.products = [
     "alt": "תמונת זכוכית עגולה – תמונות של הרב מרדכי אליהו בהילת צדקות וענווה – מתנות יודאיקה מעוצבות | עוז יודאיקה",
     "categoryName": "תמונות זכוכית וקנבס",
     "is_offline": false,
-    "status": "active"
+    "status": "active",
+    "has_silver_variant": true,
+    "print_file": "public/print_ready/print_rav_eliyahu_circle_gold.png",
+    "print_file_silver": "public/print_ready/print_rav_eliyahu_circle_silver.png"
   },
   {
     "id": 20025,
@@ -17688,8 +17814,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית – תמונות של הרב החיד\"א איש האשכולות וגדול המקובלים, דיוקנו ההיסטורי והמפואר של מרן החיד\"א רבי חיים יוסף דוד אזולאי זיע\"א, גאון ההלכה, המוסר והקבלה., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_chida_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_chida_rectangle.jpg",
+      "public/products/tmunot/glass_chida_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הרב החיד\"א איש האשכולות וגדול המקובלים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הרב החיד\"א איש האשכולות וגדול המקובלים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -18140,8 +18269,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית ריבועית – תמונות של הרב החיד\"א בעיטור ספרי קבלה וזהב טהור, עיצוב יוקרתי של החיד\"א על רקע שיש שחור וזהב עם שמות ספריו הקדושים שם הגדולים ומדבר קדמות., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_chida_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_chida_square.jpg",
+      "public/products/tmunot/glass_chida_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הרב החיד\"א בעיטור ספרי קבלה וזהב טהור</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הרב החיד\"א בעיטור ספרי קבלה וזהב טהור</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -18598,8 +18730,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית עגולה – תמונות של הרב החיד\"א בהילת חוכמת התורה, תמונת זכוכית עגולה מרהיבה עם סגולת החוכמה, הזיכרון והברכה בלימוד., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_chida_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_chida_circle.jpg",
+      "public/products/tmunot/glass_chida_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של הרב החיד\"א בהילת חוכמת התורה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של הרב החיד\"א בהילת חוכמת התורה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -19044,8 +19179,13 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית – תמונות של הרב יצחק כדורי עטור בטלית ומשקפי זהב בתפילה, תמונת הוד מרטיטה של זקן המקובלים הרב יצחק כדורי זיע\"א בתפילה עמוקה ומבט קדוש עטור בטלית מצמר טהור., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_rav_kaduri_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_rav_kaduri_rectangle.jpg",
+      "public/products/tmunot/glass_rav_kaduri_mockup.jpg",
+      "public/products/tmunot/glass_rav_kaduri_square.jpg",
+      "public/products/tmunot/glass_rav_kaduri_circle.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הרב יצחק כדורי עטור בטלית ומשקפי זהב בתפילה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הרב יצחק כדורי עטור בטלית ומשקפי זהב בתפילה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -19496,8 +19636,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית ריבועית – תמונות של הרב יצחק כדורי בעיטור כוונות האר\"י והגנה, עיצוב ריבועי מלכותי עם סגולות שמירה והגנה מכל עין הרע ורוח רעה., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_rav_kaduri_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_rav_kaduri_square.jpg",
+      "public/products/tmunot/glass_rav_kaduri_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הרב יצחק כדורי בעיטור כוונות האר\"י והגנה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הרב יצחק כדורי בעיטור כוונות האר\"י והגנה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -19954,8 +20097,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית עגולה – תמונות של הרב יצחק כדורי בהילה רוחנית לשמירה, תמונת זכוכית עגולה קריסטלית עם הילה שמימית מוזהבת סביב הצדיק., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_rav_kaduri_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_rav_kaduri_circle.jpg",
+      "public/products/tmunot/glass_rav_kaduri_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של הרב יצחק כדורי בהילה רוחנית לשמירה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של הרב יצחק כדורי בהילה רוחנית לשמירה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -20400,8 +20546,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית – תמונות של הרב פינטו הצדיק ממוגאדור בעל הנסים והמופתים, דיוקן קדוש של בעל המופתים הגדול ממרוקו הצדיק רבי חיים פינטו זיע\"א שכל ברכותיו התקיימו במלואן., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_pinto_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_pinto_rectangle.jpg",
+      "public/products/tmunot/glass_pinto_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הרב פינטו הצדיק ממוגאדור בעל הנסים והמופתים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הרב פינטו הצדיק ממוגאדור בעל הנסים והמופתים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -20852,8 +21001,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית ריבועית – תמונות של הרב פינטו בשיש שחור וברכת הצדיק, גרסה ריבועית יוקרתית על רקע שיש שחור עם עלי זהב ואותיות קודש., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_pinto_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_pinto_square.jpg",
+      "public/products/tmunot/glass_pinto_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הרב פינטו בשיש שחור וברכת הצדיק</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הרב פינטו בשיש שחור וברכת הצדיק</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -21310,8 +21462,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית עגולה – תמונות של הרב פינטו בהילת ישועות ורפואה, תמונה עגולה מרהיבה המסוגלת לישועה מהירה, רפואה שלמה וזרע של קיימא., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_pinto_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_pinto_circle.jpg",
+      "public/products/tmunot/glass_pinto_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של הרב פינטו בהילת ישועות ורפואה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של הרב פינטו בהילת ישועות ורפואה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -21756,8 +21911,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית – תמונות של רבי שמעון בר יוחאי ואור הזוהר הקדוש, הדמיית קודש של אדוננו התנא האלוקי רבי שמעון בר יוחאי רשב\"י עם אש הזוהר הקדוש וסודות התורה., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_rashbi_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_rashbi_rectangle.jpg",
+      "public/products/tmunot/glass_rashbi_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של רבי שמעון בר יוחאי ואור הזוהר הקדוש</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של רבי שמעון בר יוחאי ואור הזוהר הקדוש</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -22208,8 +22366,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית ריבועית – תמונות של רבי שמעון בר יוחאי באש התורה וזהב, עיצוב ריבועי מלכותי עם להבות אש קודש ואותיות זהב מובלטות של שירת בר יוחאי נמשחת אשריך., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_rashbi_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_rashbi_square.jpg",
+      "public/products/tmunot/glass_rashbi_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של רבי שמעון בר יוחאי באש התורה וזהב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של רבי שמעון בר יוחאי באש התורה וזהב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -22666,8 +22827,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית עגולה – תמונות של רבי שמעון בר יוחאי במעגל שבעת הרקיעים, תמונת זכוכית עגולה עם הילה קוסמית מוזהבת וסמלי עשר הספירות הרוחניות., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_rashbi_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_rashbi_circle.jpg",
+      "public/products/tmunot/glass_rashbi_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של רבי שמעון בר יוחאי במעגל שבעת הרקיעים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של רבי שמעון בר יוחאי במעגל שבעת הרקיעים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -23112,8 +23276,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית פנורמית – תמונות של ציון הרשב\"י במירון באורות ל\"ג בעומר, פנורמת ענק מרהיבה של הר מירון וציון הרשב\"י מוארים באבוקות אש קודש ושמחת אלפי ישראל., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 2:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_rashbi_panoramic.jpg",
+    "images": [
+      "public/products/tmunot/glass_rashbi_panoramic.jpg",
+      "public/products/tmunot/glass_rashbi_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – תמונות של ציון הרשב\"י במירון באורות ל\"ג בעומר</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – תמונות של ציון הרשב\"י במירון באורות ל\"ג בעומר</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן פנורמי):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 40/80 ס\"מ (משקל 3.5 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 50/100 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 60/120 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪660</strong></li> <li>• 80/160 ס\"מ (משקל 15 ק\"ג) – <strong class='text-amber-400'>₪1300</strong></li> <li>• 100/200 ס\"מ (משקל 24 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> <li>• 50/150 ס\"מ (משקל 9 ק\"ג) – <strong class='text-amber-400'>₪630</strong></li> <li>• 60/180 ס\"מ (משקל 13 ק\"ג) – <strong class='text-amber-400'>₪920</strong></li> <li>• 70/210 ס\"מ (משקל 17.5 ק\"ג) – <strong class='text-amber-400'>₪1350</strong></li> <li>• 80/240 ס\"מ (משקל 23 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> </ul>\n</div>",
     "options": [
@@ -23576,8 +23743,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית – תמונות של רבי מאיר בעל הנס סגולת הישועה \"אלהא דמאיר ענני\", תמונת מופת של התנא הקדוש רבי מאיר בעל הנס עם התפילה הבדוקה לישועה \"אלהא דמאיר ענני ענני\"., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_meir_baal_hanes_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_meir_baal_hanes_rectangle.jpg",
+      "public/products/tmunot/glass_meir_baal_hanes_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של רבי מאיר בעל הנס סגולת הישועה \"אלהא דמאיר ענני\"</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של רבי מאיר בעל הנס סגולת הישועה \"אלהא דמאיר ענני\"</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -24028,8 +24198,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית ריבועית – תמונות של רבי מאיר בעל הנס בשיש איטלקי וברכת הישועה, עיצוב ריבועי מושלם לבית ולעסק, סגולה למציאת אבדות, פרנסה ושלום בית., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_meir_baal_hanes_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_meir_baal_hanes_square.jpg",
+      "public/products/tmunot/glass_meir_baal_hanes_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של רבי מאיר בעל הנס בשיש איטלקי וברכת הישועה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של רבי מאיר בעל הנס בשיש איטלקי וברכת הישועה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -24486,8 +24659,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית עגולה – תמונות של רבי מאיר בעל הנס במעגל האור והתפילה בטבריה, תמונת זכוכית עגולה מרהיבה עם ציון הצדיק בטבריה לחופי הכנרת באורות שקיעה., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_meir_baal_hanes_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_meir_baal_hanes_circle.jpg",
+      "public/products/tmunot/glass_meir_baal_hanes_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של רבי מאיר בעל הנס במעגל האור והתפילה בטבריה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של רבי מאיר בעל הנס במעגל האור והתפילה בטבריה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -24932,8 +25108,13 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית – תמונות של רבי ישעיה מקרסטיר סגולת הפרנסה והשמירה, תמונת המופת המפורסמת של הצדיק רבי ישעיה'לה בן רבי משה מקרסטיר המסוגלת לשמירה מנזקים ולפרנסה ברווח., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kerestir_fullbleed.jpg",
+    "images": [
+      "public/products/tmunot/glass_kerestir_fullbleed.jpg",
+      "public/products/tmunot/glass_kerestir_silver_fullbleed.jpg",
+      "public/products/tmunot/glass_kerestir_square.jpg",
+      "public/products/tmunot/glass_kerestir_circle.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של רבי ישעיה מקרסטיר סגולת הפרנסה והשמירה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של רבי ישעיה מקרסטיר סגולת הפרנסה והשמירה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -25124,11 +25305,12 @@ window.products = [
       ]
     },
     "alt": "תמונת זכוכית – תמונות של רבי ישעיה מקרסטיר סגולת הפרנסה והשמירה – מתנות יודאיקה מעוצבות | עוז יודאיקה",
-    "print_file": "public/products/tmunot/glass_kerestir_rectangle.jpg",
+    "print_file": "public/print_ready/print_kerestir_rectangle_gold.jpg",
     "categoryName": "תמונות זכוכית וקנבס",
     "is_offline": false,
     "status": "active",
-    "has_silver_variant": true
+    "has_silver_variant": true,
+    "print_file_silver": "public/print_ready/print_kerestir_rectangle_silver.jpg"
   },
   {
     "id": 20042,
@@ -25386,8 +25568,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית ריבועית – תמונות של רבי ישעיה מקרסטיר ברקע שיש שחור וזהב, פורמט ריבועי יוקרתי על גבי זכוכית מחוסמת 4 מ\"מ עם הדפס שמן וקליגרפיה מוזהבת., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kerestir_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_kerestir_square.jpg",
+      "public/products/tmunot/glass_kerestir_silver_square.jpg",
+      "public/products/tmunot/glass_kerestir_fullbleed.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של רבי ישעיה מקרסטיר ברקע שיש שחור וזהב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של רבי ישעיה מקרסטיר ברקע שיש שחור וזהב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -25587,7 +25773,9 @@ window.products = [
     "categoryName": "תמונות זכוכית וקנבס",
     "is_offline": false,
     "status": "active",
-    "has_silver_variant": true
+    "has_silver_variant": true,
+    "print_file": "public/print_ready/print_kerestir_square_gold.jpg",
+    "print_file_silver": "public/print_ready/print_kerestir_square_silver.jpg"
   },
   {
     "id": 20043,
@@ -25845,8 +26033,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית עגולה – תמונות של רבי ישעיה מקרסטיר לברכת הבית והפרנסה, תמונת זכוכית עגולה אלגנטית מודפסת בצבעי UV עמידים, סגולה לשובע וברכה., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kerestir_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_kerestir_circle.jpg",
+      "public/products/tmunot/glass_kerestir_silver_circle.jpg",
+      "public/products/tmunot/glass_kerestir_fullbleed.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של רבי ישעיה מקרסטיר לברכת הבית והפרנסה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של רבי ישעיה מקרסטיר לברכת הבית והפרנסה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -26034,7 +26226,9 @@ window.products = [
     "categoryName": "תמונות זכוכית וקנבס",
     "is_offline": false,
     "status": "active",
-    "has_silver_variant": true
+    "has_silver_variant": true,
+    "print_file": "public/print_ready/print_kerestir_circle_gold.png",
+    "print_file_silver": "public/print_ready/print_kerestir_circle_silver.png"
   },
   {
     "id": 20044,
@@ -26292,8 +26486,10 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית פנורמית – תמונות של רבי ישעיה מקרסטיר עם ברכת המזון והשובע, תמונת ענק פנורמית למטבח ולפינת האוכל המשלבת את הצדיק עם נוסח ברכת המזון והשובע., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 2:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_gedolei_yisrael_panoramic_clean.jpg",
+    "images": [
+      "public/products/tmunot/glass_gedolei_yisrael_panoramic_clean.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – והיו עיניך רואות את מוריך</strong></p><p class='mb-3'>יצירת מופת פנורמית יוקרתית המאגדת שבעה מגדולי ישראל ומאורי הדורות: רבי ישעיה מקרסטיר, הרב יצחק כדורי, הבבא סאלי, מרן הרב עובדיה יוסף, הבן איש חי, הרבי מליובאוויטש, ומרן הרב מרדכי אליהו זצוק\"ל. הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ</strong> עם קנט פאזה מלוטש ומנגנון תלייה צף.</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – והיו עיניך רואות את מוריך</strong></p><p class='mb-3'>יצירת מופת פנורמית יוקרתית המאגדת שבעה מגדולי ישראל ומאורי הדורות: רבי ישעיה מקרסטיר, הרב יצחק כדורי, הבבא סאלי, מרן הרב עובדיה יוסף, הבן איש חי, הרבי מליובאוויטש, ומרן הרב מרדכי אליהו זצוק\"ל. הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ</strong> עם קנט פאזה מלוטש ומנגנון תלייה צף.</p>",
     "options": [
@@ -26352,7 +26548,7 @@ window.products = [
         "text": "80/240 ס\"מ (משקל 23 ק\"ג) - ₪1850"
       }
     ],
-    "supplier": "תמונות רבנים וצדיקים",
+    "supplier": "תמונות פנורמיות",
     "in_house": true,
     "picture_shape": "panoramic",
     "picture_type": "rabbis",
@@ -26753,8 +26949,13 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית – תמונות של הינוקא הגאון הרב שלמה יהודה בארי בתפילה ונגינה, העילוי והפנומן התורני הינוקא הגאון הרב שלמה יהודה בארי שליט\"א בתפילה זכה, נגינה ודבקות המרטיטה לבבות., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_yanuka_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_yanuka_mockup.jpg",
+      "public/products/tmunot/glass_yanuka_rectangle.jpg",
+      "public/products/tmunot/glass_yanuka_square.jpg",
+      "public/products/tmunot/glass_yanuka_circle.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הינוקא הגאון הרב שלמה יהודה בארי בתפילה ונגינה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הינוקא הגאון הרב שלמה יהודה בארי בתפילה ונגינה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -27205,8 +27406,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית ריבועית – תמונות של הינוקא בעיטור אורות וכינור דוד, עיצוב ריבועי מודרני מרהיב המשלב את דמות הינוקא עם כינור של קדושה ואורות שמימיים., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_yanuka_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_yanuka_square.jpg",
+      "public/products/tmunot/glass_yanuka_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הינוקא בעיטור אורות וכינור דוד</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הינוקא בעיטור אורות וכינור דוד</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -27663,8 +27867,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית עגולה – תמונות של הינוקא בהילת עילוי הדור, תמונה עגולה יוקרתית עם הילה קריסטלית סביב הגאון הצעיר שמאיר את עולם התורה., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_yanuka_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_yanuka_circle.jpg",
+      "public/products/tmunot/glass_yanuka_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של הינוקא בהילת עילוי הדור</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – תמונות של הינוקא בהילת עילוי הדור</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -28109,8 +28316,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית – תמונות של שר התורה מרן הרב חיים קנייבסקי שוקד על הגמרא, מרן שר התורה רבנו חיים קנייבסקי זצוק\"ל שקוע כולו בלימוד התורה בחדרו הצנוע בבני ברק, סמל לעמל התורה., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kanievsky_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_kanievsky_rectangle.jpg",
+      "public/products/tmunot/glass_kanievsky_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של שר התורה מרן הרב חיים קנייבסקי שוקד על הגמרא</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של שר התורה מרן הרב חיים קנייבסקי שוקד על הגמרא</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -28561,8 +28771,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית ריבועית – תמונות של הרב חיים קנייבסקי בברכת \"בו\"ה\" (ברכה והצלחה), עיצוב ריבועי חם עם ברכת \"בו\"ה\" המפורסמת של שר התורה שהביאה רפואות וישועות לאלפים., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kanievsky_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_kanievsky_square.jpg",
+      "public/products/tmunot/glass_kanievsky_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הרב חיים קנייבסקי בברכת \"בו\"ה\" (ברכה והצלחה)</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הרב חיים קנייבסקי בברכת \"בו\"ה\" (ברכה והצלחה)</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -29019,8 +29232,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית – תמונות של הבבא מאיר רבי מאיר אבוחצירא בקדושתו ופרישותו, בנו הגדול של הבבא סאלי, קדוש עליון שנודע בפרישותו ובקדושת עיניו הטהורות, עמוד התפילה והחסד., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_baba_meir_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_baba_meir_rectangle.jpg",
+      "public/products/tmunot/glass_baba_meir_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הבבא מאיר רבי מאיר אבוחצירא בקדושתו ופרישותו</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הבבא מאיר רבי מאיר אבוחצירא בקדושתו ופרישותו</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -29471,8 +29687,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית ריבועית – תמונות של הבבא מאיר בעיטור זהב 24K, פורמט ריבועי מלכותי עם עיטורי זהב וקליגרפיה מהודרת לבית יהודי שורשי., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_baba_meir_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_baba_meir_square.jpg",
+      "public/products/tmunot/glass_baba_meir_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הבבא מאיר בעיטור זהב 24K</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – תמונות של הבבא מאיר בעיטור זהב 24K</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -29929,8 +30148,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on modern opulent living room wall with dark Italian marble paneling and warm architectural spotlighting, תמונת זכוכית – תמונות של הבבא חאקי רבי יצחק אבוחצירא רבה של רמלה, רבה הראשי של רמלה ואחיו של סידנא בבא סאלי, דמות פאר ומנהיגות רוחנית שחיברה את כל חלקי העם., holy radiant divine golden aura, sacred Hebrew typography, frameless 4mm ultra-clear diamond tempered glass with beveled polished edges, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_baba_chaki_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_baba_chaki_rectangle.jpg",
+      "public/products/tmunot/glass_baba_chaki_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הבבא חאקי רבי יצחק אבוחצירא רבה של רמלה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – תמונות של הבבא חאקי רבי יצחק אבוחצירא רבה של רמלה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -30381,8 +30603,15 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on elegant modern dark salon wall with ambient spotlighting, תמונת זכוכית יוקרתית – \"האש שלי תוקד עד ביאת המשיח\" אותיות זהב ולהבות קודש, האמרה המפורסמת של רבנו נחמן מברסלב בעיצוב יוקרתי מרטיט, אותיות זהב תלת-ממדיות מובלטות על רקע שיש שחור ולהבות אש קודש זוהרות., glowing golden Hebrew calligraphy, holy sacred fire flames, molten amber gold sparks, obsidian black marble background, frameless 4mm tempered diamond glass with polished beveled edges, invisible floating aluminum mount, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_esh_sheli_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_esh_sheli_mockup.jpg",
+      "public/products/tmunot/glass_esh_sheli_rectangle.jpg",
+      "public/products/tmunot/glass_esh_sheli_white_carrara.jpg",
+      "public/products/tmunot/glass_esh_sheli_square.jpg",
+      "public/products/tmunot/glass_esh_sheli_round.jpg",
+      "public/products/tmunot/glass_esh_sheli_panoramic.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית יוקרתית – \"האש שלי תוקד עד ביאת המשיח\" אותיות זהב ולהבות קודש</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית יוקרתית – \"האש שלי תוקד עד ביאת המשיח\" אותיות זהב ולהבות קודש</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -30834,8 +31063,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on elegant modern dark salon wall with ambient spotlighting, תמונת זכוכית ריבועית – \"האש שלי תוקד עד ביאת המשיח\" שיש שחור ואפוקסי אש, פורמט ריבועי מודרני מרהיב לחלל הסלון, להבות אש מפותלות, אבק זהב מותך ואותיות קודש מאירות., glowing golden Hebrew calligraphy, holy sacred fire flames, molten amber gold sparks, obsidian black marble background, frameless 4mm tempered diamond glass with polished beveled edges, invisible floating aluminum mount, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_esh_sheli_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_esh_sheli_square.jpg",
+      "public/products/tmunot/glass_esh_sheli_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – \"האש שלי תוקד עד ביאת המשיח\" שיש שחור ואפוקסי אש</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – \"האש שלי תוקד עד ביאת המשיח\" שיש שחור ואפוקסי אש</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -31292,8 +31524,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on elegant modern dark salon wall with ambient spotlighting, תמונת זכוכית עגולה – מעגל האש הקוסמי \"האש שלי תוקד עד ביאת המשיח\", תמונת זכוכית עגולה מרהיבה עם טבעת אש קוסמית לוהטת, מנורת שבעת הקנים בזהב וסמלי הגאולה של ברסלב., glowing golden Hebrew calligraphy, holy sacred fire flames, molten amber gold sparks, obsidian black marble background, frameless 4mm tempered diamond glass with polished beveled edges, invisible floating aluminum mount, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_esh_sheli_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_esh_sheli_circle.jpg",
+      "public/products/tmunot/glass_esh_sheli_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – מעגל האש הקוסמי \"האש שלי תוקד עד ביאת המשיח\"</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – מעגל האש הקוסמי \"האש שלי תוקד עד ביאת המשיח\"</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -31738,8 +31973,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on elegant modern dark salon wall with ambient spotlighting, תמונת זכוכית פנורמית ענקית – \"האש שלי תוקד עד ביאת המשיח\" לסלון רחב, יצירת מופת פנורמית רחבה המשלבת את שירת האש והגאולה בעיצוב עוצר נשימה מעל הספה או פינת האוכל., glowing golden Hebrew calligraphy, holy sacred fire flames, molten amber gold sparks, obsidian black marble background, frameless 4mm tempered diamond glass with polished beveled edges, invisible floating aluminum mount, photorealistic 8k --ar 2:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_esh_sheli_panoramic.jpg",
+    "images": [
+      "public/products/tmunot/glass_esh_sheli_panoramic.jpg",
+      "public/products/tmunot/glass_esh_sheli_mockup.jpg",
+      "public/products/tmunot/glass_esh_sheli_square.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית ענקית – \"האש שלי תוקד עד ביאת המשיח\" לסלון רחב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית ענקית – \"האש שלי תוקד עד ביאת המשיח\" לסלון רחב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן פנורמי):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 40/80 ס\"מ (משקל 3.5 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 50/100 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 60/120 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪660</strong></li> <li>• 80/160 ס\"מ (משקל 15 ק\"ג) – <strong class='text-amber-400'>₪1300</strong></li> <li>• 100/200 ס\"מ (משקל 24 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> <li>• 50/150 ס\"מ (משקל 9 ק\"ג) – <strong class='text-amber-400'>₪630</strong></li> <li>• 60/180 ס\"מ (משקל 13 ק\"ג) – <strong class='text-amber-400'>₪920</strong></li> <li>• 70/210 ס\"מ (משקל 17.5 ק\"ג) – <strong class='text-amber-400'>₪1350</strong></li> <li>• 80/240 ס\"מ (משקל 23 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> </ul>\n</div>",
     "options": [
@@ -32259,8 +32498,13 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on elegant modern dark salon wall with ambient spotlighting, תמונת זכוכית – \"ניצחתי ואנצח\" באותיות אש וניצחון האמונה, אמרת הניצחון הנצחית של רבנו נחמן \"ניצחתי ואנצח, גמרתי ואגמור\", סגולה לביטחון עצמי, עוצמה פנימית ועוז רוח., glowing golden Hebrew calligraphy, holy sacred fire flames, molten amber gold sparks, obsidian black marble background, frameless 4mm tempered diamond glass with polished beveled edges, invisible floating aluminum mount, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_esh_sheli_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_esh_sheli_rectangle.jpg",
+      "public/products/tmunot/glass_esh_sheli_mockup.jpg",
+      "public/products/tmunot/glass_esh_sheli_square.jpg",
+      "public/products/tmunot/glass_esh_sheli_panoramic.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – \"ניצחתי ואנצח\" באותיות אש וניצחון האמונה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – \"ניצחתי ואנצח\" באותיות אש וניצחון האמונה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -32711,8 +32955,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on elegant modern dark salon wall with ambient spotlighting, תמונת זכוכית ריבועית – \"ניצחתי ואנצח\" בעיטור להבות זהב 24K, גרסה ריבועית אלגנטית למשרד או לסלון, להבות זהב טהור ואותיות מודגשות בעלות נוכחות מרשימה., glowing golden Hebrew calligraphy, holy sacred fire flames, molten amber gold sparks, obsidian black marble background, frameless 4mm tempered diamond glass with polished beveled edges, invisible floating aluminum mount, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_esh_sheli_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_esh_sheli_square.jpg",
+      "public/products/tmunot/glass_esh_sheli_mockup.jpg",
+      "public/products/tmunot/glass_esh_sheli_panoramic.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – \"ניצחתי ואנצח\" בעיטור להבות זהב 24K</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – \"ניצחתי ואנצח\" בעיטור להבות זהב 24K</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -33169,8 +33417,13 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on elegant modern dark salon wall with ambient spotlighting, תמונת זכוכית – \"אין ייאוש בעולם כלל\" באש התקווה והזהב, המסר המרכזי של ברסלב בעיטור להבות זהב ואור אינסוף, מפיץ שמחה, אופטימיות ואור בכל פינה בבית., glowing golden Hebrew calligraphy, holy sacred fire flames, molten amber gold sparks, obsidian black marble background, frameless 4mm tempered diamond glass with polished beveled edges, invisible floating aluminum mount, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_esh_sheli_round.jpg",
+    "images": [
+      "public/products/tmunot/glass_esh_sheli_round.jpg",
+      "public/products/tmunot/glass_esh_sheli_mockup.jpg",
+      "public/products/tmunot/glass_esh_sheli_square.jpg",
+      "public/products/tmunot/glass_esh_sheli_panoramic.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – \"אין ייאוש בעולם כלל\" באש התקווה והזהב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – \"אין ייאוש בעולם כלל\" באש התקווה והזהב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -33615,8 +33868,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on elegant modern dark salon wall with ambient spotlighting, תמונת זכוכית ריבועית – \"אין ייאוש בעולם כלל\" שיש שחור ואש חיה, עיצוב מינימליסטי עוצמתי על רקע שיש שחור עמוק, אותיות בוערות באש תמיד ומפיחות כוחות מחודשים., glowing golden Hebrew calligraphy, holy sacred fire flames, molten amber gold sparks, obsidian black marble background, frameless 4mm tempered diamond glass with polished beveled edges, invisible floating aluminum mount, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_esh_sheli_panoramic.jpg",
+    "images": [
+      "public/products/tmunot/glass_esh_sheli_panoramic.jpg",
+      "public/products/tmunot/glass_esh_sheli_mockup.jpg",
+      "public/products/tmunot/glass_esh_sheli_square.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – \"אין ייאוש בעולם כלל\" שיש שחור ואש חיה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – \"אין ייאוש בעולם כלל\" שיש שחור ואש חיה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -34136,8 +34393,13 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on elegant modern dark salon wall with ambient spotlighting, תמונת זכוכית – נ נח נחמ נחמן מאומן אותיות אש פלאיות, שיר הגאולה והפתק הקדוש מעוטר בלהבות זהב קבליות, ניצוצות אור וסגולת שמחה והגנה., glowing golden Hebrew calligraphy, holy sacred fire flames, molten amber gold sparks, obsidian black marble background, frameless 4mm tempered diamond glass with polished beveled edges, invisible floating aluminum mount, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_esh_sheli_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_esh_sheli_rectangle.jpg",
+      "public/products/tmunot/glass_esh_sheli_mockup.jpg",
+      "public/products/tmunot/glass_esh_sheli_square.jpg",
+      "public/products/tmunot/glass_esh_sheli_panoramic.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – נ נח נחמ נחמן מאומן אותיות אש פלאיות</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – נ נח נחמ נחמן מאומן אותיות אש פלאיות</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -34588,8 +34850,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on elegant modern dark salon wall with ambient spotlighting, תמונת זכוכית עגולה – נ נח נחמ נחמן מאומן בגלגל אש שמימי, גלגל של אור ושמחה עילאית עם שירת רבנו נחמן מאומן בעיצוב קריסטלי עגול ויוקרתי עם גימור יהלום., glowing golden Hebrew calligraphy, holy sacred fire flames, molten amber gold sparks, obsidian black marble background, frameless 4mm tempered diamond glass with polished beveled edges, invisible floating aluminum mount, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_esh_sheli_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_esh_sheli_square.jpg",
+      "public/products/tmunot/glass_esh_sheli_mockup.jpg",
+      "public/products/tmunot/glass_esh_sheli_panoramic.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – נ נח נחמ נחמן מאומן בגלגל אש שמימי</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – נ נח נחמ נחמן מאומן בגלגל אש שמימי</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -35046,8 +35312,13 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on elegant modern dark salon wall with ambient spotlighting, תמונת זכוכית – \"אש תמיד תוקד על המזבח לא תכבה\", פסוק התורה על אש התמיד המחברת את עבודת המקדש עם אש הלב והנשמה הבוערת תמיד בהתלהבות ודבקות., glowing golden Hebrew calligraphy, holy sacred fire flames, molten amber gold sparks, obsidian black marble background, frameless 4mm tempered diamond glass with polished beveled edges, invisible floating aluminum mount, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_esh_sheli_round.jpg",
+    "images": [
+      "public/products/tmunot/glass_esh_sheli_round.jpg",
+      "public/products/tmunot/glass_esh_sheli_mockup.jpg",
+      "public/products/tmunot/glass_esh_sheli_square.jpg",
+      "public/products/tmunot/glass_esh_sheli_panoramic.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – \"אש תמיד תוקד על המזבח לא תכבה\"</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – \"אש תמיד תוקד על המזבח לא תכבה\"</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -35492,8 +35763,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on elegant modern dark salon wall with ambient spotlighting, תמונת זכוכית פנורמית – ציון רבי נחמן באומן באור להבות וכיסופים, הציון הקדוש באומן עטוף באורות שקיעה, להבות תפילה וכיסופי הגאולה של רבבות העולים לראש השנה., glowing golden Hebrew calligraphy, holy sacred fire flames, molten amber gold sparks, obsidian black marble background, frameless 4mm tempered diamond glass with polished beveled edges, invisible floating aluminum mount, photorealistic 8k --ar 2:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_esh_sheli_panoramic.jpg",
+    "images": [
+      "public/products/tmunot/glass_esh_sheli_panoramic.jpg",
+      "public/products/tmunot/glass_esh_sheli_mockup.jpg",
+      "public/products/tmunot/glass_esh_sheli_square.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – ציון רבי נחמן באומן באור להבות וכיסופים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – ציון רבי נחמן באומן באור להבות וכיסופים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן פנורמי):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 40/80 ס\"מ (משקל 3.5 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 50/100 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 60/120 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪660</strong></li> <li>• 80/160 ס\"מ (משקל 15 ק\"ג) – <strong class='text-amber-400'>₪1300</strong></li> <li>• 100/200 ס\"מ (משקל 24 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> <li>• 50/150 ס\"מ (משקל 9 ק\"ג) – <strong class='text-amber-400'>₪630</strong></li> <li>• 60/180 ס\"מ (משקל 13 ק\"ג) – <strong class='text-amber-400'>₪920</strong></li> <li>• 70/210 ס\"מ (משקל 17.5 ק\"ג) – <strong class='text-amber-400'>₪1350</strong></li> <li>• 80/240 ס\"מ (משקל 23 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> </ul>\n</div>",
     "options": [
@@ -36013,8 +36288,13 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on elegant modern dark salon wall with ambient spotlighting, תמונת זכוכית – \"דע לך שכל רועה ורועה יש לו ניגון מיוחד\" (שירת העשבים), מילים מרטיטות של רבנו נחמן על ניגון הבריאה, שזורים באותיות זהב וענפי טבע מוארים על זכוכית פרימיום., glowing golden Hebrew calligraphy, holy sacred fire flames, molten amber gold sparks, obsidian black marble background, frameless 4mm tempered diamond glass with polished beveled edges, invisible floating aluminum mount, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_esh_sheli_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_esh_sheli_rectangle.jpg",
+      "public/products/tmunot/glass_esh_sheli_mockup.jpg",
+      "public/products/tmunot/glass_esh_sheli_square.jpg",
+      "public/products/tmunot/glass_esh_sheli_panoramic.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – \"דע לך שכל רועה ורועה יש לו ניגון מיוחד\" (שירת העשבים)</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – \"דע לך שכל רועה ורועה יש לו ניגון מיוחד\" (שירת העשבים)</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -36465,8 +36745,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on elegant modern dark salon wall with ambient spotlighting, תמונת זכוכית ריבועית – \"אם אתה מאמין שיכולים לקלקל תאמין שיכולים לתקן\", משפט המפתח לתשובה, תיקון והתחלה חדשה באותיות קליגרפיה מוזהבות על שיש איטלקי עם גידי זהב מובלטים., glowing golden Hebrew calligraphy, holy sacred fire flames, molten amber gold sparks, obsidian black marble background, frameless 4mm tempered diamond glass with polished beveled edges, invisible floating aluminum mount, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_esh_sheli_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_esh_sheli_square.jpg",
+      "public/products/tmunot/glass_esh_sheli_mockup.jpg",
+      "public/products/tmunot/glass_esh_sheli_panoramic.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – \"אם אתה מאמין שיכולים לקלקל תאמין שיכולים לתקן\"</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – \"אם אתה מאמין שיכולים לקלקל תאמין שיכולים לתקן\"</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -36923,8 +37207,13 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on elegant modern dark salon wall with ambient spotlighting, תמונת זכוכית – \"כל העולם כולו גשר צר מאוד והעיקר לא להתפחד כלל\", קריאת האומץ והאמונה של רבנו נחמן, מעוצבת באותיות עוצמתיות על רקע להבות נצחיות ואור הגאולה., glowing golden Hebrew calligraphy, holy sacred fire flames, molten amber gold sparks, obsidian black marble background, frameless 4mm tempered diamond glass with polished beveled edges, invisible floating aluminum mount, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_esh_sheli_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_esh_sheli_rectangle.jpg",
+      "public/products/tmunot/glass_esh_sheli_mockup.jpg",
+      "public/products/tmunot/glass_esh_sheli_square.jpg",
+      "public/products/tmunot/glass_esh_sheli_panoramic.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – \"כל העולם כולו גשר צר מאוד והעיקר לא להתפחד כלל\"</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – \"כל העולם כולו גשר צר מאוד והעיקר לא להתפחד כלל\"</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -37375,8 +37664,13 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on elegant modern dark salon wall with ambient spotlighting, תמונת זכוכית – תיקון הכללי עשרת מזמורי התהילים בלהבות זהב, עשרת המזמורים של התיקון הכללי שגילה רבנו נחמן, סגולה עליונה לטהרה, ישועה ושמירה מכל רע., glowing golden Hebrew calligraphy, holy sacred fire flames, molten amber gold sparks, obsidian black marble background, frameless 4mm tempered diamond glass with polished beveled edges, invisible floating aluminum mount, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_esh_sheli_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_esh_sheli_rectangle.jpg",
+      "public/products/tmunot/glass_esh_sheli_mockup.jpg",
+      "public/products/tmunot/glass_esh_sheli_square.jpg",
+      "public/products/tmunot/glass_esh_sheli_panoramic.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – תיקון הכללי עשרת מזמורי התהילים בלהבות זהב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – תיקון הכללי עשרת מזמורי התהילים בלהבות זהב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -37827,8 +38121,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on elegant modern dark salon wall with ambient spotlighting, תמונת זכוכית פנורמית – תיקון הכללי מורחב באותיות מוארות, פורמט פנורמי יוקרתי של עשרת המזמורים לרוחב הקיר בגימור קריסטל 4 מ\"מ עמיד במיוחד עם תלייה נסתרת., glowing golden Hebrew calligraphy, holy sacred fire flames, molten amber gold sparks, obsidian black marble background, frameless 4mm tempered diamond glass with polished beveled edges, invisible floating aluminum mount, photorealistic 8k --ar 2:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_esh_sheli_panoramic.jpg",
+    "images": [
+      "public/products/tmunot/glass_esh_sheli_panoramic.jpg",
+      "public/products/tmunot/glass_esh_sheli_mockup.jpg",
+      "public/products/tmunot/glass_esh_sheli_square.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – תיקון הכללי מורחב באותיות מוארות</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – תיקון הכללי מורחב באותיות מוארות</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן פנורמי):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 40/80 ס\"מ (משקל 3.5 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 50/100 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 60/120 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪660</strong></li> <li>• 80/160 ס\"מ (משקל 15 ק\"ג) – <strong class='text-amber-400'>₪1300</strong></li> <li>• 100/200 ס\"מ (משקל 24 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> <li>• 50/150 ס\"מ (משקל 9 ק\"ג) – <strong class='text-amber-400'>₪630</strong></li> <li>• 60/180 ס\"מ (משקל 13 ק\"ג) – <strong class='text-amber-400'>₪920</strong></li> <li>• 70/210 ס\"מ (משקל 17.5 ק\"ג) – <strong class='text-amber-400'>₪1350</strong></li> <li>• 80/240 ס\"מ (משקל 23 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> </ul>\n</div>",
     "options": [
@@ -38348,8 +38646,13 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on elegant modern dark salon wall with ambient spotlighting, תמונת זכוכית – \"בוערת בי אש\" – נר ה' נשמת אדם, להבת הנשמה היהודית המשתוקקת אל ה', עיצוב סוחף של אש רוחנית וזהב המרומם את הנפש., glowing golden Hebrew calligraphy, holy sacred fire flames, molten amber gold sparks, obsidian black marble background, frameless 4mm tempered diamond glass with polished beveled edges, invisible floating aluminum mount, photorealistic 8k --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_esh_sheli_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_esh_sheli_rectangle.jpg",
+      "public/products/tmunot/glass_esh_sheli_mockup.jpg",
+      "public/products/tmunot/glass_esh_sheli_square.jpg",
+      "public/products/tmunot/glass_esh_sheli_panoramic.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – \"בוערת בי אש\" – נר ה' נשמת אדם</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – \"בוערת בי אש\" – נר ה' נשמת אדם</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -38800,8 +39103,13 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on elegant modern dark salon wall with ambient spotlighting, תמונת זכוכית עגולה – מנורת אש התמיד וברכת הבית של ברסלב, תמונת זכוכית עגולה עם מנורת שבעת הקנים בוערת באש קודש ופסוקי שלום בית וברכה בגימור מלוטש., glowing golden Hebrew calligraphy, holy sacred fire flames, molten amber gold sparks, obsidian black marble background, frameless 4mm tempered diamond glass with polished beveled edges, invisible floating aluminum mount, photorealistic 8k --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_esh_sheli_round.jpg",
+    "images": [
+      "public/products/tmunot/glass_esh_sheli_round.jpg",
+      "public/products/tmunot/glass_esh_sheli_mockup.jpg",
+      "public/products/tmunot/glass_esh_sheli_square.jpg",
+      "public/products/tmunot/glass_esh_sheli_panoramic.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – מנורת אש התמיד וברכת הבית של ברסלב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – מנורת אש התמיד וברכת הבית של ברסלב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -39246,8 +39554,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art mockup hanging on elegant modern dark salon wall with ambient spotlighting, תמונת זכוכית פנורמית – \"האש שלי תוקד\" בשילוב שיר השירים ופסוקי גאולה, יצירה מונומנטלית פנורמית המשלבת את אש ברסלב עם פסוקי הגאולה של דוד המלך ושלמה המלך באותיות זהב טהור., glowing golden Hebrew calligraphy, holy sacred fire flames, molten amber gold sparks, obsidian black marble background, frameless 4mm tempered diamond glass with polished beveled edges, invisible floating aluminum mount, photorealistic 8k --ar 2:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_esh_sheli_panoramic.jpg",
+    "images": [
+      "public/products/tmunot/glass_esh_sheli_panoramic.jpg",
+      "public/products/tmunot/glass_esh_sheli_mockup.jpg",
+      "public/products/tmunot/glass_esh_sheli_square.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – \"האש שלי תוקד\" בשילוב שיר השירים ופסוקי גאולה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – \"האש שלי תוקד\" בשילוב שיר השירים ופסוקי גאולה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן פנורמי):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 40/80 ס\"מ (משקל 3.5 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 50/100 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 60/120 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪660</strong></li> <li>• 80/160 ס\"מ (משקל 15 ק\"ג) – <strong class='text-amber-400'>₪1300</strong></li> <li>• 100/200 ס\"מ (משקל 24 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> <li>• 50/150 ס\"מ (משקל 9 ק\"ג) – <strong class='text-amber-400'>₪630</strong></li> <li>• 60/180 ס\"מ (משקל 13 ק\"ג) – <strong class='text-amber-400'>₪920</strong></li> <li>• 70/210 ס\"מ (משקל 17.5 ק\"ג) – <strong class='text-amber-400'>₪1350</strong></li> <li>• 80/240 ס\"מ (משקל 23 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> </ul>\n</div>",
     "options": [
@@ -39767,8 +40079,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – פותח את ידך ומשביע לכל חי רצון אותיות זהב ושיש שחור יוקרתי, הפסוק הקדוש והנשגב לסגולת הפרנסה והשפע (תהילים קמ\"ה) באותיות זהב נוזלי תלת-ממדיות על רקע שיש שחור איטלקי, עיטור שיבולי זהב ואורות ברכה., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_poteach_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_poteach_rectangle.jpg",
+      "public/products/tmunot/glass_poteach_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – פותח את ידך ומשביע לכל חי רצון אותיות זהב ושיש שחור יוקרתי</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – פותח את ידך ומשביע לכל חי רצון אותיות זהב ושיש שחור יוקרתי</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -40276,8 +40591,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית ריבועית – פותח את ידך ומשביע לכל חי רצון בעיטור שיבולי זהב ואפוקסי, פורמט ריבועי מודרני מרהיב לפינת האוכל, למטבח ולסלון, מביא ברכת פרנסה ברווח ושובע לכל באי הבית., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_poteach_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_poteach_square.jpg",
+      "public/products/tmunot/glass_poteach_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – פותח את ידך ומשביע לכל חי רצון בעיטור שיבולי זהב ואפוקסי</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – פותח את ידך ומשביע לכל חי רצון בעיטור שיבולי זהב ואפוקסי</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -40793,8 +41111,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית עגולה – פותח את ידך במעגל השפע והפרנסה, תמונת זכוכית עגולה קריסטלית עם גלגל של שפע וברכה שמימית, שיבולי זהב ואותיות קודש מאירות., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_poteach_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_poteach_circle.jpg",
+      "public/products/tmunot/glass_poteach_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – פותח את ידך במעגל השפע והפרנסה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – פותח את ידך במעגל השפע והפרנסה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -41296,8 +41617,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית פנורמית – פותח את ידך ומשביע לכל חי רצון פנורמה רחבה לפינת אוכל, יצירת מופת פנורמית ענקית מעל שולחן האוכל או פינת הישיבה, משרה רוגע, שובע, הכרת הטוב ושפע אינסופי., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_poteach_panoramic.jpg",
+    "images": [
+      "public/products/tmunot/glass_poteach_panoramic.jpg",
+      "public/products/tmunot/glass_poteach_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – פותח את ידך ומשביע לכל חי רצון פנורמה רחבה לפינת אוכל</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – פותח את ידך ומשביע לכל חי רצון פנורמה רחבה לפינת אוכל</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן פנורמי):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 40/80 ס\"מ (משקל 3.5 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 50/100 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 60/120 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪660</strong></li> <li>• 80/160 ס\"מ (משקל 15 ק\"ג) – <strong class='text-amber-400'>₪1300</strong></li> <li>• 100/200 ס\"מ (משקל 24 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> <li>• 50/150 ס\"מ (משקל 9 ק\"ג) – <strong class='text-amber-400'>₪630</strong></li> <li>• 60/180 ס\"מ (משקל 13 ק\"ג) – <strong class='text-amber-400'>₪920</strong></li> <li>• 70/210 ס\"מ (משקל 17.5 ק\"ג) – <strong class='text-amber-400'>₪1350</strong></li> <li>• 80/240 ס\"מ (משקל 23 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> </ul>\n</div>",
     "options": [
@@ -41817,8 +42141,13 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – מזמור לתודה אותיות זהב על שיש שחור יוקרתי, מזמור ק' לתודה בעיצוב מלכותי עוצר נשימה, אותיות זהב מובלטות על רקע שיש שחור איטלקי., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_mizmor_letoda_mockup.jpg",
+    "images": [
+      "public/products/tmunot/glass_mizmor_letoda_mockup.jpg",
+      "public/products/tmunot/glass_mizmor_letoda_silver_mockup.jpg",
+      "public/products/tmunot/glass_mizmor_letoda_white_mockup.jpg",
+      "public/products/tmunot/glass_mizmor_letoda_rectangle.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – מזמור לתודה אותיות זהב על שיש שחור יוקרתי</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – מזמור לתודה אותיות זהב על שיש שחור יוקרתי</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -42068,8 +42397,11 @@ window.products = [
     "alt": "תמונת זכוכית – מזמור לתודה אותיות זהב על שיש שחור יוקרתי – מתנות יודאיקה מעוצבות | עוז יודאיקה",
     "categoryName": "תמונות זכוכית וקנבס",
     "has_silver_variant": true,
-    "is_offline": true,
-    "status": "offline"
+    "is_offline": false,
+    "status": "active",
+    "print_file": "public/print_ready/print_mizmor_letoda_rectangle_gold.jpg",
+    "print_file_silver": "public/print_ready/print_mizmor_letoda_rectangle_silver.jpg",
+    "has_white_variant": true
   },
   {
     "id": 20081,
@@ -42327,8 +42659,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – מזמור לתודה על שיש לבן קרארה ואפוקסי זהב, מזמור לתודה בעיצוב נקי ויוקרתי, אותיות שחור וזהב על רקע שיש לבן עדין., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_mizmor_letoda_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_mizmor_letoda_mockup.jpg",
+      "public/products/tmunot/glass_mizmor_letoda_rectangle.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – מזמור לתודה על שיש לבן קרארה ואפוקסי זהב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – מזמור לתודה על שיש לבן קרארה ואפוקסי זהב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -42839,8 +43174,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית ריבועית – מזמור לתודה בעיטור גיאומטרי מוזהב, פורמט ריבועי מודרני לסלון ולמטבח, מביא ברכה והכרת הטוב לכל בית., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_mizmor_letoda_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_mizmor_letoda_square.jpg",
+      "public/products/tmunot/glass_mizmor_letoda_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – מזמור לתודה בעיטור גיאומטרי מוזהב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – מזמור לתודה בעיטור גיאומטרי מוזהב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -43095,8 +43433,11 @@ window.products = [
     },
     "alt": "תמונת זכוכית ריבועית – מזמור לתודה בעיטור גיאומטרי מוזהב – מתנות יודאיקה מעוצבות | עוז יודאיקה",
     "categoryName": "תמונות זכוכית וקנבס",
-    "is_offline": true,
-    "status": "offline"
+    "is_offline": false,
+    "status": "active",
+    "print_file": "public/print_ready/print_mizmor_letoda_square_gold.jpg",
+    "has_white_variant": false,
+    "has_silver_variant": false
   },
   {
     "id": 20083,
@@ -43354,8 +43695,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית עגולה – מזמור לתודה בהילה קריסטלית, תמונת זכוכית עגולה ומרשימה ביופייה המשלבת את אותיות המזמור במעגל של ברכה., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_mizmor_letoda_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_mizmor_letoda_circle.jpg",
+      "public/products/tmunot/glass_mizmor_letoda_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – מזמור לתודה בהילה קריסטלית</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – מזמור לתודה בהילה קריסטלית</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -43598,8 +43942,11 @@ window.products = [
     },
     "alt": "תמונת זכוכית עגולה – מזמור לתודה בהילה קריסטלית – מתנות יודאיקה מעוצבות | עוז יודאיקה",
     "categoryName": "תמונות זכוכית וקנבס",
-    "is_offline": true,
-    "status": "offline"
+    "is_offline": false,
+    "status": "active",
+    "print_file": "public/print_ready/print_mizmor_letoda_circle_gold.png",
+    "has_white_variant": false,
+    "has_silver_variant": false
   },
   {
     "id": 20084,
@@ -43857,8 +44204,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית פנורמית – מזמור לתודה פנורמה רחבה לסלון, תמונת ענק פנורמית מעל הספה או שולחן האוכל, נוכחות יוקרתית שמשנה את החלל., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_mizmor_letoda_panoramic.jpg",
+    "images": [
+      "public/products/tmunot/glass_mizmor_letoda_panoramic.jpg",
+      "public/products/tmunot/glass_mizmor_letoda_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – מזמור לתודה פנורמה רחבה לסלון</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – מזמור לתודה פנורמה רחבה לסלון</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן פנורמי):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 40/80 ס\"מ (משקל 3.5 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 50/100 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 60/120 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪660</strong></li> <li>• 80/160 ס\"מ (משקל 15 ק\"ג) – <strong class='text-amber-400'>₪1300</strong></li> <li>• 100/200 ס\"מ (משקל 24 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> <li>• 50/150 ס\"מ (משקל 9 ק\"ג) – <strong class='text-amber-400'>₪630</strong></li> <li>• 60/180 ס\"מ (משקל 13 ק\"ג) – <strong class='text-amber-400'>₪920</strong></li> <li>• 70/210 ס\"מ (משקל 17.5 ק\"ג) – <strong class='text-amber-400'>₪1350</strong></li> <li>• 80/240 ס\"מ (משקל 23 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> </ul>\n</div>",
     "options": [
@@ -44119,8 +44469,11 @@ window.products = [
     },
     "alt": "תמונת זכוכית פנורמית – מזמור לתודה פנורמה רחבה לסלון – מתנות יודאיקה מעוצבות | עוז יודאיקה",
     "categoryName": "תמונות זכוכית וקנבס",
-    "is_offline": true,
-    "status": "offline"
+    "is_offline": false,
+    "status": "active",
+    "print_file": "public/print_ready/print_mizmor_letoda_panoramic_gold.jpg",
+    "has_white_variant": false,
+    "has_silver_variant": false
   },
   {
     "id": 20085,
@@ -44378,8 +44731,14 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – ברכת הבית \"בזה השער לא יבוא צער\" עיצוב מלכותי, ברכת הבית הקלאסית באותיות קליגרפיה מהודרות ועיטורי ענפי זית וזהב טהור., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_birkat_habayit_mockup.jpg",
+    "images": [
+      "public/products/tmunot/glass_birkat_habayit_mockup.jpg",
+      "public/products/tmunot/glass_birkat_habayit_silver_mockup.jpg",
+      "public/products/tmunot/glass_birkat_habayit_white_mockup.jpg",
+      "public/products/tmunot/glass_birkat_habayit_white_silver_mockup.jpg",
+      "public/products/tmunot/glass_birkat_habayit_rectangle.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – ברכת הבית \"בזה השער לא יבוא צער\" עיצוב מלכותי</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – ברכת הבית \"בזה השער לא יבוא צער\" עיצוב מלכותי</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -44630,8 +44989,10 @@ window.products = [
     "categoryName": "תמונות זכוכית וקנבס",
     "has_white_variant": true,
     "has_silver_variant": true,
-    "is_offline": true,
-    "status": "offline"
+    "is_offline": false,
+    "status": "active",
+    "print_file": "public/print_ready/print_birkat_habayit_rectangle_gold.jpg",
+    "print_file_silver": "public/print_ready/print_birkat_habayit_rectangle_silver.jpg"
   },
   {
     "id": 20086,
@@ -44889,8 +45250,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית ריבועית – ברכת הבית מודרנית שיש שחור ואפוקסי, סגנון מודרני מרהיב לכניסת הבית, כולל מקום לשמות בני המשפחה או הקדשה., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_birkat_habayit_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_birkat_habayit_square.jpg",
+      "public/products/tmunot/glass_birkat_habayit_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – ברכת הבית מודרנית שיש שחור ואפוקסי</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – ברכת הבית מודרנית שיש שחור ואפוקסי</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -45147,8 +45511,11 @@ window.products = [
     "youtube_id": "1bXyIMdmpng",
     "youtube_url": "https://youtube.com/shorts/1bXyIMdmpng",
     "categoryName": "תמונות זכוכית וקנבס",
-    "is_offline": true,
-    "status": "offline"
+    "is_offline": false,
+    "status": "active",
+    "print_file": "public/print_ready/print_birkat_habayit_square_gold.jpg",
+    "has_white_variant": false,
+    "has_silver_variant": false
   },
   {
     "id": 20087,
@@ -45406,8 +45773,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית עגולה – ברכת הבית במעגל השלום והברכה, תמונה עגולה מודפסת ישירות על זכוכית מחוסמת, משרה רוגע ושלווה בחלל., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_birkat_habayit_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_birkat_habayit_circle.jpg",
+      "public/products/tmunot/glass_birkat_habayit_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – ברכת הבית במעגל השלום והברכה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – ברכת הבית במעגל השלום והברכה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -45650,8 +46020,11 @@ window.products = [
     },
     "alt": "תמונת זכוכית עגולה – ברכת הבית במעגל השלום והברכה – מתנות יודאיקה מעוצבות | עוז יודאיקה",
     "categoryName": "תמונות זכוכית וקנבס",
-    "is_offline": true,
-    "status": "offline"
+    "is_offline": false,
+    "status": "active",
+    "print_file": "public/print_ready/print_birkat_habayit_circle_gold.png",
+    "has_white_variant": false,
+    "has_silver_variant": false
   },
   {
     "id": 20088,
@@ -45909,8 +46282,12 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – ברכת העסק להצלחה, פרנסה ושפע, ברכת העסק באותיות זהב עם סגולת שפע ופרנסה טובה למשרד, לקליניקה ולחנות., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_birkat_haeisek_mockup.jpg",
+    "images": [
+      "public/products/tmunot/glass_birkat_haeisek_mockup.jpg",
+      "public/products/tmunot/glass_birkat_haeisek_silver_mockup.jpg",
+      "public/products/tmunot/glass_birkat_haeisek_rectangle.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – ברכת העסק להצלחה, פרנסה ושפע</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – ברכת העסק להצלחה, פרנסה ושפע</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -46160,8 +46537,11 @@ window.products = [
     "alt": "תמונת זכוכית – ברכת העסק להצלחה, פרנסה ושפע – מתנות יודאיקה מעוצבות | עוז יודאיקה",
     "categoryName": "תמונות זכוכית וקנבס",
     "has_silver_variant": true,
-    "is_offline": true,
-    "status": "offline"
+    "is_offline": false,
+    "status": "active",
+    "print_file": "public/print_ready/print_birkat_haeisek_rectangle_gold.jpg",
+    "print_file_silver": "public/print_ready/print_birkat_haeisek_rectangle_silver.jpg",
+    "has_white_variant": false
   },
   {
     "id": 20089,
@@ -46419,8 +46799,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית פנורמית – ברכת העסק מורחבת עם פרשת המן, יצירת מופת למשרדי הנהלה, משלבת את ברכת העסק לצד פסוקי הפרנסה והביטחון., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_birkat_haeisek_panoramic.jpg",
+    "images": [
+      "public/products/tmunot/glass_birkat_haeisek_panoramic.jpg",
+      "public/products/tmunot/glass_birkat_haeisek_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – ברכת העסק מורחבת עם פרשת המן</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – ברכת העסק מורחבת עם פרשת המן</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן פנורמי):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 40/80 ס\"מ (משקל 3.5 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 50/100 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 60/120 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪660</strong></li> <li>• 80/160 ס\"מ (משקל 15 ק\"ג) – <strong class='text-amber-400'>₪1300</strong></li> <li>• 100/200 ס\"מ (משקל 24 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> <li>• 50/150 ס\"מ (משקל 9 ק\"ג) – <strong class='text-amber-400'>₪630</strong></li> <li>• 60/180 ס\"מ (משקל 13 ק\"ג) – <strong class='text-amber-400'>₪920</strong></li> <li>• 70/210 ס\"מ (משקל 17.5 ק\"ג) – <strong class='text-amber-400'>₪1350</strong></li> <li>• 80/240 ס\"מ (משקל 23 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> </ul>\n</div>",
     "options": [
@@ -46681,8 +47064,11 @@ window.products = [
     },
     "alt": "תמונת זכוכית פנורמית – ברכת העסק מורחבת עם פרשת המן – מתנות יודאיקה מעוצבות | עוז יודאיקה",
     "categoryName": "תמונות זכוכית וקנבס",
-    "is_offline": true,
-    "status": "offline"
+    "is_offline": false,
+    "status": "active",
+    "print_file": "public/print_ready/print_birkat_haeisek_panoramic_gold.jpg",
+    "has_white_variant": false,
+    "has_silver_variant": false
   },
   {
     "id": 20090,
@@ -46940,8 +47326,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – פיטום הקטורת המלא סגולה לעשירות ולשמירה, נוסח פיטום הקטורת המלא כפי שתיקנו חז\"ל, מודפס בדיוק מירבי עם טעמים ואותיות מאירות., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_pitum_haketoret_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_pitum_haketoret_rectangle.jpg",
+      "public/products/tmunot/glass_pitum_haketoret_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – פיטום הקטורת המלא סגולה לעשירות ולשמירה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – פיטום הקטורת המלא סגולה לעשירות ולשמירה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -47449,8 +47838,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית פנורמית – פיטום הקטורת בצורת לוחות הברית, תמונת זכוכית פנורמית רחבה המשלבת את פיטום הקטורת עם ענני קטורת וזהב עתיק., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_pitum_haketoret_panoramic.jpg",
+    "images": [
+      "public/products/tmunot/glass_pitum_haketoret_panoramic.jpg",
+      "public/products/tmunot/glass_pitum_haketoret_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – פיטום הקטורת בצורת לוחות הברית</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – פיטום הקטורת בצורת לוחות הברית</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן פנורמי):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 40/80 ס\"מ (משקל 3.5 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 50/100 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 60/120 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪660</strong></li> <li>• 80/160 ס\"מ (משקל 15 ק\"ג) – <strong class='text-amber-400'>₪1300</strong></li> <li>• 100/200 ס\"מ (משקל 24 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> <li>• 50/150 ס\"מ (משקל 9 ק\"ג) – <strong class='text-amber-400'>₪630</strong></li> <li>• 60/180 ס\"מ (משקל 13 ק\"ג) – <strong class='text-amber-400'>₪920</strong></li> <li>• 70/210 ס\"מ (משקל 17.5 ק\"ג) – <strong class='text-amber-400'>₪1350</strong></li> <li>• 80/240 ס\"מ (משקל 23 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> </ul>\n</div>",
     "options": [
@@ -47970,8 +48362,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – תפילת \"אנא בכח\" המקובלת בשבעה קולות, שם מ\"ב הקדוש ותפילת אנא בכח בעיצוב קבליסטי מדויק המשרה הגנה ועוצמה רוחנית., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_ana_bekoach_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_ana_bekoach_rectangle.jpg",
+      "public/products/tmunot/glass_ana_bekoach_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – תפילת \"אנא בכח\" המקובלת בשבעה קולות</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – תפילת \"אנא בכח\" המקובלת בשבעה קולות</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -48479,8 +48874,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית ריבועית – אנא בכח בגרפיקה קבלית מודרנית, עיצוב מינימליסטי מרהיב, אותיות זהב על רקע גרדיאנט שחור-כחול חצות., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_ana_bekoach_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_ana_bekoach_square.jpg",
+      "public/products/tmunot/glass_ana_bekoach_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – אנא בכח בגרפיקה קבלית מודרנית</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – אנא בכח בגרפיקה קבלית מודרנית</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -48994,8 +49392,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – אשת חיל מי ימצא מתנה מרגשת לאישה, מזמור אשת חיל השלם בעיצוב מלכותי ורומנטי, מתנה מושלמת לשבתות, ימי נישואין וחגים., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_eshet_chayil_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_eshet_chayil_rectangle.jpg",
+      "public/products/tmunot/glass_eshet_chayil_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – אשת חיל מי ימצא מתנה מרגשת לאישה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – אשת חיל מי ימצא מתנה מרגשת לאישה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -49503,8 +49904,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית ריבועית – אשת חיל בעיטור עלי כותרת וזהב, גרסה ריבועית אלגנטית לפינת האוכל, אותיות קריסטליות ועבודת יד מוקפדת., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_eshet_chayil_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_eshet_chayil_square.jpg",
+      "public/products/tmunot/glass_eshet_chayil_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – אשת חיל בעיטור עלי כותרת וזהב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – אשת חיל בעיטור עלי כותרת וזהב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -50018,8 +50422,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – שמע ישראל ה' אלוקינו ה' אחד, הפסוק הנצחי של העם היהודי בעיצוב קליגרפי דרמטי ומרטיט לבבות., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_shema_yisrael_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_shema_yisrael_rectangle.jpg",
+      "public/products/tmunot/glass_shema_yisrael_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – שמע ישראל ה' אלוקינו ה' אחד</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – שמע ישראל ה' אלוקינו ה' אחד</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -50527,8 +50934,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית עגולה – שמע ישראל במעגל המאורות, עיצוב עגול ייחודי לקיר הסלון או חדר השינה, אותיות בולטות של אחדות ה'., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_shema_yisrael_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_shema_yisrael_circle.jpg",
+      "public/products/tmunot/glass_shema_yisrael_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – שמע ישראל במעגל המאורות</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – שמע ישראל במעגל המאורות</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -51030,8 +51440,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – למנצח בנגינות מזמור שיר בצורת המנורה, מנורת המאור המפורסמת של דוד המלך המסוגלת לשמירה עליונה, פרנסה והצלחה ברוכה., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_shiviti_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_shiviti_rectangle.jpg",
+      "public/products/tmunot/glass_shiviti_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – למנצח בנגינות מזמור שיר בצורת המנורה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – למנצח בנגינות מזמור שיר בצורת המנורה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -51539,8 +51952,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – למנצח בצורת המנורה על שיש שחור וזהב, גרסת ריבוע יוקרתית של מנורת שבעת הקנים עם תפילת למנצח המדויקת., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_shiviti_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_shiviti_square.jpg",
+      "public/products/tmunot/glass_shiviti_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – למנצח בצורת המנורה על שיש שחור וזהב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – למנצח בצורת המנורה על שיש שחור וזהב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -52054,8 +52470,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – שיוויתי ה' לנגדי תמיד בעיטור כתר תורה, שלט שיוויתי יוקרתי לבית ולבית הכנסת, אותיות שם הוי\"ה במילוי זהב ויראת שמים., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_shiviti_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_shiviti_rectangle.jpg",
+      "public/products/tmunot/glass_shiviti_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – שיוויתי ה' לנגדי תמיד בעיטור כתר תורה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – שיוויתי ה' לנגדי תמיד בעיטור כתר תורה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -52563,8 +52982,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – שיר למעלות אשא עיני אל ההרים (תהילים קכ\"א), תפילת השמירה והביטחון של דוד המלך בעיצוב מרגיע ושליו לחדרי שינה וילדים., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_shir_lamaalot_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_shir_lamaalot_rectangle.jpg",
+      "public/products/tmunot/glass_shir_lamaalot_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – שיר למעלות אשא עיני אל ההרים (תהילים קכ\"א)</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – שיר למעלות אשא עיני אל ההרים (תהילים קכ\"א)</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -53072,8 +53494,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית עגולה – שיר למעלות עם ברכת הילדים, תמונה עגולה מרהיבה עם סגולת השמירה מכל רע לבית ולמשפחה., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_shir_lamaalot_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_shir_lamaalot_circle.jpg",
+      "public/products/tmunot/glass_shir_lamaalot_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – שיר למעלות עם ברכת הילדים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – שיר למעלות עם ברכת הילדים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -53575,8 +54000,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – ברכת כהנים \"יברכך ה' וישמרך\" באותיות קודש, שלושת פסוקי ברכת כהנים בעיצוב מלכותי עם איור ידי כהנים פורשות כנפיים., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_birkat_kohanim_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_birkat_kohanim_rectangle.jpg",
+      "public/products/tmunot/glass_birkat_kohanim_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – ברכת כהנים \"יברכך ה' וישמרך\" באותיות קודש</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – ברכת כהנים \"יברכך ה' וישמרך\" באותיות קודש</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -54084,8 +54512,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – פרשת המן סגולה בדוקה לפרנסה ברווח, טקסט פרשת המן המלא לקריאה יומיומית, סגולה לקבלת פרנסה ישרה וקלה ברווח ולא בצער., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_birkat_kohanim_panoramic.jpg",
+    "images": [
+      "public/products/tmunot/glass_birkat_kohanim_panoramic.jpg",
+      "public/products/tmunot/glass_birkat_kohanim_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – פרשת המן סגולה בדוקה לפרנסה ברווח</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – פרשת המן סגולה בדוקה לפרנסה ברווח</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -54605,8 +55036,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – תפילת הדרך לבית ולמשרדי נסיעות, נוסח תפילת הדרך המדויק באותיות מאירות לחיזוק הביטחון בדרכים., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_parashat_haman_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_parashat_haman_rectangle.jpg",
+      "public/products/tmunot/glass_parashat_haman_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – תפילת הדרך לבית ולמשרדי נסיעות</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – תפילת הדרך לבית ולמשרדי נסיעות</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -55114,8 +55548,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – ברכת אשר יצר להודיה על בריאות הגוף, ברכת אשר יצר המפוארת באותיות מוגדלות וברורות, מתאימה לכניסה למבואת הבית., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_asher_yatzar_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_asher_yatzar_rectangle.jpg",
+      "public/products/tmunot/glass_asher_yatzar_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – ברכת אשר יצר להודיה על בריאות הגוף</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – ברכת אשר יצר להודיה על בריאות הגוף</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -55623,8 +56060,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – סדר הדלקת נרות שבת קודש, ברכת הדלקת נרות שבת ותפילת חנה בעיצוב נשי עדין ויוקרתי המלווה את רגעי הקודש., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_eshet_chayil_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_eshet_chayil_rectangle.jpg",
+      "public/products/tmunot/glass_eshet_chayil_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – סדר הדלקת נרות שבת קודש</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – סדר הדלקת נרות שבת קודש</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -56132,8 +56572,13 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית ריבועית – שלום עליכם מלאכי השרת, פיוט שלום עליכם עם איורי מלאכי קודש ורימונים מוזהבים לשולחן השבת., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_birkat_habayit_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_birkat_habayit_mockup.jpg",
+      "public/products/tmunot/glass_birkat_habayit_rectangle.jpg",
+      "public/products/tmunot/glass_birkat_habayit_square.jpg",
+      "public/products/tmunot/glass_birkat_habayit_circle.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – שלום עליכם מלאכי השרת</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – שלום עליכם מלאכי השרת</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -56648,8 +57093,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – סדר קידוש ליל שבת מוגדל וברור, נוסח קידוש ליל שבת באותיות מאירות עם שילוב כוס יין של ברכה., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_birkat_haeisek_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_birkat_haeisek_mockup.jpg",
+      "public/products/tmunot/glass_birkat_haeisek_rectangle.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – סדר קידוש ליל שבת מוגדל וברור</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – סדר קידוש ליל שבת מוגדל וברור</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -57158,8 +57606,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – סדר הבדלה לשבוע טוב ומבורך, פסוקי \"הנה אל ישועתי אבטח ולא אפחד\" וסדר ההבדלה למוצאי שבת., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_birkat_habayit_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_birkat_habayit_mockup.jpg",
+      "public/products/tmunot/glass_birkat_habayit_rectangle.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – סדר הבדלה לשבוע טוב ומבורך</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – סדר הבדלה לשבוע טוב ומבורך</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -57669,8 +58120,13 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – ברכת האורח והודיה למארחים, מתנה מדהימה להביא למארחים לשבתות וחגים, אות הוקרה יוקרתי ומלא חום., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_birkat_habayit_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_birkat_habayit_mockup.jpg",
+      "public/products/tmunot/glass_birkat_habayit_rectangle.jpg",
+      "public/products/tmunot/glass_birkat_habayit_square.jpg",
+      "public/products/tmunot/glass_birkat_habayit_circle.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – ברכת האורח והודיה למארחים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – ברכת האורח והודיה למארחים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -58179,8 +58635,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – \"אם אשכחך ירושלים תשכח ימיני\", הפסוק המרגש ביותר עם ציור אומנותי של ירושלים העתיקה מודפס על זכוכית קריסטלית., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_shiviti_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_shiviti_rectangle.jpg",
+      "public/products/tmunot/glass_shiviti_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – \"אם אשכחך ירושלים תשכח ימיני\"</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – \"אם אשכחך ירושלים תשכח ימיני\"</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -58688,8 +59147,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית פנורמית – שיר השירים אשר לשלמה פסוקי אהבה, פסוקי שיר השירים באותיות זהב פנורמיות, סגולה לאהבה, שלום בית וחיבור עמוק., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_mizmor_letoda_panoramic.jpg",
+    "images": [
+      "public/products/tmunot/glass_mizmor_letoda_panoramic.jpg",
+      "public/products/tmunot/glass_mizmor_letoda_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – שיר השירים אשר לשלמה פסוקי אהבה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – שיר השירים אשר לשלמה פסוקי אהבה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן פנורמי):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 40/80 ס\"מ (משקל 3.5 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 50/100 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 60/120 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪660</strong></li> <li>• 80/160 ס\"מ (משקל 15 ק\"ג) – <strong class='text-amber-400'>₪1300</strong></li> <li>• 100/200 ס\"מ (משקל 24 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> <li>• 50/150 ס\"מ (משקל 9 ק\"ג) – <strong class='text-amber-400'>₪630</strong></li> <li>• 60/180 ס\"מ (משקל 13 ק\"ג) – <strong class='text-amber-400'>₪920</strong></li> <li>• 70/210 ס\"מ (משקל 17.5 ק\"ג) – <strong class='text-amber-400'>₪1350</strong></li> <li>• 80/240 ס\"מ (משקל 23 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> </ul>\n</div>",
     "options": [
@@ -59209,8 +59671,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית עגולה – מודים אנחנו לך שאתה הוא ה' אלוקינו, ברכת ההודאה העמוקה במעגל של אור, מביא תודה תמידית ללב., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_mizmor_letoda_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_mizmor_letoda_circle.jpg",
+      "public/products/tmunot/glass_mizmor_letoda_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – מודים אנחנו לך שאתה הוא ה' אלוקינו</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – מודים אנחנו לך שאתה הוא ה' אלוקינו</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -59712,8 +60177,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – הכותל המערבי בשקיעת ארגמן מוזהבת, תצלום מרהיב של אבני הכותל המערבי מוארות באורות שקיעה ירושלמית זהובה וחמה., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_stones_authentic.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_stones_authentic.jpg",
+      "public/products/tmunot/glass_kotel_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – הכותל המערבי בשקיעת ארגמן מוזהבת</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "צילום מאקרו אותנטי וחד במיוחד (ברזולוציית ענק) של אבני הכותל המערבי העתיקות ורחבת התפילה. הדפסת UV ישירה על זכוכית מחוסמת אקסטרה-קליר 6 מ״מ | ללא מסגרת (Frameless Glass Art) | קנט פאזה מלוטש ביהלום | תלייה צפה נסתרת בגב התמונה (מרחף 2 ס״מ מהקיר). צילום אותנטי 100% ללא כל ג׳יבריש או טקסט משובש.",
     "options": [
@@ -60221,8 +60689,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית פנורמית ענקית – פנורמת הכותל ורחבת התפילה, צילום פנורמי רחב היקף של רחבת הכותל, משרה נוכחות עוצמתית של קדושה בכל סלון., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_panorama_clear.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_panorama_clear.jpg",
+      "public/products/tmunot/glass_kotel_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית ענקית – פנורמת הכותל ורחבת התפילה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "פנורמה מרהיבה של רחבת הכותל המערבי והר הבית באור ירושלמי צלול וטהור. הדפסה ישירה על זכוכית מחוסמת אקסטרה-קליר ללא מסגרת | קנט פאזה מלוטש ביהלום | תלייה צפה נסתרת. צילום אמיתי באיכות מוזיאלית ללא שום טקסט או ג׳יבריש.",
     "options": [
@@ -60742,8 +61213,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית ריבועית – אבני הכותל מקרוב ופתקי תפילה, תקריב מרהיב של אבני הכותל הקדושות עם פתקי התפילה וצמחי הצלף., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_kvitel_authentic.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_kvitel_authentic.jpg",
+      "public/products/tmunot/glass_kotel_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – אבני הכותל מקרוב ופתקי תפילה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "תקריב מאקרו אותנטי ומרגש של פתקי תפילה וסודות הלב החבויים בסדקי אבני הכותל המערבי. הדפסה יוקרתית על זכוכית מחוסמת אקסטרה-קליר 6 מ״מ ללא מסגרת | קנט פאזה מלוטש ביהלום | תלייה צפה נסתרת. צילום אותנטי ללא ג׳יבריש.",
     "options": [
@@ -61257,8 +61731,10 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית עגולה – הכותל המערבי בהילת אורות הלילה, תמונה עגולה מהפנטת של הכותל בלילה, האבנים מוארות באורות קסומים., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_circle_stones.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_circle_stones.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – הכותל המערבי בהילת אורות הלילה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "יצירת אמנות עגולה מרהיבה מזכוכית מחוסמת עגולה עם קנט פאזה היקפי מלוטש ביהלום. צילום אותנטי של אבני הכותל המערבי ללא מסגרת וללא ג׳יבריש.",
     "options": [
@@ -61760,8 +62236,10 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – תפילת שחרית בכותל המערבי עטופים בטליתות, תמונה מרגשת ועמוקה של מתפללים עם טליתות ותפילין עם הנץ החמה בכותל., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_prayer_authentic.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_prayer_authentic.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – תפילת שחרית בכותל המערבי עטופים בטליתות</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "צילום אנכי מרומם ומלא קדושה של מתפללים עטופים בטליתות צחורות מול אבני הכותל המערבי הנישאות. הדפסה על זכוכית מחוסמת אקסטרה-קליר ללא מסגרת | קנט פאזה מלוטש | תלייה צפה נסתרת.",
     "options": [
@@ -62271,8 +62749,10 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – ברכת כהנים ההמונית בכותל המערבי בפסח וסוכות, רבבות אלפי ישראל מתכנסים ברחבת הכותל בברכת כהנים מסורתית מרטיטה., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_birkat_kohanim.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_birkat_kohanim.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – ברכת כהנים ההמונית בכותל המערבי בפסח וסוכות</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "מעמד ברכת כהנים המסורתי והמרגש ברחבת הכותל המערבי בחול המועד, עם רבבות בית ישראל עטופי טליתות לבנות. הדפסת מופת על זכוכית מחוסמת אקסטרה-קליר ללא מסגרת | קנט פאזה מלוטש | תלייה נסתרת. צילום אמיתי 100% ללא ג׳יבריש.",
     "options": [
@@ -62792,8 +63272,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – הכותל המערבי בשלג ירושלמי לבן וטהור, מראה נדיר וטהור של אבני הכותל המכוסות בשלג צחור, תמונה של קדושה ורוגע., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_vertical_majestic.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_vertical_majestic.jpg",
+      "public/products/tmunot/glass_kotel_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – הכותל המערבי בשלג ירושלמי לבן וטהור</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – הכותל המערבי בשלג ירושלמי לבן וטהור</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -63301,8 +63784,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – ירושלים של זהב פנורמת העיר העתיקה מהר הזיתים, המראה המושלם של ירושלים של זהב, החומות וגגות העיר העתיקה ממעוף הר הזיתים., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_stones_authentic.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_stones_authentic.jpg",
+      "public/products/tmunot/glass_kotel_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – ירושלים של זהב פנורמת העיר העתיקה מהר הזיתים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – ירושלים של זהב פנורמת העיר העתיקה מהר הזיתים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן פנורמי):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 40/80 ס\"מ (משקל 3.5 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 50/100 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 60/120 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪660</strong></li> <li>• 80/160 ס\"מ (משקל 15 ק\"ג) – <strong class='text-amber-400'>₪1300</strong></li> <li>• 100/200 ס\"מ (משקל 24 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> <li>• 50/150 ס\"מ (משקל 9 ק\"ג) – <strong class='text-amber-400'>₪630</strong></li> <li>• 60/180 ס\"מ (משקל 13 ק\"ג) – <strong class='text-amber-400'>₪920</strong></li> <li>• 70/210 ס\"מ (משקל 17.5 ק\"ג) – <strong class='text-amber-400'>₪1350</strong></li> <li>• 80/240 ס\"מ (משקל 23 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> </ul>\n</div>",
     "options": [
@@ -63822,8 +64308,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – מגדל דוד וחומות ירושלים בלילה, חומות העיר העתיקה ומגדל דוד מוארים באורות זהב מלכותיים על רקע שמי הלילה., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_kvitel_authentic.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_kvitel_authentic.jpg",
+      "public/products/tmunot/glass_kotel_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – מגדל דוד וחומות ירושלים בלילה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – מגדל דוד וחומות ירושלים בלילה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -64331,8 +64820,10 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית ריבועית – סמטאות ירושלים העתיקה באור שקיעה, קשתות אבן עתיקות, ריצוף ירושלמי אותנטי ואווירה רוחנית של עיר הנצח., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_circle_stones.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_circle_stones.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – סמטאות ירושלים העתיקה באור שקיעה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – סמטאות ירושלים העתיקה באור שקיעה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -64834,8 +65325,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית עגולה – פנורמת שערי ירושלים והר הבית, תמונה עגולה מרהיבה המשקפת את שערי עיר הקודש ביופי שאין שני לו., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_prayer_authentic.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_prayer_authentic.jpg",
+      "public/products/tmunot/glass_kotel_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – פנורמת שערי ירושלים והר הבית</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – פנורמת שערי ירושלים והר הבית</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -65337,8 +65831,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – ציור שמן ירושלים הבנויה בצבעי זהב וטורקיז, ציור שמן מודרני מודפס על זכוכית מחוסמת, שילוב עז של כחול, טורקיז וזהב., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_panorama_clear.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_panorama_clear.jpg",
+      "public/products/tmunot/glass_kotel_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – ציור שמן ירושלים הבנויה בצבעי זהב וטורקיז</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – ציור שמן ירושלים הבנויה בצבעי זהב וטורקיז</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -65858,8 +66355,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית פנורמית – שער יפו ושוק העיר העתיקה באור יקרות, תמונת פנורמה מרהיבה של שער יפו וחיי העיר העתיקה., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_vertical_majestic.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_vertical_majestic.jpg",
+      "public/products/tmunot/glass_kotel_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – שער יפו ושוק העיר העתיקה באור יקרות</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – שער יפו ושוק העיר העתיקה באור יקרות</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן פנורמי):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 40/80 ס\"מ (משקל 3.5 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 50/100 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 60/120 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪660</strong></li> <li>• 80/160 ס\"מ (משקל 15 ק\"ג) – <strong class='text-amber-400'>₪1300</strong></li> <li>• 100/200 ס\"מ (משקל 24 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> <li>• 50/150 ס\"מ (משקל 9 ק\"ג) – <strong class='text-amber-400'>₪630</strong></li> <li>• 60/180 ס\"מ (משקל 13 ק\"ג) – <strong class='text-amber-400'>₪920</strong></li> <li>• 70/210 ס\"מ (משקל 17.5 ק\"ג) – <strong class='text-amber-400'>₪1350</strong></li> <li>• 80/240 ס\"מ (משקל 23 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> </ul>\n</div>",
     "options": [
@@ -66379,8 +66879,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – קבר רחל אמנו בבית לחם \"ושבו בנים לגבולם\", ציון רחל אמנו עטוף באורות של תפילה, ישועה ודמעות של אם המבכה על בניה., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_stones_authentic.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_stones_authentic.jpg",
+      "public/products/tmunot/glass_kotel_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – קבר רחל אמנו בבית לחם \"ושבו בנים לגבולם\"</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – קבר רחל אמנו בבית לחם \"ושבו בנים לגבולם\"</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -66888,8 +67391,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – מערת המכפלה בחברון עיר האבות, המבנה המונומנטלי העתיק של מערת המכפלה בחברון, זכות אבות לנצח., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_vertical_majestic.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_vertical_majestic.jpg",
+      "public/products/tmunot/glass_kotel_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – מערת המכפלה בחברון עיר האבות</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – מערת המכפלה בחברון עיר האבות</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -67397,8 +67903,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – קבר דוד המלך בהר ציון, הציון הקדוש של נעים זמירות ישראל דוד המלך עם כינור דוד וספרי התהילים., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_stones_authentic.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_stones_authentic.jpg",
+      "public/products/tmunot/glass_kotel_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – קבר דוד המלך בהר ציון</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – קבר דוד המלך בהר ציון</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -67906,8 +68415,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – קבר יוסף הצדיק בשכם, ציון יוסף הצדיק איש האמונה והטהרה, סגולה לשמירה ולפרנסה., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_vertical_majestic.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_vertical_majestic.jpg",
+      "public/products/tmunot/glass_kotel_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – קבר יוסף הצדיק בשכם</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – קבר יוסף הצדיק בשכם</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -68415,8 +68927,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – קבר שמואל הנביא בצפון ירושלים, מראה עוצר נשימה של נביא ה' הצופה על פני כל ירושלים., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_stones_authentic.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_stones_authentic.jpg",
+      "public/products/tmunot/glass_kotel_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – קבר שמואל הנביא בצפון ירושלים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – קבר שמואל הנביא בצפון ירושלים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -68924,8 +69439,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – שער האריות והחומות המזרחיות של ירושלים, שער האריות ההיסטורי המסמל את גבורת ישראל והכניסה לעיר הקודש., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_panorama_clear.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_panorama_clear.jpg",
+      "public/products/tmunot/glass_kotel_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – שער האריות והחומות המזרחיות של ירושלים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – שער האריות והחומות המזרחיות של ירושלים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -69445,8 +69963,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית פנורמית – ירושלים הרים סביב לה וה' סביב לעמו, פנורמת ענק מרהיבה של כל הרי יהודה הנושקים לחומות העיר ירושלים., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_kotel_prayer_authentic.jpg",
+    "images": [
+      "public/products/tmunot/glass_kotel_prayer_authentic.jpg",
+      "public/products/tmunot/glass_kotel_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – ירושלים הרים סביב לה וה' סביב לעמו</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית פנורמית – ירושלים הרים סביב לה וה' סביב לעמו</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן פנורמי):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 40/80 ס\"מ (משקל 3.5 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 50/100 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 60/120 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪660</strong></li> <li>• 80/160 ס\"מ (משקל 15 ק\"ג) – <strong class='text-amber-400'>₪1300</strong></li> <li>• 100/200 ס\"מ (משקל 24 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> <li>• 50/150 ס\"מ (משקל 9 ק\"ג) – <strong class='text-amber-400'>₪630</strong></li> <li>• 60/180 ס\"מ (משקל 13 ק\"ג) – <strong class='text-amber-400'>₪920</strong></li> <li>• 70/210 ס\"מ (משקל 17.5 ק\"ג) – <strong class='text-amber-400'>₪1350</strong></li> <li>• 80/240 ס\"מ (משקל 23 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> </ul>\n</div>",
     "options": [
@@ -69966,8 +70487,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – שבעת המינים בעיטור זהב גיאומטרי מודרני, חיטה ושעורה, גפן ותאנה, רימון, זית ודבש בעיצוב ארץ-ישראלי פרימיום., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_birkat_kohanim_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_birkat_kohanim_rectangle.jpg",
+      "public/products/tmunot/glass_birkat_kohanim_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – שבעת המינים בעיטור זהב גיאומטרי מודרני</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – שבעת המינים בעיטור זהב גיאומטרי מודרני</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -70475,8 +70999,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית ריבועית – רימון השפע וגרגרי הברכה באפוקסי אדום, סמל הפוריות והמצוות כרימון בעיצוב עכשווי בולט ומלא חיים., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_mizmor_letoda_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_mizmor_letoda_square.jpg",
+      "public/products/tmunot/glass_mizmor_letoda_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – רימון השפע וגרגרי הברכה באפוקסי אדום</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – רימון השפע וגרגרי הברכה באפוקסי אדום</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -70990,8 +71517,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית עגולה – יונת השלום עם ענף זית בזהב, תמונה עגולה מרהיבה המסמלת שלום, טוהר ובשורות טובות לבית., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_birkat_habayit_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_birkat_habayit_circle.jpg",
+      "public/products/tmunot/glass_birkat_habayit_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – יונת השלום עם ענף זית בזהב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – יונת השלום עם ענף זית בזהב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -71493,8 +72023,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – כ\"ב אותיות הקודש האלף-בית העברי בזהב, 22 אותיות לשון הקודש שבהן נברא העולם, בעיצוב קליגרפי קבליסטי מרהיב., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_ana_bekoach_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_ana_bekoach_rectangle.jpg",
+      "public/products/tmunot/glass_ana_bekoach_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – כ\"ב אותיות הקודש האלף-בית העברי בזהב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – כ\"ב אותיות הקודש האלף-בית העברי בזהב</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -72002,8 +72535,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – אריות יהודה שומרי ארון הברית והלוחות, גבורת שבט יהודה והמקדש, שני אריות זהב מעוטרים בכתר מלכות., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_shiviti_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_shiviti_rectangle.jpg",
+      "public/products/tmunot/glass_shiviti_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – אריות יהודה שומרי ארון הברית והלוחות</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – אריות יהודה שומרי ארון הברית והלוחות</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -72511,8 +73047,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – כלי המקדש והמזבח באור נבואי, שולחן לחם הפנים, מזבח הזהב, הכיור והמנורה בציור פנורמי מדויק לפי הרמב\"ם., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_pitum_haketoret_panoramic.jpg",
+    "images": [
+      "public/products/tmunot/glass_pitum_haketoret_panoramic.jpg",
+      "public/products/tmunot/glass_pitum_haketoret_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – כלי המקדש והמזבח באור נבואי</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – כלי המקדש והמזבח באור נבואי</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן פנורמי | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן פנורמי):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 40/80 ס\"מ (משקל 3.5 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 50/100 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 60/120 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪660</strong></li> <li>• 80/160 ס\"מ (משקל 15 ק\"ג) – <strong class='text-amber-400'>₪1300</strong></li> <li>• 100/200 ס\"מ (משקל 24 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> <li>• 50/150 ס\"מ (משקל 9 ק\"ג) – <strong class='text-amber-400'>₪630</strong></li> <li>• 60/180 ס\"מ (משקל 13 ק\"ג) – <strong class='text-amber-400'>₪920</strong></li> <li>• 70/210 ס\"מ (משקל 17.5 ק\"ג) – <strong class='text-amber-400'>₪1350</strong></li> <li>• 80/240 ס\"מ (משקל 23 ק\"ג) – <strong class='text-amber-400'>₪1850</strong></li> </ul>\n</div>",
     "options": [
@@ -73032,8 +73571,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית ריבועית – מגן דוד קריסטלי וספירות הקבלה, מגן דוד מעוצב בקווים מודרניים עם עשר הספירות הרוחניות., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_ana_bekoach_square.jpg",
+    "images": [
+      "public/products/tmunot/glass_ana_bekoach_square.jpg",
+      "public/products/tmunot/glass_ana_bekoach_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – מגן דוד קריסטלי וספירות הקבלה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית ריבועית – מגן דוד קריסטלי וספירות הקבלה</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> ריבוע | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (ריבוע):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 50/50 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪350</strong></li> <li>• 60/60 ס\"מ (משקל 7.2 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 70/70 ס\"מ (משקל 8.4 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• 80/80 ס\"מ (משקל 9.5 ק\"ג) – <strong class='text-amber-400'>₪570</strong></li> <li>• 90/90 ס\"מ (משקל 10.8 ק\"ג) – <strong class='text-amber-400'>₪670</strong></li> <li>• 100/100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• 120/120 ס\"מ (משקל 17 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> <li>• 150/150 ס\"מ (משקל 27 ק\"ג) – <strong class='text-amber-400'>₪1900</strong></li> </ul>\n</div>",
     "options": [
@@ -73547,8 +74089,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – חושן האפוד עם שתים עשרה אבני השבטים, שתים עשרה אבני החושן זוהרות בצבעי אבני חן אמיתיות על גבי זכוכית יהלום., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_pitum_haketoret_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_pitum_haketoret_rectangle.jpg",
+      "public/products/tmunot/glass_pitum_haketoret_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – חושן האפוד עם שתים עשרה אבני השבטים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – חושן האפוד עם שתים עשרה אבני השבטים</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -74056,8 +74601,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית עגולה – עץ החיים שורשים וענפים בזהב טהור, תמונת זכוכית עגולה המסמלת את עץ החיים והתורה, מתאימה לכל סלון ופינת אוכל., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 1:1",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_shir_lamaalot_circle.jpg",
+    "images": [
+      "public/products/tmunot/glass_shir_lamaalot_circle.jpg",
+      "public/products/tmunot/glass_shir_lamaalot_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – עץ החיים שורשים וענפים בזהב טהור</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית עגולה – עץ החיים שורשים וענפים בזהב טהור</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> עיגול (קוטר) | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (עיגול (קוטר)):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• קוטר 50 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• קוטר 60 ס\"מ (משקל 4.5 ק\"ג) – <strong class='text-amber-400'>₪500</strong></li> <li>• קוטר 70 ס\"מ (משקל 6 ק\"ג) – <strong class='text-amber-400'>₪550</strong></li> <li>• קוטר 80 ס\"מ (משקל 7.5 ק\"ג) – <strong class='text-amber-400'>₪600</strong></li> <li>• קוטר 90 ס\"מ (משקל 10 ק\"ג) – <strong class='text-amber-400'>₪700</strong></li> <li>• קוטר 100 ס\"מ (משקל 12 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> </ul>\n</div>",
     "options": [
@@ -74559,8 +75107,11 @@ window.products = [
       }
     ],
     "banana_prompt": "Ultra-detailed luxury Jewish glass wall art, תמונת זכוכית – שופר הגאולה וענני כבוד, קול שופר גדול בעיצוב שמימי המסמל גאולה שלמה, תרועה ושמחה., premium tempered glass print mockup hanging on elegant modern living room wall, diamond polished edges, ultra clear crystal reflection, volumetric lighting, photorealistic 8k, cinematic elegance, rich golden highlights --ar 2:3",
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_birkat_kohanim_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_birkat_kohanim_rectangle.jpg",
+      "public/products/tmunot/glass_birkat_kohanim_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>תמונת זכוכית – שופר הגאולה וענני כבוד</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>",
     "description": "<p class='mb-3'><strong>תמונת זכוכית – שופר הגאולה וענני כבוד</strong></p>\n<p class='mb-3'>הדפסה ישירה על גבי <strong>זכוכית מחוסמת פרימיום בעובי 4 מ\"מ (Ultra Clear Diamond Glass)</strong> עם רמת שקיפות מקסימלית ועמידות מוחלטת לשנים רבות. כולל מנגנון תלייה צף נסתר מאלומיניום המעניק מראה אלגנטי ומרחף על הקיר.</p>\n<p class='mb-3'>️ <strong>צורה:</strong> מלבן | ️ <strong>איכות:</strong> צבעי UV מקוריים שאינם דוהים לעולם | ️ <strong>משלוח:</strong> אריזת מגן מרופדת עץ ומשלוח מהיר עד פתח הבית</p>\n<div class='mt-4 p-4 bg-slate-900/60 rounded-xl border border-amber-500/30'> <h4 class='text-amber-400 font-bold mb-2'>מידות ומשקלים לבחירה (מלבן):</h4> <ul class='grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-300'> <li>• 30/45 ס\"מ (משקל 2 ק\"ג) – <strong class='text-amber-400'>₪220</strong></li> <li>• 40/60 ס\"מ (משקל 3 ק\"ג) – <strong class='text-amber-400'>₪280</strong></li> <li>• 50/70 ס\"מ (משקל 4 ק\"ג) – <strong class='text-amber-400'>₪400</strong></li> <li>• 60/90 ס\"מ (משקל 6.5 ק\"ג) – <strong class='text-amber-400'>₪450</strong></li> <li>• 70/100 ס\"מ (משקל 8.5 ק\"ג) – <strong class='text-amber-400'>₪620</strong></li> <li>• 80/120 ס\"מ (משקל 11.5 ק\"ג) – <strong class='text-amber-400'>₪750</strong></li> <li>• 100/150 ס\"מ (משקל 18 ק\"ג) – <strong class='text-amber-400'>₪1250</strong></li> </ul>\n</div>",
     "options": [
@@ -74819,8 +75370,10 @@ window.products = [
     "price": 600,
     "regular_price": 600,
     "inStock": true,
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_rav_yoram_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_rav_yoram_rectangle.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>כיסוי תמונת זכוכית נפתחת לארון חשמל | RABI-503</strong> – יצירת אמנות יהודית מרהיבה המשלבת קדושה, יופי אצילי וטכנולוגיית הדפסה מתקדמת על גבי זכוכית מחוסמת פרימיום בעובי 6 מ\"מ Extra Clear, עם מנגנון פתיחה דמוי-דלת וצירים נסתרים לגישה נוחה ללוח החשמל.</p>",
     "description": "<p class='mb-3'><strong>כיסוי תמונת זכוכית נפתחת לארון חשמל | RABI-503</strong> היא יצירת אמנות יהודית מרהיבה המשלבת קדושה, יופי אצילי וטכנולוגיית הדפסה מתקדמת על גבי זכוכית מחוסמת פרימיום בעובי 6 מ\"מ Extra Clear. התמונה מכניסה לבית, לסלון או למשרד אווירה מרוממת של קדושה, שלווה וברכה, ומעניקה נוכחות מלאת הוד של גדולי ישראל ומאורי הדורות.</p><p class='mb-3'><strong>איכות הדפסה וטכנולוגיה עילאית:</strong> ההדפסה מבוצעת ישירות על גב הזכוכית באמצעות טכנולוגיית UV חדישה ברזולוציה מקסימלית של עד 2400DPI. טכנולוגיה זו מבטיחה חדות צבעים מדהימה, עומק ויזואלי מהפנט ועמידות מוחלטת בפני דהייה, שריטות או לחות לאורך עשרות שנים. קצוות הזכוכית מלוטשים בגימור יהלום יוקרתי ובטוח למגע.</p><p class='mb-3'><strong>פרטי היצירה:</strong> הפכו את ארון החשמל הסטנדרטי והפונקציונלי ליצירת אומנות קדושה, מאירה ומלאת הוד. הכניסו אל קירות ביתכם שילוב מושלם של פרקטיקה, עיצוב יוקרתי ומאור פניו של מקים עולה של תורה. היצירה המרגשת, המשמשת ככיסוי לארון חשמל, מציגה את דיוקנו החם, המחייך והאהוב של הרב יורם אברגל זצוק\"ל, שפניו משדרות אהבת ישראל, שמחה וקדושה עמוקה. דמותו המאירה של הרב בולטת באצילות על גבי רקע שחור, עמוק ויוקרתי, התחום במסגרת פנימית ודקה של זהב המעניקה למכלול מראה דרמטי ומהודר. הפתרון החכם הזה מאפשר לכם להסתיר את ארון החשמל או התקשורת (שפעמים רבות פוגם בעיצוב מבואת הכניסה, פינת האוכל או המסדרון), ולהחליפו בתמונה של צדיקים המשרה בחלל אווירה של קדושה, עין טובה וברכה מתמדת. מנגנון הפתיחה דמוי-הדלת מאפשר גישה מהירה, נוחה ובטוחה ללוח המפסקים בכל עת שנדרש, מבלי להתפשר על האסתטיקה של הבית.</p>",
     "category": "pictures",
@@ -74865,8 +75418,11 @@ window.products = [
     "price": 600,
     "regular_price": 600,
     "inStock": true,
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_baba_sali_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_baba_sali_rectangle.jpg",
+      "public/products/tmunot/glass_baba_sali_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>כיסוי תמונת זכוכית נפתחת לארון חשמל | r-04</strong> – יצירת אמנות יהודית מרהיבה עם דיוקנו המאיר של סדנא הבבא סאלי זיע\"א, המשלבת קדושה, שלווה וברכה עם מנגנון פתיחה דמוי-דלת וצירים נסתרים לכיסוי ארון חשמל.</p><p class='mb-2 text-purple-700 font-semibold'>משלוח ממוגן ייעודי עד הבית (₪50) לשמירה מלאה על הפריט.</p>",
     "description": "<p class='mb-3'><strong>כיסוי תמונת זכוכית נפתחת לארון חשמל | r-04</strong> היא יצירת אמנות יהודית מרהיבה המשלבת קדושה, יופי אצילי וטכנולוגיית הדפסה מתקדמת על גבי זכוכית מחוסמת פרימיום בעובי 6 מ\"מ Extra Clear. התמונה מכניסה לבית, לסלון או למשרד אווירה מרוממת של קדושה, שלווה וברכה, ומעניקה נוכחות מלאת הוד של גדולי ישראל ומאורי הדורות.</p><p class='mb-3'><strong>איכות הדפסה וטכנולוגיה עילאית:</strong> ההדפסה מבוצעת ישירות על גב הזכוכית באמצעות טכנולוגיית UV חדישה ברזולוציה מקסימלית של עד 2400DPI. טכנולוגיה זו מבטיחה חדות צבעים מדהימה, עומק ויזואלי מהפנט ועמידות מוחלטת בפני דהייה, שריטות או לחות לאורך עשרות שנים. קצוות הזכוכית מלוטשים בגימור יהלום יוקרתי ובטוח למגע.</p><p class='mb-3'><strong>פרטי היצירה:</strong> הפכו את ארון החשמל הסטנדרטי והפונקציונלי ליצירת אומנות קדושה, מאירה ומלאת הוד. הכניסו אל קירות ביתכם שילוב מושלם של פרקטיקה, עיצוב יוקרתי וברכתו של מופת הדור. היצירה המרגשת, המשמשת ככיסוי לארון חשמל, מציגה את דיוקנו הרך, העדין והטהור של סדנא הבבא סאלי (רבי ישראל אבוחצירא) זיע\"א, שפניו מקרינות אור, שלווה וענווה אינסופית. דמותו הקדושה של הצדיק, העטוף בלבושו המסורתי הלבן והטהור, מובלטת בעוצמה על גבי רקע שחור, עמוק ואטום, התחום במסגרת פנימית עדינה של זהב. הפתרון החכם הזה מאפשר לכם להסתיר את ארון החשמל או התקשורת ולהחליפו בתמונה של צדיקים המשרה בחלל אווירה של קדושה, שמירה ואמונה פשוטה. מנגנון הפתיחה דמוי-הדלת מאפשר גישה מהירה, נוחה ובטוחה ללוח המפסקים בכל עת שנדרש.</p>",
     "category": "pictures",
@@ -74910,8 +75466,11 @@ window.products = [
     "price": 600,
     "regular_price": 600,
     "inStock": true,
-    "image": "",
-    "images": [],
+    "image": "public/products/tmunot/glass_rav_ovadia_rectangle.jpg",
+    "images": [
+      "public/products/tmunot/glass_rav_ovadia_rectangle.jpg",
+      "public/products/tmunot/glass_rav_ovadia_mockup.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>כיסוי תמונת זכוכית נפתחת לארון חשמל | r-03</strong> – יצירת אמנות יהודית מרהיבה עם דיוקנו המאיר של מרן שר התורה הרב עובדיה יוסף זצוק\"ל, עם מנגנון פתיחה דמוי-דלת וצירים נסתרים לכיסוי מעוצב לארון חשמל.</p><p class='mb-2 text-purple-700 font-semibold'>משלוח ממוגן ייעודי עד הבית (₪50) לשמירה מלאה על הפריט.</p>",
     "description": "<p class='mb-3'><strong>כיסוי תמונת זכוכית נפתחת לארון חשמל | r-03</strong> היא יצירת אמנות יהודית מרהיבה המשלבת קדושה, יופי אצילי וטכנולוגיית הדפסה מתקדמת על גבי זכוכית מחוסמת פרימיום בעובי 6 מ\"מ Extra Clear. התמונה מכניסה לבית, לסלון או למשרד אווירה מרוממת של קדושה, שלווה וברכה, ומעניקה נוכחות מלאת הוד של גדולי ישראל ומאורי הדורות.</p><p class='mb-3'><strong>איכות הדפסה וטכנולוגיה עילאית:</strong> ההדפסה מבוצעת ישירות על גב הזכוכית באמצעות טכנולוגיית UV חדישה ברזולוציה מקסימלית של עד 2400DPI. טכנולוגיה זו מבטיחה חדות צבעים מדהימה, עומק ויזואלי מהפנט ועמידות מוחלטת בפני דהייה, שריטות או לחות לאורך עשרות שנים. קצוות הזכוכית מלוטשים בגימור יהלום יוקרתי ובטוח למגע.</p><p class='mb-3'><strong>פרטי היצירה:</strong> הפכו את ארון החשמל הסטנדרטי והפונקציונלי ליצירת אומנות קדושה ומלאת הוד. הכניסו אל קירות ביתכם שילוב מושלם של פרקטיקה, עיצוב יוקרתי וזכותו העצומה של מנהיג הדור. היצירה המרגשת, המשמשת ככיסוי לארון חשמל, מציגה את דיוקנו המאיר והאהוב של מרן שר התורה, הרב עובדיה יוסף זצוק\"ל. דמותו הקדושה של הרב מוצגת בחיוכו האבהי והמוכר, כשהוא עטוף בגלימת \"הראשון לציון\" השחורה והמעוטרת ברקמת זהב מלכותית, על גבי רקע שחור ועמוק התחום במסגרת זהב עדינה וקלאסית. הפתרון החכם הזה מאפשר לכם להסתיר את ארון החשמל או התקשורת ולהחליפו בתמונה של צדיקים המשרה אווירה של קדושה, ברכה ויוקרה. מנגנון הפתיחה דמוי-הדלת מאפשר גישה מהירה, נוחה ובטוחה ללוח המפסקים בכל עת שנדרש.</p>",
     "category": "pictures",
@@ -76394,8 +76953,12 @@ window.products = [
     "price": 35,
     "regular_price": 35,
     "inStock": true,
-    "image": "",
-    "images": [],
+    "image": "public/products/book_covers/book_586_cover.jpg",
+    "images": [
+      "public/products/book_covers/book_586_cover.jpg",
+      "public/products/siddur_586_lifestyle.jpg",
+      "public/products/book_covers/book_586_white.jpg"
+    ],
     "short_description": "<p class='mb-3'><strong>סידור סקאי כוונת הלב 12*17</strong> מבית עוז יודאיקה ראש העין הוא מוצר מובחר המתאפיין באיכות ללא פשרות, רמת גימור גבוהה ושמירה מדוקדקת על כל דרישות ההלכה והמסורת. המוצר מיוצר מחומרי הגלם המשובחים ביותר ועובר בקרת איכות קפדנית לפני יציאתו ללקוח.</p><p class='mb-3'><strong>איכות ועיצוב מנצח:</strong> המוצר עוצב בקפידה תוך שימת דגש על שילוב בין אסתטיקה יהודית עכשווית לבין עמידות לאורך זמן. מתאים באופן מושלם כמתנה ערכית ויוקרתית לאירועים משפחתיים, ימי הולדת וחגים.</p><p class='mb-3'><strong>אחריות ומשלוח:</strong> כל הזמנה באתר עוז יודאיקה נארזת במקצועיות ונשלחת בבטחה לכל חלקי הארץ (1-3 ימי עסקים למשלוח מהיר, או 5-7 ימי עסקים למשלוח רגיל). המוצר מלווה באחריות מלאה מבית עוז יודאיקה (רחוב שלום מנצורה 48, ראש העין | וואטסאפ: 052-686-7192).</p>",
     "description": "<p class='mb-3'><strong>סידור סקאי כוונת הלב 12*17</strong> מבית עוז יודאיקה ראש העין הוא מוצר מובחר המתאפיין באיכות ללא פשרות, רמת גימור גבוהה ושמירה מדוקדקת על כל דרישות ההלכה והמסורת. המוצר מיוצר מחומרי הגלם המשובחים ביותר ועובר בקרת איכות קפדנית לפני יציאתו ללקוח.</p><p class='mb-3'><strong>איכות ועיצוב מנצח:</strong> המוצר עוצב בקפידה תוך שימת דגש על שילוב בין אסתטיקה יהודית עכשווית לבין עמידות לאורך זמן. מתאים באופן מושלם כמתנה ערכית ויוקרתית לאירועים משפחתיים, ימי הולדת וחגים.</p><p class='mb-3'><strong>אחריות ומשלוח:</strong> כל הזמנה באתר עוז יודאיקה נארזת במקצועיות ונשלחת בבטחה לכל חלקי הארץ (1-3 ימי עסקים למשלוח מהיר, או 5-7 ימי עסקים למשלוח רגיל). המוצר מלווה באחריות מלאה מבית עוז יודאיקה (רחוב שלום מנצורה 48, ראש העין | וואטסאפ: 052-686-7192).</p>",
     "category": "books",
@@ -76439,7 +77002,7 @@ window.products = [
     "category": "tefillin-bags",
     "category_name": "תיקים לטלית ותפילין",
     "subcategory": "כיסוי טלית ותפילין",
-    "supplier": "עוז יודאיקה (מארז משולב)",
+    "supplier": "עוז יודאיקה (ייצור עצמי וסת\"ם)",
     "alt": "סט טלית תפילין פיו כותל שחור עם אותיות זהב בולטות | סט מהודר ואיכותי – סט כיסויים לטלית ותפילין מהודר | עוז יודאיקה",
     "faq": [
       {
@@ -76475,7 +77038,7 @@ window.products = [
     "category": "tefillin-bags",
     "category_name": "תיקים לטלית ותפילין",
     "subcategory": "כיסוי טלית ותפילין",
-    "supplier": "עוז יודאיקה (מארז משולב)",
+    "supplier": "עוז יודאיקה (ייצור עצמי וסת\"ם)",
     "alt": "סט טלית תפילין פיו כותל משולב ברכת כהנים | סט מהודר ואיכותי – סט כיסויים לטלית ותפילין מהודר | עוז יודאיקה",
     "faq": [
       {
@@ -76511,7 +77074,7 @@ window.products = [
     "category": "tefillin-bags",
     "category_name": "תיקים לטלית ותפילין",
     "subcategory": "כיסוי טלית ותפילין",
-    "supplier": "עוז יודאיקה (מארז משולב)",
+    "supplier": "עוז יודאיקה (ייצור עצמי וסת\"ם)",
     "alt": "סט טלית תפילין שחור פיו כותל משולב ברכת כהנים בולט זהב | סט מהודר ואיכותי – סט כיסויים לטלית ותפילין מהודר | עוז יודאיקה",
     "faq": [
       {
@@ -76548,7 +77111,7 @@ window.products = [
     "category": "tefillin-bags",
     "category_name": "תיקים לטלית ותפילין",
     "subcategory": "כיסוי טלית ותפילין",
-    "supplier": "עוז יודאיקה (מארז משולב)",
+    "supplier": "עוז יודאיקה (ייצור עצמי וסת\"ם)",
     "alt": "סט טלית תפילין לבן פיו | סט מהודר ואיכותי 36X29 ס\"מ – סט כיסויים לטלית ותפילין מהודר | עוז יודאיקה",
     "faq": [
       {
@@ -76583,7 +77146,7 @@ window.products = [
     "category": "tefillin-bags",
     "category_name": "תיקים לטלית ותפילין",
     "subcategory": "כיסוי טלית ותפילין",
-    "supplier": "עוז יודאיקה (מארז משולב)",
+    "supplier": "עוז יודאיקה (ייצור עצמי וסת\"ם)",
     "alt": "סט טלית תפילין לבן בהיר פיו | סט מהודר ואיכותי 38X31 ס\"מ – סט כיסויים לטלית ותפילין מהודר | עוז יודאיקה",
     "faq": [
       {
@@ -76619,7 +77182,7 @@ window.products = [
     "category": "tefillin-bags",
     "category_name": "תיקים לטלית ותפילין",
     "subcategory": "כיסוי טלית ותפילין",
-    "supplier": "עוז יודאיקה (מארז משולב)",
+    "supplier": "עוז יודאיקה (ייצור עצמי וסת\"ם)",
     "alt": "סט טלית תפילין פיו אפור בהיר 38X31 ס\"מ | סט מהודר ואיכותי – סט כיסויים לטלית ותפילין מהודר | עוז יודאיקה",
     "faq": [
       {
@@ -76655,7 +77218,7 @@ window.products = [
     "category": "tefillin-bags",
     "category_name": "תיקים לטלית ותפילין",
     "subcategory": "כיסוי טלית ותפילין",
-    "supplier": "עוז יודאיקה (מארז משולב)",
+    "supplier": "עוז יודאיקה (ייצור עצמי וסת\"ם)",
     "alt": "סט טלית תפילין דמוי עור כחול כהה \"טלית\" 36X29 ס\"מ – סט כיסויים לטלית ותפילין מהודר | עוז יודאיקה",
     "faq": [
       {
@@ -76691,7 +77254,7 @@ window.products = [
     "category": "tefillin-bags",
     "category_name": "תיקים לטלית ותפילין",
     "subcategory": "כיסוי טלית ותפילין",
-    "supplier": "עוז יודאיקה (מארז משולב)",
+    "supplier": "עוז יודאיקה (ייצור עצמי וסת\"ם)",
     "alt": "סט טלית תפילין דמוי עור יברכך 36X29 ס\"מ – סט כיסויים לטלית ותפילין מהודר | עוז יודאיקה",
     "faq": [
       {
@@ -76727,7 +77290,7 @@ window.products = [
     "category": "tefillin-bags",
     "category_name": "תיקים לטלית ותפילין",
     "subcategory": "כיסוי טלית ותפילין",
-    "supplier": "עוז יודאיקה (מארז משולב)",
+    "supplier": "עוז יודאיקה (ייצור עצמי וסת\"ם)",
     "alt": "סט טלית תפילין דמוי עור עם ריקמה 36X29 ס\"מ – סט כיסויים לטלית ותפילין מהודר | עוז יודאיקה",
     "faq": [
       {
@@ -76762,7 +77325,7 @@ window.products = [
     "category": "tefillin-bags",
     "category_name": "תיקים לטלית ותפילין",
     "subcategory": "כיסוי טלית ותפילין",
-    "supplier": "עוז יודאיקה (מארז משולב)",
+    "supplier": "עוז יודאיקה (ייצור עצמי וסת\"ם)",
     "alt": "סט טלית תפילין דמוי עור מהודר 36X29 ס\"מ – סט כיסויים לטלית ותפילין מהודר | עוז יודאיקה",
     "faq": [
       {
@@ -76797,7 +77360,7 @@ window.products = [
     "category": "tefillin-bags",
     "category_name": "תיקים לטלית ותפילין",
     "subcategory": "כיסוי טלית ותפילין",
-    "supplier": "עוז יודאיקה (מארז משולב)",
+    "supplier": "עוז יודאיקה (ייצור עצמי וסת\"ם)",
     "alt": "סט טלית תפילין רש\"י ר\"ת דמוי עור 34X40 ס\"מ – סט כיסויים לטלית ותפילין מהודר | עוז יודאיקה",
     "faq": [
       {
@@ -76833,7 +77396,7 @@ window.products = [
     "category": "tefillin-bags",
     "category_name": "תיקים לטלית ותפילין",
     "subcategory": "כיסוי טלית ותפילין",
-    "supplier": "עוז יודאיקה (מארז משולב)",
+    "supplier": "עוז יודאיקה (ייצור עצמי וסת\"ם)",
     "alt": "סט טלית תפילין רש\"יתם דמוי עור 34X40 ס\"מ – סט כיסויים לטלית ותפילין מהודר | עוז יודאיקה",
     "faq": [
       {
@@ -76851,5 +77414,3 @@ window.products = [
     ]
   }
 ];
-if (typeof window !== 'undefined') { window.PRODUCTS_DATA = window.products; }
-if (typeof module !== 'undefined' && module.exports) { module.exports = window.products; }

@@ -248,8 +248,9 @@
                 const isPrintItem = (title.includes('זכוכית') || title.includes('תמונה') || title.includes('מדבקה') || supplier.id === 'supp_rabbis_pics' || (supplier.name && supplier.name.includes('תמונות')));
                 if (isPrintItem) {
                     const isTransparent = title.includes('שקוף') || size.includes('שקוף');
+                    const isSilver = (size && (size.includes('כסף') || size.includes('silver'))) || (title && title.includes('כסף')) || (it.finish && it.finish.includes('כסף'));
                     const format = isTransparent ? 'PDF לשקוף (וקטור/שקיפות)' : 'JPEG לרגיל (הדפסה אטומה)';
-                    let cleanImg = it.print_file || (it.image || '').replace(/_(?:mockup|fullbleed)\.jpg$/i, '_rectangle.jpg');
+                    let cleanImg = (isSilver && it.print_file_silver) ? it.print_file_silver : (it.print_file || (it.image || '').replace(/_(?:mockup|fullbleed)\.jpg$/i, '_rectangle.jpg'));
                     let fileUrl = cleanImg ? (cleanImg.startsWith('http') ? cleanImg : 'https://oz-judaica.co.il/' + cleanImg.replace(/^\/+/, '')) : '';
                     msg += `  🖨️ קובץ להדפסה [${format}]: ${fileUrl || 'קובץ מקור'}\n`;
                     msg += `  ⚠️ שים לב: קובץ מוכן לדפוס בלבד (ללא הדמיית אווירה)\n`;
@@ -288,8 +289,9 @@
             text += '   • כמות: ' + qty + ' יחידות\n';
 
             const isTransparent = title.includes('שקוף') || size.includes('שקוף');
+            const isSilver = (size && (size.includes('כסף') || size.includes('silver'))) || (title && title.includes('כסף')) || (item.finish && item.finish.includes('כסף'));
             const formatType = isTransparent ? 'PDF לשקוף (וקטור/שקיפות)' : 'JPEG לרגיל (הדפסה אטומה)';
-            let cleanImg = item.print_file || (item.image || '').replace(/_(?:mockup|fullbleed)\.jpg$/i, '_rectangle.jpg');
+            let cleanImg = (isSilver && item.print_file_silver) ? item.print_file_silver : (item.print_file || (item.image || '').replace(/_(?:mockup|fullbleed)\.jpg$/i, '_rectangle.jpg'));
             let fileUrl = cleanImg ? (cleanImg.startsWith('http') ? cleanImg : 'https://oz-judaica.co.il/' + cleanImg.replace(/^\/+/, '')) : '';
 
             text += '   • פורמט נדרש למדפיס: ' + formatType + '\n';
