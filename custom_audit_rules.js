@@ -253,7 +253,7 @@ const customRules = [
                     const nonSupplierImgs = imgs.filter(img => {
                         const low = (img || '').toLowerCase();
                         if (low.includes('mishkan') || low.includes('משכן')) return true; // יסולק
-                        if (p.supplier === 'תמונות רבנים וצדיקים') return !low.includes('tmunotrabanim.com') && !low.includes('ozonlineshop.com');
+                        if (p.supplier === 'תמונות רבנים וצדיקים' || p.category === 'pictures') return !low.includes('tmunotrabanim.com') && !low.includes('ozonlineshop.com') && !low.includes('public/products/tmunot') && !low.includes('glass_') && !low.includes('tmunot');
                         if (p.supplier === 'שמעק') return !low.includes('wixstatic.com') && !low.includes('shmec') && !low.includes('ozonlineshop.com');
                         if (p.supplier === 'לבורסה') return !low.includes('laborsa') && !low.includes('ozonlineshop.com');
                         if (p.supplier === 'סידור מבואר (נהרות)') return !low.includes('sidur-neharot') && !low.includes('ozonlineshop.com') && !low.includes('neharot') && !low.includes('tehillim_mevoar');
