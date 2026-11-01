@@ -3,61 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>עוז יודאיקה — מודעות שיווק מעוצבות לוואטסאפ</title>
+    <title>עוז יודאיקה — מרכז כרזות שיווק מעוצבות לוואטסאפ</title>
+    <meta name="description" content="פורטל השיווק הרשמי של עוז יודאיקה: כרזות שיווק מעוצבות באיכות סטודיו לשיתוף מיידי בוואטסאפ (סטטוס ושיחות), עם מחירים אמיתיים וקישורים ישירים.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800;900&family=Frank+Ruhl+Libre:wght@700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --purple-dark: #0f172a;
-            --purple-card: #1e293b;
+            --purple-dark: #0a0f1d;
+            --purple-card: #151e32;
             --gold: #f59e0b;
             --gold-light: #fbbf24;
+            --gold-glow: rgba(245, 158, 11, 0.35);
             --wa-green: #25D366;
             --wa-dark: #128C7E;
+            --slate-border: rgba(255, 255, 255, 0.12);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            background: #090d16;
+            background: #070b14;
             font-family: 'Assistant', sans-serif;
             color: #f1f5f9;
-            padding-bottom: 80px;
+            padding-bottom: 90px;
             direction: rtl;
+            min-height: 100vh;
         }
 
         .header {
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(12px);
+            background: rgba(10, 15, 29, 0.96);
+            backdrop-filter: blur(14px);
             border-bottom: 2px solid var(--gold);
-            padding: 18px 16px;
+            padding: 20px 16px;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.6);
+        }
+
+        .header-inner {
+            max-width: 960px;
+            margin: 0 auto;
         }
 
         .header h1 {
             font-family: 'Frank Ruhl Libre', serif;
-            font-size: 24px;
+            font-size: 26px;
             color: var(--gold-light);
             margin-bottom: 6px;
+            text-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
         }
 
         .header p {
-            font-size: 13.5px;
+            font-size: 14px;
             color: #94a3b8;
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
-            line-height: 1.4;
+            line-height: 1.45;
+        }
+
+        .date-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid var(--gold);
+            color: var(--gold-light);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 12.5px;
+            font-weight: 800;
+            margin-top: 10px;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 960px;
             margin: 24px auto 0 auto;
             padding: 0 16px;
+        }
+
+        .quick-filter-bar {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 12px;
+            margin-bottom: 24px;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .quick-filter-bar::-webkit-scrollbar { display: none; }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--slate-border);
+            color: #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-family: inherit;
+            font-size: 13.5px;
+            font-weight: 700;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .filter-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, var(--gold) 0%, #d97706 100%);
+            color: #070b14;
+            border-color: var(--gold-light);
+            font-weight: 900;
+            box-shadow: 0 4px 15px var(--gold-glow);
         }
 
         .notice-banner {
@@ -74,41 +140,48 @@
             line-height: 1.5;
         }
 
-        .notice-banner span {
-            font-size: 26px;
+        .notice-banner span.emoji {
+            font-size: 28px;
             flex-shrink: 0;
         }
 
         .flyer-gallery-grid {
-            display: grid !important;
-            grid-template-columns: 1fr !important;
-            gap: 32px !important;
-            opacity: 1 !important;
-            visibility: visible !important;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 28px;
         }
 
         @media (min-width: 768px) {
             .flyer-gallery-grid {
-                grid-template-columns: repeat(2, 1fr) !important;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
             }
         }
 
         .flyer-showcase-card {
-            background: var(--purple-card) !important;
-            border: 1.5px solid rgba(255, 255, 255, 0.1) !important;
-            border-radius: 20px !important;
-            overflow: hidden !important;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
-            display: flex !important;
-            flex-direction: column !important;
-            transition: transform 0.2s, border-color 0.2s;
-            opacity: 1 !important;
-            visibility: visible !important;
+            background: var(--purple-card);
+            border: 1.5px solid var(--slate-border);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
         }
 
         .flyer-showcase-card:hover {
             transform: translateY(-4px);
-            border-color: var(--gold) !important;
+            border-color: var(--gold);
+            box-shadow: 0 14px 40px rgba(245, 158, 11, 0.2);
+        }
+
+        .flyer-showcase-card.is-new-today {
+            border-color: rgba(245, 158, 11, 0.5);
+            position: relative;
+        }
+
+        .flyer-showcase-card.hidden {
+            display: none !important;
         }
 
         .img-preview-box {
@@ -125,18 +198,18 @@
             height: 100%;
             object-fit: cover;
             display: block;
-            transition: transform 0.3s;
+            transition: transform 0.35s ease;
         }
 
         .img-preview-box:hover img {
-            transform: scale(1.02);
+            transform: scale(1.025);
         }
 
         .badge-overlay {
             position: absolute;
             top: 14px;
             right: 14px;
-            background: rgba(15, 23, 42, 0.85);
+            background: rgba(10, 15, 29, 0.88);
             border: 1px solid var(--gold);
             color: var(--gold-light);
             font-size: 12px;
@@ -144,6 +217,27 @@
             padding: 5px 12px;
             border-radius: 20px;
             backdrop-filter: blur(8px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .new-glow-pill {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 900;
+            padding: 4px 10px;
+            border-radius: 20px;
+            box-shadow: 0 2px 12px rgba(239, 68, 68, 0.5);
+            letter-spacing: 0.5px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.85; transform: scale(1.04); }
         }
 
         .card-details {
@@ -155,23 +249,53 @@
             gap: 14px;
         }
 
-        .card-title {
-            font-size: 18px;
+        .category-chip {
+            font-size: 11.5px;
             font-weight: 800;
-            color: #ffffff;
+            color: var(--gold-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             margin-bottom: 4px;
         }
 
+        .card-title {
+            font-size: 17px;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.35;
+            margin-bottom: 6px;
+        }
+
         .card-price {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 900;
             color: #34d399;
+            margin-bottom: 6px;
+        }
+
+        .card-specs {
+            font-size: 12.5px;
+            color: #94a3b8;
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+
+        .card-hook {
+            font-size: 13px;
+            font-style: italic;
+            color: #cbd5e1;
+            line-height: 1.4;
+            background: rgba(255, 255, 255, 0.04);
+            padding: 8px 12px;
+            border-radius: 10px;
+            border-right: 3px solid var(--gold);
         }
 
         .actions-box {
             display: flex;
             flex-direction: column;
             gap: 10px;
+            margin-top: 4px;
         }
 
         .btn-wa-share {
@@ -180,22 +304,23 @@
             font-family: inherit;
             font-size: 15px;
             font-weight: 900;
-            padding: 14px 18px;
-            border-radius: 14px;
+            padding: 13px 18px;
+            border-radius: 12px;
             border: none;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 8px;
             text-decoration: none;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
             transition: all 0.2s;
         }
 
         .btn-wa-share:hover {
             filter: brightness(1.1);
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
         }
 
         .btn-wa-share:active {
@@ -204,17 +329,17 @@
 
         .secondary-actions {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 6px;
         }
 
         .btn-sub {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid var(--slate-border);
             color: #cbd5e1;
-            padding: 10px 8px;
+            padding: 9px 6px;
             border-radius: 10px;
-            font-size: 12.5px;
+            font-size: 12px;
             font-weight: 700;
             text-align: center;
             text-decoration: none;
@@ -223,12 +348,22 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
+            gap: 4px;
         }
 
         .btn-sub:hover {
-            background: rgba(255, 255, 255, 0.16);
+            background: rgba(255, 255, 255, 0.14);
             color: #ffffff;
+        }
+
+        .btn-store {
+            color: var(--gold-light);
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-store:hover {
+            background: rgba(245, 158, 11, 0.15);
+            border-color: var(--gold);
         }
 
         .toast {
@@ -236,14 +371,14 @@
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
-            background: #1e293b;
+            background: #151e32;
             color: var(--gold-light);
             border: 1.5px solid var(--gold);
             padding: 12px 28px;
             border-radius: 30px;
             font-weight: 800;
             font-size: 14px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.7);
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.3s;
@@ -251,176 +386,884 @@
         }
 
         .toast.show { opacity: 1; }
+
+        /* Lightbox modal */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.92);
+            z-index: 100000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .lightbox-modal.active {
+            display: flex;
+        }
+
+        .lightbox-modal img {
+            max-width: 95%;
+            max-height: 90vh;
+            border-radius: 16px;
+            border: 2px solid var(--gold);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+            object-fit: contain;
+        }
     </style>
 </head>
 <body>
 
     <header class="header">
-        <h1>עוז יודאיקה — מודעות שיווק מעוצבות לוואטסאפ</h1>
-        <p>תמונות בפורמט מלא עם כל המילים והמחיר בתוך התמונה • בלחיצה אחת: שיתוף ישיר לוואטסאפ (סטטוס או שיחה)!</p>
+        <div class="header-inner">
+            <h1>עוז יודאיקה — מרכז כרזות שיווק מעוצבות לוואטסאפ</h1>
+            <p>כרזות סטודיו איכותיות בפורמט מלא עם כל הפרטים והמחירים • בלחיצה אחת: שיתוף ישיר לוואטסאפ (סטטוס או שיחה)!</p>
+            <div class="date-badge">
+                <span>📅</span>
+                <span>מהדורה מעודכנת • 1 בנובמבר 2026</span>
+            </div>
+        </div>
     </header>
 
     <div class="container">
+        
+        <!-- Quick Category & Filter Tabs -->
+        <nav class="quick-filter-bar" aria-label="סינון קטגוריות כרזות">
+            <button class="filter-btn active" onclick="filterGallery('new', this)">
+                <span>🌟</span> נבחרת היום החדשה
+            </button>
+            <button class="filter-btn" onclick="filterGallery('all', this)">
+                <span>🔥</span> הכל (21 כרזות)
+            </button>
+            <button class="filter-btn" onclick="filterGallery('sets', this)">
+                <span>🎁</span> מארזים ומתנות
+            </button>
+            <button class="filter-btn" onclick="filterGallery('stam', this)">
+                <span>✡️</span> תפילין, מזוזות וסת"ם
+            </button>
+            <button class="filter-btn" onclick="filterGallery('books', this)">
+                <span>📖</span> ספרי קודש וסגולות
+            </button>
+            <button class="filter-btn" onclick="filterGallery('pictures', this)">
+                <span>🖼️</span> תמונות זכוכית
+            </button>
+            <button class="filter-btn" onclick="filterGallery('wallets', this)">
+                <span>💼</span> ארנקים וגברים
+            </button>
+        </nav>
+
         <div class="notice-banner">
-            <span>📲</span>
+            <span class="emoji">💡</span>
             <div>
-                <strong>איך משתפים בשנייה אחת?</strong><br>
-                לחץ על הכפתור הירוק <strong>"שתף תמונה זו לוואטסאפ"</strong>. בנייד ייפתח ישירות הוואטסאפ עם התמונה מוכנה להעלאה לסטטוס או לשליחה לאנשי קשר. במחשב התמונה תרד מיד ותיפתח שיחת הוואטסאפ!
+                <strong>איך משתפים בשניות?</strong>
+                לוחצים על הכפתור הירוק <strong>"שתף ישיר לוואטסאפ"</strong>. מהנייד תיפתח לכם האפליקציה לשיתוף התמונה עם הטקסט בסטטוס או לקבוצות! ניתן גם להוריד את התמונה או להעתיק את הטקסט בלבד.
             </div>
         </div>
 
-        <div class="flyer-gallery-grid" style="display: grid !important; opacity: 1 !important; visibility: visible !important;">
-
-        <!-- Card 1: בית מזוזה יוקרתי מבטון אדריכלי – "האש שלי" (12 ס"מ) -->
-        <div class="flyer-showcase-card" style="display: flex !important; opacity: 1 !important; visibility: visible !important;">
-            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_21001.jpg')">
-                <img src="/public/marketing/creative_banana_21001.jpg" alt="בית מזוזה יוקרתי מבטון אדריכלי – "האש שלי" (12 ס"מ)" loading="eager">
-                <div class="badge-overlay">🔥 דגם הדגל הבלעדי</div>
+        <main class="flyer-gallery-grid" id="galleryGrid">
+            
+        <!-- Card 1: סט חתן מלכותי פרימיום – תפילין מהודרות, תפידנית מוגנת, סידור, תהילים וארנק עור נאפה -->
+        <article class="flyer-showcase-card is-new-today" data-category="sets" data-new="true">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_19001.jpg')">
+                <img src="/public/marketing/creative_banana_19001.jpg" alt="סט חתן מלכותי פרימיום – תפילין מהודרות, תפידנית מוגנת, סידור, תהילים וארנק עור נאפה" loading="lazy">
+                <div class="badge-overlay">👑 חדש היום • מארז חתן מפואר</div>
+                <div class="new-glow-pill">🌟 חדש היום</div>
             </div>
             <div class="card-details">
                 <div>
-                    <div class="card-title">בית מזוזה יוקרתי מבטון אדריכלי – "האש שלי" (12 ס"מ)</div>
-                    <div class="card-price">מחיר: ₪99 בלבד</div>
+                    <div class="category-chip">מארזים ומתנות</div>
+                    <h2 class="card-title">סט חתן מלכותי פרימיום – תפילין מהודרות, תפידנית מוגנת, סידור, תהילים וארנק עור נאפה</h2>
+                    <div class="card-price">מחיר: ₪2,863 בלבד</div>
+                    <div class="card-specs">תפילין בהמה גסה • תפידנית מוגנת מפני חום • סידור ותהילים נהרות • ארנק עור איטלקי</div>
+                    <p class="card-hook">"מתכוננים לחתונה? מחפשים מתנה שתרגש את החתן עד דמעות ותלווה אותו לכל החיים?"</p>
                 </div>
                 <div class="actions-box">
-                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_21001.jpg', 'בית מזוזה יוקרתי מבטון אדריכלי – "האש שלי" (12 ס"מ)', '✨ בית מזוזה יוקרתי מבטון אדריכלי – "האש שלי" (12 ס"מ)\n🏷️ מחיר: ₪99 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=21001')">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_19001.jpg', 'סט חתן מלכותי פרימיום – תפילין מהודרות, תפידנית מוגנת, סידור, תהילים וארנק עור נאפה', '✨ סט חתן מלכותי פרימיום – תפילין מהודרות, תפידנית מוגנת, סידור, תהילים וארנק עור נאפה\n🏷️ מחיר: ₪2,863 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=19001')">
                         <span>🟢</span>
-                        <span>שתף תמונה זו לוואטסאפ</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
                     </button>
                     <div class="secondary-actions">
-                        <a href="/public/marketing/creative_banana_21001.jpg" download="21001_flyer.jpg" class="btn-sub">
-                            <span>📥</span> הורד תמונה בלבד
+                        <a href="/public/marketing/creative_banana_19001.jpg" download="19001_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד כרזה
                         </a>
-                        <button class="btn-sub" onclick="copyCaption('✨ בית מזוזה יוקרתי מבטון אדריכלי – "האש שלי" (12 ס"מ)\n🏷️ מחיר: ₪99 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=21001')">
+                        <button class="btn-sub" onclick="copyCaption('✨ סט חתן מלכותי פרימיום – תפילין מהודרות, תפידנית מוגנת, סידור, תהילים וארנק עור נאפה\n🏷️ מחיר: ₪2,863 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=19001')">
                             <span>📋</span> העתק טקסט
                         </button>
+                        <a href="https://oz-judaica.co.il/?product=19001" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    
+        </article>
+        
 
-        <!-- Card 2: בית מזוזה אפוקסי משולב עם עץ זית לבן שמנת עבודת יד – דגם יחיד (לבחירה 12 או 15 ס״מ) -->
-        <div class="flyer-showcase-card" style="display: flex !important; opacity: 1 !important; visibility: visible !important;">
-            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_556.jpg')">
-                <img src="/public/marketing/creative_banana_556.jpg" alt="בית מזוזה אפוקסי משולב עם עץ זית לבן שמנת עבודת יד – דגם יחיד (לבחירה 12 או 15 ס״מ)" loading="eager">
-                <div class="badge-overlay">✨ עבודת יד בלעדית</div>
+        <!-- Card 2: סט בר מצווה יוקרתי אקסקלוסיבי – תפילין מהודרות א.א, תפידנית מוגנת, סידור, תהילים וארנק עור נאפה -->
+        <article class="flyer-showcase-card is-new-today" data-category="sets" data-new="true">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_19010.jpg')">
+                <img src="/public/marketing/creative_banana_19010.jpg" alt="סט בר מצווה יוקרתי אקסקלוסיבי – תפילין מהודרות א.א, תפידנית מוגנת, סידור, תהילים וארנק עור נאפה" loading="lazy">
+                <div class="badge-overlay">✨ חדש היום • סט בר מצווה VIP</div>
+                <div class="new-glow-pill">🌟 חדש היום</div>
             </div>
             <div class="card-details">
                 <div>
-                    <div class="card-title">בית מזוזה אפוקסי משולב עם עץ זית לבן שמנת עבודת יד – דגם יחיד (לבחירה 12 או 15 ס״מ)</div>
-                    <div class="card-price">מחיר: ₪189 בלבד</div>
+                    <div class="category-chip">מארזים ומתנות</div>
+                    <h2 class="card-title">סט בר מצווה יוקרתי אקסקלוסיבי – תפילין מהודרות א.א, תפידנית מוגנת, סידור, תהילים וארנק עור נאפה</h2>
+                    <div class="card-price">מחיר: ₪3,105 בלבד</div>
+                    <div class="card-specs">תפילין בהמה גסה א.א • תפידנית מרופדת • סידור ותהילים בכריכה מהודרת • ארנק עור יוקרתי</div>
+                    <p class="card-hook">"הבן מגיע לגיל מצוות? העניקו לו חוויית קדושה מרגשת ומושלמת ליום העלייה לתורה."</p>
                 </div>
                 <div class="actions-box">
-                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_556.jpg', 'בית מזוזה אפוקסי משולב עם עץ זית לבן שמנת עבודת יד – דגם יחיד (לבחירה 12 או 15 ס״מ)', '✨ בית מזוזה אפוקסי משולב עם עץ זית לבן שמנת עבודת יד – דגם יחיד (לבחירה 12 או 15 ס״מ)\n🏷️ מחיר: ₪189 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=556')">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_19010.jpg', 'סט בר מצווה יוקרתי אקסקלוסיבי – תפילין מהודרות א.א, תפידנית מוגנת, סידור, תהילים וארנק עור נאפה', '✨ סט בר מצווה יוקרתי אקסקלוסיבי – תפילין מהודרות א.א, תפידנית מוגנת, סידור, תהילים וארנק עור נאפה\n🏷️ מחיר: ₪3,105 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=19010')">
                         <span>🟢</span>
-                        <span>שתף תמונה זו לוואטסאפ</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
                     </button>
                     <div class="secondary-actions">
-                        <a href="/public/marketing/creative_banana_556.jpg" download="556_flyer.jpg" class="btn-sub">
-                            <span>📥</span> הורד תמונה בלבד
+                        <a href="/public/marketing/creative_banana_19010.jpg" download="19010_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד כרזה
                         </a>
-                        <button class="btn-sub" onclick="copyCaption('✨ בית מזוזה אפוקסי משולב עם עץ זית לבן שמנת עבודת יד – דגם יחיד (לבחירה 12 או 15 ס״מ)\n🏷️ מחיר: ₪189 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=556')">
+                        <button class="btn-sub" onclick="copyCaption('✨ סט בר מצווה יוקרתי אקסקלוסיבי – תפילין מהודרות א.א, תפידנית מוגנת, סידור, תהילים וארנק עור נאפה\n🏷️ מחיר: ₪3,105 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=19010')">
                             <span>📋</span> העתק טקסט
                         </button>
+                        <a href="https://oz-judaica.co.il/?product=19010" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    
+        </article>
+        
 
         <!-- Card 3: תפילין בהמה גסה חרוצות מהודרות במיוחד – עוז יודאיקה -->
-        <div class="flyer-showcase-card" style="display: flex !important; opacity: 1 !important; visibility: visible !important;">
+        <article class="flyer-showcase-card is-new-today" data-category="stam" data-new="true">
             <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_20151.jpg')">
-                <img src="/public/marketing/creative_banana_20151.jpg" alt="תפילין בהמה גסה חרוצות מהודרות במיוחד – עוז יודאיקה" loading="eager">
-                <div class="badge-overlay">👑 כשרות מהודרת למהדרין</div>
+                <img src="/public/marketing/creative_banana_20151.jpg" alt="תפילין בהמה גסה חרוצות מהודרות במיוחד – עוז יודאיקה" loading="lazy">
+                <div class="badge-overlay">✡️ חדש היום • הידור שיא למהדרין</div>
+                <div class="new-glow-pill">🌟 חדש היום</div>
             </div>
             <div class="card-details">
                 <div>
-                    <div class="card-title">תפילין בהמה גסה חרוצות מהודרות במיוחד – עוז יודאיקה</div>
+                    <div class="category-chip">תשמישי קדושה וסת"ם</div>
+                    <h2 class="card-title">תפילין בהמה גסה חרוצות מהודרות במיוחד – עוז יודאיקה</h2>
                     <div class="card-price">מחיר: ₪4,500 בלבד</div>
+                    <div class="card-specs">בהמה גסה חרוצות מובחרת • כתיבת סופר יר"ש • הגהת מחשב וגברא • תעודת כשרות מלאה</div>
+                    <p class="card-hook">"מחפשים תפילין של פעם בחיים? הידור הלכתי עילאי ללא שמץ פשרה באיכות הכתיבה והבתים."</p>
                 </div>
                 <div class="actions-box">
                     <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_20151.jpg', 'תפילין בהמה גסה חרוצות מהודרות במיוחד – עוז יודאיקה', '✨ תפילין בהמה גסה חרוצות מהודרות במיוחד – עוז יודאיקה\n🏷️ מחיר: ₪4,500 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=20151')">
                         <span>🟢</span>
-                        <span>שתף תמונה זו לוואטסאפ</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
                     </button>
                     <div class="secondary-actions">
                         <a href="/public/marketing/creative_banana_20151.jpg" download="20151_flyer.jpg" class="btn-sub">
-                            <span>📥</span> הורד תמונה בלבד
+                            <span>📥</span> הורד כרזה
                         </a>
                         <button class="btn-sub" onclick="copyCaption('✨ תפילין בהמה גסה חרוצות מהודרות במיוחד – עוז יודאיקה\n🏷️ מחיר: ₪4,500 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=20151')">
                             <span>📋</span> העתק טקסט
                         </button>
+                        <a href="https://oz-judaica.co.il/?product=20151" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    
+        </article>
+        
 
-        <!-- Card 4: תמונת זכוכית – אבני הכותל המערבי הוד קדומים (תקריב קריסטלי מאקרו) -->
-        <div class="flyer-showcase-card" style="display: flex !important; opacity: 1 !important; visibility: visible !important;">
-            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_20115.jpg')">
-                <img src="/public/marketing/creative_banana_20115.jpg" alt="תמונת זכוכית – אבני הכותל המערבי הוד קדומים (תקריב קריסטלי מאקרו)" loading="eager">
-                <div class="badge-overlay">🕊️ הדפסה קריסטלית עמידה</div>
+        <!-- Card 4: בית מזוזה יוקרתי מבטון אדריכלי – "האש שלי" (12 ס"מ) -->
+        <article class="flyer-showcase-card is-new-today" data-category="stam" data-new="true">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_21001.jpg')">
+                <img src="/public/marketing/creative_banana_21001.jpg" alt="בית מזוזה יוקרתי מבטון אדריכלי – "האש שלי" (12 ס"מ)" loading="lazy">
+                <div class="badge-overlay">🏛️ חדש היום • דגם הדגל</div>
+                <div class="new-glow-pill">🌟 חדש היום</div>
             </div>
             <div class="card-details">
                 <div>
-                    <div class="card-title">תמונת זכוכית – אבני הכותל המערבי הוד קדומים (תקריב קריסטלי מאקרו)</div>
-                    <div class="card-price">מחיר: ₪220 בלבד</div>
+                    <div class="category-chip">תשמישי קדושה וסת"ם</div>
+                    <h2 class="card-title">בית מזוזה יוקרתי מבטון אדריכלי – "האש שלי" (12 ס"מ)</h2>
+                    <div class="card-price">מחיר: ₪99 בלבד</div>
+                    <div class="card-specs">בטון אדריכלי פרימיום • עמיד לחלוטין לשמש וגשם • הטבעת "האש שלי" בלעדית</div>
+                    <p class="card-hook">"איך להכניס עיצוב מודרני מרהיב, עוצמה וקדושה לפתח הבית שלך?"</p>
                 </div>
                 <div class="actions-box">
-                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_20115.jpg', 'תמונת זכוכית – אבני הכותל המערבי הוד קדומים (תקריב קריסטלי מאקרו)', '✨ תמונת זכוכית – אבני הכותל המערבי הוד קדומים (תקריב קריסטלי מאקרו)\n🏷️ מחיר: ₪220 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=20115')">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_21001.jpg', 'בית מזוזה יוקרתי מבטון אדריכלי – "האש שלי" (12 ס"מ)', '✨ בית מזוזה יוקרתי מבטון אדריכלי – "האש שלי" (12 ס"מ)\n🏷️ מחיר: ₪99 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=21001')">
                         <span>🟢</span>
-                        <span>שתף תמונה זו לוואטסאפ</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
                     </button>
                     <div class="secondary-actions">
-                        <a href="/public/marketing/creative_banana_20115.jpg" download="20115_flyer.jpg" class="btn-sub">
-                            <span>📥</span> הורד תמונה בלבד
+                        <a href="/public/marketing/creative_banana_21001.jpg" download="21001_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד כרזה
                         </a>
-                        <button class="btn-sub" onclick="copyCaption('✨ תמונת זכוכית – אבני הכותל המערבי הוד קדומים (תקריב קריסטלי מאקרו)\n🏷️ מחיר: ₪220 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=20115')">
+                        <button class="btn-sub" onclick="copyCaption('✨ בית מזוזה יוקרתי מבטון אדריכלי – "האש שלי" (12 ס"מ)\n🏷️ מחיר: ₪99 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=21001')">
                             <span>📋</span> העתק טקסט
                         </button>
+                        <a href="https://oz-judaica.co.il/?product=21001" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    
+        </article>
+        
 
-        <!-- Card 5: ארנק עור נאפה מעוצב לגבר עם תא שטרות מורחב – שחור אלגנטי -->
-        <div class="flyer-showcase-card" style="display: flex !important; opacity: 1 !important; visibility: visible !important;">
-            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_7821.jpg')">
-                <img src="/public/marketing/creative_banana_7821.jpg" alt="ארנק עור נאפה מעוצב לגבר עם תא שטרות מורחב – שחור אלגנטי" loading="eager">
-                <div class="badge-overlay">💼 100% עור איטלקי מובחר</div>
+        <!-- Card 5: מארז 3 בתי מזוזה בטון אדריכלי – "האש שלי" (12 ס"מ) -->
+        <article class="flyer-showcase-card is-new-today" data-category="stam" data-new="true">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_21002.jpg')">
+                <img src="/public/marketing/creative_banana_21002.jpg" alt="מארז 3 בתי מזוזה בטון אדריכלי – "האש שלי" (12 ס"מ)" loading="lazy">
+                <div class="badge-overlay">🏡 חדש היום • מארז 3 מזוזות</div>
+                <div class="new-glow-pill">🌟 חדש היום</div>
             </div>
             <div class="card-details">
                 <div>
-                    <div class="card-title">ארנק עור נאפה מעוצב לגבר עם תא שטרות מורחב – שחור אלגנטי</div>
+                    <div class="category-chip">תשמישי קדושה וסת"ם</div>
+                    <h2 class="card-title">מארז 3 בתי מזוזה בטון אדריכלי – "האש שלי" (12 ס"מ)</h2>
+                    <div class="card-price">מחיר: ₪276 בלבד</div>
+                    <div class="card-specs">שלישיית בתי מזוזה תואמים • מתאים לקלף 12 ס"מ • אטימה הרמטית מלאה</div>
+                    <p class="card-hook">"משפצים או נכנסים לבית חדש? שדרגו את כל הפתחים המרכזיים בקו עיצובי נקי, עמיד ומלא השראה."</p>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_21002.jpg', 'מארז 3 בתי מזוזה בטון אדריכלי – "האש שלי" (12 ס"מ)', '✨ מארז 3 בתי מזוזה בטון אדריכלי – "האש שלי" (12 ס"מ)\n🏷️ מחיר: ₪276 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=21002')">
+                        <span>🟢</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_21002.jpg" download="21002_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד כרזה
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ מארז 3 בתי מזוזה בטון אדריכלי – "האש שלי" (12 ס"מ)\n🏷️ מחיר: ₪276 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=21002')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                        <a href="https://oz-judaica.co.il/?product=21002" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+
+        <!-- Card 6: מארז ספרי קודש מבוארים מהודר – סידור, תהילים וחמש מגילות (ספרי יסוד בהוצאת נהרות) -->
+        <article class="flyer-showcase-card is-new-today" data-category="books" data-new="true">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_19007.jpg')">
+                <img src="/public/marketing/creative_banana_19007.jpg" alt="מארז ספרי קודש מבוארים מהודר – סידור, תהילים וחמש מגילות (ספרי יסוד בהוצאת נהרות)" loading="lazy">
+                <div class="badge-overlay">📖 חדש היום • ספרי יסוד נהרות</div>
+                <div class="new-glow-pill">🌟 חדש היום</div>
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="category-chip">ספרי קודש וסגולות</div>
+                    <h2 class="card-title">מארז ספרי קודש מבוארים מהודר – סידור, תהילים וחמש מגילות (ספרי יסוד בהוצאת נהרות)</h2>
+                    <div class="card-price">מחיר: ₪116 בלבד</div>
+                    <div class="card-specs">שלישיית ספרים מהודרת • ביאור בהיר משולב • אותיות מאירות עיניים • הטבעת זהב יוקרתית</div>
+                    <p class="card-hook">"מחפשים מתנה ערכית ומרגשת לכל בית יהודי? שלישיית ספרי היסוד של נהרות במארז מושלם."</p>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_19007.jpg', 'מארז ספרי קודש מבוארים מהודר – סידור, תהילים וחמש מגילות (ספרי יסוד בהוצאת נהרות)', '✨ מארז ספרי קודש מבוארים מהודר – סידור, תהילים וחמש מגילות (ספרי יסוד בהוצאת נהרות)\n🏷️ מחיר: ₪116 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=19007')">
+                        <span>🟢</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_19007.jpg" download="19007_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד כרזה
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ מארז ספרי קודש מבוארים מהודר – סידור, תהילים וחמש מגילות (ספרי יסוד בהוצאת נהרות)\n🏷️ מחיר: ₪116 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=19007')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                        <a href="https://oz-judaica.co.il/?product=19007" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+
+        <!-- Card 7: מארז הוקרה אלגנטי לגבר – ארנק עור ברידג', תיק תפילין שני רוכסנים, סידור ותהילים מבוארים -->
+        <article class="flyer-showcase-card is-new-today" data-category="sets" data-new="true">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_19009.jpg')">
+                <img src="/public/marketing/creative_banana_19009.jpg" alt="מארז הוקרה אלגנטי לגבר – ארנק עור ברידג', תיק תפילין שני רוכסנים, סידור ותהילים מבוארים" loading="lazy">
+                <div class="badge-overlay">💼 חדש היום • מארז ג'נטלמן</div>
+                <div class="new-glow-pill">🌟 חדש היום</div>
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="category-chip">מארזים ומתנות</div>
+                    <h2 class="card-title">מארז הוקרה אלגנטי לגבר – ארנק עור ברידג', תיק תפילין שני רוכסנים, סידור ותהילים מבוארים</h2>
+                    <div class="card-price">מחיר: ₪399 בלבד</div>
+                    <div class="card-specs">ארנק עור ברידג' איכותי • תיק תפילין מרווח • סידור ותהילים מבוארים בכריכה תואמת</div>
+                    <p class="card-hook">"מתנה מושלמת לגבר ליום הולדת, קידום, חג או הוקרה – שילוב מנצח של פרקטיקה וקדושה."</p>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_19009.jpg', 'מארז הוקרה אלגנטי לגבר – ארנק עור ברידג\', תיק תפילין שני רוכסנים, סידור ותהילים מבוארים', '✨ מארז הוקרה אלגנטי לגבר – ארנק עור ברידג\', תיק תפילין שני רוכסנים, סידור ותהילים מבוארים\n🏷️ מחיר: ₪399 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=19009')">
+                        <span>🟢</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_19009.jpg" download="19009_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד כרזה
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ מארז הוקרה אלגנטי לגבר – ארנק עור ברידג\', תיק תפילין שני רוכסנים, סידור ותהילים מבוארים\n🏷️ מחיר: ₪399 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=19009')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                        <a href="https://oz-judaica.co.il/?product=19009" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+
+        <!-- Card 8: תמונת זכוכית פנורמית – פנורמת הכותל המערבי ורחבת התפילה באור יום צלול -->
+        <article class="flyer-showcase-card is-new-today" data-category="pictures" data-new="true">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_20116.jpg')">
+                <img src="/public/marketing/creative_banana_20116.jpg" alt="תמונת זכוכית פנורמית – פנורמת הכותל המערבי ורחבת התפילה באור יום צלול" loading="lazy">
+                <div class="badge-overlay">🕊️ חדש היום • פנורמת הכותל</div>
+                <div class="new-glow-pill">🌟 חדש היום</div>
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="category-chip">תמונות קודש מזכוכית</div>
+                    <h2 class="card-title">תמונת זכוכית פנורמית – פנורמת הכותל המערבי ורחבת התפילה באור יום צלול</h2>
+                    <div class="card-price">מחיר: ₪400 בלבד</div>
+                    <div class="card-specs">זכוכית מחוסמת קריסטל 4 מ"מ • הדפסה פנורמית חדה במיוחד • תלייה צפה נסתרת</div>
+                    <p class="card-hook">"רוצים להרגיש את הוד הכותל המערבי והקדושה של ירושלים בסלון הבית בכל יום מחדש?"</p>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_20116.jpg', 'תמונת זכוכית פנורמית – פנורמת הכותל המערבי ורחבת התפילה באור יום צלול', '✨ תמונת זכוכית פנורמית – פנורמת הכותל המערבי ורחבת התפילה באור יום צלול\n🏷️ מחיר: ₪400 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=20116')">
+                        <span>🟢</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_20116.jpg" download="20116_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד כרזה
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ תמונת זכוכית פנורמית – פנורמת הכותל המערבי ורחבת התפילה באור יום צלול\n🏷️ מחיר: ₪400 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=20116')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                        <a href="https://oz-judaica.co.il/?product=20116" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+
+        <!-- Card 9: ארנק עור נאפה מעוצב לגבר עם תא שטרות מורחב – שחור אלגנטי -->
+        <article class="flyer-showcase-card is-new-today" data-category="wallets" data-new="true">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_7821.jpg')">
+                <img src="/public/marketing/creative_banana_7821.jpg" alt="ארנק עור נאפה מעוצב לגבר עם תא שטרות מורחב – שחור אלגנטי" loading="lazy">
+                <div class="badge-overlay">💼 חדש היום • עור נאפה איטלקי</div>
+                <div class="new-glow-pill">🌟 חדש היום</div>
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="category-chip">ארנקי עור וגברים</div>
+                    <h2 class="card-title">ארנק עור נאפה מעוצב לגבר עם תא שטרות מורחב – שחור אלגנטי</h2>
                     <div class="card-price">מחיר: ₪129 בלבד</div>
+                    <div class="card-specs">100% עור נאפה אמיתי ורך למגע • חלוקה חכמה לכרטיסים ומזומן • תפירה כפולה עמידה</div>
+                    <p class="card-hook">"מחפשים ארנק איכותי באמת שלא יתבלה אחרי חודשיים? עור נאפה אמיתי בעיצוב אלגנטי ונקי."</p>
                 </div>
                 <div class="actions-box">
                     <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_7821.jpg', 'ארנק עור נאפה מעוצב לגבר עם תא שטרות מורחב – שחור אלגנטי', '✨ ארנק עור נאפה מעוצב לגבר עם תא שטרות מורחב – שחור אלגנטי\n🏷️ מחיר: ₪129 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=7821')">
                         <span>🟢</span>
-                        <span>שתף תמונה זו לוואטסאפ</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
                     </button>
                     <div class="secondary-actions">
                         <a href="/public/marketing/creative_banana_7821.jpg" download="7821_flyer.jpg" class="btn-sub">
-                            <span>📥</span> הורד תמונה בלבד
+                            <span>📥</span> הורד כרזה
                         </a>
                         <button class="btn-sub" onclick="copyCaption('✨ ארנק עור נאפה מעוצב לגבר עם תא שטרות מורחב – שחור אלגנטי\n🏷️ מחיר: ₪129 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=7821')">
                             <span>📋</span> העתק טקסט
                         </button>
+                        <a href="https://oz-judaica.co.il/?product=7821" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    
-        </div>
+        </article>
+        
+
+        <!-- Card 10: ספר תהילים המבואר – פירוש משולב לפסוקי דוד המלך – עוז יודאיקה -->
+        <article class="flyer-showcase-card is-new-today" data-category="books" data-new="true">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_7223.jpg')">
+                <img src="/public/marketing/creative_banana_7223.jpg" alt="ספר תהילים המבואר – פירוש משולב לפסוקי דוד המלך – עוז יודאיקה" loading="lazy">
+                <div class="badge-overlay">✨ חדש היום • תהילים מבואר</div>
+                <div class="new-glow-pill">🌟 חדש היום</div>
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="category-chip">ספרי קודש וסגולות</div>
+                    <h2 class="card-title">ספר תהילים המבואר – פירוש משולב לפסוקי דוד המלך – עוז יודאיקה</h2>
+                    <div class="card-price">מחיר: ₪45 בלבד</div>
+                    <div class="card-specs">אותיות גדולות ומאירות עיניים • פירוש בהיר משולב בפסוקים • כריכה יוקרתית בהטבעה מוזהבת</div>
+                    <p class="card-hook">"התהילים שתרצו לקחת איתכם לכל מקום: קריאה חלקה, אותיות ברורות ופירוש שמחבר את הלב."</p>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_7223.jpg', 'ספר תהילים המבואר – פירוש משולב לפסוקי דוד המלך – עוז יודאיקה', '✨ ספר תהילים המבואר – פירוש משולב לפסוקי דוד המלך – עוז יודאיקה\n🏷️ מחיר: ₪45 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=7223')">
+                        <span>🟢</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_7223.jpg" download="7223_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד כרזה
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ ספר תהילים המבואר – פירוש משולב לפסוקי דוד המלך – עוז יודאיקה\n🏷️ מחיר: ₪45 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=7223')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                        <a href="https://oz-judaica.co.il/?product=7223" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+
+        <!-- Card 11: בית מזוזה אפוקסי משולב עם עץ זית לבן שמנת עבודת יד – דגם יחיד (לבחירה 12 או 15 ס״מ) -->
+        <article class="flyer-showcase-card is-new-today" data-category="stam" data-new="true">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_556.jpg')">
+                <img src="/public/marketing/creative_banana_556.jpg" alt="בית מזוזה אפוקסי משולב עם עץ זית לבן שמנת עבודת יד – דגם יחיד (לבחירה 12 או 15 ס״מ)" loading="lazy">
+                <div class="badge-overlay">🌿 חדש היום • עץ זית ואפוקסי</div>
+                <div class="new-glow-pill">🌟 חדש היום</div>
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="category-chip">תשמישי קדושה וסת"ם</div>
+                    <h2 class="card-title">בית מזוזה אפוקסי משולב עם עץ זית לבן שמנת עבודת יד – דגם יחיד (לבחירה 12 או 15 ס״מ)</h2>
+                    <div class="card-price">מחיר: ₪189 בלבד</div>
+                    <div class="card-specs">עץ זית גלילי מקורי • אפוקסי פנינה יצוק ידנית • אות ש' מוזהבת • יחיד במינו (One of a Kind)</div>
+                    <p class="card-hook">"להכניס חמימות גלילית ואומנות בוטיק יוקרתית לדלת הכניסה שלך – כל פריט הוא יצירה חד-פעמית."</p>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_556.jpg', 'בית מזוזה אפוקסי משולב עם עץ זית לבן שמנת עבודת יד – דגם יחיד (לבחירה 12 או 15 ס״מ)', '✨ בית מזוזה אפוקסי משולב עם עץ זית לבן שמנת עבודת יד – דגם יחיד (לבחירה 12 או 15 ס״מ)\n🏷️ מחיר: ₪189 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=556')">
+                        <span>🟢</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_556.jpg" download="556_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד כרזה
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ בית מזוזה אפוקסי משולב עם עץ זית לבן שמנת עבודת יד – דגם יחיד (לבחירה 12 או 15 ס״מ)\n🏷️ מחיר: ₪189 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=556')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                        <a href="https://oz-judaica.co.il/?product=556" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+
+        <!-- Card 12: קלף מזוזה כשר למהדרין – בהגהת מחשב וסופר סת״ם יר״ש (גדלים לבחירה) -->
+        <article class="flyer-showcase-card " data-category="stam" data-new="false">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_21010.jpg')">
+                <img src="/public/marketing/creative_banana_21010.jpg" alt="קלף מזוזה כשר למהדרין – בהגהת מחשב וסופר סת״ם יר״ש (גדלים לבחירה)" loading="lazy">
+                <div class="badge-overlay">✡️ כשרות מהודרת למהדרין</div>
+                
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="category-chip">תשמישי קדושה וסת"ם</div>
+                    <h2 class="card-title">קלף מזוזה כשר למהדרין – בהגהת מחשב וסופר סת״ם יר״ש (גדלים לבחירה)</h2>
+                    <div class="card-price">מחיר: ₪250 בלבד</div>
+                    <div class="card-specs">כתיבת יד סופר יר"ש • דיו שחור עמיד • הגהת מחשב דיגיטלית כפולה • תעודת כשרות חתומה</div>
+                    <p class="card-hook">"מתי בדקתם את המזוזות שלכם לאחרונה? קלף כשר למהדרין המבטיח שמירה וברכה אמיתית לבית."</p>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_21010.jpg', 'קלף מזוזה כשר למהדרין – בהגהת מחשב וסופר סת״ם יר״ש (גדלים לבחירה)', '✨ קלף מזוזה כשר למהדרין – בהגהת מחשב וסופר סת״ם יר״ש (גדלים לבחירה)\n🏷️ מחיר: ₪250 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=21010')">
+                        <span>🟢</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_21010.jpg" download="21010_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד כרזה
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ קלף מזוזה כשר למהדרין – בהגהת מחשב וסופר סת״ם יר״ש (גדלים לבחירה)\n🏷️ מחיר: ₪250 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=21010')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                        <a href="https://oz-judaica.co.il/?product=21010" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+
+        <!-- Card 13: סט חנוכת בית וזוג צעיר – מזוזת עץ זית ואפוקסי ארץ ישראל, מזמור לתודה, סידור ופיטום הקטורת -->
+        <article class="flyer-showcase-card " data-category="sets" data-new="false">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_19005.jpg')">
+                <img src="/public/marketing/creative_banana_19005.jpg" alt="סט חנוכת בית וזוג צעיר – מזוזת עץ זית ואפוקסי ארץ ישראל, מזמור לתודה, סידור ופיטום הקטורת" loading="lazy">
+                <div class="badge-overlay">🏡 מארז ברכה לחנוכת בית</div>
+                
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="category-chip">מארזים ומתנות</div>
+                    <h2 class="card-title">סט חנוכת בית וזוג צעיר – מזוזת עץ זית ואפוקסי ארץ ישראל, מזמור לתודה, סידור ופיטום הקטורת</h2>
+                    <div class="card-price">מחיר: ₪409 בלבד</div>
+                    <div class="card-specs">בית מזוזה עץ זית ואפוקסי • תמונת מזמור לתודה • סידור מבואר • ברכת פיטום הקטורת</div>
+                    <p class="card-hook">"המתנה המושלמת לחנוכת בית או לזוג צעיר – שילוב מושלם של קדושה, ברכה ועיצוב מרהיב."</p>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_19005.jpg', 'סט חנוכת בית וזוג צעיר – מזוזת עץ זית ואפוקסי ארץ ישראל, מזמור לתודה, סידור ופיטום הקטורת', '✨ סט חנוכת בית וזוג צעיר – מזוזת עץ זית ואפוקסי ארץ ישראל, מזמור לתודה, סידור ופיטום הקטורת\n🏷️ מחיר: ₪409 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=19005')">
+                        <span>🟢</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_19005.jpg" download="19005_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד כרזה
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ סט חנוכת בית וזוג צעיר – מזוזת עץ זית ואפוקסי ארץ ישראל, מזמור לתודה, סידור ופיטום הקטורת\n🏷️ מחיר: ₪409 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=19005')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                        <a href="https://oz-judaica.co.il/?product=19005" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+
+        <!-- Card 14: תמונת זכוכית – מרן רבנו עובדיה יוסף זיע"א פוסק הדור (מלבן) -->
+        <article class="flyer-showcase-card " data-category="pictures" data-new="false">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_20015.jpg')">
+                <img src="/public/marketing/creative_banana_20015.jpg" alt="תמונת זכוכית – מרן רבנו עובדיה יוסף זיע"א פוסק הדור (מלבן)" loading="lazy">
+                <div class="badge-overlay">👑 דמותו המאירה של מרן</div>
+                
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="category-chip">תמונות קודש מזכוכית</div>
+                    <h2 class="card-title">תמונת זכוכית – מרן רבנו עובדיה יוסף זיע"א פוסק הדור (מלבן)</h2>
+                    <div class="card-price">מחיר: ₪220 בלבד</div>
+                    <div class="card-specs">זכוכית מחוסמת קריסטל 4 מ"מ • קנט מלוטש • תלייה מרחפת נסתרת • חדות צבעים מושלמת</div>
+                    <p class="card-hook">"ברכת הצדיק בלב הסלון שלכם: דמותו הקדושה של מרן פוסק הדור בתמונת זכוכית קריסטלית מרשימה."</p>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_20015.jpg', 'תמונת זכוכית – מרן רבנו עובדיה יוסף זיע"א פוסק הדור (מלבן)', '✨ תמונת זכוכית – מרן רבנו עובדיה יוסף זיע"א פוסק הדור (מלבן)\n🏷️ מחיר: ₪220 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=20015')">
+                        <span>🟢</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_20015.jpg" download="20015_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד כרזה
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ תמונת זכוכית – מרן רבנו עובדיה יוסף זיע"א פוסק הדור (מלבן)\n🏷️ מחיר: ₪220 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=20015')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                        <a href="https://oz-judaica.co.il/?product=20015" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+
+        <!-- Card 15: תמונת זכוכית – אבני הכותל המערבי הוד קדומים (תקריב קריסטלי מאקרו) -->
+        <article class="flyer-showcase-card " data-category="pictures" data-new="false">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_20115.jpg')">
+                <img src="/public/marketing/creative_banana_20115.jpg" alt="תמונת זכוכית – אבני הכותל המערבי הוד קדומים (תקריב קריסטלי מאקרו)" loading="lazy">
+                <div class="badge-overlay">🕊️ אבני הכותל המערבי</div>
+                
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="category-chip">תמונות קודש מזכוכית</div>
+                    <h2 class="card-title">תמונת זכוכית – אבני הכותל המערבי הוד קדומים (תקריב קריסטלי מאקרו)</h2>
+                    <div class="card-price">מחיר: ₪220 בלבד</div>
+                    <div class="card-specs">זכוכית מחוסמת אקסטרה-קליר • תקריב מאקרו מרהיב • תלייה ללא מסגרת • מראה צף יוקרתי</div>
+                    <p class="card-hook">"לגעת באבני הכותל בכל מבט: תמונת זכוכית עוצרת נשימה של שריד בית מקדשנו לסלון הבית."</p>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_20115.jpg', 'תמונת זכוכית – אבני הכותל המערבי הוד קדומים (תקריב קריסטלי מאקרו)', '✨ תמונת זכוכית – אבני הכותל המערבי הוד קדומים (תקריב קריסטלי מאקרו)\n🏷️ מחיר: ₪220 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=20115')">
+                        <span>🟢</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_20115.jpg" download="20115_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד כרזה
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ תמונת זכוכית – אבני הכותל המערבי הוד קדומים (תקריב קריסטלי מאקרו)\n🏷️ מחיר: ₪220 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=20115')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                        <a href="https://oz-judaica.co.il/?product=20115" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+
+        <!-- Card 16: הסידור המבואר – תפילת ימות השבוע ושבת קודש – עוז יודאיקה -->
+        <article class="flyer-showcase-card " data-category="books" data-new="false">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_7220.jpg')">
+                <img src="/public/marketing/creative_banana_7220.jpg" alt="הסידור המבואר – תפילת ימות השבוע ושבת קודש – עוז יודאיקה" loading="lazy">
+                <div class="badge-overlay">📖 הסידור המבואר</div>
+                
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="category-chip">ספרי קודש וסגולות</div>
+                    <h2 class="card-title">הסידור המבואר – תפילת ימות השבוע ושבת קודש – עוז יודאיקה</h2>
+                    <div class="card-price">מחיר: ₪45 בלבד</div>
+                    <div class="card-specs">אותיות גדולות ומאירות עיניים • ביאור פנינים בהיר • כריכה מוטבעת זהב • נוסח מדויק ומדוקדק</div>
+                    <p class="card-hook">"להתפלל מתוך שמחה ובהירות: סידור מהודר שהופך כל תפילה לחוויה רוחנית מרוממת."</p>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_7220.jpg', 'הסידור המבואר – תפילת ימות השבוע ושבת קודש – עוז יודאיקה', '✨ הסידור המבואר – תפילת ימות השבוע ושבת קודש – עוז יודאיקה\n🏷️ מחיר: ₪45 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=7220')">
+                        <span>🟢</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_7220.jpg" download="7220_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד כרזה
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ הסידור המבואר – תפילת ימות השבוע ושבת קודש – עוז יודאיקה\n🏷️ מחיר: ₪45 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=7220')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                        <a href="https://oz-judaica.co.il/?product=7220" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+
+        <!-- Card 17: סט שבת קודש מהודר – תמונת זכוכית אשת חיל, סכין חלה וסידור מבואר -->
+        <article class="flyer-showcase-card " data-category="sets" data-new="false">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_19004.jpg')">
+                <img src="/public/marketing/creative_banana_19004.jpg" alt="סט שבת קודש מהודר – תמונת זכוכית אשת חיל, סכין חלה וסידור מבואר" loading="lazy">
+                <div class="badge-overlay">🕯️ פאר והדר לשולחן השבת</div>
+                
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="category-chip">מארזים ומתנות</div>
+                    <h2 class="card-title">סט שבת קודש מהודר – תמונת זכוכית אשת חיל, סכין חלה וסידור מבואר</h2>
+                    <div class="card-price">מחיר: ₪275 בלבד</div>
+                    <div class="card-specs">תמונת זכוכית אשת חיל יוקרתית • סכין חלה מעוצבת וחדה • סידור מבואר מהודר לשבת</div>
+                    <p class="card-hook">"רוצים להלביש את שולחן השבת בהוד מלכותי? מארז שבת קודש יוקרתי ומלא שמחה לכל המשפחה."</p>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_19004.jpg', 'סט שבת קודש מהודר – תמונת זכוכית אשת חיל, סכין חלה וסידור מבואר', '✨ סט שבת קודש מהודר – תמונת זכוכית אשת חיל, סכין חלה וסידור מבואר\n🏷️ מחיר: ₪275 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=19004')">
+                        <span>🟢</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_19004.jpg" download="19004_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד כרזה
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ סט שבת קודש מהודר – תמונת זכוכית אשת חיל, סכין חלה וסידור מבואר\n🏷️ מחיר: ₪275 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=19004')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                        <a href="https://oz-judaica.co.il/?product=19004" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+
+        <!-- Card 18: סט 5 מזוזות אפוקסי משולב עם עץ זית לבן שמנת עבודת יד (12 ס"מ) – עוז יודאיקה -->
+        <article class="flyer-showcase-card " data-category="stam" data-new="false">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_555.jpg')">
+                <img src="/public/marketing/creative_banana_555.jpg" alt="סט 5 מזוזות אפוקסי משולב עם עץ זית לבן שמנת עבודת יד (12 ס"מ) – עוז יודאיקה" loading="lazy">
+                <div class="badge-overlay">✨ מארז 5 מזוזות יוקרה</div>
+                
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="category-chip">תשמישי קדושה וסת"ם</div>
+                    <h2 class="card-title">סט 5 מזוזות אפוקסי משולב עם עץ זית לבן שמנת עבודת יד (12 ס"מ) – עוז יודאיקה</h2>
+                    <div class="card-price">מחיר: ₪850 בלבד</div>
+                    <div class="card-specs">חמישה בתי מזוזה תואמים • עץ זית גלילי ואפוקסי פנינה • אות ש' מוזהבת • קו עיצובי אחיד</div>
+                    <p class="card-hook">"הפתרון המושלם לכל חדרי הבית: מראה יוקרתי, חם ואחיד לכל פתחי הבית בעבודת יד מרהיבה."</p>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_555.jpg', 'סט 5 מזוזות אפוקסי משולב עם עץ זית לבן שמנת עבודת יד (12 ס"מ) – עוז יודאיקה', '✨ סט 5 מזוזות אפוקסי משולב עם עץ זית לבן שמנת עבודת יד (12 ס"מ) – עוז יודאיקה\n🏷️ מחיר: ₪850 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=555')">
+                        <span>🟢</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_555.jpg" download="555_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד כרזה
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ סט 5 מזוזות אפוקסי משולב עם עץ זית לבן שמנת עבודת יד (12 ס"מ) – עוז יודאיקה\n🏷️ מחיר: ₪850 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=555')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                        <a href="https://oz-judaica.co.il/?product=555" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+
+        <!-- Card 19: חמש מגילות מבוארות – עם ביאור משולב – עוז יודאיקה -->
+        <article class="flyer-showcase-card " data-category="books" data-new="false">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_7221.jpg')">
+                <img src="/public/marketing/creative_banana_7221.jpg" alt="חמש מגילות מבוארות – עם ביאור משולב – עוז יודאיקה" loading="lazy">
+                <div class="badge-overlay">📜 חמש מגילות מבוארות</div>
+                
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="category-chip">ספרי קודש וסגולות</div>
+                    <h2 class="card-title">חמש מגילות מבוארות – עם ביאור משולב – עוז יודאיקה</h2>
+                    <div class="card-price">מחיר: ₪35 בלבד</div>
+                    <div class="card-specs">חמש המגילות בכרך אחד מהודר • פירוש בהיר משולב • אותיות מאירות עיניים • כריכה יוקרתית</div>
+                    <p class="card-hook">"מתנה ערכית ושימושית לשבתות, למועדים ולכל ימות השנה בביאור בהיר ומאיר עיניים."</p>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_7221.jpg', 'חמש מגילות מבוארות – עם ביאור משולב – עוז יודאיקה', '✨ חמש מגילות מבוארות – עם ביאור משולב – עוז יודאיקה\n🏷️ מחיר: ₪35 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=7221')">
+                        <span>🟢</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_7221.jpg" download="7221_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד כרזה
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ חמש מגילות מבוארות – עם ביאור משולב – עוז יודאיקה\n🏷️ מחיר: ₪35 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=7221')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                        <a href="https://oz-judaica.co.il/?product=7221" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+
+        <!-- Card 20: ארנק דמוי עור לגבר בעיצוב קומפקטי – אפור עכבר -->
+        <article class="flyer-showcase-card " data-category="wallets" data-new="false">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_7911.jpg')">
+                <img src="/public/marketing/creative_banana_7911.jpg" alt="ארנק דמוי עור לגבר בעיצוב קומפקטי – אפור עכבר" loading="lazy">
+                <div class="badge-overlay">💼 קומפקטי עם הגנת RFID</div>
+                
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="category-chip">ארנקי עור וגברים</div>
+                    <h2 class="card-title">ארנק דמוי עור לגבר בעיצוב קומפקטי – אפור עכבר</h2>
+                    <div class="card-price">מחיר: ₪80 בלבד</div>
+                    <div class="card-specs">הגנת RFID נגד גניבות מידע • עיצוב דק במיוחד הנכנס לכל כיס • חלוקה חכמה לכרטיסים ושטרות</div>
+                    <p class="card-hook">"נמאס מארנקים מגושמים ומנופחים בכיס? ארנק קומפקטי, אלגנטי, מוגן וקל משקל."</p>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_7911.jpg', 'ארנק דמוי עור לגבר בעיצוב קומפקטי – אפור עכבר', '✨ ארנק דמוי עור לגבר בעיצוב קומפקטי – אפור עכבר\n🏷️ מחיר: ₪80 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=7911')">
+                        <span>🟢</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_7911.jpg" download="7911_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד כרזה
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ ארנק דמוי עור לגבר בעיצוב קומפקטי – אפור עכבר\n🏷️ מחיר: ₪80 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=7911')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                        <a href="https://oz-judaica.co.il/?product=7911" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+
+        <!-- Card 21: פיטום הקטורת פיו 15*15 -->
+        <article class="flyer-showcase-card " data-category="books" data-new="false">
+            <div class="img-preview-box" onclick="previewImage('/public/marketing/creative_banana_633.jpg')">
+                <img src="/public/marketing/creative_banana_633.jpg" alt="פיטום הקטורת פיו 15*15" loading="lazy">
+                <div class="badge-overlay">🛡️ סגולה עילאית לפרנסה ושמירה</div>
+                
+            </div>
+            <div class="card-details">
+                <div>
+                    <div class="category-chip">ספרי קודש וסגולות</div>
+                    <h2 class="card-title">פיטום הקטורת פיו 15*15</h2>
+                    <div class="card-price">מחיר: ₪40 בלבד</div>
+                    <div class="card-specs">סגולת פיטום הקטורת המפורסמת להגנה, שמירה ופרנסה ברווח • פורמט מהודר 15x15 מתאים לכל חדר</div>
+                    <p class="card-hook">"סגולה בדוקה לפרנסה, שמירה והצלחה: הציבו את פיטום הקטורת בבית, במשרד או בעסק לשפע וברכה."</p>
+                </div>
+                <div class="actions-box">
+                    <button class="btn-wa-share" onclick="shareFlyer('/public/marketing/creative_banana_633.jpg', 'פיטום הקטורת פיו 15*15', '✨ פיטום הקטורת פיו 15*15\n🏷️ מחיר: ₪40 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=633')">
+                        <span>🟢</span>
+                        <span>שתף ישיר לוואטסאפ (תמונה + טקסט)</span>
+                    </button>
+                    <div class="secondary-actions">
+                        <a href="/public/marketing/creative_banana_633.jpg" download="633_flyer.jpg" class="btn-sub">
+                            <span>📥</span> הורד כרזה
+                        </a>
+                        <button class="btn-sub" onclick="copyCaption('✨ פיטום הקטורת פיו 15*15\n🏷️ מחיר: ₪40 בלבד\n📱 להזמנות בוואטסאפ: 052-686-7192\n🌐 oz-judaica.co.il/?product=633')">
+                            <span>📋</span> העתק טקסט
+                        </button>
+                        <a href="https://oz-judaica.co.il/?product=633" target="_blank" rel="noopener" class="btn-sub btn-store">
+                            <span>🌐</span> צפה באתר
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+        </main>
+
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
+        <img id="lightboxImg" src="" alt="תצוגה מוגדלת">
     </div>
 
     <div id="toast" class="toast">הטקסט הועתק בהצלחה!</div>
 
     <script>
+        function filterGallery(category, btnEl) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            if (btnEl) btnEl.classList.add('active');
+
+            const cards = document.querySelectorAll('.flyer-showcase-card');
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.classList.remove('hidden');
+                } else if (category === 'new') {
+                    if (card.getAttribute('data-new') === 'true') {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                } else {
+                    if (card.getAttribute('data-category') === category) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+        }
+
+        // Default filter: Show new items on top
+        document.addEventListener('DOMContentLoaded', () => {
+            const initialBtn = document.querySelector('.filter-btn.active');
+            if (initialBtn) filterGallery('new', initialBtn);
+        });
+
         async function shareFlyer(imgUrl, title, text) {
             try {
                 showToast('מכין את התמונה לשיתוף...');
@@ -429,41 +1272,47 @@
                 const file = new File([blob], title.replace(/[^\u0590-\u05FFa-zA-Z0-9]/g, '_') + '.jpg', { type: 'image/jpeg' });
 
                 if (navigator.canShare && navigator.canShare({ files: [file] })) {
-                    await navigator.share({ files: [file], title: title, text: text });
-                    showToast('התמונה נשלחה לשיתוף!');
+                    await navigator.share({
+                        files: [file],
+                        title: title,
+                        text: text
+                    });
+                    showToast('התמונה שותפה בהצלחה!');
                     return;
                 }
             } catch (err) {
-                console.log('Share fallback:', err);
+                console.log('Native share canceled or unsupported:', err);
             }
 
-            const a = document.createElement('a');
-            a.href = imgUrl;
-            a.download = title.replace(/[^\u0590-\u05FFa-zA-Z0-9]/g, '_') + '.jpg';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-
-            if (navigator.clipboard) navigator.clipboard.writeText(text).catch(() => {});
-
-            const waUrl = 'https://web.whatsapp.com/send?text=' + encodeURIComponent(text);
-            showToast('התמונה ירדה למחשב! פותח את WhatsApp Web...');
-            setTimeout(() => window.open(waUrl, '_blank'), 800);
+            // Fallback: Open WhatsApp Web / App with text and product link
+            window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent(text), '_blank');
         }
 
         function copyCaption(text) {
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(text).then(() => showToast('הטקסט הועתק ללוח!'));
-            }
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('הטקסט הועתק בהצלחה! הדבק בסטטוס או בשיחה');
+            }).catch(() => {
+                showToast('שגיאה בהעתקה, נסה שנית');
+            });
         }
-
-        function previewImage(src) { window.open(src, '_blank'); }
 
         function showToast(msg) {
             const toast = document.getElementById('toast');
             toast.textContent = msg;
             toast.classList.add('show');
-            setTimeout(() => toast.classList.remove('show'), 2500);
+            setTimeout(() => toast.classList.remove('show'), 2800);
+        }
+
+        function previewImage(src) {
+            const modal = document.getElementById('lightboxModal');
+            const img = document.getElementById('lightboxImg');
+            img.src = src;
+            modal.classList.add('active');
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightboxModal');
+            modal.classList.remove('active');
         }
     </script>
 </body>
