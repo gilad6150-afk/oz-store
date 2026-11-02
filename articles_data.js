@@ -1,4 +1,3 @@
-// MECHON OZ / OZ JUDAICA - ARTICLES DATABASE (42 ARTICLES - MODE: RECOMMENDED_42_PILLARS)
 window.ARTICLES_DATA = [
   {
     "id": 1,
@@ -810,5 +809,3 @@ window.ARTICLES_DATA = [
     ]
   }
 ];
-window.articles = window.ARTICLES_DATA;
-window.articlesDB = window.ARTICLES_DATA;

@@ -77354,3 +77354,5 @@ window.products = [
     ]
   }
 ];
+if (typeof window !== 'undefined') { window.PRODUCTS_DATA = window.products; }
+if (typeof module !== 'undefined' && module.exports) { module.exports = window.products; }
