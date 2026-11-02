@@ -128,16 +128,14 @@ export async function onRequestPost(context) {
                     provider: 'GROW_MAKE'
                 }), { status: 200, headers: corsHeaders });
             } else {
-                // If Make responded 200 but didn't return a JSON payment_url yet (e.g. 'Accepted' because Webhook Response module is pending)
                 return new Response(JSON.stringify({
-                    success: true,
-                    accepted: true,
+                    success: false,
+                    error: 'מערכת הסליקה GROW לא החזירה קישור תשלום. אנא נסה שוב או פנה להזמנה ישירה בוואטסאפ.',
                     rawResponse: resText,
                     orderId: orderId,
                     amount: amount,
-                    provider: 'GROW_MAKE',
-                    message: 'ההזמנה שודרה בהצלחה ל-Make'
-                }), { status: 200, headers: corsHeaders });
+                    provider: 'GROW_MAKE'
+                }), { status: 502, headers: corsHeaders });
             }
         }
 

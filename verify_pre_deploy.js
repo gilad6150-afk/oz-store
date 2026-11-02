@@ -270,24 +270,19 @@ function runAudit() {
     console.log('  ✓ resetFilters() איפס את המצב בהצלחה.');
 
     // -------------------------------------------------------------
-    // בדיקה 5: אימות תקינות מארזים ועסקאות מיוחדות (מוצרים 19004 ו-19007)
+    // בדיקה 5: אימות תקינות מארזים ועסקאות מיוחדות (מוצר 19007 ווידוא מחיקת 19004)
     // -------------------------------------------------------------
-    console.log('\n🔍 שלב 5: אימות שלמות מארזי מתנה (19004, 19007) ועסקאות קופה...');
+    console.log('\n🔍 שלב 5: אימות שלמות מארזי מתנה (19007) ווידוא מחיקת מוצר 19004...');
     const prodsList = context.window.PRODUCTS_DATA || [];
     const p19004 = prodsList.find(p => p.id == 19004);
     const p19007 = prodsList.find(p => p.id == 19007);
 
-    if (!p19004 || !p19007) {
-        console.error('❌ שגיאה: מוצרים 19004 או 19007 לא נמצאו בקטלוג הנתונים!');
+    if (p19004) {
+        console.error('❌ שגיאה: מוצר 19004 לא נמחק מהקטלוג!');
         process.exit(1);
     }
-
-    if (p19004.name.includes('חנוכ') || p19004.alt.includes('חנוכ')) {
-        console.error('❌ שגיאה: מוצר 19004 עדיין מכיל אזכור חנוכייה!');
-        process.exit(1);
-    }
-    if (p19004.name.includes('פמוט') || JSON.stringify(p19004.set_items || []).includes('פמוט')) {
-        console.error('❌ שגיאה: מוצר 19004 אסור שיכיל פמוטי קריסטל (אין פמוטים בקטלוג החנות)!');
+    if (!p19007) {
+        console.error('❌ שגיאה: מוצר 19007 לא נמצא בקטלוג הנתונים!');
         process.exit(1);
     }
 
@@ -298,7 +293,6 @@ function runAudit() {
 
     // אימות תמונות מקומיות
     const localImages = [
-        ...p19004.images.filter(img => !img.startsWith('http')),
         ...p19007.images.filter(img => !img.startsWith('http'))
     ];
     for (const img of localImages) {
@@ -311,7 +305,7 @@ function runAudit() {
             process.exit(1);
         }
     }
-    console.log('  ✓ מארז 19004 (סט שבת קודש מהודר) ומארז 19007 (ספרי נהרות) תקינים ושלמים.');
+    console.log('  ✓ מארז 19007 (ספרי נהרות) תקין ושלם, ואומת שמוצר 19004 הוסר כליל מהקטלוג.');
     console.log('  ✓ כל קובצי התמונות אומתו פיזית בדיסק ב-root וב-cloudflare_deploy.');
 
     // בדיקת אימות שכיסויי ארון חשמל לא זולגים לתיקי תפילין

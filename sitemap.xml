@@ -98,7 +98,189 @@
     </image:image>
   </url>
 
-  <!-- Products (369 items) -->
+  <!-- Local City Landing Pages -->
+  <url>
+    <loc>https://oz-judaica.co.il/cities/ashdod/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/ashkelon/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/bat-yam/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/beer-sheva/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/beit-shemesh/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/bnei-brak/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/elad/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/givat-shmuel/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/givatayim/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/hadera/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/haifa/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/herzliya/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/hod-hasharon/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/holon/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/jerusalem/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/kfar-saba/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/kiryat-ono/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/lod/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/modiin/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/nes-tziona/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/netanya/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/petah-tikva/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/raanana/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/ramat-gan/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/ramla/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/rehovot/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/rishon-lezion/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/rosh-haayin/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/shoham/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oz-judaica.co.il/cities/tel-aviv/</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Products (368 items) -->
   <url>
     <loc>https://oz-judaica.co.il/?product=21010</loc>
     <lastmod>2026-11-02</lastmod>
@@ -234,16 +416,6 @@
       <video:publication_date>2026-11-02</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
-  </url>
-  <url>
-    <loc>https://oz-judaica.co.il/?product=19004</loc>
-    <lastmod>2026-11-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://oz-judaica.co.il/public/products/set_shabbat_royal_19004.jpg</image:loc>
-      <image:title>סט שבת קודש מהודר – תמונת זכוכית אשת חיל, סכין חלה וסידור מבואר</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?product=19005</loc>
@@ -4513,17 +4685,9 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.25-1024x1024-2.jpeg</image:loc>
       <image:title>מדריך לבחירת תפילין מהודרות לבר מצווה: נוסח אשכנזי, ספרדי ותימני</image:title>
     </image:image>
-    <video:video>
-      <video:thumbnail_loc>https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&amp;fit=crop&amp;w=800&amp;q=80</video:thumbnail_loc>
-      <video:title>סקירת וידאו מקצועית: מדריך לבחירת תפילין מהודרות לבר מצווה: נוסח אשכנזי, ספרדי ותימני</video:title>
-      <video:description>סקירה הלכתית ומעשית לקראת שנת הבר מצווה: ההבדלים בין כתב בית יוסף לוועליש, איכות עור הבתים, תעודות כשרות ובדיקה ממוחשבת.</video:description>
-      <video:content_loc>https://oz-judaica.co.il/demos/option2_royal_groom_set.mp4</video:content_loc>
-      <video:publication_date>2026-02-15</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?article=2</loc>
@@ -4531,7 +4695,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1558036117-15d82a90b9b1?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-26-at-14.54.52-4-1024x1024-2.jpeg</image:loc>
       <image:title>כשרות רצועות התפילין: עור עליון, השחרה לשמה והבדל בין סוגי העורות</image:title>
     </image:image>
   </url>
@@ -4541,7 +4705,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://oz-judaica.co.il/public/epoxy_green_set_12cm.jpg</image:loc>
       <image:title>הלכות כתיבת סת&quot;ם: קלף מעובד, קולמוס נוצה ודיו כשר</image:title>
     </image:image>
   </url>
@@ -4551,17 +4715,9 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.25-1024x1024-2.jpeg</image:loc>
       <image:title>תפילין של רש&quot;י ורבינו תם: מדוע מניחים שני זוגות ומתי מתחילים?</image:title>
     </image:image>
-    <video:video>
-      <video:thumbnail_loc>https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?auto=format&amp;fit=crop&amp;w=800&amp;q=80</video:thumbnail_loc>
-      <video:title>סקירת וידאו מקצועית: תפילין של רש&quot;י ורבינו תם: מדוע מניחים שני זוגות ומתי מתחילים?</video:title>
-      <video:description>סקירה הלכתית מקיפה על מחלוקת רש&quot;י ורבנו תם בסדר פרשיות התפילין, פסיקת השולחן ערוך, ומנהגי העדות השונות.</video:description>
-      <video:content_loc>https://oz-judaica.co.il/demos/option2_royal_groom_set.mp4</video:content_loc>
-      <video:publication_date>2026-02-15</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?article=5</loc>
@@ -4569,7 +4725,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.25-1024x1024-2.jpeg</image:loc>
       <image:title>בדיקת תפילין ומזוזות לפי ההלכה: מתי חובה לבדוק וכיצד מזהים שחיקה?</image:title>
     </image:image>
   </url>
@@ -4579,7 +4735,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://oz-judaica.co.il/public/articles/megillat_esther_gvil_kosher.jpg</image:loc>
+      <image:loc>https://oz-judaica.co.il/public/epoxy_green_set_12cm.jpg</image:loc>
       <image:title>מגילת אסתר על קלף בעבודת יד: הנחיות הלכתיות ואיכות כתיבה מהודרת</image:title>
     </image:image>
   </url>
@@ -4589,7 +4745,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-16-at-12.05.26-1024x1024-2.jpeg</image:loc>
       <image:title>ספר תורה מהודר: תהליך היצירה המלא מעור הבהמה ועד הכנסת הספר</image:title>
     </image:image>
   </url>
@@ -4599,7 +4755,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.25-1.jpeg</image:loc>
       <image:title>הבדלים בין כתב בית יוסף, כתב האר&quot;י וכתב וועליש בספרי קודש וסת&quot;ם</image:title>
     </image:image>
   </url>
@@ -4609,17 +4765,9 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://oz-judaica.co.il/public/epoxy_green_set_12cm.jpg</image:loc>
       <image:title>איך מתקינים מזוזה נכון? מיקום מדויק, גובה הדלת, זווית וברכת המצווה</image:title>
     </image:image>
-    <video:video>
-      <video:thumbnail_loc>https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=800&amp;q=80</video:thumbnail_loc>
-      <video:title>סקירת וידאו מקצועית: איך מתקינים מזוזה נכון? מיקום מדויק, גובה הדלת, זווית וברכת המצווה</video:title>
-      <video:description>מדריך מעשי צעד-אחר-צעד להתקנת מזוזה כהלכה: בחירת הפתח הנכון, מציאת השליש העליון, זווית ספרד מול אשכנז, ונוסח הברכה המדויק.</video:description>
-      <video:content_loc>https://oz-judaica.co.il/demos/commercial_concrete_mezuzah_clean_studio.mp4</video:content_loc>
-      <video:publication_date>2026-02-15</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?article=10</loc>
@@ -4627,17 +4775,9 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://oz-judaica.co.il/public/epoxy_green_set_12cm.jpg</image:loc>
       <image:title>בתי מזוזה מעץ זית ארצישראלי: יופי טבעי, איכות עמידה ואומנות מסורתית</image:title>
     </image:image>
-    <video:video>
-      <video:thumbnail_loc>https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&amp;fit=crop&amp;w=800&amp;q=80</video:thumbnail_loc>
-      <video:title>סקירת וידאו מקצועית: בתי מזוזה מעץ זית ארצישראלי: יופי טבעי, איכות עמידה ואומנות מסורתית</video:title>
-      <video:description>כל מה שהופך את עץ הזית לאחד החומרים המבוקשים ביותר לבתי מזוזה: טבעות עץ ייחודיות, גילוף שד&quot;י וטיפול בשמנים טבעיים.</video:description>
-      <video:content_loc>https://oz-judaica.co.il/demos/commercial_concrete_mezuzah_haesh_sheli.mp4</video:content_loc>
-      <video:publication_date>2026-02-15</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?article=11</loc>
@@ -4645,17 +4785,9 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://oz-judaica.co.il/public/epoxy_green_set_12cm.jpg</image:loc>
       <image:title>בתי מזוזה מאפוקסי ועץ זית: השילוב המושלם בין אמנות מודרנית להלכה</image:title>
     </image:image>
-    <video:video>
-      <video:thumbnail_loc>https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&amp;fit=crop&amp;w=800&amp;q=80</video:thumbnail_loc>
-      <video:title>סקירת וידאו מקצועית: בתי מזוזה מאפוקסי ועץ זית: השילוב המושלם בין אמנות מודרנית להלכה</video:title>
-      <video:description>סקירת הטרנד המוביל בעולם עיצוב הבית היהודי: יציקות שרף אפוקסי קריסטלי בגווני טורקיז וזהב משולבות בעץ זית טבעי.</video:description>
-      <video:content_loc>https://oz-judaica.co.il/demos/commercial_concrete_mezuzah_clean_studio.mp4</video:content_loc>
-      <video:publication_date>2026-02-15</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?article=12</loc>
@@ -4663,7 +4795,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/06/20804.webp</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/06/23015.webp</image:loc>
       <image:title>בתי מזוזה מאלומיניום אטום: הגנה עמידה לרוחות, שמש ישירה וגשם</image:title>
     </image:image>
   </url>
@@ -4673,7 +4805,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/06/23015.webp</image:loc>
+      <image:loc>https://oz-judaica.co.il/public/epoxy_green_set_12cm.jpg</image:loc>
       <image:title>מידות קלף המזוזה (10, 12, 15 ו-20 ס&quot;מ): מה הגודל המומלץ לכל פתח?</image:title>
     </image:image>
   </url>
@@ -4683,7 +4815,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://oz-judaica.co.il/public/epoxy_green_set_12cm.jpg</image:loc>
       <image:title>הלכות קביעת מזוזה בחדרי שינה, חדרי ילדים, משרדים ומרפסות</image:title>
     </image:image>
   </url>
@@ -4693,17 +4825,9 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/מנומר-1.webp</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.25-1024x1024-2.jpeg</image:loc>
       <image:title>תפדנית קשיחה לתפילין: הגנה תרמית מלאה מפני חום הרכב, מכות ונפילות</image:title>
     </image:image>
-    <video:video>
-      <video:thumbnail_loc>https://ozonlineshop.com/wp-content/uploads/2026/09/מנומר-1.webp</video:thumbnail_loc>
-      <video:title>סקירת וידאו מקצועית: תפדנית קשיחה לתפילין: הגנה תרמית מלאה מפני חום הרכב, מכות ונפילות</video:title>
-      <video:description>מדוע תפדנית איכותית היא פריט חובה לכל מניח תפילין: שכבת בידוד מפני חום הקיץ הישראלי, עמידות במים ורצועות נשיאה.</video:description>
-      <video:content_loc>https://oz-judaica.co.il/demos/option2_royal_groom_set.mp4</video:content_loc>
-      <video:publication_date>2026-02-15</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?article=16</loc>
@@ -4721,7 +4845,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-26-at-14.54.52-4-1024x1024-2.jpeg</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.25-1024x1024-2.jpeg</image:loc>
       <image:title>תיקי צד מהודרים לטלית ותפילין: נוחות מודרנית לנסיעות, עבודה ומילואים</image:title>
     </image:image>
   </url>
@@ -4731,7 +4855,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1473187983305-f615332c9ddc?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.25-1024x1024-2.jpeg</image:loc>
       <image:title>איך לשמור על התפילין בנסיעות, טיסות וטיולים בעולם?</image:title>
     </image:image>
   </url>
@@ -4741,7 +4865,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/אפור-1.webp</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.25-1024x1024-2.jpeg</image:loc>
       <image:title>נרתיקי תפילין קשיחים: חשיבות המגן הפנימי לשמירה על ריבוע הבתים</image:title>
     </image:image>
   </url>
@@ -4751,17 +4875,9 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.25-1024x1024-2.jpeg</image:loc>
       <image:title>מארז מתנה מהודר לחתן בר מצווה: תפילין, כיסויים, סידור וגביע קידוש</image:title>
     </image:image>
-    <video:video>
-      <video:thumbnail_loc>https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&amp;fit=crop&amp;w=800&amp;q=80</video:thumbnail_loc>
-      <video:title>סקירת וידאו מקצועית: מארז מתנה מהודר לחתן בר מצווה: תפילין, כיסויים, סידור וגביע קידוש</video:title>
-      <video:description>רשימת הציוד המלאה לנער הנכנס לעול מצוות: כל מה שצריך לרכוש לקראת העלייה לתורה וההנחה הראשונה.</video:description>
-      <video:content_loc>https://oz-judaica.co.il/demos/option2_royal_groom_set.mp4</video:content_loc>
-      <video:publication_date>2026-02-15</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?article=21</loc>
@@ -4769,17 +4885,9 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-16-at-12.05.26-1024x1024-2.jpeg</image:loc>
       <image:title>סידורים בכריכת עור אמיתי: איכות, עמידות ומתנה מרגשת לכל אירוע</image:title>
     </image:image>
-    <video:video>
-      <video:thumbnail_loc>https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&amp;fit=crop&amp;w=800&amp;q=80</video:thumbnail_loc>
-      <video:title>סקירת וידאו מקצועית: סידורים בכריכת עור אמיתי: איכות, עמידות ומתנה מרגשת לכל אירוע</video:title>
-      <video:description>מדוע סידור כרוך בעור טבעי הוא נכס לשנים רבות: איכות הכריכה, תפירת סמייט, הטבעות זהב והתאמה אישית.</video:description>
-      <video:content_loc>https://oz-judaica.co.il/demos/option3_neharot_holy_books.mp4</video:content_loc>
-      <video:publication_date>2026-02-15</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?article=22</loc>
@@ -4787,17 +4895,9 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://www.sidur-neharot.co.il/up/gallery/112917_11y59.jpg</image:loc>
       <image:title>בחירת סידור תפילה: נוסח עדות המזרח, אשכנז, ספרד ותימן</image:title>
     </image:image>
-    <video:video>
-      <video:thumbnail_loc>https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&amp;fit=crop&amp;w=800&amp;q=80</video:thumbnail_loc>
-      <video:title>סקירת וידאו מקצועית: בחירת סידור תפילה: נוסח עדות המזרח, אשכנז, ספרד ותימן</video:title>
-      <video:description>סקירה מקיפה על נוסחאות התפילה השונות בישראל: מקורות הנוסח, סדר המזמורים והתאמת הסידור למסורת בית אבא.</video:description>
-      <video:content_loc>https://oz-judaica.co.il/demos/option3_neharot_holy_books.mp4</video:content_loc>
-      <video:publication_date>2026-02-15</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?article=23</loc>
@@ -4805,7 +4905,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1476275466078-4007374efbbe?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://www.sidur-neharot.co.il/up/gallery/112917_WhatsApp-Image-2026-06-07-at-150828.jpeg</image:loc>
       <image:title>ספר תהילים מחולק: סגולות, זמני קריאה ומהדורות יוקרתיות לכיס ולבית</image:title>
     </image:image>
   </url>
@@ -4815,7 +4915,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://www.sidur-neharot.co.il/up/gallery/112917_11y59.jpg</image:loc>
       <image:title>חמשה חומשי תורה ומקראות גדולות: כלי עזר חיוני ללימוד שבת מעמיק</image:title>
     </image:image>
   </url>
@@ -4825,7 +4925,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://www.sidur-neharot.co.il/up/gallery/112917_253n.jpg</image:loc>
       <image:title>הגדה של פסח מבוארת ומאוירת: חיבור המשפחה והילדים לשולחן הסדר</image:title>
     </image:image>
   </url>
@@ -4835,7 +4935,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1491841573634-28140fc7ced7?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/מנומר-1.webp</image:loc>
       <image:title>מחזורים לראש השנה ויום כיפור: נוסח מדויק, כוונת הלב ופיוטים עתיקים</image:title>
     </image:image>
   </url>
@@ -4848,14 +4948,6 @@
       <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-16-at-12.05.26-1024x1024-2.jpeg</image:loc>
       <image:title>ארנקי עור נאפה לגבר עם הגנת RFID: בטיחות טכנולוגית, עמידות ויוקרה</image:title>
     </image:image>
-    <video:video>
-      <video:thumbnail_loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-16-at-12.05.26-1024x1024-2.jpeg</video:thumbnail_loc>
-      <video:title>סקירת וידאו מקצועית: ארנקי עור נאפה לגבר עם הגנת RFID: בטיחות טכנולוגית, עמידות ויוקרה</video:title>
-      <video:description>כל מה שחשוב לדעת על ארנקי עור נאפה פרימיום: מהי שכבת הנאפה, כיצד פועלת חסימת גניבת אשראי RFID, וחלוקת תאים חכמה.</video:description>
-      <video:content_loc>https://oz-judaica.co.il/generated_videos/viral_ad_7875.mp4</video:content_loc>
-      <video:publication_date>2026-02-15</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?article=28</loc>
@@ -4866,14 +4958,6 @@
       <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-17-at-11.29.44-1024x1024-1.jpeg</image:loc>
       <image:title>ארנק עור דק (Slim Wallet) מול ארנק עור קלאסי: מה מתאים לך?</image:title>
     </image:image>
-    <video:video>
-      <video:thumbnail_loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-17-at-11.29.44-1024x1024-1.jpeg</video:thumbnail_loc>
-      <video:title>סקירת וידאו מקצועית: ארנק עור דק (Slim Wallet) מול ארנק עור קלאסי: מה מתאים לך?</video:title>
-      <video:description>השוואה בין סגנונות ארנקים: יתרונות הארנק הדק בכיס הקדמי ובריאות הגב, מול הקיבולת והנוחות של הארנק המסורתי.</video:description>
-      <video:content_loc>https://oz-judaica.co.il/generated_videos/viral_ad_7875.mp4</video:content_loc>
-      <video:publication_date>2026-02-15</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?article=29</loc>
@@ -4881,7 +4965,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1585488763177-bde7d15fd3cf?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-16-at-12.05.26-1024x1024-2.jpeg</image:loc>
       <image:title>איך לזהות 100% עור אמיתי לעומת דמוי עור סינתטי? מדריך צרכנות מעשי</image:title>
     </image:image>
   </url>
@@ -4891,7 +4975,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-16-at-12.05.26-1024x1024-2.jpeg</image:loc>
       <image:title>מארז מתנה לגבר: שילוב ארנק עור יוקרתי, מחזיק מפתחות ונרתיק כרטיסים</image:title>
     </image:image>
   </url>
@@ -4901,7 +4985,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-16-at-12.05.26-1024x1024-2.jpeg</image:loc>
       <image:title>כיסוי עור לסידור ולתהילים: שמירה והידור לספרי התפילה האישיים</image:title>
     </image:image>
   </url>
@@ -4911,7 +4995,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://oz-judaica.co.il/public/articles/shabbat_candlesticks_crystal_silver.jpg</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.25-1.jpeg</image:loc>
       <image:title>פמוטי שבת מעוצבים: שילוב כסף, קריסטל ועיצוב מודרני להארת הבית</image:title>
     </image:image>
   </url>
@@ -4921,7 +5005,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://oz-judaica.co.il/public/articles/kiddush_cup_silver_gold_luxury.jpg</image:loc>
+      <image:loc>https://tmunotrabanim.com/wp-content/uploads/2026/08/LIS-M1-מזמור-לתודה-רקע-אפור-בטון-מוקאפ.jpg</image:loc>
       <image:title>גביעי קידוש מהודרים: מכסף טהור, ציפוי זהב וזכוכית מעוטרת</image:title>
     </image:image>
   </url>
@@ -4931,7 +5015,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://static.wixstatic.com/media/960282_49dc8161edc64f7992c8d35c82143051~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg</image:loc>
       <image:title>ערכות הבדלה ובשמים: ניחוחות קודש ומנהגים ליציאת השבת</image:title>
     </image:image>
   </url>
@@ -4941,17 +5025,9 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://tmunotrabanim.com/wp-content/uploads/2026/08/LIS-M1-מזמור-לתודה-רקע-אפור-בטון-מוקאפ.jpg</image:loc>
       <image:title>תמונות זכוכית HD לבית היהודי: ברכת הבית, מזמור לתודה ואשת חיל</image:title>
     </image:image>
-    <video:video>
-      <video:thumbnail_loc>https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&amp;fit=crop&amp;w=800&amp;q=80</video:thumbnail_loc>
-      <video:title>סקירת וידאו מקצועית: תמונות זכוכית HD לבית היהודי: ברכת הבית, מזמור לתודה ואשת חיל</video:title>
-      <video:description>אמנות יהודית עכשווית: הדפסה ישירה על גבי זכוכית מחוסמת HD, עמידות בפני דהייה, ותלייה צפה המעניקה מראה יוקרתי.</video:description>
-      <video:content_loc>https://oz-judaica.co.il/demos/option1_luxury_glass_art.mp4</video:content_loc>
-      <video:publication_date>2026-02-15</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?article=36</loc>
@@ -4959,17 +5035,9 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://tmunotrabanim.com/wp-content/uploads/2026/08/LIS-M1-מזמור-לתודה-רקע-אפור-בטון-מוקאפ.jpg</image:loc>
       <image:title>מתנות לחנוכת בית חדש: רעיונות ליודאיקה שמכניסה ברכה, שמחה והגנה</image:title>
     </image:image>
-    <video:video>
-      <video:thumbnail_loc>https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&amp;fit=crop&amp;w=800&amp;q=80</video:thumbnail_loc>
-      <video:title>סקירת וידאו מקצועית: מתנות לחנוכת בית חדש: רעיונות ליודאיקה שמכניסה ברכה, שמחה והגנה</video:title>
-      <video:description>מדריך לבחירת מתנה בעלת משמעות לחנוכת בית: בתי מזוזה מעוצבים, ברכת הבית, מגש חלות מעוצב וכלי כסף.</video:description>
-      <video:content_loc>https://oz-judaica.co.il/demos/option1_luxury_glass_art.mp4</video:content_loc>
-      <video:publication_date>2026-02-15</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
   </url>
   <url>
     <loc>https://oz-judaica.co.il/?article=37</loc>
@@ -4977,7 +5045,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://www.sidur-neharot.co.il/up/gallery/112917_253n.jpg</image:loc>
       <image:title>צלחות פסח וקעריות ליל הסדר: מסורת, אלגנטיות ויופי לשולחן החג</image:title>
     </image:image>
   </url>
@@ -4987,7 +5055,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-06-16-at-12.05.26-1024x1024-2.jpeg</image:loc>
       <image:title>הכנות לחג הפסח: מדריך הלכתי לבדיקת חמץ, ביעור חמץ ומכירת חמץ</image:title>
     </image:image>
   </url>
@@ -4997,7 +5065,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://www.sidur-neharot.co.il/up/gallery/112917_שיר-השירים.jpg</image:loc>
       <image:title>הלכות יום הכיפורים: חמשת העינויים, סעודה מפסקת ותפילת נעילה</image:title>
     </image:image>
   </url>
@@ -5007,7 +5075,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.25-1.jpeg</image:loc>
       <image:title>בניית סוכה כשרה: מידות, סכך כשר, דפנות ודיני ארבעת המינים</image:title>
     </image:image>
   </url>
@@ -5017,7 +5085,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://ozonlineshop.com/wp-content/uploads/2026/09/WhatsApp-Image-2021-07-27-at-12.06.25-1.jpeg</image:loc>
       <image:title>הדלקת נרות חנוכה: זמנים, שמן זית זך מול נרות, סדר הברכות ומקום ההנחה</image:title>
     </image:image>
   </url>
@@ -5027,7 +5095,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&amp;fit=crop&amp;w=800&amp;q=80</image:loc>
+      <image:loc>https://www.sidur-neharot.co.il/up/gallery/112917_שיר-השירים.jpg</image:loc>
       <image:title>מצוות פורים: מקרא מגילה, משלוח מנות, מתנות לאביונים ומשתה ושמחה</image:title>
     </image:image>
   </url>

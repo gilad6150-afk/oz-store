@@ -3,27 +3,27 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
 
-# Static media assets - revalidate with server so browser always gets updated images!
+# Static media assets - cache for 30 days with stale-while-revalidate for blazing fast loads
 /public/*
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
 /*.jpg
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
 /*.jpeg
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
 /*.png
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
 /*.webp
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
 /*.svg
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
 /*.ico
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
 /public/fonts/*
   Cache-Control: public, max-age=31536000, immutable
