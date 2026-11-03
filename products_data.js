@@ -1,4 +1,4 @@
-window.PRODUCTS_DATA = [
+window.products = [
   {
     "id": 21010,
     "sku": "OZ-KLAF-MEZUZAH-KASHER",
